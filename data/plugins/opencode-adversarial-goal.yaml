@@ -1,0 +1,4 @@
+name: Adversarial Goal
+repo: https://github.com/OmarAtieh/opencode-adversarial-goal
+tagline: Goal ledger with adversarial evaluator and investigative advisor
+description: Write-capable goal system that survives compaction. A clean-context child session verifies completion claims against the codebase (verdicts: APPROVE, REOPEN_WITH_COMMENTS, ADD_ITEMS), an investigative advisor helps stuck workers, churn detection catches oscillation, and budget tracking enforces turn/minute caps. 11 agent tools, 6 hooks, slash commands, and one-way sync with OpenCode's built-in todos.
