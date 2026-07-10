@@ -1235,6 +1235,15 @@ suggestions. All processing stays local by default — no data leaves the machin
 </details>
 
 <details>
+  <summary><b>Unforgit</b> <img src="https://badgen.net/github/stars/MiguelMedeiros/unforgit" height="14"/> - <i>Git-backed repository memory for AI agents</i></summary>
+  <blockquote>
+    Unforgit gives OpenCode and other coding agents durable, repository-scoped memory through MCP. Store and recall project decisions, conventions, gotchas, and playbooks locally in a Git-backed memory base, with optional sync and curation workflows.
+    <br><br>
+    <a href="https://github.com/MiguelMedeiros/unforgit">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
   <summary><b>UNMOJI</b> - <i>Strip emojis from output</i></summary>
   <blockquote>
     A simple plugin that strips ALL emojis from agent outputs in Opencode.
