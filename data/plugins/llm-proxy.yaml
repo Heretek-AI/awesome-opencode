@@ -1,4 +1,28 @@
-name: LLM Proxy
+name: opencode-llm-proxy
 repo: https://github.com/KochC/opencode-llm-proxy
-tagline: OpenAI / Anthropic / Gemini API gateway
-description: Starts a local HTTP server that proxies OpenAI, Anthropic, and Google Gemini API requests to any model configured in OpenCode. Use Open WebUI, LangChain, the OpenAI SDK, or any other tool without reconfiguring your models.
+tagline: OpenCode-backed API gateway with tool calling
+description: Local OpenCode plugin that exposes OpenAI Chat Completions, OpenAI Responses, Anthropic Messages, and Gemini-compatible endpoints for any model configured in OpenCode. Supports streaming, model listing, and real tool/function calling including parallel tool calls, so tools like n8n, Open WebUI, LangChain, Continue, Zed, and coding agents can reuse the same OpenCode model setup.
+scope:
+  - global
+  - project
+tags:
+  - openai
+  - anthropic
+  - gemini
+  - responses-api
+  - llm-gateway
+  - tool-calling
+  - n8n
+  - open-webui
+  - langchain
+homepage: https://www.npmjs.com/package/opencode-llm-proxy
+installation: |
+  Add the package to `opencode.json`:
+
+  ```json
+  {
+    "plugin": ["opencode-llm-proxy"]
+  }
+  ```
+
+  The proxy starts automatically on `http://127.0.0.1:4010`.
