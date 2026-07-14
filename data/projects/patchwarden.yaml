@@ -11,5 +11,5 @@ tags:
 homepage: https://github.com/jiezeng2004-design/PatchWarden#readme
 installation: |
   ```bash
-  npx -y patchwarden@0.6.1
+  npx -y patchwarden@1.5.1
   ```
