@@ -1,4 +1,4 @@
 name: Fractal Memory
 repo: https://github.com/holgerreppert/opencode-fractal-memory
 tagline: fractal memory
-description: structured persistent memory with labels, content, metadata, and type system, ONNX-powered embeddings, BM25 full-text search, mcp server included and a lot more (see https://github.com/holgerreppert/opencode-fractal-memory/blob/main/README.md)
+description: structured persistent memory with labels, content, metadata, and type system, ONNX-powered embeddings, BM25 full-text search, mcp servercodebase graph, command compression included and a lot more (see https://github.com/holgerreppert/opencode-fractal-memory/blob/main/README.md)
