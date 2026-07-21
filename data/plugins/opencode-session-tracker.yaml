@@ -1,0 +1,4 @@
+name: OpenCode Session Tracker
+repo: https://github.com/ykocaman/opencode-session-tracker
+tagline: TUI sidebar extension and Telegram integration to track active sessions/subagents and interact remotely.
+description: A lightweight, robust TUI sidebar extension and interactive Telegram Integration for OpenCode that brings real-time session tracking, multi-process routing, and remote monitoring directly to your terminal and phone. Monitor and drive your terminal agents remotely from your mobile device, answer interactive questions, approve or deny commands, and track status streams.
