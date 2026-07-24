@@ -1462,6 +1462,15 @@ Also available for bat and Ghostty in the same repository.
 </details>
 
 <details>
+  <summary><b>Opencode Profiles</b> <img src="https://badgen.net/github/stars/gtmdev-br/opencode-profiles" height="14"/> - <i>17 agent personalities for OpenCode — switch with one command</i></summary>
+  <blockquote>
+    17 specialized agent personalities for OpenCode with dedicated agents, MCP servers, and permissions. Switch between engineer, designer, sales, and more with a single command. Also includes <b>agent-ci</b>, a CLI to validate, test, and benchmark profiles.
+    <br><br>
+    <a href="https://github.com/gtmdev-br/opencode-profiles">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
   <summary><b>Python Expert Agent for OpenCode</b> <img src="https://badgen.net/github/stars/amrahman90/python-expert-agent" height="14"/> - <i>Python Expert Agent toolkit for OpenCode with subagents and skills</i></summary>
   <blockquote>
     A custom configurable agent toolkit includes 1 Primary Custom Agent python-expert with intelligent skill loading, Predefined Specialized Subagents for Code generation, review, testing, and exploration, On-Demand Skills for Python development projects, Context Files for Standards, patterns, and security guidelines.
