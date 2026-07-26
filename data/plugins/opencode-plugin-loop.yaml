@@ -1,0 +1,4 @@
+name: OpenCode Plugin Loop
+repo: https://github.com/jkrandom-sudo/opencode-plugin-loop
+tagline: Fixed, adaptive, one-shot, and maintenance /loop scheduling for OpenCode
+description: Adds Claude Code-inspired /loop scheduling to OpenCode with fixed and adaptive intervals, one-shot jobs, maintenance tasks, pause and resume controls, status, and cancellation.
