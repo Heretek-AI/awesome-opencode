@@ -1,4 +1,4 @@
 name: Modellix
 repo: https://github.com/Modellix/modellix-plugin
 tagline: Unified API for AI image and video generation
-description: OpenCode-compatible plugin/skill for async image and video generation via Modellix CLI (model run --wait, task download) with default T2I/T2V/I2I/I2V/V2V models.
+description: OpenCode-compatible plugin/skill for async image and video generation via Modellix CLI (model run --wait, task download) with default T2I/T2V/I2I/I2V/V2V/TTS/STT/STS models.
