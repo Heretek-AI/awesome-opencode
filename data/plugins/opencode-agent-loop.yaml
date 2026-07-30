@@ -1,0 +1,4 @@
+name: Agent Loop
+repo: https://github.com/dwrdx/opencode-agent-loop
+tagline: Goal-oriented agent loop that nudges agents toward objectives
+description: Iteratively drives agents toward configurable objectives with turn/time budgets, marker/regex-based termination conditions, idle detection, and a /loop slash command for manual control.
