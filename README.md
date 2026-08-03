@@ -698,6 +698,15 @@ startup.
 </details>
 
 <details>
+  <summary><b>OpenCode Focus</b> <img src="https://badgen.net/github/stars/kivervinicius/opencode-focus" height="14"/> - <i>Status-aware terminal titles and focus-aware notifications</i></summary>
+  <blockquote>
+    Status-aware terminal titles with spinner/state for the TUI, minimal desktop notifications (error, waiting decision, completion, retry) and click-to-focus via a GNOME extension, with focus-based suppression.
+    <br><br>
+    <a href="https://github.com/kivervinicius/opencode-focus">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
   <summary><b>Opencode Notify</b> <img src="https://badgen.net/github/stars/kdcokenny/opencode-notify" height="14"/> - <i>Native OS notifications</i></summary>
   <blockquote>
     Native OS notifications for OpenCode - know when tasks complete.
