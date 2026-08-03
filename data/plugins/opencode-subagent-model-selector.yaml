@@ -1,0 +1,4 @@
+name: OpenCode Subagent Model Selector
+repo: https://github.com/IdrisGit/opencode-subagent-model-selector
+tagline: Route subagent models by the primary agent's model and variant.
+description: Declaratively configure subagents to use faster, cheaper, or stronger models based on the selected primary model and variant.
