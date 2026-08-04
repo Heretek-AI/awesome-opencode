@@ -917,6 +917,15 @@ startup.
 </details>
 
 <details>
+  <summary><b>opencode-plugin-cost-guard</b> <img src="https://badgen.net/github/stars/yuseferi/opencode-cost-guard" height="14"/> - <i>Cost guard for OpenCode — detect runaway context, auto-compact, and alert on spend</i></summary>
+  <blockquote>
+    Live cost guard for opencode sessions. Watches per-session spend and token usage, detects runaway context replay before it compounds, auto-compacts sessions crossing the threshold, and alerts via desktop notifications when a session or day passes your budget. Also auto-applies opencode's compaction config and caps paid Claude models to 120K context on install (free/cheap models left untouched). Writes JSONL per-session savings reports and exposes a cost_guard_report tool so the agent can answer "how much have I spent?". Published on npm as opencode-plugin-cost-guard under MIT.
+    <br><br>
+    <a href="https://github.com/yuseferi/opencode-cost-guard">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
   <summary><b>opencode-plugin-otel</b> <img src="https://badgen.net/github/stars/DEVtheOPS/opencode-plugin-otel" height="14"/> - <i>OpenTelemetry telemetry exporter for opencode sessions, mirroring Claude Code monitoring signals</i></summary>
   <blockquote>
     Exports metrics, logs, and traces from opencode sessions via OTLP/gRPC to any OpenTelemetry-compatible backend (Datadog, Honeycomb, Grafana Cloud, etc.). Instruments session lifecycle, token usage, cost, tool durations, and git commits — mirroring the same signals as Claude Code's monitoring.

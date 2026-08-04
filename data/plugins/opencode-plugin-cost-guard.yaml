@@ -1,0 +1,10 @@
+name: opencode-plugin-cost-guard
+repo: https://github.com/yuseferi/opencode-cost-guard
+tagline: Cost guard for OpenCode — detect runaway context, auto-compact, and alert on spend
+description: Live cost guard for opencode sessions. Watches per-session spend and token usage, detects runaway context replay before it compounds, auto-compacts sessions crossing the threshold, and alerts via desktop notifications when a session or day passes your budget. Also auto-applies opencode's compaction config and caps paid Claude models to 120K context on install (free/cheap models left untouched). Writes JSONL per-session savings reports and exposes a cost_guard_report tool so the agent can answer "how much have I spent?". Published on npm as opencode-plugin-cost-guard under MIT.
+tags:
+  - cost
+  - tokens
+  - budget
+  - compaction
+  - usage
