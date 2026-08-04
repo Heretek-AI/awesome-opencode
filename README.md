@@ -788,6 +788,15 @@ startup.
 </details>
 
 <details>
+  <summary><b>OpenCode TasksMD</b> <img src="https://badgen.net/github/stars/LeonardMeagher2/tasksmd" height="14"/> - <i>Background task queue for OpenCode projects, powered by TASKS.md</i></summary>
+  <blockquote>
+    Background task queue that reads TASKS.md — schedules recurring work, sets per-task permissions and agents, and persists state across restarts.
+    <br><br>
+    <a href="https://github.com/LeonardMeagher2/tasksmd">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
   <summary><b>Opencode Telemetry</b> <img src="https://badgen.net/github/stars/agostinilabsrl/opencode-telemetry" height="14"/> - <i>Passive cross-session telemetry to local SQLite; cost rollups across agent orchestration chains</i></summary>
   <blockquote>
     Logs every opencode session to a local SQLite database automatically — tokens, tool calls, skills, per-turn cost. Aggregates costs across orchestration chains (conductor + child sessions), offers turn-by-turn forensic inspection, and ships an `octm` CLI for reports without spending model tokens. Zero cloud, zero network, no message bodies stored.
