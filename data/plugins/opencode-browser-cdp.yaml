@@ -1,0 +1,13 @@
+name: OpenCode Browser CDP
+repo: https://github.com/Nor1m/opencode-browser-cdp
+tagline: Fast browser automation through a persistent Puppeteer CDP connection
+description: Adds a browser tool to OpenCode for launching or controlling visible Chromium-based browsers through a persistent Puppeteer CDP connection. Keeps tabs, cookies, logins, and profiles between calls without an extension, wrapper, MCP server, or separate driver.
+scope:
+  - global
+  - project
+tags:
+  - browser
+  - chromium
+  - automation
+  - puppeteer
+  - cdp
