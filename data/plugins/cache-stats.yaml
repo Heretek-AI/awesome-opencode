@@ -1,0 +1,7 @@
+name: cache-stats
+repo: https://github.com/nmdra/opencode-cache-stats
+tagline: TUI plugin showing the active session's prompt-cache hit rate in a popup dialog
+description: Read-only opencode TUI plugin. Run /cache-stats to open a dialog with
+  the session's prompt-cache hit rate, a hit bar and verdict word, totals for tokens,
+  calls and cost, and breakdowns by model and subagent. It never calls a model; it
+  only reads session data.
