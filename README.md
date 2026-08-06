@@ -1076,6 +1076,15 @@ suggestions. All processing stays local by default — no data leaves the machin
 </details>
 
 <details>
+  <summary><b>run-long-script</b> <img src="https://badgen.net/github/stars/Thexinyi/run-long-script" height="14"/> - <i>Run long Python/Shell scripts with stdout/stderr on disk + freeze-kill watchdog</i></summary>
+  <blockquote>
+    An opencode custom tool for long-running scripts (>30s, tqdm/akshare/PDF-heavy). Redirects stdout/stderr to disk so progress bars and tracebacks never pollute the agent context - only a small summary (RESULT line + key lines + error tail) returns. A PowerShell watchdog monitors the process with a tri-layer progress signal (stderr tail, stdout tail, CPU time); if a whole 100s round sees no change, it force-kills the stuck process and reports `stuck`.
+    <br><br>
+    <a href="https://github.com/Thexinyi/run-long-script">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
   <summary><b>Ring a Bell Example</b> - <i>Simple terminal bell plugin</i></summary>
   <blockquote>
     A simple plugin to ring the terminal bell once a request is complete.
