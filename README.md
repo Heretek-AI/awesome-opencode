@@ -197,6 +197,15 @@
 </details>
 
 <details>
+  <summary><b>context-workflow</b> <img src="https://badgen.net/github/stars/Thexinyi/context-workflow" height="14"/> - <i>Context-management + auto-compact relay workflow for long-running multi-file tasks</i></summary>
+  <blockquote>
+    Breaks long tasks into independent steps persisted to workflow.json, drops notes summaries when key files are read, and writes handoff.json at step completion. Script gates (not prompt soft-rules) enforce that the handoff is complete before compact, and a one-shot wf_resume.ps1 restores state after compact. Pairs with a guard plugin for automatic token water-level injection and a wf_compact tool. Keeps the context window between 100K-150K tokens. Designed for non-pure-code long-running tasks (report analysis, multi-document processing) that risk blowing the context window.
+    <br><br>
+    <a href="https://github.com/Thexinyi/context-workflow">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
   <summary><b>Crawlberg</b> <img src="https://badgen.net/github/stars/xberg-io/plugins" height="14"/> - <i>Web crawling and scraping tools for opencode</i></summary>
   <blockquote>
     OpenCode plugin exposing crawlberg CLI tools for scraping pages, crawling sites, and mapping URLs to JSON or Markdown.
