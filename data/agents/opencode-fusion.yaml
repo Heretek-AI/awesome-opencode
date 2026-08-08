@@ -1,0 +1,19 @@
+name: opencode-fusion
+repo: https://github.com/mihneaptu/opencode-fusion
+homepage: https://mihneaptu.github.io/opencode-fusion/
+tagline: Main agent plans and reviews; cheaper sidekick edits
+description: >-
+  A multi-model team for OpenCode built on the Devin Fusion sidekick pattern. The main
+  agent plans, delegates, and reviews, but its edit tool is denied at the permission
+  layer, so every file change goes through a cheaper, faster sidekick. Read-only explore
+  and research helpers plus optional design, reviewer, and vision specialists round out
+  the team, each on a model you pick. Ships a setup skill that writes the config for you,
+  with ready-made profiles for OpenCode Go/Zen, ChatGPT, and GitHub Copilot subscriptions.
+scope:
+  - global
+tags:
+  - multi-model
+  - model-routing
+  - sidekick
+  - permissions
+  - cost-optimization
