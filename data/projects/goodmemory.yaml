@@ -15,7 +15,7 @@ tags:
   - ai-agents
 homepage: https://github.com/hjqcan/GoodMemory
 installation: |
-  npm install -g goodmemory@0.7.1
+  npm install -g goodmemory@0.7.2
 
   Add the `mcp.goodmemory` block from the OpenCode setup guide:
   https://github.com/hjqcan/GoodMemory/blob/main/docs/GoodMemory-OpenCode-Setup-Guide.md
