@@ -1,0 +1,13 @@
+name: OpenCode Taskmarket
+repo: https://github.com/zehidu/opencode-taskmarket
+tagline: Browse Taskmarket work and prepare guarded delegation plans without exposing a wallet
+description: Read-only-by-default OpenCode plugin that lists open escrow-backed tasks, inspects one task, reviews public submissions, and produces structured first-party CLI arguments for an explicitly authorized delegation. Wallet custody, signatures, spending, and acceptance remain outside OpenCode.
+scope:
+  - global
+  - project
+tags:
+  - taskmarket
+  - delegation
+  - payments
+  - security
+min_version: "1.18.0"
