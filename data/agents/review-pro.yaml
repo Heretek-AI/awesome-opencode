@@ -1,0 +1,20 @@
+name: review-pro
+repo: https://github.com/tufantunc/review-pro
+tagline: Tiered code review - triage picks the relevant specialists, they run in parallel, synthesis returns one verdict
+description: >-
+  Splits code review into three stages. A triage pass classifies the diff and selects
+  which of twelve specialist reviewers to dispatch - security, correctness, craft,
+  ai-antipatterns, dry, performance, backend, frontend, a11y, db, api-contract, tests -
+  each with its own rubric and scoped context. The selected reviewers run in parallel,
+  then a synthesis pass dedups overlapping findings, resolves conflicts by domain
+  ownership, calibrates severity, and emits one verdict. Sixteen stack packs add
+  language and framework specific signals from the repository's .review-pro/ directory.
+scope:
+  - global
+  - project
+tags:
+  - code-review
+  - subagents
+  - skills
+  - security
+  - ai-code
