@@ -1,0 +1,17 @@
+name: OpenCode Agent Harness
+repo: https://github.com/kulapoo/opencode-agent-harness
+tagline: Drop-in, skill-driven opencode harness: workflows, subagents, and conventions
+description: >
+  An opencode-native agent harness that consolidates skill-driven workflows,
+  subagent orchestration, standing rules, and tech-aware conventions for 20+
+  stacks into one drop-in .opencode/ configuration. Ships lifecycle slash
+  commands, four specialist subagents, an idempotent MANIFEST-gated installer,
+  and five stdlib-Python validation gates — no runtime dependencies.
+scope:
+  - project
+tags:
+  - harness
+  - skills
+  - workflow
+  - subagents
+  - conventions
