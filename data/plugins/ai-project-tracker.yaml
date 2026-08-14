@@ -1,0 +1,45 @@
+name: AI Project Tracker
+repo: https://github.com/Helixventures-AI/ai-project-tracker
+tagline: Real-time project progress tracker with dashboard, MCP, CLI and git-history import
+description: |
+  Tracks 7 development phases (research, setup, implementation, testing, docs, deployment, delivery) automatically from tool activity, and shows progress percentages, growth charts, ETA prediction, milestones and a bilingual (EN/FA) HTML dashboard.
+
+  - Zero npm dependencies, 100% local — data lives in the project (.opencode/project-tracker/state.json), nothing is uploaded
+  - Works beyond opencode: same state engine powers a CLI (pt), an MCP server (Claude Code, Cursor, Copilot, Claude Desktop) and Claude Code hooks
+  - Git-history import: `pt import-git` backfills all phases from past commits (honest timestamps, no fake growth)
+  - Notes with phase & weight: `pt note success "..." --phase deploy --weight 3` records retroactive scoring
+  - Installed via npm (`ai-project-tracker`) or local plugin file
+scope:
+  - global
+  - project
+tags:
+  - progress
+  - tracking
+  - dashboard
+  - mcp
+  - cli
+  - productivity
+homepage: https://github.com/Helixventures-AI/ai-project-tracker#readme
+installation: |
+  ### npm (easiest)
+  ```bash
+  npm i -g ai-project-tracker
+  ```
+
+  ### opencode
+  Add to `opencode.json`:
+  ```json
+  {
+    "plugin": ["ai-project-tracker"]
+  }
+  ```
+  or copy `project-tracker.ts` into `.opencode/plugins/`.
+
+  ### MCP (Claude Code, Cursor, Copilot)
+  Register `mcp/server.mjs` as a stdio server:
+  ```json
+  { "command": "node", "args": ["<path>/mcp/server.mjs"] }
+  ```
+
+  ### Claude Code hooks
+  Point `settings.json` hooks at `hooks/claude-code/pt-hook.mjs` (PostToolUse / SessionStart / UserPromptSubmit / Stop).
