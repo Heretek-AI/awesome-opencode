@@ -1,7 +1,7 @@
 name: Caspian
-repo: https://github.com/TryCaspian/caspian-sdk
+repo: https://github.com/TryCaspian/caspian-sdk/tree/main/packages/opencode
 tagline: Give your OpenCode agent an inbox — email, Telegram, and Discord
-description: Official Caspian plugin for OpenCode. Gives the agent a bidirectional inbox — email, Telegram, and Discord — with slash commands, session threading back to Gmail, and desktop notifications. No Caspian account required; on first start the plugin mints a sandbox project and provisions an agent email. Distributed via npm as caspian-opencode-plugin (lives in packages/opencode).
+description: Official Caspian plugin for OpenCode. Gives the agent a bidirectional inbox — email, Telegram, and Discord — with slash commands, session threading back to Gmail, and desktop notifications. No Caspian account required; on first start the plugin mints a sandbox project and provisions an agent email. Distributed via npm as caspian-opencode-plugin.
 scope:
   - global
   - project
