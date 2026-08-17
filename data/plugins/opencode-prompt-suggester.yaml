@@ -1,0 +1,4 @@
+name: Opencode Prompt Suggester
+repo: https://github.com/burningportra/opencode-prompt-suggester
+tagline: Intent-aware next-prompt ghost suggestions for OpenCode
+description: Drafts contextual next-prompt suggestions as ghost text in the empty prompt box after assistant turns finish. Accepts with Space or Right Arrow, powered by background repo intent discovery and adaptive steering.
