@@ -1462,6 +1462,15 @@ Also available for bat and Ghostty in the same repository.
 </details>
 
 <details>
+  <summary><b>opencode-roundtable</b> <img src="https://badgen.net/github/stars/NeoMei/opencode-roundtable" height="14"/> - <i>Multi-agent roundtable discussion skill with per-member model routing and meeting minutes</i></summary>
+  <blockquote>
+    A roundtable discussion (圆桌讨论) skill for opencode — TUI, CLI and Desktop. Pick members one by one via inline cards (role, persona, model — any provider); each member is a real subagent run via opencode run -m provider/model, a neutral host summarizes each round, and on termination a structured meeting-minutes Markdown file is written. Uses only built-in primitives — no plugin required.
+    <br><br>
+    <a href="https://github.com/NeoMei/opencode-roundtable">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
   <summary><b>Python Expert Agent for OpenCode</b> <img src="https://badgen.net/github/stars/amrahman90/python-expert-agent" height="14"/> - <i>Python Expert Agent toolkit for OpenCode with subagents and skills</i></summary>
   <blockquote>
     A custom configurable agent toolkit includes 1 Primary Custom Agent python-expert with intelligent skill loading, Predefined Specialized Subagents for Code generation, review, testing, and exploration, On-Demand Skills for Python development projects, Context Files for Standards, patterns, and security guidelines.
