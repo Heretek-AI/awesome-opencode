@@ -1,8 +1,9 @@
 name: OutageDeck MCP
 repo: https://github.com/outagedeck/mcp
-tagline: Live cloud and SaaS outage checks for OpenCode agents
-description: OutageDeck gives OpenCode agents live provider status, incident timelines,
-  and independent uptime history for 172 cloud and SaaS vendors. Its hosted remote
+tagline: Vendor-published cloud and SaaS outage checks for OpenCode agents
+description: OutageDeck gives OpenCode agents current provider status, incident timelines,
+  and observed uptime history for cloud and SaaS vendors, based on their official
+  status feeds. Its hosted remote
   MCP server connects without a package, daemon, account, or API key for public
   status checks, so an agent can rule out dependency outages before changing code.
 scope:
