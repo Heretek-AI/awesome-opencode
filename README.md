@@ -1253,6 +1253,15 @@ suggestions. All processing stays local by default — no data leaves the machin
 </details>
 
 <details>
+  <summary><b>WaveSpeed Skill</b> <img src="https://badgen.net/github/stars/WaveSpeedAI/wavespeed-cli" height="14"/> - <i>AI media generation via the wavespeed CLI</i></summary>
+  <blockquote>
+    Agent skill for generating and editing images, video, audio, and 3D through the WaveSpeed platform via the open-source wavespeed CLI: live model catalog search, per-model input-schema introspection, local-file upload with @path markers, and price quotes before running. Works out of the box — `wavespeed skill install` writes to `.claude/skills/`, one of the directories OpenCode loads skills from.
+    <br><br>
+    <a href="https://github.com/WaveSpeedAI/wavespeed-cli">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
   <summary><b>WakaTime</b> <img src="https://badgen.net/github/stars/angristan/opencode-wakatime" height="14"/> - <i>WakaTime integration</i></summary>
   <blockquote>
     WakaTime integration plugin for tracking coding activity in opencode sessions.
