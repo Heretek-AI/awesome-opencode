@@ -1,0 +1,4 @@
+name: OpenCode Async Prompt Injector
+repo: https://github.com/theOnlyBoy/opencode-async-prompt-injector
+tagline: "Slide a sticky note under your agent's nose: inject prompts mid-task without interrupting agent's flow."
+description: Injects prompts into your OpenCode agent mid-task — async, without interrupting its flow. Like a sticky note slid under the agent's nose while it's busy thinking. Drop a message via `/inject_prompt <your message>` — the agent picks it up the moment it's free to look, without you having to wait for the current task to finish.
