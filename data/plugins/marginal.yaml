@@ -1,0 +1,4 @@
+name: MARGINAL
+repo: https://github.com/SignalLayerLabs/Marginal
+tagline: Runtime governance for OpenCode that detects no-progress repetition and records local evidence.
+description: MARGINAL is a local-first runtime governor for AI coding agents with an OpenCode observe-only integration. It observes tool activity, detects proven no-progress repetition, and records decision evidence without blocking OpenCode actions.
