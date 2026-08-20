@@ -1,0 +1,11 @@
+name: aGiTrack
+repo: https://github.com/core-aix/agitrack
+tagline: Turns every agent turn into a traceable git commit, with a live dashboard
+description: A terminal tool that drives OpenCode (or Claude Code or Codex) and automatically commits each agent turn, recording the prompt, the model, and the token cost alongside the diff, so the AI's work leaves a clean and reviewable git history. Ships with a live web dashboard for browsing commits, sessions, and token spend.
+tags:
+  - cli
+  - git
+  - commits
+  - tokens
+  - dashboard
+  - opencode
