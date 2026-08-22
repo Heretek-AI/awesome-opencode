@@ -1488,6 +1488,15 @@ Also available for bat and Ghostty in the same repository.
   </blockquote>
 </details>
 
+<details>
+  <summary><b>ShipFrame</b> <img src="https://badgen.net/github/stars/juanitourquiza/shipframe" height="14"/> - <i>AI coding workflows for OpenCode, Claude Code, and Codex</i></summary>
+  <blockquote>
+    AI coding workflow toolkit with installable OpenCode skills, converted agents, project profiles, release evidence, and disciplined PR/MR workflows.
+    <br><br>
+    <a href="https://github.com/juanitourquiza/shipframe">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
 <br>
 <a href="https://github.com/awesome-opencode/awesome-opencode/blob/main/contributing.md"><b>➕ Add an Agent via PR</b></a>
 </details>
