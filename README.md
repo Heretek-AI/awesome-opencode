@@ -125,20 +125,20 @@
 </details>
 
 <details>
-  <summary><b>Background</b> <img src="https://badgen.net/github/stars/zenobi-us/opencode-background" height="14"/> - <i>Background process management</i></summary>
-  <blockquote>
-    Background process management plugin for opencode.
-    <br><br>
-    <a href="https://github.com/zenobi-us/opencode-background">🔗 <b>View Repository</b></a>
-  </blockquote>
-</details>
-
-<details>
   <summary><b>Background Agents</b> <img src="https://badgen.net/github/stars/kdcokenny/opencode-background-agents" height="14"/> - <i>Async agent delegation</i></summary>
   <blockquote>
     Claude Code-style background agents with async delegation and context persistence.
     <br><br>
     <a href="https://github.com/kdcokenny/opencode-background-agents">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
+  <summary><b>Background Process</b> <img src="https://badgen.net/github/stars/Ttg1ithub/opencode-background-process" height="14"/> - <i>Pure-Node background process management, UTF-8/GBK decoding on Windows, process-tree cleanup on exit</i></summary>
+  <blockquote>
+    Launch, monitor, read output, send stdin input, and kill long-running tasks in the background without blocking the session. Pure Node (no Bun), works on the desktop app. Windows-specific features: automatic UTF-8/GBK output decoding, taskkill-based process-tree cleanup, and processes auto-terminate when OpenCode exits. Replaces the archived zenobi-us/opencode-background.
+    <br><br>
+    <a href="https://github.com/Ttg1ithub/opencode-background-process">🔗 <b>View Repository</b></a>
   </blockquote>
 </details>
 
@@ -1099,6 +1099,15 @@ suggestions. All processing stays local by default — no data leaves the machin
     Instructions file that teaches LLMs how to avoid interactive shell commands that hang in non-TTY environments.
     <br><br>
     <a href="https://github.com/JRedeker/opencode-shell-strategy">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
+  <summary><b>Show Image</b> <img src="https://badgen.net/github/stars/Ttg1ithub/opencode-show-image" height="14"/> - <i>Display images inline in the conversation without vision-capable models</i></summary>
+  <blockquote>
+    Custom tool that shows local or remote images directly in the conversation via a local HTTP short-URL server. Works on desktop and web. No vision-capable model required and no terminal-graphics support needed. The AI copies a Markdown image line into its reply and the user sees the image inline; registration is persisted so historical URLs survive restarts.
+    <br><br>
+    <a href="https://github.com/Ttg1ithub/opencode-show-image">🔗 <b>View Repository</b></a>
   </blockquote>
 </details>
 
