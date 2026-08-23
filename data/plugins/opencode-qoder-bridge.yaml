@@ -1,0 +1,8 @@
+name: Qoder Bridge for OpenCode
+repo: https://github.com/naoufalelbani/opencode-qoder-bridge
+tagline: Use Qoder AI models in OpenCode via the official Qoder Agent SDK, with tools, MCP, sessions, and quota tracking.
+description: >
+  OpenCode plugin that integrates Qoder AI models through the official
+  Qoder Agent SDK. Provides dynamic model discovery, streaming, tool calling,
+  MCP integration, multimodal input, persistent sessions, live quota visibility,
+  and usage tracking.
