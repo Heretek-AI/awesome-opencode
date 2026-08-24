@@ -1,0 +1,8 @@
+name: OpenCode 2 Shell Tasks
+repo: https://github.com/madcpt/opencode2-shell-tasks
+tagline: Claude Code-style background shell jobs for OpenCode 2 (V2 plugin API)
+description: >-
+  Run long commands without blocking the current turn: detached processes that
+  return a task ID immediately, combined stdout/stderr logs with bounded tails,
+  exit-code reconciliation after a restart, process-group kill, and a native
+  /tasks TUI panel. Built on the OpenCode 2 V2 plugin API.
