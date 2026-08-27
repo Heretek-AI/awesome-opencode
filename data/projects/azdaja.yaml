@@ -1,0 +1,11 @@
+name: Azdaja
+repo: https://github.com/kubet/azdaja
+tagline: Bounded large-input analysis for OpenCode with a local evaluator and receipts
+description: A Rust CLI and OpenCode integration that keeps complete large UTF-8 inputs in a local evaluator, exposes bounded model-facing prompts, and verifies record coverage with hash-bound receipts.
+tags:
+  - cli
+  - large-context
+  - opencode
+  - receipts
+  - rust
+homepage: https://azdaja.dev
