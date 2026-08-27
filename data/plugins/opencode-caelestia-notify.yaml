@@ -1,0 +1,4 @@
+name: Opencode Caelestia Notify
+repo: https://github.com/Shanu-Kumawat/opencode-caelestia-notify
+tagline: Desktop notifications when opencode finishes or needs your attention
+description: Sends a system notification when opencode finishes responding, hits an error, or waits for permission or input. Shows the session name so you know which task it is, and skips the done notification when your terminal is already focused. Built and tested on Caelestia shell, works on any Hyprland/Wayland desktop. Zero dependencies, single file.
