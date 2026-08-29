@@ -1,0 +1,4 @@
+name: Opencode Autopilot Logbook
+repo: https://github.com/smapira/opencode-autopilot-logbook
+tagline: Auto-generates daily logbooks on session idle
+description: Automatically creates a daily logbook when a session becomes idle. Fetches the transcript, masks secrets and truncates before embedding, then prompts a new agent session to write artifacts/daily/YYYYMMDD_logbook.md. Supports custom templates, configurable output directory, throttle window, file-based daily limit with in-flight guard, and English-first output. Philosophy links OSS principles to social technical debt.
