@@ -1,0 +1,30 @@
+name: Image Reader Relay
+repo: https://github.com/massiveits/image-reader-relay
+tagline: Let text-only models read pasted images via a vision model (OpenCode plugin)
+description: |
+  OpenCode plugin that lets text-only models read images pasted into a session.
+  Stashes pasted images in memory, injects a note into the model's context only,
+  and registers a `read_image` tool the main model calls with its own question —
+  relaying the image to a configurable vision model in a throwaway session, then
+  cleaning up. Models that support images natively are left untouched.
+scope:
+  - global
+  - project
+tags:
+  - images
+  - vision
+  - multimodal
+  - productivity
+installation: |
+  ## Prerequisites
+  - OpenCode with a tool-capable main model
+  - Access to a vision model via one of your providers
+
+  ## Installation
+  Add to `opencode.json` (project) or `~/.config/opencode/opencode.json` (global):
+  ```json
+  {
+    "plugin": [
+      ["massiveits/image-reader-relay", { "model": "clinepass/cline-pass/mimo-v2.5" }]
+    ]
+  }
