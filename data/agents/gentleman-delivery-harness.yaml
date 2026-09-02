@@ -1,0 +1,4 @@
+name: Delivery Harness
+repo: https://github.com/LuisAlbertoMK/gentleman-agent-gh/tree/main/.agents/skills/delivery-harness
+tagline: Multi-agent orchestration harness (4-field contract)
+description: Orchestrate multi-agent work — break goals into work units, delegate with isolation, collect results, handle failures. Anti-rationalization flow with clean context per delegation (R2-1).

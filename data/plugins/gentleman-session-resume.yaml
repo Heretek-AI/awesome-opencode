@@ -1,0 +1,4 @@
+name: Session Resume
+repo: https://github.com/LuisAlbertoMK/gentleman-agent-gh/tree/main/.agents/skills/session-resume
+tagline: Session continuity — save/restore, git gate, Engram recall
+description: Session continuity — save/restore state, git gate, sparse skill pre-load, Engram recall. Dirty/ahead detection with 4-option handoff. Part of gentleman-agent-gh SDD suite.
