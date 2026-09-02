@@ -1,0 +1,12 @@
+name: heyGRC
+repo: https://github.com/better-isms/heygrc-plugin
+tagline: GRC compliance review for pull requests (ISO 27001, SOC 2, GDPR)
+description: >-
+  A portable setup skill that teaches OpenCode to install and configure heyGRC, compliance
+  review for pull requests: each PR is reviewed against ISO 27001, SOC 2, GDPR, DORA, NIS 2,
+  and the EU AI Act, grounded in the company profile, with inline findings, a neutral check run,
+  and a sticky summary. Reviews run server-side in the heyGRC GitHub App; the skill never
+  reviews code locally and never blocks a merge. Install: npx skills add better-isms/heygrc-plugin.
+  Public repositories are free. By Better ISMS (MIT).
+tags:
+  - skills
