@@ -1,0 +1,20 @@
+name: OpenCode Double Ctrl+C
+repo: https://github.com/tannerbruhn/opencode-double-ctrl-c
+tagline: Press ctrl+c twice to exit, like Claude Code and Codex CLI; one press clears the prompt
+description: >-
+  By default a single ctrl+c on an empty prompt quits the OpenCode TUI immediately, which is
+  easy to hit by reflex in a long session. This replicates the ctrl+c behaviour of Claude Code
+  and Codex CLI: with text in the prompt it clears the text, on an empty prompt it shows
+  "ctrl+c again to exit", and only a second press inside a short window actually exits. No
+  keybind changes are needed. The window length is configurable, and an option makes the first
+  press interrupt a running turn instead of arming the exit.
+scope:
+  - global
+  - project
+tags:
+  - keybindings
+  - ctrl-c
+  - exit
+  - claude-code
+  - ergonomics
+min_version: "1.18.18"

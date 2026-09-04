@@ -1,0 +1,21 @@
+name: OpenCode Compaction Meter
+repo: https://github.com/tannerbruhn/opencode-compaction-meter
+tagline: See compactions per session, tool calls per cycle and context room, live in the TUI
+description: >-
+  Shows whether compaction is letting work happen or just spinning. The prompt row and a
+  sidebar block report how many times the session has compacted, how many tool calls each
+  cycle got done before the next compaction, how much context room the current cycle
+  started with, and whether the last summary was truncated. Two consecutive low-work cycles
+  or a restart with little headroom turn the readout amber, which is what compaction thrash
+  looks like before it becomes obvious. Also flags whether a compaction was triggered by
+  provider overflow rather than the normal preflight check.
+scope:
+  - global
+  - project
+tags:
+  - compaction
+  - context-window
+  - tokens
+  - sidebar
+  - telemetry
+min_version: "1.18.18"
