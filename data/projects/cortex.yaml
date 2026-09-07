@@ -1,0 +1,4 @@
+name: Cortex
+repo: https://github.com/benogoulart/Cortex
+tagline: Codebase intelligence engine for coding agents via MCP
+description: Indexes your project into a structured knowledge graph of files, symbols and dependencies using tree-sitter AST parsing, and exposes it to OpenCode over MCP. Includes semantic search, dependency-graph context engine, architecture analysis, persistent project memory, task planning, and specialized agents (architect, reviewer, security, tester) producing unified reports. TypeScript, Node 22+, MIT.
