@@ -1,9 +1,9 @@
 name: OrcaReplay
 repo: https://github.com/Continuum-AI-Corp/OrcaReplay
-tagline: Record an OpenCode run, replay it offline byte-for-byte, fork it onto another model
+tagline: Record an OpenCode run, replay it offline with the network off, fork it onto another model
 description: >-
   Records an OpenCode session without modifying it, then replays that run with the network off
-  and reproduces it byte-for-byte, or forks it from any step so the model is the only thing that
+  and reproduces it with the network off, or forks it from any step so the model is the only thing that
   changed. Because OpenCode keeps its provider origin in opencode.json rather than an environment
   variable, there is nothing to redirect: the adapter terminates the TLS OpenCode opened itself
   using a per-run CA that only the launched process trusts and that is deleted when the run ends,
