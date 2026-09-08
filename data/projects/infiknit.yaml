@@ -1,0 +1,18 @@
+name: Infiknit
+repo: https://github.com/Synthenova/infiknit-mcp
+tagline: Local stdio launcher for Infiknit desktop image and video canvas workflows
+description: Connect OpenCode to Infiknit on this computer. Generate images and videos into a project or build canvas workflows. Keep Infiknit open. Cloud agents cannot reach it. Official registry io.github.Synthenova/infiknit.
+homepage: https://infiknit.app
+installation: |
+  Keep Infiknit open, then add a local stdio MCP server:
+
+  {
+    "mcp": {
+      "Infiknit": {
+        "type": "local",
+        "command": ["node", "plugins/infiknit/bin/infiknit-mcp.cjs"]
+      }
+    }
+  }
+
+  Clone https://github.com/Synthenova/infiknit-mcp and point the command at that launcher. Do not use a remote 127.0.0.1 URL.
