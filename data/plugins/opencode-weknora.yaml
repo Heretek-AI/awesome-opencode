@@ -1,0 +1,24 @@
+name: opencode-weknora
+repo: https://github.com/vicfei/opencode-weknora
+tagline: WeKnora knowledge retrieval tools — semantic search, document reading, and RAG answers over your own knowledge bases
+description: Connects opencode to a WeKnora deployment so the agent can ground its answers in your organization's documents. Four tools cover listing knowledge bases, hybrid vector+keyword search that returns passages verbatim, paged full-document reading, and a RAG ask tool that streams a cited answer. Scope can be restricted per knowledge base; credentials are WeKnora API keys.
+scope:
+  - global
+  - project
+tags:
+  - rag
+  - knowledge-base
+  - retrieval
+  - search
+  - weknora
+homepage: https://www.npmjs.com/package/opencode-weknora
+installation: |
+  Add the package to `opencode.json`:
+
+  ```json
+  {
+    "plugin": [["opencode-weknora", { "baseUrl": "https://weknora.example.com/api/v1", "apiKey": "wk-..." }]]
+  }
+  ```
+
+  Requires a WeKnora API key with `retrieve` (add `chat` for the ask tool).
