@@ -1,0 +1,4 @@
+name: Cortiq Router
+repo: https://github.com/infosave2007/cortiq-opencode-router
+tagline: Route user messages to configured models by task and complexity
+description: Native OpenCode plugin that uses Cortiq classification to select among explicitly configured provider/model targets before the response starts. Includes bounded classification timeouts, safe fallback, and live validation with a real provider and tool cycle.
