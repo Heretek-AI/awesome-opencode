@@ -1,0 +1,4 @@
+name: OpenCode Dashboard
+repo: https://github.com/touchkale/opencode-dashboard
+tagline: Single-file live token usage dashboard with zero dependencies
+description: A live usage dashboard served by one Python file — no framework, no build step, no dependencies. Token-first views of sessions, models, projects, tokens by changed file/subsystem, tokens per git commit, and a 52-week activity heatmap, with click-to-filter and JSON/CSV export.
