@@ -1,4 +1,4 @@
-name: Cortiq Router
+name: AllaiGate Model Router
 repo: https://github.com/infosave2007/cortiq-opencode-router
-tagline: Route user messages to configured models by task and complexity
-description: Native OpenCode plugin that uses Cortiq classification to select among explicitly configured provider/model targets before the response starts. Includes bounded classification timeouts, safe fallback, and live validation with a real provider and tool cycle.
+tagline: Use inexpensive models for simple tasks and stronger models for complex work with AllaiGate
+description: Automatically select models for OpenCode with AllaiGate and your own rules. Send simple tasks to inexpensive models and complex work to stronger models you have configured. OpenCode continues to manage provider credentials and tool execution.
