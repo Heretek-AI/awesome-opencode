@@ -1,0 +1,8 @@
+name: opencode-fold-tools
+repo: https://github.com/ningzimu/opencode-fold-tools
+tagline: Expand tool outputs on click, with one row per call and native file diffs.
+description: |
+  Keeps each OpenCode TUI tool call on its own line in conversation order.
+  Click to reveal output underneath while preserving the input summary,
+  or use Ctrl+O to toggle all matched rows. Retains native colored file diffs
+  and provides a full tool-record viewer. Includes npm installation and a GIF demo.
