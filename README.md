@@ -680,6 +680,15 @@ startup.
 </details>
 
 <details>
+  <summary><b>opencode-memd</b> <img src="https://badgen.net/github/stars/kryptohaker/opencode-memd" height="14"/> - <i>Persistent memory with fuzzy search, no vector DB or external dependencies</i></summary>
+  <blockquote>
+    Persistent memory across sessions and projects. Plain markdown files, fuzzy search with typo tolerance, memory compaction, tags, pruning, and export/import. Zero external dependencies.
+    <br><br>
+    <a href="https://github.com/kryptohaker/opencode-memd">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
   <summary><b>OpenCode Mission Control</b> <img src="https://badgen.net/github/stars/nigel-dev/opencode-mission-control" height="14"/> - <i>Command center for parallel agents — worktree isolation, DAG plans, merge train, PRs</i></summary>
   <blockquote>
     Orchestrates parallel OpenCode agents in tmux-isolated git worktrees with live inspection (capture/attach/diff), a dashboard overview, agent status reporting, and in-chat notifications. Supports DAG-based plans with autopilot/copilot/supervisor modes and a merge train with test gating and automatic rollback.
