@@ -1,0 +1,4 @@
+name: myc
+repo: https://github.com/aistastudio/myc
+tagline: Local task queue and decision memory for coding agents, wired into opencode with one command
+description: A local task-and-memory layer for coding agents (opencode, Claude Code, Codex, Kimi). One SQLite file next to the repo holds a task queue with dependencies, blockers and atomic claims, an oplog of decisions with hybrid search, and a code index; `myc wire` installs the opencode plugin and MCP server. No network calls of its own, no API key, MIT.
