@@ -1,0 +1,4 @@
+name: shunt-digest
+repo: https://github.com/masculinecache/shunt-digest
+tagline: AXI shunt for oversized tool output — stash full text, return a cheap-worker digest
+description: An opencode plugin implementing "shunt" (concept adapted from spotify/portal-ai-plugins) at tool-call granularity. When a bash tool result exceeds 350 lines or 50 KB, the full text is stashed durably (7-day TTL) and the session receives a digest from a cheap worker model (claude-haiku primary, nemotron fallback, byte-capped mechanical head/tail as last resort). Auth is resolved at runtime from opencode's own local provider config, so no keys, account IDs, or hostnames are stored anywhere. Optional companion levers from the same plugin: a chat.params maxOutputTokens cap and a terse-output system directive, both opt-in via env. Every hook is try/catch-wrapped because opencode core does not isolate hook errors — a throwing hook aborts the tool call, so degraded behavior is always pass-through.
