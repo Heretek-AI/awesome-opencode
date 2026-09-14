@@ -1,0 +1,4 @@
+name: Total Session Cost Tracker
+repo: https://github.com/StayPirate/opencode-total-session-cost
+tagline: Real-time cumulative cost tracker for parent and child sub-agent sessions
+description: A real-time, lightweight plugin that displays the actual cumulative cost of your active session and all recursive child sub-agent tasks directly inside the main prompt, even when the sidebar is closed.
