@@ -43,6 +43,8 @@
 | **[opencode-sdk-js](https://github.com/anomalyco/opencode-sdk-js)** | ![Stars](https://badgen.net/github/stars/anomalyco/opencode-sdk-js) | Official JavaScript/TypeScript SDK for opencode. |
 | **[opencode-sdk-go](https://github.com/anomalyco/opencode-sdk-go)** | ![Stars](https://badgen.net/github/stars/anomalyco/opencode-sdk-go) | Official Go SDK for opencode. |
 | **[opencode-sdk-python](https://github.com/anomalyco/opencode-sdk-python)** | ![Stars](https://badgen.net/github/stars/anomalyco/opencode-sdk-python) | Official Python SDK for opencode. |
+| [HostDeFi](https://hostdefi.com) | Free token-safety grades (A+–F) for Solana and EVM tokens; keyless REST API, 100 checks/day/IP | No | Yes |
+
 
 <br>
 
