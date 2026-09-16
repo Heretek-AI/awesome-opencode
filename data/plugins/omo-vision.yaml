@@ -1,0 +1,11 @@
+name: omo-vision
+repo: https://github.com/Gracdjd/omo-vision
+tagline: Zero-config vision bridge — lets text-only models act on pasted images
+description: Automatically saves pasted images to disk and injects a transient path hint, instructing the model to analyze them via the built-in look_at tool (multimodal-looker agent). Native-vision models are detected via model metadata and left untouched. Works with OhMyOpenCode out of the box — no external VLM API key or extra agent definition required — and is also configurable for vanilla OpenCode.
+installation: "Run `npx omo-vision` — or `npx github:Gracdjd/omo-vision`"
+tags:
+  - vision
+  - multimodal
+  - images
+  - oh-my-opencode
+  - subagent
