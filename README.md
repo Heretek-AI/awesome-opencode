@@ -1031,6 +1031,15 @@ suggestions. All processing stays local by default — no data leaves the machin
 </details>
 
 <details>
+  <summary><b>opencode-chrome-annotation</b> <img src="https://badgen.net/github/stars/eagleeyejack/opencode-chrome-annotation-extension" height="14"/> - <i>Point-and-click annotations for live webpages</i></summary>
+  <blockquote>
+    Chrome side panel that connects a tab to a local OpenCode session. Click an element on the live page, queue instructions with cropped screenshots and exact selectors, and send them all at once. Localhost-only; GPL-3.0 fork of JodusNodus/opencode-chrome-annotation.
+    <br><br>
+    <a href="https://github.com/eagleeyejack/opencode-chrome-annotation-extension">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
   <summary><b>Plugin Template</b> <img src="https://badgen.net/github/stars/zenobi-us/opencode-plugin-template" height="14"/> - <i>CICD setup for plugins</i></summary>
   <blockquote>
     Focuses on providing the CICD setup with generator script, release please, bun publish, npm trusted publishing, and mise tasks.
