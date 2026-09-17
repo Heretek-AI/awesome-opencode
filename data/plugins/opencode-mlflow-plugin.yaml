@@ -1,0 +1,8 @@
+name: opencode-mlflow-plugin
+repo: https://github.com/MunhozThiago/opencode-mlflow-plugin
+tagline: Track OpenCode session metrics and tool execution timings in MLflow.
+description: >-
+  Records OpenCode sessions as MLflow runs with message and tool counts,
+  tool execution timings, and agent, model, and provider tags. Connects to
+  a local MLflow tracking server for comparing session metrics. Available
+  on npm as opencode-mlflow-plugin.
