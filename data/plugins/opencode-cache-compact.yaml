@@ -1,0 +1,21 @@
+name: opencode-cache-compact
+repo: https://github.com/lennartschoch/opencode-cache-compact
+tagline: Cache-friendly compaction for locally hosted models
+description: >-
+  Replaces OpenCode's built-in compaction, which rebuilds the prompt from
+  scratch (no system prompt, no tools, history re-serialized) and therefore
+  cold-prefills the whole conversation. This plugin appends the summary turn
+  instead — a cache hit — and then rewrites only the outgoing message list down
+  to that summary, so a locally hosted model reuses its KV cache instead of
+  re-reading everything. Aimed at llama.cpp / LM Studio / vLLM setups where
+  prefilling a large context is the expensive part.
+scope:
+  - global
+  - project
+min_version: 1.17.9
+tags:
+  - context
+  - compaction
+  - prompt-cache
+  - local-models
+  - llama.cpp
