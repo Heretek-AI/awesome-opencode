@@ -1,0 +1,4 @@
+name: MetaMask Agent Wallet
+repo: https://github.com/MetaMask/agent-skills
+tagline: Self-custodial crypto wallet for AI agents, with spend limits and MEV protection
+description: Agent skills for the MetaMask `mm` CLI that give your agent a self-custodial wallet. Send, swap, bridge, trade perps on Hyperliquid and prediction markets on Polymarket, earn in yield vaults, and pay x402 APIs across EVM chains. You set spend limits, allowlisted protocols and a risk profile; every supported EVM transaction passes simulation, Blockaid threat scanning and MEV protection before signing.
