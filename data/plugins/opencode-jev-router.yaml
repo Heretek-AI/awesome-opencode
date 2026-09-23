@@ -1,0 +1,4 @@
+name: Jev Router
+repo: https://github.com/robertn702/opencode-jev-router
+tagline: Jev-selected reasoning effort for user-chosen GPT-6 models in OpenCode
+description: OpenCode plugin that uses Jev to choose reasoning effort per Responses request while keeping the user's selected GPT-6 Astra, Luna, or Sol model. Also includes an optional standalone Responses API proxy. Requires a Jev key and a separately configured upstream.
