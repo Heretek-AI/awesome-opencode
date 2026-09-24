@@ -1,0 +1,30 @@
+name: Sabi
+repo: https://github.com/vizuh/sabi
+tagline: Adaptive per-round inference routing for coding agents — model, effort and provider scheduled against the trajectory
+description: >
+  Sits between a coding harness and its model providers and makes a fresh
+  routing decision per inference round, not per session. Each round is
+  classified from trajectory state — round position, tool calls and their
+  results, failure evidence, context pressure — and a deterministic policy
+  maps class to tier (failure → strong, exploration → cheap, first-turn →
+  mid). An optional semantic judge (TypeSafe Jev) runs only on rounds the
+  policy cannot classify, and is fail-open. The harness loop is untouched.
+
+  Exposes an OpenAI-compatible local proxy at 127.0.0.1:8787/v1. From
+  OpenCode, `npm run connect:opencode` writes only a provider.sabi entry and
+  the adaptive alias is `sabi/sabi-code`; fixed baselines `sabi/sabi-cheap`,
+  `sabi/sabi-mid` and `sabi/sabi-strong` are available for comparison.
+  Borrowed-auth passthrough is supported: the harness keeps its own credential
+  and Sabi rewrites only model. Decisions and cost are inspectable via
+  `npm run report`.
+scope:
+  - global
+tags:
+  - proxy
+  - routing
+  - model-routing
+  - inference
+  - scheduling
+  - cost
+  - opencode
+homepage: https://github.com/vizuh/sabi/blob/main/docs/adapters/opencode.md
