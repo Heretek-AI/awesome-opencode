@@ -1,0 +1,9 @@
+name: OpenMate
+repo: https://github.com/bob-dawson/openmate
+tagline: Offline-first Android client for OpenCode, connect from anywhere
+description: Native Android (Kotlin/Compose) client for a self-hosted opencode server. Connects over your local network or automatically through a cloud relay, so you can reach your agent from anywhere. A lightweight Bridge streams incremental, seq-based sync from opencode's own database into a local copy on your phone, so you can read and reply to sessions offline. Supports opencode v2 only.
+tags:
+  - android
+  - mobile
+  - client
+  - offline
