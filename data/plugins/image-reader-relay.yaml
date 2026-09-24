@@ -28,3 +28,4 @@ installation: |
       ["massiveits/image-reader-relay", { "model": "clinepass/cline-pass/mimo-v2.5" }]
     ]
   }
+  ```
