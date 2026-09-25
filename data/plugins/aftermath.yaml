@@ -1,0 +1,51 @@
+name: Aftermath
+repo: https://github.com/moah0911/aftermath
+tagline: Post-failure recovery for agents — stop, revert cheap damage, return to last-known-good
+description: Aftermath is a post-failure recovery skill for OpenCode. When something breaks — a test suite goes green to red,
+  the same error recurs, a destructive command looms, or the user says "you broke it" — it stops forward motion,
+  reverts the actual bad hunk instead of patching around it, and returns the session to last-known-good.
+  Includes four intensity levels (lite/full/ultra/off), four slash commands (status, revert, audit, log),
+  and lifecycle tripwires for test failures, repeat errors, and destructive commands.
+
+scope:
+  - global
+  - project
+
+tags:
+  - productivity
+  - testing
+  - debugging
+  - safety
+
+installation: |
+  ## Prerequisites
+  - OpenCode 1.0.0 or later
+  - Node.js 18+
+  - git
+
+  ## Installation
+
+  ### Via curl (global)
+  ```bash
+  curl -fsSL https://raw.githubusercontent.com/moah0911/aftermath/main/scripts/install.sh \
+    | bash -s --
+  ```
+
+  ### Via npm
+  Add to your `opencode.json`:
+  ```json
+  { "plugin": ["@moah0911/aftermath"] }
+  ```
+
+  ### Project-only
+  ```bash
+  git clone https://github.com/moah0911/aftermath
+  node aftermath/scripts/install.js --project
+  ```
+
+  Restart OpenCode after installing (config loads at startup).
+
+  ## Removal
+  ```bash
+  node scripts/install.js --uninstall
+  ```
