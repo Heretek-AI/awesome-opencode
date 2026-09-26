@@ -1,0 +1,4 @@
+name: Shell Magazine
+repo: https://github.com/aiev/opencode-shell-magazine
+tagline: Real-time shell command monitor in the TUI sidebar
+description: Sidebar panel that tracks every shell command in real time. Reads the host shell registry and session.shell.* events for true status (running/exited/timeout/killed, exit code, PID, elapsed time), tails background output, backfills history from session messages, and offers kill, copy, open-output, and finish notifications. Multi-TUI safe through the host's atomic storage.

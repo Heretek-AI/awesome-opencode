@@ -1,0 +1,4 @@
+name: Cut
+repo: https://github.com/aiev/opencode-cut
+tagline: Clipboard-aware Ctrl+X cut for prompt and dialog inputs
+description: Makes Ctrl+X cut selected text in prompt and dialog inputs. Copies to the system clipboard first and deletes only after the write succeeds; leaves the input untouched if the selection or focused editor changes, and ignores repeated cut requests while a copy is pending.
