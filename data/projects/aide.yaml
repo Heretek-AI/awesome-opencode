@@ -1,0 +1,4 @@
+name: Aide
+repo: https://github.com/ragnarwestad/aide
+tagline: Spec-driven workflow as opencode skills, with a local dashboard that runs specs across projects
+description: Skills (/aide-create, /aide-analyze, /aide-implement, /aide-archive) that write each change as four Markdown files — description, analysis, solution, status — before any code, then implement it test-first. The installer sets the skills up for opencode alongside Claude Code, Codex and GitHub Copilot. A local dashboard queues specs across projects and runs each step headless on the model chosen for it, including opencode's provider/model models, and merges only once the project's tests pass.
