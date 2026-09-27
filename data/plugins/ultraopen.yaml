@@ -1,0 +1,4 @@
+name: ultraopen
+repo: https://github.com/PhillipChaffee/ultraopen
+tagline: Deterministic multi-agent workflow orchestration with resumable runs
+description: An OpenCode plugin for deterministic multi-agent workflow orchestration. A workflow is a plain JavaScript driver in which agent() is the only nondeterministic call, so fan-out, loops, and thresholds are real code — runs are reproducible and a failed run resumes from a journal instead of restarting finished agents. Install from npm with `opencode plugin ultraopen -g`.
