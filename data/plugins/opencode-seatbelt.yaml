@@ -1,0 +1,28 @@
+name: OpenCode Seatbelt
+repo: https://github.com/ssmirr/opencode-seatbelt
+tagline: macOS kernel sandbox that blocks agents from reading secrets via .ocignore
+description: Applies a macOS Seatbelt profile to the OpenCode process the moment the plugin loads, so every tool and child process (read, glob, grep, the shell, MCP servers, custom tools) is confined by the kernel. Patterns from .ocignore plus a built-in secret baseline are compiled to syscall-level rules instead of being matched against command text, so "tail" instead of "cat", symlinks, hardlinks, base64 and interpreters are all covered, and rename/unlink of protected files is blocked too. Requires macOS and OpenCode v2.
+scope:
+  - global
+  - project
+tags:
+  - security
+  - sandbox
+  - macos
+  - secrets
+min_version: "2.0.0"
+installation: |
+  Install from npm:
+
+  ```sh
+  opencode plugin add opencode-seatbelt
+  ```
+
+  Or add it to `opencode.json(c)` yourself:
+
+  ```jsonc
+  {
+    "$schema": "https://opencode.ai/config.json",
+    "plugins": ["opencode-seatbelt"]
+  }
+  ```
