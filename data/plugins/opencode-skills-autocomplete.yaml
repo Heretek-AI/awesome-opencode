@@ -1,0 +1,4 @@
+name: OpenCode Skills Autocomplete
+repo: https://github.com/a1exk-dev/opencode-skills-autocomplete
+tagline: Find and add skills to your OpenCode prompt from a searchable TUI menu.
+description: Lists discovered skills in the slash menu and a searchable dialog, inserting skill references at the cursor without submitting the prompt. Supports adding multiple skills and opening the list with a configurable keyboard shortcut.
