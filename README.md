@@ -1494,6 +1494,15 @@ Also available for bat and Ghostty in the same repository.
 
 <br>
 
+<details>
+  <summary><b>Kortix</b> <img src="https://badgen.net/github/stars/kortix-ai/suna" height="14"/> - <i>The open-source AI Management System, with the agent harness powered by OpenCode</i></summary>
+  <blockquote>
+    Kortix runs a workforce of agents from one git repo you own: agents, skills, company memory, connector config and triggers are files you can grep, diff and roll back. Every session boots its own isolated Linux machine, and finished work lands as a change request a human reviews as a diff. The agent harness is powered by OpenCode. Self-hosted on a laptop, VPS, VPC or on-prem — or managed cloud.
+    <br><br>
+    <a href="https://kortix.com">🔗 <b>View site</b></a>
+  </blockquote>
+</details>
+
 <div id="projects"></div>
 
 <details>
