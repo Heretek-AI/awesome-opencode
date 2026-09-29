@@ -1,0 +1,4 @@
+name: opencode-skills-tui
+repo: https://github.com/aihaipeng/opencode-skills-tui
+tagline: Browse available skills, track session loads, and preview SKILL.md in the OpenCode TUI
+description: OpenCode V2 TUI sidebar plugin that lists available skills, marks skills loaded in the current session, and opens a scrollable SKILL.md preview on click.
