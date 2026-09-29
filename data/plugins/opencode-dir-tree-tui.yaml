@@ -1,0 +1,4 @@
+name: opencode-dir-tree-tui
+repo: https://github.com/aihaipeng/opencode-dir-tree-tui
+tagline: Sidebar file tree with Git colors, wildcard hiding, auto-refresh, and system-default opening
+description: OpenCode V2 TUI plugin that adds an expandable workspace file tree with Git status colors, configurable name and wildcard hiding, automatic refresh, and system-default opening.
