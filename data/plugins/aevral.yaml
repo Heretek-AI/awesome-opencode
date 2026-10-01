@@ -1,0 +1,13 @@
+name: Aevral
+repo: https://github.com/better-isms/aevral-plugin
+tagline: AI security review for pull requests (access control, business logic, injection)
+description: >-
+  A portable setup skill that teaches OpenCode to install Aevral, AI security review for
+  pull requests: each PR is reviewed for access control, business logic, injection, XSS,
+  SSRF, path traversal, unsafe deserialization, token and session flaws, and
+  LLM-integration risks, with a suggested fix you apply. Reviews run server-side in the
+  Aevral GitHub App; the skill never reviews code locally and never blocks a merge.
+  Install: npx skills add better-isms/aevral-plugin. Public repositories are free.
+  By Better ISMS (MIT).
+tags:
+  - skills
