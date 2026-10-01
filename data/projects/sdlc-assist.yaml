@@ -1,0 +1,15 @@
+name: SDLC-Assist
+repo: https://github.com/PapiScholz/SDLC-Assist
+tagline: SDLC phase router skill - infers the phase from the repo, asks one question, hands off
+description: Agent skills that tell opencode which SDLC phase a request is in (analysis, planning, development, testing, deployment) from what the repo already contains, show the evidence, ask one confirmation and route to spec-driven-development, a QA gate and a release skill. Node only, no dependencies.
+scope:
+  - global
+tags:
+  - skills
+  - sdlc
+  - spec-driven-development
+installation: |
+  ```bash
+  cd ~ && npx skills add PapiScholz/SDLC-Assist
+  ```
+  Installs the skills into `~/.config/opencode/skills`. Optional `/sdlc-phase` command: copy `.opencode/command/sdlc-phase.md` from the repo to `~/.config/opencode/command/`.
