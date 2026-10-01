@@ -1,0 +1,4 @@
+name: opencode-serpapi
+repo: https://github.com/serpapi/opencode-serpapi
+tagline: Real-time web search for OpenCode via the SerpApi API
+description: Adds a native serpapi_search tool to OpenCode, giving it real-time access to Google, Amazon, YouTube, and 100+ other search engines through SerpApi, without manual MCP configuration.
