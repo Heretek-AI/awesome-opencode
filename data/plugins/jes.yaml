@@ -1,0 +1,4 @@
+name: jes
+repo: https://github.com/everafterlabs/jes
+tagline: Prompt-injection and jailbreak guardrails for AI agents, powered by decision models like Jev.
+description: OpenCode plugin from the open-source jes library. It checks the user prompt, each tool call before it runs and each tool result, sending every check to a decision model such as Jev, which outputs a classification, not text. Secrets and PII are redacted locally before any model sees them. The Jev checks call a hosted API and need a TYPESAFE_API_KEY.
