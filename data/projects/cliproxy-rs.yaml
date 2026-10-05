@@ -1,0 +1,4 @@
+name: cliproxy-rs
+repo: https://github.com/vayungodara/cliproxy-rs
+tagline: Use your Claude and ChatGPT accounts in OpenCode through one local endpoint, with each account's limits on a dashboard
+description: A Rust port of CLIProxyAPI. OpenCode points at it as an OpenAI-compatible custom provider, and it translates to the Anthropic, OpenAI and Gemini APIs while spreading requests across the accounts and API keys you already have. The built-in dashboard shows each Claude and Codex account's 5-hour and weekly limits. Reads CLIProxyAPI's config and auth files. MIT.
