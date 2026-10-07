@@ -1,0 +1,30 @@
+name: MrScraper
+repo: https://github.com/mrscraper-com/mrscraper-opencode-plugin
+tagline: Web scraping, structured data extraction, and Google search through the hosted MrScraper MCP server
+description: >-
+  OpenCode plugin that registers the hosted MrScraper MCP server
+  (https://mcp.mrscraper.com/mcp, OAuth 2.1) and four on-demand skills. Its
+  seven tools fetch raw page HTML, run managed structured extraction or site
+  mapping, search Google, rerun saved scrapers, read stored results, and report
+  account usage. The skills follow a fetch-first workflow that preserves raw
+  page content before adding backend extraction. A MrScraper account is
+  required.
+scope:
+  - global
+  - project
+tags:
+  - mcp
+  - web-scraping
+  - data-extraction
+  - google-search
+  - serp
+homepage: https://docs.mrscraper.com/docs/getting-started/mcp-server
+installation: |
+  ```bash
+  opencode plugin @mrscraper/opencode --global
+  opencode mcp auth mrscraper
+  ```
+
+  Or add `"plugin": ["@mrscraper/opencode"]` to `opencode.json`, then run
+  `opencode mcp auth mrscraper` to sign in. `opencode mcp list` shows
+  `mrscraper` as connected after sign-in.
