@@ -1,0 +1,67 @@
+name: OpenCode Indexing
+repo: https://github.com/Javierkaiser/opencode-indexing
+tagline: Semantic code search for OpenCode that reuses Kilo Code's index and keeps its own incremental one.
+description: |
+  Adds semantic (vector) code search to OpenCode. It reads Kilo Code's existing
+  index (Qdrant ws-* collections and Kilo's local LanceDB) without ever modifying
+  it, and can import those vectors and chunks at zero embedding cost, then keep
+  its own incremental index (Qdrant oc-* collections or embedded LanceDB) keyed
+  on a per-file SHA-256. Search merges results from both indexes, so semantic
+  search keeps working even when Kilo is not installed, is disabled, or its index
+  is stale.
+
+  - Reuse Kilo Code's index read-only, importing vectors without re-embedding
+  - Own incremental index with manifest-based freshness (new/changed/deleted only)
+  - Vector-store agnostic: Qdrant or embedded LanceDB
+  - Settings and index actions from the TUI, Desktop and web clients
+  - Supported embedding providers: Mistral, OpenAI, Ollama, Gemini, Voyage,
+    OpenRouter and any OpenAI-compatible endpoint
+scope:
+  - global
+tags:
+  - semantic-search
+  - code-search
+  - indexing
+  - embeddings
+  - qdrant
+  - lancedb
+homepage: https://github.com/Javierkaiser/opencode-indexing#readme
+installation: |
+  ## Prerequisites
+  - OpenCode v2 (plugin API `@opencode/plugin` 2.x)
+  - Node.js >= 22.6
+  - Optional: a Qdrant server and/or the `@lancedb/lancedb` module
+
+  ## Installation
+
+  ### Installer (recommended, cross-platform)
+
+  ```bash
+  # Linux / macOS
+  ./install.sh
+  # Windows
+  powershell -ExecutionPolicy Bypass -File .\install.ps1
+  # any platform (the wrappers call this)
+  node install.mjs
+  ```
+
+  ### From npm
+
+  ```bash
+  npm install @javierkaiser/opencode-indexing
+  ```
+
+  Then reference it from `opencode.json`:
+
+  ```jsonc
+  {
+    "plugins": [
+      { "package": "@javierkaiser/opencode-indexing" }
+    ]
+  }
+  ```
+
+  ## Configuration
+
+  Settings live in `~/.config/opencode/indexing.json` and are editable from
+  `/indexing-config` (any client) or the `/indexing` page (terminal TUI).
