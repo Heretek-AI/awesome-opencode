@@ -1,0 +1,7 @@
+name: yoink
+repo: https://github.com/MajidRaimi/yoink
+tagline: Connect an API-key provider to opencode and 12 other coding harnesses, and switch AI coding logins
+description: CLI and macOS menu bar app. Add a provider once (OpenAI, Kimi Code, Moonshot, OpenRouter, DeepSeek, z.ai, Ollama or any OpenAI- or Anthropic-compatible base URL), pick its models, and tick opencode; yoink writes the provider into ~/.config/opencode/opencode.json (or opencode.jsonc, edited in place), alongside pi, codex, Claude Code, Qwen Code, Kilo Code, Droid and others. It also saves and switches Claude Code, ChatGPT (Codex), Kimi Code, Gemini and GitHub Copilot logins.
+tags:
+  - providers
+  - cli
