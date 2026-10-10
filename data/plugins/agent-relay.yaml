@@ -12,6 +12,6 @@ tags:
 min_version: 1.18.3
 homepage: https://agentrelay.com
 installation: |
-  1. [Download and install Agent Relay Desktop](https://github.com/AgentWorkforce/relay-desktop#download), sign in, and keep it running.
+  1. [Download and install the latest Agent Relay Desktop release](https://github.com/AgentWorkforce/relay-desktop-releases/releases/latest), sign in, and keep it running.
   2. Add `@agent-relay/opencode-plugin` to the `plugin` array in `opencode.json`.
   3. Restart OpenCode, then add the session in the desktop's Sessions list.
