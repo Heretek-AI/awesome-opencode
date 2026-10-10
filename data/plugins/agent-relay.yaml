@@ -1,7 +1,7 @@
 name: Agent Relay
 repo: https://github.com/AgentWorkforce/skills/tree/main/plugins/opencode/agent-relay
 tagline: Connect OpenCode sessions to other coding agents through Agent Relay
-description: Lets Claude Code, Codex, Grok, and other agents message a running OpenCode 1.x session and read its reply through the local Agent Relay desktop.
+description: Lets Claude Code, Codex, Grok, and other agents message a running OpenCode V2 or 1.x session and read its reply through the local Agent Relay desktop.
 scope:
   - global
   - project
@@ -13,5 +13,5 @@ min_version: 1.18.3
 homepage: https://agentrelay.com
 installation: |
   1. [Download and install the latest Agent Relay Desktop release](https://github.com/AgentWorkforce/relay-desktop-releases/releases/latest), sign in, and keep it running.
-  2. Add `@agent-relay/opencode-plugin` to the `plugin` array in `opencode.json`.
+  2. Add `@agent-relay/opencode-plugin` to the `plugins` array in OpenCode V2's `opencode.json` (`plugin` on V1).
   3. Restart OpenCode, then add the session in the desktop's Sessions list.
