@@ -1,0 +1,4 @@
+name: Session Time
+repo: https://github.com/LazyGatto/opencode-session-time
+tagline: Session start / last answer timestamps and a clock
+description: Adds a wall clock to the prompt footer, a "Session" block to the sidebar with the session start time and the time of the last model answer, and a /time timeline panel with every turn's timing.
