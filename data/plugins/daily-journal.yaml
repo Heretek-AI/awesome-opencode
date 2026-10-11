@@ -1,0 +1,11 @@
+name: Daily Journal
+repo: https://github.com/jianzhangg/opencode-daily-journal
+tagline: Auto-journal every conversation into daily/YYYY-MM-DD.md, record-only (never injects)
+description: >-
+  An OpenCode V2 plugin that keeps a daily journal of your conversations. When a session turn
+  finishes, the exchange is summarized into a diary entry and appended to daily/YYYY-MM-DD.md.
+  Record only, never inject: entries are plain Markdown on disk and are never added to session
+  context unless you explicitly ask the agent to read them. Writes are concurrency-safe (file lock
+  + append-only + idempotent markers, so simultaneous sessions never overwrite or duplicate each
+  other), and summaries use a model fallback chain (session model, then other configured models,
+  then a raw excerpt) so nothing is lost when a model is unavailable.
