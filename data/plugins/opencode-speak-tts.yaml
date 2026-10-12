@@ -1,0 +1,4 @@
+name: Speak TTS
+repo: https://github.com/fahrim/opencode-speak-tts
+tagline: Free neural voices, no API key
+description: Reads OpenCode answers aloud on Windows using Microsoft's free Edge neural voices. Condenses long answers through the model you already have connected, and falls back to the built-in Windows voice when Edge is unreachable.
