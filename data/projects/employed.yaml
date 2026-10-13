@@ -1,0 +1,23 @@
+name: Employed by Guaq AI
+repo: https://github.com/Guaq-AI/employed-plugins
+tagline: Live job search MCP server and skills for OpenCode, from about 5,000 verified employer ATS boards
+description: Remote MCP server plus Agent Skills for searching live job postings read from employers' own applicant-tracking systems, researching an employer's hiring and tracking applications. Signs in with OAuth through opencode mcp auth, so no API key is needed. Every result links to the employer's own apply page.
+scope:
+  - global
+  - project
+tags:
+  - mcp
+  - skills
+  - jobs
+homepage: https://jobs.guaqai.me/connectors
+installation: |
+  Add the server to `opencode.json`, then run `opencode mcp auth employed` to sign in:
+
+  ```json
+  {
+    "$schema": "https://opencode.ai/config.json",
+    "mcp": { "employed": { "type": "remote", "url": "https://jobs.guaqai.me/mcp" } }
+  }
+  ```
+
+  For the job-search skills, copy the repository's `skills/*` into `.agents/skills/`.
