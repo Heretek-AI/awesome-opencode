@@ -1,0 +1,9 @@
+name: opencode-pre-tool-review
+repo: https://github.com/yehweihsu/opencode-pre-tool-review
+tagline: Model-assisted pre-execution review for OpenCode V2 tool permissions
+description: >
+  Experimental OpenCode V2 plugin that reviews tool permission checks
+  using a configurable reviewer model before execution. Integrates
+  with OpenCode's native permission system, supports conservative
+  read-only whitelisting, and offers user-confirmed one-time releases
+  for blocked actions.
