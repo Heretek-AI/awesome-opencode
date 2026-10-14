@@ -25,6 +25,7 @@ tags:
   - embeddings
   - qdrant
   - lancedb
+min_version: 2.0.0
 homepage: https://github.com/Javierkaiser/opencode-indexing#readme
 installation: |
   ## Prerequisites
