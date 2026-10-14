@@ -1,0 +1,8 @@
+name: Pixeltable Developer MCP
+repo: https://github.com/pixeltable/mcp-server-pixeltable-developer
+tagline: Local MCP server for Pixeltable applications
+description: Local MCP server for Pixeltable, a multimodal data store with incremental computed columns and embedding search for agents.
+tags:
+  - mcp-server
+  - multimodal
+  - database
