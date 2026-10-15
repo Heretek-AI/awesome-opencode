@@ -1,0 +1,4 @@
+name: Agent Nexus
+repo: https://github.com/Strategiumfinancepartner/AgentNexus
+tagline: Remote MCP registry of 700+ APIs, MCP servers and CLIs, each live-probed so agents pick tools that actually work
+description: Remote MCP server and discovery registry for AI agents. Every entry (APIs, MCP servers, CLIs) is continuously probed for liveness, capability and response schema, so an agent can search, compare and pick a tool based on live evidence instead of a README. Agents can also follow an entry and get alerted when it goes down or changes shape. Works with opencode via remote URL (https://agentnexus.app/api/public/mcp, free tier without key) and publishes a ready-to-use config at https://agentnexus.app/.well-known/opencode.
