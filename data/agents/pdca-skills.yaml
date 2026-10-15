@@ -1,0 +1,44 @@
+name: PDCA Skills
+repo: https://github.com/AlexeyShirshov/skills
+tagline: "PDCA orchestration skills: PLAN → DO → CHECK → ACT with evidence-based verification"
+description: |
+  A family of four OpenCode skills that drive a task through a PDCA cycle
+  (PLAN → DO → CHECK → ACT) with transition gates, evidence-based verification,
+  escalation accounting, durable status, and recovery after compaction.
+
+  - **pdca** — domain-neutral cycle; the task's PLAN selects the means and the verification method.
+  - **pdca-coder** — stack-agnostic executor for software tasks (code, tests, docs, refactoring, config).
+  - **pdca-dotnet** — the same cycle tuned for .NET/C# repositories.
+  - **pdca-collection** — a batch of tasks run as parallel PDCA lanes (worktree per group, `--no-ff` merge of completed groups).
+
+  Roles (planner, coder, check, scout, escalate) are bound by the host, so the
+  skills stay model- and provider-neutral.
+scope:
+  - global
+  - project
+tags:
+  - skills
+  - pdca
+  - orchestration
+  - subagents
+  - workflow
+  - verification
+min_version: "1.0.0"
+installation: |
+  Copy the skills you want into an OpenCode skills directory.
+
+  Global (all projects):
+  ```sh
+  git clone https://github.com/AlexeyShirshov/skills
+  cp -r skills/opencode/pdca skills/opencode/pdca-coder \
+        skills/opencode/pdca-dotnet skills/opencode/pdca-collection \
+        ~/.config/opencode/skills/
+  ```
+
+  Per project:
+  ```sh
+  mkdir -p .opencode/skills
+  cp -r skills/opencode/pdca* .opencode/skills/
+  ```
+
+  Invoke a skill by name, for example `pdca-coder` for "by the cycle" code tasks.
