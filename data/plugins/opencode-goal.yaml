@@ -1,0 +1,20 @@
+name: Goal
+repo: https://github.com/KelpHect/opencode-goal
+tagline: Persistent /goal mode that keeps a session working across turns
+description: >-
+  A port of OpenAI Codex's /goal for OpenCode v2. Registers a /goal command plus
+  create_goal/get_goal/update_goal tools. The session keeps re-prompting itself
+  until the objective is complete, with token budgets, completion audits, and a
+  bundled goal skill.
+scope:
+  - global
+  - project
+tags:
+  - workflow
+  - agents
+min_version: "2.0.0"
+install: |
+  ```bash
+  opencode plugin add github:KelpHect/opencode-goal
+  ```
+  Pin a release with `github:KelpHect/opencode-goal#v0.2.1`.
