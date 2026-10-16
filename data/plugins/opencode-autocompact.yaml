@@ -1,0 +1,50 @@
+name: OpenCode Autocompact
+repo: https://github.com/N0K0/opencode-autocompact
+tagline: Per-session autocompact — /autocompact 500k compacts a session and its children early
+description: >-
+  Claude Code's autocompact, with a knob. Compacts a session before the model's real context
+  limit, at a token count you choose per session. OpenCode's built-in auto-compaction is
+  configured globally and only relative to the model limit, so on a 256K or 1M context model
+  it kicks in very late; this adds an earlier, deliberate ceiling for one session and its
+  children, useful for cheaper requests, more headroom for large tool results, or a shorter
+  tail for the summarizer. Thresholds are inherited by subagents by walking the parentID
+  chain, `/autocompact off` reverts to normal behaviour, and with no threshold set the plugin
+  has zero footprint. When a threshold applies, a chip joins the prompt footer and a side
+  panel shows the numbers. Tested against 2.0.24.
+scope:
+  - global
+  - project
+tags:
+  - context
+  - compaction
+  - tokens
+  - tui
+min_version: "2.0.0"
+installation: |
+  ## Install
+
+  ```sh
+  opencode plugin add @hacky.software/opencode-autocompact
+  ```
+
+  Or list it in `opencode.json`:
+
+  ```json
+  {
+    "$schema": "https://opencode.ai/config.json",
+    "plugins": ["@hacky.software/opencode-autocompact"]
+  }
+  ```
+
+  ## Usage
+
+  ```
+  /autocompact 500k      # compact this session (and its children) at 500k tokens
+  /autocompact 500000    # same, plain count
+  /autocompact 1m        # suffix form
+  /autocompact           # report the effective threshold and the model's limit
+  /autocompact off       # revert this session (and descendants) to normal auto-compaction
+  ```
+
+  No configuration is required. The plugin does nothing until a threshold is set for a
+  session or one of its ancestors.
