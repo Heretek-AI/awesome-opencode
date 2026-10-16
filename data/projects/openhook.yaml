@@ -1,0 +1,9 @@
+name: Openhook
+repo: https://github.com/openhook-dev/openhook-inbox
+tagline: Give OpenCode a callback inbox to test webhook integrations through MCP.
+description: >-
+  Open-source callback inbox with a hosted Streamable HTTP MCP endpoint and
+  an OpenCode setup recipe. Create a disposable inbox, wait for a webhook,
+  inspect the received body and headers, then clean up the test inbox.
+  Private per-inbox tokens control access to captured events. Also supports
+  email and DNS capture, with self-hosting available.
