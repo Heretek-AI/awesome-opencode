@@ -1,0 +1,4 @@
+name: SourcePier
+repo: https://github.com/happyeric77/sourcepier
+tagline: Persistent project documents across OpenCode sessions
+description: Manage project-scoped Markdown documents in the OpenCode v2 native TUI. Import, search, edit, and export Sources across sessions, while agents can discover and read them through read-only tools.
