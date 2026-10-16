@@ -1,0 +1,7 @@
+name: JustSessions
+repo: https://github.com/yangzichao/JustSessions
+tagline: Native Mac workspace for finding, reading, and resuming OpenCode sessions.
+description: >-
+  Groups OpenCode and other coding-agent sessions by project, with searchable
+  conversation history and embedded terminals that preserve the original CLI.
+  Requires macOS 14 or later, Apple Silicon, and an installed, authenticated CLI.
