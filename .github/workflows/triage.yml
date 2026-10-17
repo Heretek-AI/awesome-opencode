@@ -1,0 +1,43 @@
+# Labels PRs (needs-v2 / needs-metadata / needs-human / ready, plus category) and keeps one comment
+# with the check results up to date.
+#
+# Security: pull_request_target runs with a write token, so this workflow checks out the BASE branch
+# only. PR files are fetched through the API and parsed as data; PR code is never executed here.
+name: Triage PR
+
+on:
+  pull_request_target:
+    types: [opened, synchronize, reopened, ready_for_review]
+
+permissions:
+  contents: read
+  pull-requests: write
+  issues: write
+
+concurrency:
+  group: triage-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  triage:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout base branch
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Label and comment
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: node scripts/triage.js --pr "$PR_NUMBER"

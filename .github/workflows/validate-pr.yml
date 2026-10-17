@@ -1,39 +1,49 @@
-name: Validate PR YAML Files
+# The required "validate" status check. Runs on every PR (including README-only and non-data PRs, so
+# hand edits to generated files get feedback) and on workflow_dispatch, which bot workflows use to
+# attach the check to branches they push with GITHUB_TOKEN.
+name: Validate PR
 
 on:
   pull_request:
-    paths:
-      - 'data/**'
+  workflow_dispatch:
 
 permissions:
   contents: read
 
+concurrency:
+  group: validate-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
 jobs:
   validate:
+    name: validate
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+          persist-credentials: false
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
-          node-version: '20'
+          node-version: '24'
+          cache: npm
 
       - name: Install dependencies
         run: npm ci
 
-      - name: Get changed YAML files
-        id: changed-files
-        uses: tj-actions/changed-files@v44
-        with:
-          files: |
-            data/**/*.yaml
+      - name: Unit tests
+        run: npm test
 
-      - name: Validate YAML files
+      - name: Check catalog changes
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          BASE_REF: ${{ github.event.pull_request.base.sha || 'origin/main' }}
+        run: node scripts/check-pr.js --base "$BASE_REF"
+
+      - name: README and registry still generate
         run: |
-          if [[ -n "${{ steps.changed-files.outputs.all_changed_files }}" ]]; then
-            node scripts/validate.js ${{ steps.changed-files.outputs.all_changed_files }}
-          else
-            echo "No YAML files changed, skipping validation"
-          fi
+          node scripts/generate-readme.js
+          node scripts/export-json.js --output "$RUNNER_TEMP/registry.json"

@@ -6,6 +6,8 @@ on:
       - main
     paths:
       - 'data/**'
+      - 'templates/**'
+      - 'scripts/**'
   workflow_dispatch:
 
 permissions:
@@ -21,15 +23,18 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           ref: ${{ github.ref }}
+          # Full history: "Recently added" is derived from when each entry file was first committed
+          fetch-depth: 0
           persist-credentials: true
 
-      - name: Setup Node.js 20
-        uses: actions/setup-node@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
         with:
-          node-version: '20'
+          node-version: '24'
+          cache: npm
 
       - name: Install dependencies
         run: npm ci
@@ -46,6 +51,7 @@ jobs:
             git fetch origin main
             git reset --hard origin/main
 
+            # Both scripts validate the whole catalog and exit non-zero without writing on any error
             node scripts/generate-readme.js
             node scripts/export-json.js --pretty --output dist/registry.json
 
