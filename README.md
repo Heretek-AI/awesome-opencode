@@ -2027,6 +2027,15 @@ template (cowork-with-github). Install: drag-and-drop .plugin into Cowork.
 </details>
 
 <details>
+  <summary><b>SuperLocalMemory</b> <img src="https://badgen.net/github/stars/qualixar/superlocalmemory" height="14"/> - <i>The governed memory brain for every AI agent. It lives on your machine.</i></summary>
+  <blockquote>
+    Local-first memory for AI agents, added to OpenCode as an MCP server in opencode.json. It recalls what was saved, keeps it true over time, and answers that it does not have the answer instead of guessing.
+    <br><br>
+    <a href="https://github.com/qualixar/superlocalmemory">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
   <summary><b>SwarmClaw</b> <img src="https://badgen.net/github/stars/swarmclawai/swarmclaw" height="14"/> - <i>Self-hosted multi-agent runtime with first-class OpenCode delegation</i></summary>
   <blockquote>
     Self-hosted runtime for autonomous AI agents with heartbeats, schedules, delegation, memory, runtime skills, and reviewed conversation-to-skill learning. Orchestrates OpenCode alongside Claude Code, Codex, Gemini CLI, Copilot CLI, Cursor Agent, Goose, Qwen Code, Droid, and 20+ LLM providers. Ships as an Electron desktop app, CLI, and Docker image. MCP-native (server and client). MIT, TypeScript.
