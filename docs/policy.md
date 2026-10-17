@@ -58,7 +58,7 @@ A weekly scout searches npm for packages published since V2 shipped that depend 
 | Workflow | When | What |
 | :--- | :--- | :--- |
 | `validate-pr.yml` | every PR | Required `validate` check |
-| `triage.yml` | PR opened/updated | Labels and a results comment (base-branch code only) |
+| `triage.yml` | PR opened/updated | Labels and a results comment (base-branch code only). `needs-human` is only ever removed by a maintainer |
 | `generate-readme.yml` | push to main | README.md and dist/registry.json; fails without writing on any invalid entry. The regenerated commit goes through a bot PR (`bot/readme-*`) that merges itself once `validate` passes |
 | `site.yml` | push to main, daily | Search site on GitHub Pages |
 | `health.yml` | daily | Health report issue, rename and removal PRs |
