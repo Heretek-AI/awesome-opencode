@@ -1,0 +1,8 @@
+name: Generative Media Skills
+repo: https://github.com/SamurAIGPT/Generative-Media-Skills
+tagline: Multi-modal AI media generation skills
+description: "13 OpenCode-native skills for image, video, and audio generation powered by 100+ AI models (FLUX, Midjourney v7, Veo3, Kling 3.0, Suno, HunyuanVideo). Includes expert skills: Cinema Director, Nano-Banana image generation, UI Designer, Logo Creator, UGC Video Factory, AI Clipping, and more. Clone the repo and skills auto-load from .opencode/skills/."
+kind: skill
+topics:
+  - media
+compat: n/a
