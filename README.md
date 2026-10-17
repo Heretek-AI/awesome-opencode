@@ -179,15 +179,6 @@
 </details>
 
 <details>
-  <summary><b>clm-context</b> <img src="https://badgen.net/github/stars/masculinecache/clm-context" height="14"/> - <i>CLM self-managed context plugin for opencode</i></summary>
-  <blockquote>
-    CLM self-managed context plugin for opencode — live-context mirror, edit gate, and token budget (implements the Context Language Models protocol).
-    <br><br>
-    <a href="https://github.com/masculinecache/clm-context">🔗 <b>View Repository</b></a>
-  </blockquote>
-</details>
-
-<details>
   <summary><b>Command Inject</b> <img src="https://badgen.net/github/stars/shihyuho/opencode-command-inject" height="14"/> - <i>Auto-inject project commands into OpenCode</i></summary>
   <blockquote>
     Automatically discovers and injects Makefile targets, npm/pnpm/yarn/bun scripts, and local skills at startup. Type / to see and run all project commands.
