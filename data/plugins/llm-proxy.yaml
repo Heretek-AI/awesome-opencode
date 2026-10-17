@@ -26,8 +26,10 @@ installation: |
 
   ```json
   {
-    "plugin": ["opencode-llm-proxy"]
+    "plugins": ["opencode-llm-proxy"]
   }
   ```
+
+  This is the OpenCode V2 key. On OpenCode V1, use `"plugin": ["opencode-llm-proxy"]` instead; the package supports both.
 
   The proxy starts automatically on `http://127.0.0.1:4010`.
