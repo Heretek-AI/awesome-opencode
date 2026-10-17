@@ -1,0 +1,4 @@
+name: claudex-switch
+repo: https://github.com/Holden-Lin/claudex-switch
+tagline: OpenCode V1 Go profiles share session history; experimental V2 profiles isolate credentials and history
+description: "Source-available CLI for OpenCode V1 Go account aliases and provider-reported quotas. V1 profiles share normal session history; experimental V2 profiles keep credentials and SQLite history per alias. Also supports Claude Code and Codex. Licensed under MIT + Commons Clause v1.0: ordinary work use is allowed, but charging third parties for products or services whose value derives entirely or substantially from this tool requires separate permission."
