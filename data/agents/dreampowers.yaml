@@ -1,0 +1,8 @@
+name: dreampowers
+repo: https://github.com/skyfiredao/dreampowers
+tagline: 13 skills for Chinese novel writing, from story ideation to finished manuscript
+description: "A pure-skill set for Chinese fiction writing: 13 specialized skills covering every stage from ideation to manuscript, with checks against worldbuilding info-dumps, reader-perspective testing and AI-flavor removal."
+kind: skill
+topics:
+  - domain
+compat: n/a
