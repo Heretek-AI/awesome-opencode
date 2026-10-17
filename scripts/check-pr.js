@@ -1,7 +1,9 @@
 #!/usr/bin/env node
 /**
  * The required "validate" check for pull requests.
- * Usage: node scripts/check-pr.js --base <git-ref> [--no-probe]
+ * Usage: node scripts/check-pr.js --base <git-ref> [--no-probe] [--allow-generated]
+ *
+ * --allow-generated is passed only for the README bot's own staged commits (see generate-readme.yml).
  *
  * Compares HEAD against the merge base with <git-ref>, analyzes the changed files, writes a report to
  * $GITHUB_STEP_SUMMARY (when set) and exits 1 on any blocking problem.
@@ -11,7 +13,7 @@ const fs = require('fs');
 const path = require('path');
 const { execFileSync } = require('child_process');
 const { loadCatalog } = require('./utils/catalog');
-const { DATA_FILE_RE, analyzePullRequest, formatReport } = require('./utils/pr-checks');
+const { DATA_FILE_RE, GENERATED_FILES, analyzePullRequest, formatReport } = require('./utils/pr-checks');
 
 const ROOT = path.join(__dirname, '..');
 const git = (...args) => execFileSync('git', args, { cwd: ROOT, encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 });
@@ -20,7 +22,8 @@ function parseArgs(argv) {
   const baseIndex = argv.indexOf('--base');
   return {
     base: baseIndex !== -1 ? argv[baseIndex + 1] : 'origin/main',
-    probe: !argv.includes('--no-probe')
+    probe: !argv.includes('--no-probe'),
+    allowGenerated: argv.includes('--allow-generated')
   };
 }
 
@@ -42,7 +45,7 @@ function changedFiles(mergeBase) {
 }
 
 async function main() {
-  const { base, probe } = parseArgs(process.argv.slice(2));
+  const { base, probe, allowGenerated } = parseArgs(process.argv.slice(2));
   const mergeBase = git('merge-base', base, 'HEAD').trim();
   const changes = changedFiles(mergeBase);
 
@@ -61,6 +64,7 @@ async function main() {
   const baseEntries = entries.filter(e => !changedPaths.has(e.file));
 
   const result = await analyzePullRequest({ changes, baseEntries, probe });
+  if (allowGenerated) result.errors = result.errors.filter(e => !GENERATED_FILES.includes(e.file));
   // Unparseable files anywhere in the catalog break README generation, so they always block
   for (const err of loadErrors) {
     if (!result.errors.some(e => e.file === err.file)) result.errors.push({ ...err, kind: 'metadata' });

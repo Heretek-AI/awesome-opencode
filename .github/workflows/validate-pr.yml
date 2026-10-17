@@ -41,7 +41,14 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
           BASE_REF: ${{ github.event.pull_request.base.sha || 'origin/main' }}
-        run: node scripts/check-pr.js --base "$BASE_REF"
+          # The README bot stages its regenerated README on bot/readme-* and dispatches this check
+          ALLOW_GENERATED: ${{ github.event_name == 'workflow_dispatch' && github.actor == 'github-actions[bot]' && startsWith(github.ref_name, 'bot/readme-') }}
+        run: |
+          if [ "$ALLOW_GENERATED" = "true" ]; then
+            node scripts/check-pr.js --base "$BASE_REF" --allow-generated
+          else
+            node scripts/check-pr.js --base "$BASE_REF"
+          fi
 
       - name: README and registry still generate
         run: |

@@ -49,13 +49,17 @@ Removal PRs are reviewed like any other PR; closing one keeps the entries until 
 
 A weekly scout searches npm for packages published since V2 shipped that depend on `@opencode/*`, keeps public, licensed, non-archived, non-fork repositories that are not already listed or in an open PR, and ranks them by weekly downloads, then stars. It posts a **Scout** issue; a maintainer ticking a candidate's box makes the bot open a PR for it. Add a package or repo to [`discovery/declined.txt`](../discovery/declined.txt) to stop suggesting it.
 
+## Branch protection
+
+`main` has a ruleset: every commit that lands on it must have a passing `validate` check, and force-pushes and deletion are blocked. Contributors and maintainers get the check through pull requests; bots get it by dispatching `validate` on their branch. Repository admins can merge a PR whose check is failing or pending (for a broken CI), but cannot push unvalidated commits directly.
+
 ## Automation map
 
 | Workflow | When | What |
 | :--- | :--- | :--- |
 | `validate-pr.yml` | every PR | Required `validate` check |
 | `triage.yml` | PR opened/updated | Labels and a results comment (base-branch code only) |
-| `generate-readme.yml` | push to main | README.md and dist/registry.json; fails without writing on any invalid entry |
+| `generate-readme.yml` | push to main | README.md and dist/registry.json; fails without writing on any invalid entry. The regenerated commit is staged on `bot/readme-*`, validated, then fast-forwarded onto main |
 | `site.yml` | push to main, daily | Search site on GitHub Pages |
 | `health.yml` | daily | Health report issue, rename and removal PRs |
 | `reprobe.yml` | daily | Re-checks `needs-v2` PRs |
