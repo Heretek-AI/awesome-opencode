@@ -1,0 +1,16 @@
+name: Infer Client Examples
+repo: https://github.com/tarunspandit/infer-client-examples
+homepage: https://infer.flow7.org/opencode
+tagline: OpenCode configurations for Infer's GPT-6 Astra and GPT-5.6 Sol models
+description: Configures Infer as a custom Responses API provider in OpenCode using an environment-based key. Includes Astra and Sol selectors, a standard-library Python client with an output-token cap, and offline tests. Live usage requires paid Infer wallet credit.
+kind: config
+topics:
+  - providers
+compat: n/a
+scope:
+  - global
+  - project
+tags:
+  - configuration
+  - provider
+  - responses-api

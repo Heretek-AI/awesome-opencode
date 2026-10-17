@@ -1,4 +1,9 @@
 name: OpenCode Swarm
-repo: https://github.com/zaxbysauce/opencode-swarm
+repo: https://github.com/ZaxbyHub/opencode-swarm
 tagline: Verification-gated swarm with architect, review, test, and security agents
 description: Verification-gated OpenCode swarm with architect planning, independent review, test engineering, security checks, and resumable evidence.
+kind: plugin
+topics:
+  - orchestration
+  - code-quality
+compat: v2

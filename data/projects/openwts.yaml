@@ -1,0 +1,30 @@
+name: openwts
+repo: https://github.com/atpaawej/openwts
+tagline: Isolated git worktrees for AI coding agents — opencode, Claude Code, and more
+description: |-
+  Stop context-switching. openwts creates isolated git worktrees for each task
+  and opens your AI coding agent inside them — no stashing, no partial commits,
+  no "what branch was I on?"
+
+  One command — `openwts opencode hotfix` — creates a worktree, opens opencode
+  inside it, and cleans up when you exit. Jump between tasks like it's nothing.
+
+  Features
+  - Agent-agnostic: opencode, Claude Code, and any AI CLI on PATH
+  - Auto-detects opencode, falls back to an interactive picker
+  - Works on all platforms: Linux, macOS, Windows
+  - Manifest tracking — never touches worktrees it didn't create
+  - Cleanup modes: auto-remove, prompt, or leave
+
+  Zero config. One env var if you want a default agent.
+kind: tool
+topics:
+  - git
+  - orchestration
+compat: n/a
+tags:
+  - productivity
+  - workflow
+  - git
+  - worktree
+  - multi-agent
