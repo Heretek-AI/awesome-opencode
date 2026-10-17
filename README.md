@@ -1573,15 +1573,6 @@ Also available for bat and Ghostty in the same repository.
 </details>
 
 <details>
-  <summary><b>Chat Sidebar for OpenCode</b> <img src="https://badgen.net/github/stars/SenCha930511/chat-sidebar-for-opencode" height="14"/> - <i>VS Code sidebar chat GUI for OpenCode</i></summary>
-  <blockquote>
-    A VS Code extension that gives a locally installed OpenCode server a full GUI chat panel in the editor sidebar — multi-session streaming, inline permission approvals and question cards, slash commands with agent/model pickers, @-mention file attachments, todos and native diff previews. Bilingual English / 繁體中文 UI. Available on the VS Code Marketplace.
-    <br><br>
-    <a href="https://github.com/SenCha930511/chat-sidebar-for-opencode">🔗 <b>View Repository</b></a>
-  </blockquote>
-</details>
-
-<details>
   <summary><b>CLI Proxy API</b> <img src="https://badgen.net/github/stars/router-for-me/CLIProxyAPI" height="14"/> - <i>Multi-model proxy</i></summary>
   <blockquote>
     A proxy server providing compatible API interfaces for multiple model CLIs.
