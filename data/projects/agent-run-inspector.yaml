@@ -1,0 +1,9 @@
+name: Agent Run Inspector
+repo: https://github.com/kaboumou/agent-run-inspector-docs
+tagline: Local, read-only reports for OpenCode session exports - repeated tool calls, failures, completion
+description: "Generates a self-contained HTML (and JSON) report from `opencode export <sessionID>` data: repeated identical tool calls, recovered vs unresolved failures, completion state, and tool/usage statistics. Python standard library only, no network calls, and the input file is never modified. Tested with OpenCode 1.18.x; other versions are best-effort with an explicit note in the report. The tool itself is a paid download (USD $49 individual / $149 team); the linked repository contains the documentation, screenshots, and a free sample pack of synthetic inputs and example reports."
+kind: tool
+topics:
+  - sessions
+  - observability
+compat: n/a

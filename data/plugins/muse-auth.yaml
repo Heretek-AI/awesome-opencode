@@ -1,0 +1,8 @@
+name: Muse Auth
+repo: https://github.com/TheStreamCode/opencode-muse-auth
+tagline: Muse Spark billed to subscription
+description: Use Muse Spark in opencode billed to the Muse Code monthly subscription via Meta device login instead of API billing.
+kind: plugin
+topics:
+  - providers
+compat: v2

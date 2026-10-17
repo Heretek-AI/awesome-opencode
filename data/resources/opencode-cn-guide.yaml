@@ -1,0 +1,15 @@
+name: OpenCode CN Deployment Guide
+repo: https://github.com/lifugui-175/opencode-cn-guide
+tagline: Chinese free-tier multi-model deployment guide (DeepSeek/Kimi/Zhipu/SiliconFlow/OpenRouter) + MCP + CN network tips
+description: A practical Chinese-language guide for deploying OpenCode in mainland China on a budget. Covers a free-tier model matrix — DeepSeek V4 Flash for daily tasks, Kimi K2.x for coding, GLM-4-Flash / Qwen2.5-7B (permanently free) as fallback, plus OpenRouter free models — along with a ready-to-use opencode.example.json template, MCP (GitHub/ComfyUI) configuration, and mainland-China networking notes (npm mirror, proxy).
+kind: guide
+topics:
+  - providers
+  - docs
+compat: n/a
+tags:
+  - guide
+  - config
+  - free-tier
+  - mcp
+  - china

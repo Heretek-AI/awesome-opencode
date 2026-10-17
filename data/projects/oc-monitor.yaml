@@ -1,0 +1,9 @@
+name: oc-monitor
+repo: https://github.com/bikky-kc013/oc-monitor
+tagline: Real-time terminal dashboard for tracking OpenCode session costs and usage.
+description: A terminal UI (built with Go and Bubble Tea) that reads your local OpenCode SQLite database to show live session activity, burn-rate charts, and cost breakdowns by agent, model, and project. Includes daily/hourly usage trends with a calendar heatmap, per-session token and tool-call inspection, full-text search across sessions, and JSON export. All data stays local — the only network call is an optional lookup to models.dev for model context-window sizes.
+kind: client
+topics:
+  - cost
+  - observability
+compat: n/a

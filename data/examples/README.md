@@ -15,7 +15,7 @@ When adding a new entry to `data/{category}/`, use the corresponding example as 
 | `data/agents/` | [agent.yaml](agent.yaml) |
 | `data/projects/` | [project.yaml](project.yaml) |
 | `data/resources/` | [resource.yaml](resource.yaml) |
-| `data/forks/` | [fork.yaml](fork.yaml) |
+| `data/projects/` (`kind: fork`) | [fork.yaml](fork.yaml) |
 
 ## Required vs Optional Fields
 

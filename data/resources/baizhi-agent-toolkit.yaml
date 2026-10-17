@@ -1,0 +1,33 @@
+name: Baizhi Cloud Agent Toolkit
+repo: https://github.com/chaitin/baizhi-agent-toolkit
+tagline: Remote web search and page extraction MCP for OpenCode agents
+description: "For OpenCode V2, configure a remote MCP server at https://agent-toolkit.app.baizhi.cloud/mcp with oauth disabled and Authorization: Bearer {env:BAIZHI_API_KEY}. It offers web search, page reading, and structured extraction. The linked MIT repository publishes integration configuration and documentation, not the hosted backend. Users need their own Baizhi account and API key; calls may consume paid credits."
+kind: mcp-server
+topics:
+  - remote
+  - web
+compat: n/a
+tags:
+  - mcp-server
+  - web-search
+  - web-extraction
+installation: |
+  For OpenCode V2, set BAIZHI_API_KEY in the OpenCode process environment and
+  add this server to opencode.jsonc. Keep the key out of the config file:
+
+  {
+    "mcp": {
+      "servers": {
+        "baizhi": {
+          "type": "remote",
+          "url": "https://agent-toolkit.app.baizhi.cloud/mcp",
+          "oauth": false,
+          "headers": {
+            "Authorization": "Bearer {env:BAIZHI_API_KEY}"
+          }
+        }
+      }
+    }
+  }
+
+  Run `opencode mcp list` to check the connection before using any tools.

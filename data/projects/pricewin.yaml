@@ -1,0 +1,8 @@
+name: PriceWin
+repo: https://github.com/PriceDotWin/pricewin-agent-plugin
+tagline: Remote MCP server and skill for live hotel and flight prices across Booking.com, Agoda, Trip.com and Traveloka
+description: Compares live hotel and flight prices in USD across Booking.com, Agoda, Trip.com, Traveloka and Google Flights through one remote MCP server (https://mcp.price.win/mcp, no account or API key). Add it to opencode.json as a remote MCP server and copy the bundled pricewin-travel-search skill to ~/.agents/skills, which OpenCode loads automatically. Results name their source and link to it for booking.
+kind: mcp-server
+topics:
+  - domain
+compat: n/a

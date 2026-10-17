@@ -1,0 +1,20 @@
+name: db-semantic-mcp
+repo: https://github.com/chncaesar/db-semantic-mcp
+tagline: Read-only PostgreSQL and SQL Server schema context for OpenCode agents
+description: A local MCP server that gives OpenCode agents table and column metadata, database comments, bounded sample data with redaction controls, and optional semantic schema search. Supports PostgreSQL and SQL Server without arbitrary SQL execution or a vector database.
+kind: mcp-server
+topics:
+  - integrations
+  - context
+compat: n/a
+scope:
+  - global
+  - project
+tags:
+  - mcp-server
+  - database
+  - postgresql
+  - sql-server
+  - schema
+installation: |
+  Install with `pip install db-semantic-mcp`, set `DATABASE_URL`, and register the `pg-semantic-mcp` command as a local MCP server in `opencode.jsonc`.
