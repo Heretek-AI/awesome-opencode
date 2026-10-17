@@ -1,0 +1,9 @@
+name: Agent QA
+repo: https://github.com/vostride/agent-qa
+tagline: The self-improving QA agent for software teams
+description: Open-source QA harness for authoring and running natural-language web and mobile tests, with persistent memory, self-healing, a dashboard, Agent Skills, and an MCP server. Configure its `agent-qa mcp` command in OpenCode to expose tools for creating, executing, inspecting, triaging, and repairing tests.
+tags:
+  - testing
+  - qa
+  - mcp
+  - automation
