@@ -65,7 +65,7 @@
 > Полный список см. в [English README](README.md#plugins).
 
 <br>
-<a href="https://github.com/awesome-opencode/awesome-opencode/blob/main/contributing.md"><b>➕ Добавить плагин через PR</b></a>
+<a href="https://github.com/Heretek-AI/awesome-opencode/blob/main/contributing.md"><b>➕ Добавить плагин через PR</b></a>
 </details>
 
 <br>
@@ -80,7 +80,7 @@
 > Полный список см. в [English README](README.md#themes).
 
 <br>
-<a href="https://github.com/awesome-opencode/awesome-opencode/blob/main/contributing.md"><b>➕ Добавить тему через PR</b></a>
+<a href="https://github.com/Heretek-AI/awesome-opencode/blob/main/contributing.md"><b>➕ Добавить тему через PR</b></a>
 </details>
 
 <br>
@@ -95,7 +95,7 @@
 > Полный список см. в [English README](README.md#agents).
 
 <br>
-<a href="https://github.com/awesome-opencode/awesome-opencode/blob/main/contributing.md"><b>➕ Добавить агента через PR</b></a>
+<a href="https://github.com/Heretek-AI/awesome-opencode/blob/main/contributing.md"><b>➕ Добавить агента через PR</b></a>
 </details>
 
 <br>
@@ -110,7 +110,7 @@
 > Полный список см. в [English README](README.md#projects).
 
 <br>
-<a href="https://github.com/awesome-opencode/awesome-opencode/blob/main/contributing.md"><b>➕ Добавить проект через PR</b></a>
+<a href="https://github.com/Heretek-AI/awesome-opencode/blob/main/contributing.md"><b>➕ Добавить проект через PR</b></a>
 </details>
 
 <br>
@@ -125,7 +125,7 @@
 > Полный список см. в [English README](README.md#resources).
 
 <br>
-<a href="https://github.com/awesome-opencode/awesome-opencode/blob/main/contributing.md"><b>➕ Добавить ресурс через PR</b></a>
+<a href="https://github.com/Heretek-AI/awesome-opencode/blob/main/contributing.md"><b>➕ Добавить ресурс через PR</b></a>
 </details>
 
 <br><br>
@@ -133,7 +133,7 @@
 <div align="center">
 <h3>🤝 Участие</h3>
 Нашли отличный проект для Opencode? <br>
-<a href="https://github.com/awesome-opencode/awesome-opencode/blob/main/contributing.md"><b>Отправьте Pull Request</b></a>, чтобы добавить его в список!
+<a href="https://github.com/Heretek-AI/awesome-opencode/blob/main/contributing.md"><b>Отправьте Pull Request</b></a>, чтобы добавить его в список!
 <br><br>
 <sub>Выпущено под лицензией <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0 Universal</a>.</sub>
 </div>

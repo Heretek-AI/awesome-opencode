@@ -65,7 +65,7 @@
 > 完整列表请查看 [English README](README.md#plugins)。
 
 <br>
-<a href="https://github.com/awesome-opencode/awesome-opencode/blob/main/contributing.md"><b>➕ 通过 PR 添加插件</b></a>
+<a href="https://github.com/Heretek-AI/awesome-opencode/blob/main/contributing.md"><b>➕ 通过 PR 添加插件</b></a>
 </details>
 
 <br>
@@ -80,7 +80,7 @@
 > 完整列表请查看 [English README](README.md#themes)。
 
 <br>
-<a href="https://github.com/awesome-opencode/awesome-opencode/blob/main/contributing.md"><b>➕ 通过 PR 添加主题</b></a>
+<a href="https://github.com/Heretek-AI/awesome-opencode/blob/main/contributing.md"><b>➕ 通过 PR 添加主题</b></a>
 </details>
 
 <br>
@@ -95,7 +95,7 @@
 > 完整列表请查看 [English README](README.md#agents)。
 
 <br>
-<a href="https://github.com/awesome-opencode/awesome-opencode/blob/main/contributing.md"><b>➕ 通过 PR 添加智能体</b></a>
+<a href="https://github.com/Heretek-AI/awesome-opencode/blob/main/contributing.md"><b>➕ 通过 PR 添加智能体</b></a>
 </details>
 
 <br>
@@ -110,7 +110,7 @@
 > 完整列表请查看 [English README](README.md#projects)。
 
 <br>
-<a href="https://github.com/awesome-opencode/awesome-opencode/blob/main/contributing.md"><b>➕ 通过 PR 添加项目</b></a>
+<a href="https://github.com/Heretek-AI/awesome-opencode/blob/main/contributing.md"><b>➕ 通过 PR 添加项目</b></a>
 </details>
 
 <br>
@@ -125,7 +125,7 @@
 > 完整列表请查看 [English README](README.md#resources)。
 
 <br>
-<a href="https://github.com/awesome-opencode/awesome-opencode/blob/main/contributing.md"><b>➕ 通过 PR 添加资源</b></a>
+<a href="https://github.com/Heretek-AI/awesome-opencode/blob/main/contributing.md"><b>➕ 通过 PR 添加资源</b></a>
 </details>
 
 <br><br>
@@ -133,7 +133,7 @@
 <div align="center">
 <h3>🤝 贡献</h3>
 发现了优秀的 Opencode 相关项目？<br>
-<a href="https://github.com/awesome-opencode/awesome-opencode/blob/main/contributing.md"><b>提交 Pull Request</b></a> 将其添加到列表中！
+<a href="https://github.com/Heretek-AI/awesome-opencode/blob/main/contributing.md"><b>提交 Pull Request</b></a> 将其添加到列表中！
 <br><br>
 <sub>基于 <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0 Universal</a> 发布。</sub>
 </div>
