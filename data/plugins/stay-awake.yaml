@@ -1,0 +1,4 @@
+name: Stay Awake
+repo: https://github.com/AuroraAeon/opencode-stay-awake
+tagline: Keep the computer awake only while a session is generating
+description: Long agent runs (model streaming, tool execution, compaction, rate-limit retries) routinely take minutes with no user input, and default OS power settings treat that as idle and suspend mid-prompt. This plugin holds a system sleep inhibitor for exactly as long as any session is generating, then releases it — caffeinate -dims -w <server pid> on macOS, systemd-inhibit on Linux, no-op elsewhere. Busy detection is event-driven rather than polling, so a tool call that runs for minutes keeps its work item open instead of being released mid-run. Every inhibitor is bound to the server pid and a stale cap bounds any lost end event, so the machine can never be wedged awake. Zero dependencies, MIT.
