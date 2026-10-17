@@ -95,11 +95,11 @@
 </details>
 
 <details>
-  <summary><b>Agent Memory</b> <img src="https://badgen.net/github/stars/joshuadavidthomas/opencode-agent-memory" height="14"/> - <i>Letta-inspired memory</i></summary>
+  <summary><b>Agent Memory</b> <img src="https://badgen.net/github/stars/Ghilteras/opencode-agent-memory" height="14"/> - <i>Persistent, self-editable memory and a local semantic journal</i></summary>
   <blockquote>
-    Gives the agent persistent, self-editable memory blocks inspired by Letta agents.
+    Maintained OpenCode plugin providing shared global and project memory blocks, dedicated memory tools, and an opt-in append-only journal with local multilingual semantic search.
     <br><br>
-    <a href="https://github.com/joshuadavidthomas/opencode-agent-memory">🔗 <b>View Repository</b></a>
+    <a href="https://github.com/Ghilteras/opencode-agent-memory">🔗 <b>View Repository</b></a>
   </blockquote>
 </details>
 
@@ -424,6 +424,15 @@ Key features:
 </details>
 
 <details>
+  <summary><b>Idea Inbox</b> <img src="https://badgen.net/github/stars/apilot/opencode-idea-inbox" height="14"/> - <i>Capture stray thoughts into a sidebar backlog, then dispatch them to agents without derailing your session</i></summary>
+  <blockquote>
+    A persistent idea backlog for the opencode v2 TUI. Mid-conversation, press leader+z (or run /idea) to park a thought in the Idea Inbox sidebar without leaving your current task — no notes app, no derailing the agent. When you have a free moment, press leader+i and pick a pending idea: a delegation mission lands in your current session and execution starts immediately, while the sidebar status flips from parked to running to done as the agent works. Agents can manage the backlog themselves through idea_add/idea_list/ idea_update/idea_start tools, and a "documented" status archives an idea after its result is written up. Storage is per-worktree SQLite, so the backlog survives restarts. Ships for opencode v2 (this entry) and as a legacy v1 line: opencode-idea-inbox@legacy-v1.
+    <br><br>
+    <a href="https://github.com/apilot/opencode-idea-inbox">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
   <summary><b>kibi-opencode</b> <img src="https://badgen.net/github/stars/Looted/kibi" height="14"/> - <i>Repo-local, branch-scoped knowledge and traceability for OpenCode</i></summary>
   <blockquote>
     Plugin-first entry point into the Kibi stack for OpenCode users. It adds context-aware
@@ -509,6 +518,15 @@ sync and targeted validation checks, and helps keep repo knowledge branch-local 
 </details>
 
 <details>
+  <summary><b>Muse Auth</b> <img src="https://badgen.net/github/stars/TheStreamCode/opencode-muse-auth" height="14"/> - <i>Muse Spark billed to subscription</i></summary>
+  <blockquote>
+    Use Muse Spark in opencode billed to the Muse Code monthly subscription via Meta device login instead of API billing.
+    <br><br>
+    <a href="https://github.com/TheStreamCode/opencode-muse-auth">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
   <summary><b>oc-mnemoria</b> <img src="https://badgen.net/github/stars/one-bit/oc-mnemoria" height="14"/> - <i>Persistent shared memory (hive mind) for OpenCode agents across sessions</i></summary>
   <blockquote>
     Gives all OpenCode agents a shared persistent memory store where every agent can read and write. Each entry is tagged with the creating agent (plan, build, ask, review) so no context is lost between roles. Powered by the mnemoria Rust engine with hybrid BM25 + semantic search, CRC32 checksum chains, and an append-only binary format. Includes 7 tools and /mn-* slash commands.
@@ -532,6 +550,15 @@ sync and targeted validation checks, and helps keep repo knowledge branch-local 
     Slimmed-down fork of oh-my-opencode focused on core agent orchestration. Features specialized sub-agents (Explorer, Oracle, Librarian, Designer, etc.), background task management, LSP/AST tools, tmux integration for live agent visibility, and MCP servers. Optimized to consume significantly fewer tokens.
     <br><br>
     <a href="https://github.com/alvinunreal/oh-my-opencode-slim">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
+  <summary><b>oh-my-agentmemory</b> <img src="https://badgen.net/github/stars/dev-hann/oh-my-agentmemory" height="14"/> - <i>Forces agents to actually write to agentmemory, not just read from it</i></summary>
+  <blockquote>
+    Companion plugin to agentmemory-capture. Re-injects a memory policy directive into the system prompt every turn so the agent actually calls memory_save, bootstraps empty pinned slots on session start, catches bilingual intent keywords (EN/KR), auto-saves lessons from error-signal file edits, and suggests crystallizing finished work. Installs from npm with one line in opencode.json.
+    <br><br>
+    <a href="https://github.com/dev-hann/oh-my-agentmemory">🔗 <b>View Repository</b></a>
   </blockquote>
 </details>
 
@@ -713,6 +740,15 @@ startup.
 </details>
 
 <details>
+  <summary><b>OpenCode Model Alias</b> <img src="https://badgen.net/github/stars/renaudcerrato/opencode-model-alias" height="14"/> - <i>Portable model aliases with variants and chains — one config entry, per-machine remapping</i></summary>
+  <blockquote>
+    Define short model aliases (cheap, smart, reviewer...) in a central alias file and reference them in any agent or command model field. Each machine maps aliases to whatever provider/model it prefers, so shared agent and command configs stay portable across machines and providers. Supports model variants, alias chains (stable role names layered on machine-specific mappings), and a /alias command for managing aliases in-session.
+    <br><br>
+    <a href="https://github.com/renaudcerrato/opencode-model-alias">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
   <summary><b>Opencode Models Discovery</b> <img src="https://badgen.net/github/stars/yuhp/opencode-models-discovery" height="14"/> - <i>Configurable model discovery and filtering without long manual config</i></summary>
   <blockquote>
     OpenCode plugin for discovering models from OpenAI-compatible providers and API gateways, with provider and model filtering so users can avoid maintaining large configs or loading every model at once.
@@ -813,6 +849,15 @@ of model or provider, no configuration required.
     Instant inline text expansion for OpenCode. Type #snippet anywhere in your message and watch it transform. Brings DRY principles to prompt engineering with composable, shell-enabled snippets.
     <br><br>
     <a href="https://github.com/JosXa/opencode-snippets">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
+  <summary><b>Opencode Status Popup</b> <img src="https://badgen.net/github/stars/LucasInstra/opencode-status-popup" height="14"/> - <i>Always-on-top status pill or tray icon that shows what the agent is doing (Windows)</i></summary>
+  <blockquote>
+    A second screen for your agent. While a session is thinking, a small always-on-top pill types the word out letter by letter, or a tray icon draws the letter o pixel by pixel. It turns amber on provider retries, red when an execution fails, and violet when OpenCode is waiting for a permission, so you can be in another window and still notice. One PowerShell host starts on demand and is shared by every instance, and the renderer can be switched at runtime with the /popup-* commands or a tool.
+    <br><br>
+    <a href="https://github.com/LucasInstra/opencode-status-popup">🔗 <b>View Repository</b></a>
   </blockquote>
 </details>
 

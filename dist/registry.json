@@ -127,9 +127,9 @@
     "productId": "agent-memory",
     "type": "plugins",
     "displayName": "Agent Memory",
-    "repoUrl": "https://github.com/joshuadavidthomas/opencode-agent-memory",
-    "tagline": "Letta-inspired memory",
-    "description": "Gives the agent persistent, self-editable memory blocks inspired by Letta agents.",
+    "repoUrl": "https://github.com/Ghilteras/opencode-agent-memory",
+    "tagline": "Persistent, self-editable memory and a local semantic journal",
+    "description": "Maintained OpenCode plugin providing shared global and project memory blocks, dedicated memory tools, and an opt-in append-only journal with local multilingual semantic search.",
     "scope": [
       "global"
     ],
@@ -677,6 +677,18 @@
     "tags": []
   },
   {
+    "productId": "muse-auth",
+    "type": "plugins",
+    "displayName": "Muse Auth",
+    "repoUrl": "https://github.com/TheStreamCode/opencode-muse-auth",
+    "tagline": "Muse Spark billed to subscription",
+    "description": "Use Muse Spark in opencode billed to the Muse Code monthly subscription via Meta device login instead of API billing.",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
     "productId": "oc-mnemoria",
     "type": "plugins",
     "displayName": "oc-mnemoria",
@@ -687,6 +699,24 @@
       "global"
     ],
     "tags": []
+  },
+  {
+    "productId": "oh-my-agentmemory",
+    "type": "plugins",
+    "displayName": "oh-my-agentmemory",
+    "repoUrl": "https://github.com/dev-hann/oh-my-agentmemory",
+    "tagline": "Forces agents to actually write to agentmemory, not just read from it",
+    "description": "Companion plugin to agentmemory-capture. Re-injects a memory policy directive into the system prompt every turn so the agent actually calls memory_save, bootstraps empty pinned slots on session start, catches bilingual intent keywords (EN/KR), auto-saves lessons from error-signal file edits, and suggests crystallizing finished work. Installs from npm with one line in opencode.json.",
+    "scope": [
+      "global"
+    ],
+    "tags": [
+      "memory",
+      "agentmemory",
+      "persistence"
+    ],
+    "installation": "Add `\"oh-my-agentmemory\"` to the `plugin` array in `opencode.json` and restart opencode.",
+    "minVersion": "1.14.0"
   },
   {
     "productId": "oh-my-opencode",
@@ -1027,6 +1057,27 @@
     "installation": "Add the plugin to `~/.config/opencode/opencode.json`:\n\n```json\n{\n  \"$schema\": \"https://opencode.ai/config.json\",\n  \"plugin\": [\"opencode-host-notify-bridge\"]\n}\n```\n\nThen configure `host-notify-bridge.json` and start the host helper:\n\n```bash\nopencode-host-notify-server\n```\n"
   },
   {
+    "productId": "opencode-idea-inbox",
+    "type": "plugins",
+    "displayName": "Idea Inbox",
+    "repoUrl": "https://github.com/apilot/opencode-idea-inbox",
+    "tagline": "Capture stray thoughts into a sidebar backlog, then dispatch them to agents without derailing your session",
+    "description": "A persistent idea backlog for the opencode v2 TUI. Mid-conversation, press leader+z (or run /idea) to park a thought in the Idea Inbox sidebar without leaving your current task — no notes app, no derailing the agent. When you have a free moment, press leader+i and pick a pending idea: a delegation mission lands in your current session and execution starts immediately, while the sidebar status flips from parked to running to done as the agent works. Agents can manage the backlog themselves through idea_add/idea_list/ idea_update/idea_start tools, and a \"documented\" status archives an idea after its result is written up. Storage is per-worktree SQLite, so the backlog survives restarts. Ships for opencode v2 (this entry) and as a legacy v1 line: opencode-idea-inbox@legacy-v1.",
+    "scope": [
+      "global",
+      "project"
+    ],
+    "tags": [
+      "productivity",
+      "backlog",
+      "tui",
+      "sidebar",
+      "workflow"
+    ],
+    "installation": "## Installation (opencode v2)\n\nAdd one line to the `plugins` key of your `opencode.json` — global\n(`~/.config/opencode/opencode.json`) or per-project:\n\n```jsonc\n{\n  \"plugins\": [\"opencode-idea-inbox\"]\n}\n```\n\nOne entry loads both halves of the plugin: the server part (tools, events,\nslash commands) and the TUI part (sidebar, hotkeys). Restart opencode.\n\nNote: opencode v2 reads the `plugins` key (plural). The v1 `plugin` key is\nsilently ignored — that is the #1 \"it doesn't load\" cause.\n\nOn opencode v1? Install the legacy line instead:\n`\"plugin\": [\"opencode-idea-inbox@legacy-v1\"]`.\n",
+    "minVersion": "2.0.20"
+  },
+  {
     "productId": "opencode-ignore",
     "type": "plugins",
     "displayName": "Opencode Ignore",
@@ -1088,6 +1139,18 @@
     "repoUrl": "https://github.com/nigel-dev/opencode-mission-control",
     "tagline": "Command center for parallel agents — worktree isolation, DAG plans, merge train, PRs",
     "description": "Orchestrates parallel OpenCode agents in tmux-isolated git worktrees with live inspection (capture/attach/diff), a dashboard overview, agent status reporting, and in-chat notifications. Supports DAG-based plans with autopilot/copilot/supervisor modes and a merge train with test gating and automatic rollback.",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
+    "productId": "opencode-model-alias",
+    "type": "plugins",
+    "displayName": "OpenCode Model Alias",
+    "repoUrl": "https://github.com/renaudcerrato/opencode-model-alias",
+    "tagline": "Portable model aliases with variants and chains — one config entry, per-machine remapping",
+    "description": "Define short model aliases (cheap, smart, reviewer...) in a central alias file and reference them in any agent or command model field. Each machine maps aliases to whatever provider/model it prefers, so shared agent and command configs stay portable across machines and providers. Supports model variants, alias chains (stable role names layered on machine-specific mappings), and a /alias command for managing aliases in-session.",
     "scope": [
       "global"
     ],
@@ -1400,6 +1463,26 @@
       "global"
     ],
     "tags": []
+  },
+  {
+    "productId": "opencode-status-popup",
+    "type": "plugins",
+    "displayName": "Opencode Status Popup",
+    "repoUrl": "https://github.com/LucasInstra/opencode-status-popup",
+    "tagline": "Always-on-top status pill or tray icon that shows what the agent is doing (Windows)",
+    "description": "A second screen for your agent. While a session is thinking, a small always-on-top pill types the word out letter by letter, or a tray icon draws the letter o pixel by pixel. It turns amber on provider retries, red when an execution fails, and violet when OpenCode is waiting for a permission, so you can be in another window and still notice. One PowerShell host starts on demand and is shared by every instance, and the renderer can be switched at runtime with the /popup-* commands or a tool.",
+    "scope": [
+      "global",
+      "project"
+    ],
+    "tags": [
+      "windows",
+      "notifications",
+      "status",
+      "tray"
+    ],
+    "installation": "opencode plugin add opencode-status-popup",
+    "minVersion": "2.0.0"
   },
   {
     "productId": "opencode-swarm",
