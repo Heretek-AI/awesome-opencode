@@ -55,7 +55,12 @@ def append_to_summary(item_type, num, title, target_name, verdict, v2_status, co
             f.write("Autonomous review powered by OpenCode evaluating OpenCode V2 compatibility and catalog quality.\n\n")
             f.write("| Type | # | Title | Target Name | V2 Status | Verdict | Conf | Reason |\n")
             f.write("| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n")
-        f.write(f"| {item_type} | [{num}](https://github.com/{REPO}/{'pull' if item_type == 'PR' else 'issues'}/{num}) | {title[:35]} | {target_name[:25]} | `{v2_status}` | **`{verdict}`** | {confidence}% | {reason} |\n")
+        safe_title = (title or "").replace("|", "-")[:35]
+        safe_target = (target_name or "N/A").replace("|", "-")[:25]
+        safe_status = (v2_status or "UNKNOWN").replace("|", "-")
+        safe_verdict = (verdict or "UNKNOWN").replace("|", "-")
+        safe_reason = (reason or "").replace("|", "-").replace("\n", " ")
+        f.write(f"| {item_type} | [{num}](https://github.com/{REPO}/{'pull' if item_type == 'PR' else 'issues'}/{num}) | {safe_title} | {safe_target} | `{safe_status}` | **`{safe_verdict}`** | {confidence}% | {safe_reason} |\n")
 
 def fetch_open_prs():
     print("Fetching open PRs from GitHub...")
