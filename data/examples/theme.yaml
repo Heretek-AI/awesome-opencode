@@ -13,6 +13,10 @@ description: A dark theme designed for extended coding sessions.
   Features high contrast syntax highlighting and
   carefully chosen colors to reduce eye strain.
 
+kind: theme   # plugin, theme, agent, skill, mcp-server, client, tool, config, guide, fork
+topics:   # 1-3 from the fixed list in data/schema.json; the first is used for README grouping
+  - ui
+
 # ============================================================================
 # OPTIONAL FIELDS
 # ============================================================================

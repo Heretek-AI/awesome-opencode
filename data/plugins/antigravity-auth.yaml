@@ -2,3 +2,7 @@ name: Antigravity Auth
 repo: https://github.com/NoeFabris/opencode-antigravity-auth
 tagline: Google Antigravity models
 description: Use Gemini and Anthropic models for free via Google Antigravity IDE authentication.
+kind: plugin
+topics:
+  - providers
+compat: v1

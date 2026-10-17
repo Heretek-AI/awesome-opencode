@@ -1,0 +1,16 @@
+name: oh-my-agentmemory
+repo: https://github.com/dev-hann/oh-my-agentmemory
+tagline: Forces agents to actually write to agentmemory, not just read from it
+description: Companion plugin to agentmemory-capture. Re-injects a memory policy directive into the system prompt every turn so the agent actually calls memory_save, bootstraps empty pinned slots on session start, catches bilingual intent keywords (EN/KR), auto-saves lessons from error-signal file edits, and suggests crystallizing finished work. Installs from npm with one line in opencode.json.
+kind: plugin
+topics:
+  - memory
+compat: v2
+scope:
+  - global
+tags:
+  - memory
+  - agentmemory
+  - persistence
+min_version: 1.14.0
+installation: Add `"oh-my-agentmemory"` to the `plugin` array in `opencode.json` and restart opencode.

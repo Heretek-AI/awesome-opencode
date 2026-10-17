@@ -1,0 +1,9 @@
+name: nsq
+repo: https://github.com/glmn-ai/neurosquad-cli
+tagline: Run OpenCode, Claude Code and Codex side by side in one terminal and see which one needs you
+description: Open-source CLI that runs OpenCode (1.x and 2.x), Claude Code, Codex or any command side by side in one terminal. Status comes from each CLI's own events (working / needs you, with the question / finished), and a permission prompt can be answered y/a/n without opening the agent. A daemon keeps agents alive when the terminal closes, each agent can get its own git worktree, and cost is tracked per agent. Never writes to opencode.json; each session gets its own config layer. OpenRouter and local model servers supported. No account, no telemetry. MIT, `npx neurosquad`.
+kind: tool
+topics:
+  - environment
+  - orchestration
+compat: n/a

@@ -1,0 +1,39 @@
+{
+  "processed_prs": {
+    "486": {
+      "item_type": "PR",
+      "item_number": 486,
+      "title": "docs: add Quota Board plugin for OpenCode V2",
+      "target_name": "Quota Board",
+      "target_repo": "https://github.com/gilvex/opencode-quota-board",
+      "category": "plugins",
+      "worth_adding": true,
+      "worth_adding_rationale": "Active, well-maintained plugin adding provider quota bars, reset countdowns, and credit balances to the OpenCode V2 terminal via a collapsible sidebar and /quota popup. Genuine utility, no policy violations, distinct from the existing slkiser/opencode-quota entry.",
+      "opencode_v2_status": "V2_COMPATIBLE",
+      "opencode_v2_details": "package.json imports @opencode/plugin and @opencode/client (2.0.28), not legacy @opencode-ai/plugin. src/index.ts uses Plugin.define({ id: \"opencode-quota-board.server\", async setup(ctx) }) with modern ctx domain objects (ctx.integration, ctx.provider, ctx.rpc, ctx.event, ctx.options). README states \"Built for OpenCode V2\", tested with 2.0.28, uses active V2 connections, avoids V1 auth.json/cookie scraping.",
+      "yaml_valid": true,
+      "verdict": "APPROVE_AND_MERGE",
+      "confidence_score": 95,
+      "summary_reason": "High quality V2-native plugin with active maintenance (pushed 2 days ago), clean MIT-licensed repo, and complete schema-conformant metadata. Not a duplicate of the existing opencode-quota entry (different repo/tool).",
+      "recommended_comment": "Thank you for this submission, @BillyOutlast / @gilvex! This entry is verified compatible with OpenCode V2 (@opencode/plugin, Plugin.define, ctx domain objects) and meets all awesome-opencode catalog standards. Approved for merge. Note: the PR diff did not include the YAML file contents; please ensure data/plugins/opencode-quota-board.yaml is present with name/repo/tagline/description before merge."
+    },
+    "46": {
+      "item_type": "PR",
+      "item_number": 46,
+      "title": "[Upstream #130] feat: add Opencode Auto Update plugin",
+      "target_name": "Opencode Auto Update",
+      "target_repo": "https://github.com/AnganSamadder/opencode-plugin-auto-update",
+      "category": "plugins",
+      "worth_adding": true,
+      "worth_adding_rationale": "Provides genuine utility: background auto-updates for OpenCode plugins with throttling, lock files, and update history. Repository is public, not archived, and pushed within the last year. Not crypto-related, not malicious, and not a duplicate of any existing catalog entry.",
+      "opencode_v2_status": "V1_LEGACY_NEEDS_MIGRATION",
+      "opencode_v2_details": "Source (src/index.ts) uses the legacy V1 callback export (`export default async function (ctx) => {...}` returning `{ name, config }`) with no `Plugin.define`, no stable string `id`, and no `@opencode/plugin` dependency \u2014 package.json declares zero dependencies. Installation docs direct users to the removed V1 `plugin` array in `opencode.json`. This plugin will not execute in OpenCode V2 without migration.",
+      "yaml_valid": true,
+      "verdict": "NEEDS_V2_UPDATE",
+      "confidence_score": 92,
+      "summary_reason": "Good, maintained plugin concept with valid, schema-conformant YAML, but implemented against the legacy OpenCode V1 plugin API and incompatible with OpenCode V2 until migrated to `@opencode/plugin` / `Plugin.define`.",
+      "recommended_comment": "Thank you for this submission! The entry is well-formed and the auto-update concept is useful for the OpenCode ecosystem. However, this plugin is built on the legacy OpenCode V1 plugin API (default callback export, no `Plugin.define`/stable `id`, targets the removed `plugin` config array in `opencode.json`) and declares no `@opencode/plugin` dependency, so it will not execute in OpenCode V2 without migration. Please migrate to `@opencode/plugin` with `Plugin.define({ id: \"...\", async setup(ctx) {...} })`, use modern `ctx` domain objects, and update the install instructions to reflect V2 (no `plugin` array in config). Once V2-compatible, this is a strong candidate for approval."
+    }
+  },
+  "processed_issues": {}
+}

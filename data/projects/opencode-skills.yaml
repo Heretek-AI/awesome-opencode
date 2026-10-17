@@ -2,3 +2,7 @@ name: Opencode Skills
 repo: https://github.com/malhashemi/opencode-skills
 tagline: Skills management
 description: Skills management system for organising and tracking opencode capabilities.
+kind: tool
+topics:
+  - prompting
+compat: v1

@@ -1,0 +1,29 @@
+name: Dialbot MCP
+repo: https://github.com/R2100/dialbot-mcp
+tagline: Local MCP browser control for OpenCode with an unpacked Chrome extension
+description: Control Chrome tabs from OpenCode through a local stdio MCP server and a Chrome Manifest V3 extension. Includes fast DOM and selector actions, plus visual screenshot, mouse and keyboard control. Also works with Pi and other MCP stdio clients.
+kind: mcp-server
+topics:
+  - web
+compat: n/a
+scope:
+  - global
+  - project
+tags:
+  - mcp
+  - browser-automation
+  - chrome
+  - windows
+installation: |
+  Requires Windows, Google Chrome and Node.js 22 or later.
+
+  1. Clone https://github.com/R2100/dialbot-mcp to a stable local folder.
+  2. Ask OpenCode: "Install Dialbot MCP from the cloned repository. Run npm run
+     setup, add it as a local stdio MCP server to my existing OpenCode config
+     without replacing other settings, and tell me to load the Chrome extension
+     unpacked from the repository's extension/ folder. Ask before running local
+     commands or editing configuration."
+  3. In Chrome, enable Developer mode at chrome://extensions and choose Load
+     unpacked, selecting the repository's extension/ folder.
+  4. Open the Dialbot MCP popup and click Connect. Verify with opencode mcp list
+     and a browser_tabs tool call.

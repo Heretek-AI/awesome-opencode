@@ -1,0 +1,9 @@
+name: DeepSeek Peak
+repo: https://github.com/aiev/opencode-deepseek-peak
+tagline: DeepSeek peak/off-peak pricing, Chinese holidays included
+description: Shows whether DeepSeek is in its peak or off-peak pricing window. Applies the official rule including Chinese public holidays, treats a response pricing header as the source of truth and flags mismatches, adds a compact next-change time (local or UTC, with weekday) in a single non-wrapping sidebar line, works before the first request via a preview marker, and speaks English, Portuguese, Chinese, Japanese, and Korean. Supports OpenCode V2 and V1.
+kind: plugin
+topics:
+  - cost
+  - providers
+compat: v2

@@ -1,0 +1,13 @@
+name: dsh-movein
+repo: https://github.com/sjh9714/dsh-movein
+tagline: Preview and move OpenCode setup into DeepSeek Harness
+description: Preview and migrate global and project OpenCode configuration into DeepSeek Harness. Handles JSONC precedence, singular and plural asset directories, inline agents and commands, local and remote MCP servers, disabled entries, and environment placeholders without copying secret values.
+kind: tool
+topics:
+  - environment
+compat: n/a
+tags:
+  - migration
+  - configuration
+  - mcp
+  - skills

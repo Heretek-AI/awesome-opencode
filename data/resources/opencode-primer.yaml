@@ -1,0 +1,8 @@
+name: OpenCode Primer
+repo: https://github.com/wesammustafa/opencode-primer
+tagline: Everything you need to know about OpenCode — a verified, release-tracked community guide.
+description: A community field guide that goes from first prompt to power use — setup, prompt engineering, custom commands, agent skills, plugins, custom agents, MCP servers, Zen and Go billing, TUI mastery, and headless CI. Ships a worked example .opencode/ directory (agents, commands, plugins, skills), seven drop-in specialist agent prompts, and MCP walkthroughs. Every version pin, price, and flag is verified against the current OpenCode release with a visible last-reviewed date.
+kind: guide
+topics:
+  - docs
+compat: n/a
