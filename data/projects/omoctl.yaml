@@ -1,8 +1,8 @@
 name: omoctl
 repo: https://github.com/anfreire/omoctl
 tagline: Define, patch, and switch oh-my-openagent profiles with one command
-description: >-
-  CLI profile manager for oh-my-openagent configs: define profiles in one YAML,
-  patch models declaratively across providers, agents, and categories, rebuild
-  profiles from fresh OMO configs on update, validate against live model data,
-  and switch the active config with a single command.
+description: "CLI profile manager for oh-my-openagent configs: define profiles in one YAML, patch models declaratively across providers, agents, and categories, rebuild profiles from fresh OMO configs on update, validate against live model data, and switch the active config with a single command."
+kind: tool
+topics:
+  - environment
+compat: n/a

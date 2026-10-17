@@ -1,8 +1,0 @@
-name: cc-oc
-repo: https://github.com/anfreire/cc-oc
-tagline: Drive OpenCode from inside Claude Code — five slash commands, always detached
-description: >-
-  Thin launcher for OpenCode from inside Claude Code. /oc:spawn, /oc:wait,
-  /oc:debug, /oc:sessions, and /oc:cancel wrap `opencode run` with no config of
-  its own — every flag passes through, sessions run detached, and the answer
-  returns to the Claude Code conversation.
