@@ -1,0 +1,33 @@
+name: opencode-tg
+repo: https://github.com/par4987/opencode-tg
+tagline: Control OpenCode from Telegram — every session gets its own thread
+description: |
+  Runs inside the OpenCode server as a plugin (zero runtime dependencies) and mirrors every session into a Telegram chat: each session and subagent gets its own thread, and writing in the thread is prompting the agent. Answer the agent's questions and approve permissions with a tap, run shell commands in the session (a three-tier guard passes read-only commands, asks for confirmation on service-breaking ones, and blocks the irreversible), browse and attach project files, schedule tasks, switch models and agents, watch CI runs, and steer the message queue mid-turn. Optional extras: multi-bot topologies (one bot per project or per session), local whisper.cpp voice transcription, and a dead-prompt watchdog that reports the real cause when a turn never starts.
+scope:
+  - global
+  - project
+tags:
+  - telegram
+  - notifications
+  - mobile
+  - i18n
+  - voice
+min_version: 2.0.15
+homepage: https://github.com/par4987/opencode-tg#readme
+installation: |
+  Register the plugin in your OpenCode config (`opencode.jsonc`) pointing at the directory:
+
+  ```jsonc
+  "plugins": [
+    { "package": "C:/path/to/opencode-tg" }
+  ]
+  ```
+
+  Create `~/.opencode/tg/.env` (never committed to the repo):
+
+  ```
+  TELEGRAM_BOT_TOKEN=123456:ABC...
+  ALLOWED_USERS=123456789
+  ```
+
+  Start in `dry` mode to validate without touching Telegram, then switch `mode` to `live` in the plugin's `config.json`. The interface ships in 12 languages (Spanish, English, Portuguese, German, French, Italian, Indonesian, Russian, Turkish, Chinese, Korean, Arabic) switchable from the phone with `/locale`. Tested against OpenCode 2.0.15–2.0.22.
