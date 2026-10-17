@@ -1,0 +1,9 @@
+name: zosma-qa
+repo: https://github.com/zosmaai/zosma-qa
+tagline: "QA agents for OpenCode: test planner, generator, healer and analyzer for Playwright, Appium and k6"
+description: Zero-config QA platform that scaffolds four OpenCode agent prompts (test planner, generator, healer, analyzer) into .opencode/prompts/ for Playwright web tests, Appium mobile tests and k6 load tests.
+kind: agent
+topics:
+  - code-quality
+compat: n/a
+installation: npx zosma-qa agents init --loop opencode
