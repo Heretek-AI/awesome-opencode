@@ -1,0 +1,11 @@
+name: opencode-sesh
+repo: https://github.com/ozandogrultan/opencode-sesh
+npm: opencode-sesh
+tagline: "OpenCode session browser: search, preview, and resume every session across every project from the terminal or TUI."
+description: "OpenCode session browser: search, preview, and resume every session across every project from the terminal or TUI."
+kind: plugin
+topics:
+  - sessions
+  - web
+  - ui
+compat: v2
