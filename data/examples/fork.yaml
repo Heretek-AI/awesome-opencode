@@ -1,6 +1,6 @@
 # Example Fork Entry
 # Forks are modified builds of OpenCode with custom features or patches.
-# Place actual entries in: data/forks/your-fork-name.yaml
+# Place actual entries in: data/projects/your-fork-name.yaml
 
 # ============================================================================
 # REQUIRED FIELDS
@@ -16,6 +16,10 @@ description: A fork of OpenCode designed for enterprise environments.
   - Audit logging for compliance
   - Custom model routing
   - Air-gapped deployment support
+
+kind: fork   # plugin, theme, agent, skill, mcp-server, client, tool, config, guide, fork
+topics:   # 1-3 from the fixed list in data/schema.json; the first is used for README grouping
+  - environment
 
 # ============================================================================
 # OPTIONAL FIELDS

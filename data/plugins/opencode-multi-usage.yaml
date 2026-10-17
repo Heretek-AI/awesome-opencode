@@ -1,0 +1,9 @@
+name: OpenCode Multi-Usage
+repo: https://github.com/Bugg4/opencode-multi-usage
+tagline: One OpenCode plugin for multiple AI subscription quotas
+description: An easily extensible OpenCode plugin for tracking AI subscription quotas. Add provider integrations with minimal effort; each is opt-in, with support for ChatGPT Codex, OpenCode Go, CommandCode and more.
+kind: plugin
+topics:
+  - cost
+  - providers
+compat: v2

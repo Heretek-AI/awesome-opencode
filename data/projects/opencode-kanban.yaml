@@ -1,4 +1,9 @@
 name: opencode-kanban
-repo: https://github.com/qrafty-ai/opencode-kanban
+repo: https://github.com/TomCC7/opencode-kanban
 tagline: Kanban-style task management for opencode
 description: Kanban tool that allows you to stay in terminal.
+kind: client
+topics:
+  - workflow
+  - ui
+compat: n/a

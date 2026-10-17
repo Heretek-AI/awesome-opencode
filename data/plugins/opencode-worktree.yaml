@@ -2,3 +2,7 @@ name: Opencode Worktree
 repo: https://github.com/kdcokenny/opencode-worktree
 tagline: Zero-friction git worktrees
 description: Zero-friction git worktrees for OpenCode. Auto-spawns terminals, syncs files, cleans up on exit.
+kind: plugin
+topics:
+  - git
+compat: v1

@@ -1,0 +1,9 @@
+name: repo-cover
+repo: https://github.com/sjh9714/cover-my-repo
+tagline: Agent skill that designs your GitHub social preview as one self-contained HTML file
+description: The agent writes a 1280x640 og:image card following a constrained design system, with four editorial moods, CJK-first typography, a deterministic checker for contrast and line breaking, and PNG export through headless Chrome. Installs into OpenCode via the Agent Skills CLI.
+kind: skill
+topics:
+  - git
+  - media
+compat: n/a

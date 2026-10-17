@@ -1,0 +1,8 @@
+name: OpenCode Mobile
+repo: https://github.com/alvarolorentedev/opencode-mobile
+tagline: Your OpenCode workflow in your pocket. Manage AI coding agents from Android and iOS.
+description: OpenCode Mobile is a free, open-source, community-built companion app for OpenCode on Android and iOS. Connect to your self-hosted OpenCode server to start coding sessions, monitor agent progress, approve permissions, review code changes, browse files, access the terminal, and manage projects and AI models directly from your phone. Optional secure remote connectivity lets you stay connected to your development environment from anywhere, while your code and workloads remain on your own computer. No cloud-hosted development environment required.
+kind: client
+topics:
+  - remote
+compat: v2

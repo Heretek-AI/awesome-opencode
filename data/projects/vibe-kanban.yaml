@@ -2,3 +2,8 @@ name: Vibe Kanban
 repo: https://github.com/BloopAI/vibe-kanban
 tagline: Manage AI in parallel
 description: A Kanban board to manage and orchestrate AI coding agents in parallel.
+kind: client
+topics:
+  - orchestration
+  - workflow
+compat: n/a

@@ -16,6 +16,10 @@ description: A custom agent configuration for security-focused code review.
   - Predefined tools for vulnerability scanning
   - Skills for OWASP Top 10 detection
 
+kind: agent   # plugin, theme, agent, skill, mcp-server, client, tool, config, guide, fork
+topics:   # 1-3 from the fixed list in data/schema.json; the first is used for README grouping
+  - orchestration
+
 # ============================================================================
 # OPTIONAL FIELDS
 # ============================================================================

@@ -1,0 +1,15 @@
+name: Bifrost
+repo: https://github.com/maximhq/bifrost
+homepage: https://docs.getbifrost.ai/cli-agents/opencode
+tagline: OpenCode gateway for multi-provider routing
+description: Route OpenCode requests through Bifrost's OpenAI-compatible gateway with provider selection, virtual-key controls, and request logging.
+kind: tool
+topics:
+  - providers
+  - observability
+compat: n/a
+tags:
+  - gateway
+  - routing
+  - provider
+  - observability
