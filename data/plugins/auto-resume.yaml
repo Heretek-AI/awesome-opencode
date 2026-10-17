@@ -1,0 +1,8 @@
+name: auto-resume
+repo: https://github.com/neohiro/auto-resume
+tagline: Keeps OpenCode sessions running through network blips, rate limits, outages and max-token cutoffs
+description: Single-file plugin that hooks the event bus to resume sessions after network errors, provider outages, free-tier limits, truncations, stalled streams, permission prompts and unfinished todo lists, then has the model critique its finished work.
+kind: plugin
+topics:
+  - sessions
+compat: v2
