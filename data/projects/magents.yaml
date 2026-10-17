@@ -1,0 +1,4 @@
+name: magents
+repo: https://github.com/abnegate/magents
+tagline: Read, hand off to, message, and spawn OpenCode, Claude Code, Codex, Cursor, and Gemini sessions from one MCP server
+description: Rust MCP server and CLI over the session files coding agents already write. From OpenCode you can list and read other live sessions, search transcripts, hand off compact state into another chat, send into a specific session, or spawn an independent headless session that replies through a shared inbox. Reads OpenCode's session database directly; `magents install --all` registers the MCP server in opencode.json and adds the magents skill. Homebrew, APT, binaries, and Docker. MIT licensed.
