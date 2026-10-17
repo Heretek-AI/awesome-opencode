@@ -1,0 +1,9 @@
+name: opencode-reviewer
+repo: https://github.com/mightykatun/opencode-reviewer
+npm: opencode-reviewer
+tagline: Safety reviews, report history, optional one-time auto-approval and Linux desktop notifications for OpenCode permissions
+description: Safety reviews and optional one-time auto-approval for OpenCode permissions
+kind: plugin
+topics:
+  - ui
+compat: v2
