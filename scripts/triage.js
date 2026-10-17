@@ -34,7 +34,11 @@ async function main() {
   console.log('labels:', result.labels.join(', ') || '(none)');
   if (dryRun) return;
 
-  await setTriageLabels(number, result.labels, current);
+  // needs-human is a maintainer gate: the bot may add it but never clears it or marks the PR ready
+  const labels = current.includes('needs-human')
+    ? [...new Set([...result.labels.filter(l => l !== 'ready'), 'needs-human'])]
+    : result.labels;
+  await setTriageLabels(number, labels, current);
   await addLabels(number, result.categories.map(c => `category: ${c}`).filter(l => !current.includes(l)));
   if (result.dataChanged || result.errors.length) {
     await upsertComment(number, MARKER, report);
