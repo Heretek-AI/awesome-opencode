@@ -1,0 +1,41 @@
+# Nightly catalog health: updates the "Catalog health report" issue, and opens bot PRs that follow
+# renamed repos and remove entries dead for 30+ days (or V1-only plugins after the sunset date).
+name: Catalog health
+
+on:
+  schedule:
+    - cron: '17 5 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+  actions: write
+
+concurrency:
+  group: catalog-health
+  cancel-in-progress: false
+
+jobs:
+  health:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci --ignore-scripts
+
+      - name: Check health and open bot PRs
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node scripts/health-check.js --issue --open-prs

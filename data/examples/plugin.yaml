@@ -15,6 +15,11 @@ description: A longer description explaining the plugin in detail.
   - Use cases
   - Key benefits
 
+kind: plugin   # plugin, theme, agent, skill, mcp-server, client, tool, config, guide, fork
+topics:   # 1-3 from the fixed list in data/schema.json; the first is used for README grouping
+  - workflow
+compat: v2   # plugins only: v2, v1 or unknown (CI verifies it)
+
 # ============================================================================
 # OPTIONAL FIELDS
 # ============================================================================

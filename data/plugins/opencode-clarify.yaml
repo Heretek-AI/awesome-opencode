@@ -1,0 +1,8 @@
+name: OpenCode Clarify
+repo: https://github.com/D-MSol4/opencode-clarify
+tagline: Rewrite rough prompts into precise technical prompts
+description: Rewrites rough, plain-language prompts into precise technical prompts with /clarify, /clarify:model, or a -clarify marker before you send them to the model. OpenCode 2 TUI plugin, ported from pi-clarify.
+kind: plugin
+topics:
+  - prompting
+compat: v2

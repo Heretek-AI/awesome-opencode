@@ -1,0 +1,28 @@
+name: OpenCode TasksMD
+repo: https://github.com/LeonardMeagher2/tasksmd
+npm: "@leonardmeagher2/opencode-tasksmd"
+homepage: https://www.npmjs.com/package/@leonardmeagher2/opencode-tasksmd
+tagline: Background task queue for OpenCode projects, powered by TASKS.md
+description: Background task queue that reads TASKS.md — schedules recurring work, sets per-task permissions and agents, and persists state across restarts.
+kind: plugin
+topics:
+  - orchestration
+  - workflow
+compat: v1
+scope:
+  - global
+  - project
+tags:
+  - tasks
+  - scheduling
+  - background
+  - queue
+  - automation
+installation: |
+  Add the package to your OpenCode config:
+
+  ```json
+  {
+    "plugin": ["@leonardmeagher2/opencode-tasksmd"]
+  }
+  ```
