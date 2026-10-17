@@ -1,0 +1,28 @@
+name: OpenCode Model Router
+repo: https://github.com/sertdisk/OpenCode-Model-Router
+homepage: https://github.com/sertdisk/OpenCode-Model-Router
+tagline: Per-agent model fallback chains (primary/secondary/tertiary) for OpenCode v2.x with a local web UI
+description: Give every OpenCode agent a primary, secondary, and tertiary model chain, managed from a clean local web UI served by the plugin itself. The model picker mirrors the models you enabled in Settings > Models, provider-qualified refs make the same model on two different providers count as separate fallback steps, and chains are written natively into oh-my-opencode-slim (agents.<agent>.model arrays) or plain OpenCode config with automatic backups. Zero dependencies; the web UI binds to 127.0.0.1 only. Built for OpenCode v2.x — uses the OpenCode V2 plugin API.
+kind: plugin
+topics:
+  - providers
+compat: v2
+scope:
+  - global
+tags:
+  - model-router
+  - fallback
+  - models
+  - web-ui
+  - oh-my-opencode-slim
+  - configuration
+installation: |
+  Clone the repository and run the install script:
+
+  ```powershell
+  git clone https://github.com/sertdisk/OpenCode-Model-Router
+  cd OpenCode-Model-Router
+  powershell -ExecutionPolicy Bypass -File tools/install-dev.ps1
+  ```
+
+  Restart OpenCode, then open the web UI at `http://127.0.0.1:37337` to configure each agent. Prefer the terminal? Use the `/model-router` command instead.
