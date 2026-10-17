@@ -1,0 +1,4 @@
+name: Context Optimizer
+repo: https://github.com/evermeer/context-optimizer
+tagline: Coding Agent Context Optimizer Plugin
+description: Keep your coding agent's context small. When a session gets compacted, Context Optimizer reranks the relevant parts, drops duplicates, and compresses the rest with a local ML pipeline (LLMLingua-2 + Sentence Transformers) — so more of the window stays useful and fewer tokens get billed. Everything runs on your machine.
