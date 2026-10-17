@@ -1,0 +1,68 @@
+# Builds the search site (site/ + registry.json + fresh health.json) and deploys it to GitHub Pages.
+name: Deploy search site
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'data/**'
+      - 'site/**'
+      - 'scripts/**'
+  schedule:
+    - cron: '30 5 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build site
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          node scripts/health-check.js --out "$RUNNER_TEMP/health.json" || echo "::warning::health check failed; deploying without health data"
+          if [ -f "$RUNNER_TEMP/health.json" ]; then
+            node scripts/build-site.js --health "$RUNNER_TEMP/health.json"
+          else
+            node scripts/build-site.js
+          fi
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
