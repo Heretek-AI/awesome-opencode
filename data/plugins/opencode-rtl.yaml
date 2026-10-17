@@ -1,0 +1,8 @@
+name: opencode-rtl
+repo: https://github.com/razavioo/opencode-rtl
+tagline: RTL language support for Persian, Arabic, Hebrew and other right-to-left languages
+description: Automatic RTL text detection, bidi isolation, and alignment for Persian/Arabic/Hebrew workflows in OpenCode's terminal and web UI.
+kind: plugin
+topics:
+  - ui
+compat: v2
