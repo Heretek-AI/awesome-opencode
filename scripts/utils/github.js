@@ -79,6 +79,9 @@ async function graphql(query, variables = {}) {
  */
 async function rest(route, { method = 'GET', body } = {}) {
   const url = route.startsWith('http') ? route : `https://api.github.com${route}`;
+  if (!url.startsWith('https://api.github.com/') || /\/\.{1,2}(\/|\?|$)/.test(url.split('?')[0])) {
+    throw new Error(`refusing to call ${url}`);
+  }
   const res = await fetchWithRetry(url, {
     method,
     headers: headers(body ? { 'Content-Type': 'application/json' } : {}),
@@ -142,8 +145,11 @@ async function getFiles(requests, { batchSize = 60 } = {}) {
  * @param {string} pkg
  * @returns {Promise<object|null>} null when the package does not exist
  */
+const NPM_NAME_RE = /^(@[a-z0-9-~][a-z0-9-._~]*\/)?[a-z0-9-~][a-z0-9-._~]*$/;
+
 async function getNpmLatest(pkg) {
-  const res = await fetchWithRetry(`https://registry.npmjs.org/${pkg.replace('/', '%2F')}/latest`, {
+  if (!NPM_NAME_RE.test(pkg)) return null;
+  const res = await fetchWithRetry(`https://registry.npmjs.org/${pkg.replace(/\//g, '%2F')}/latest`, {
     headers: { 'User-Agent': 'awesome-opencode-bot', Accept: 'application/json' }
   });
   if (res.status === 404) return null;
@@ -157,6 +163,7 @@ async function getNpmLatest(pkg) {
  * @returns {Promise<number>}
  */
 async function getNpmWeeklyDownloads(pkg) {
+  if (!NPM_NAME_RE.test(pkg)) return 0;
   const res = await fetchWithRetry(`https://api.npmjs.org/downloads/point/last-week/${pkg}`, {
     headers: { 'User-Agent': 'awesome-opencode-bot' }
   });

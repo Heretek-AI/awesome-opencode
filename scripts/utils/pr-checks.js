@@ -10,6 +10,7 @@ const yaml = require('js-yaml');
 const { CATEGORIES, canonicalKey, checkCatalog, parseRepoUrl } = require('./catalog');
 const { probeCompat } = require('./compat');
 const { getRepos } = require('./github');
+const { escapeCell } = require('./template');
 
 // Generated files a PR must never edit by hand
 const GENERATED_FILES = ['README.md', 'dist/registry.json'];
@@ -158,7 +159,7 @@ function formatReport(result) {
   const verified = result.entries.filter(e => e.probe);
   if (verified.length) {
     lines.push('', '**V2 compatibility**', '', '| Entry | Detected | Evidence |', '| :--- | :--- | :--- |');
-    for (const e of verified) lines.push(`| \`${path.basename(e.file)}\` | ${e.probe.compat} | ${e.probe.evidence.join('; ').replace(/\|/g, '\\|') || '—'} |`);
+    for (const e of verified) lines.push(`| \`${path.basename(e.file)}\` | ${e.probe.compat} | ${escapeCell(e.probe.evidence.join('; ')) || '—'} |`);
   }
   lines.push('', '<sub>Entry format: [contributing.md](https://github.com/Heretek-AI/awesome-opencode/blob/main/contributing.md) · Catalog policy: [docs/policy.md](https://github.com/Heretek-AI/awesome-opencode/blob/main/docs/policy.md)</sub>');
   return lines.join('\n');

@@ -11,10 +11,7 @@ on:
     types: [opened, edited, reopened, labeled]
 
 permissions:
-  contents: write
-  pull-requests: write
-  issues: write
-  actions: write
+  contents: read
 
 concurrency:
   group: issue-${{ github.event.issue.number }}
@@ -23,6 +20,11 @@ concurrency:
 jobs:
   submission:
     if: contains(github.event.issue.labels.*.name, 'submission') && github.event.issue.state == 'open'
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+      actions: write
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -37,7 +39,7 @@ jobs:
           cache: npm
 
       - name: Install dependencies
-        run: npm ci
+        run: npm ci --ignore-scripts
 
       - name: Build entry and open PR
         env:
@@ -47,6 +49,11 @@ jobs:
 
   scout-accept:
     if: github.event.action == 'edited' && contains(github.event.issue.labels.*.name, 'scout')
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+      actions: write
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -61,7 +68,7 @@ jobs:
           cache: npm
 
       - name: Install dependencies
-        run: npm ci
+        run: npm ci --ignore-scripts
 
       - name: Open PRs for ticked candidates
         env:

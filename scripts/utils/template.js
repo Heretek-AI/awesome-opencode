@@ -46,6 +46,34 @@ function escapeHtml(text) {
 }
 
 /**
+ * Escape text for a markdown table cell.
+ * @param {string} text
+ * @returns {string}
+ */
+function escapeCell(text) {
+  return String(text).replace(/\\/g, '\\\\').replace(/\|/g, '\\|').replace(/\r?\n/g, ' ');
+}
+
+/**
+ * Parse a URL, or null when it is not one.
+ * @param {string} url
+ * @returns {URL|null}
+ */
+function parseUrl(url) {
+  try { return new URL(url); } catch { return null; }
+}
+
+/**
+ * True for npm package pages (they duplicate the npm link, so they are not shown as docs).
+ * @param {string} url
+ * @returns {boolean}
+ */
+function isNpmPage(url) {
+  const u = parseUrl(url);
+  return Boolean(u && (u.hostname === 'www.npmjs.com' || u.hostname === 'npmjs.com') && u.pathname.startsWith('/package/'));
+}
+
+/**
  * URL of the entry's code, including the monorepo subfolder when set.
  * @param {object} entry - Parsed YAML data
  * @returns {string}
@@ -61,19 +89,20 @@ function sourceUrl(entry) {
  * @returns {string} HTML string for the details element
  */
 function generateEntryHtml(entry, category) {
+  const url = parseUrl(entry.repo);
+  const isGist = Boolean(url && url.hostname === 'gist.github.com');
+  const isDiscussion = Boolean(url && url.hostname === 'github.com' && /^\/[^/]+\/[^/]+\/discussions\//.test(url.pathname));
+
   // Determine link text based on URL type first
   let linkText = '🔗 <b>View Repository</b>';
-  if (entry.repo.includes('gist.github.com')) {
+  if (isGist) {
     linkText = '🔗 <b>View Gist</b>';
-  } else if (entry.repo.includes('/discussions/')) {
+  } else if (isDiscussion) {
     linkText = '🔗 <b>View Discussion</b>';
   }
 
   // Extract owner/repo from URL for star badge (only for non-gist, non-discussion GitHub repos)
-  // Use negative lookahead to exclude gist.github.com
-  const isGist = entry.repo.includes('gist.github.com');
-  const isDiscussion = entry.repo.includes('/discussions/');
-  const repoMatch = entry.repo.match(/github\.com\/(?!gist\.)([^\/]+)\/([^\/]+)/);
+  const repoMatch = url && url.hostname === 'github.com' ? url.pathname.match(/^\/([^/]+)\/([^/]+)/) : null;
 
   let summaryContent = `<b>${escapeHtml(entry.name)}</b>`;
 
@@ -100,7 +129,7 @@ function generateEntryHtml(entry, category) {
   if (entry.npm) {
     links.push(`<a href="https://www.npmjs.com/package/${escapeHtml(entry.npm)}">📦 <b>npm</b></a>`);
   }
-  if (entry.homepage && !/npmjs\.com\/package\//.test(entry.homepage)) {
+  if (entry.homepage && !isNpmPage(entry.homepage)) {
     links.push(`<a href="${escapeHtml(entry.homepage)}">📖 <b>Docs</b></a>`);
   }
 
@@ -124,7 +153,9 @@ function writeReadme(content) {
 }
 
 module.exports = {
+  escapeCell,
   escapeHtml,
+  isNpmPage,
   readTemplate,
   replacePlaceholder,
   generateEntryHtml,

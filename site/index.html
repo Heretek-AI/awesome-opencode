@@ -106,6 +106,7 @@ const TOPIC_LABELS = { memory: 'Memory', context: 'Context & tokens', orchestrat
 const STATUS_LABELS = { quiet: 'quiet', stale: 'no push in 1y', archived: 'archived', missing: 'repo missing', deprecated: 'deprecated' };
 const DEAD = ['archived', 'missing', 'deprecated'];
 const $ = id => document.getElementById(id);
+const isNpmPage = url => { try { const u = new URL(url); return (u.hostname === 'www.npmjs.com' || u.hostname === 'npmjs.com') && u.pathname.startsWith('/package/'); } catch { return false; } };
 const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const state = { q: '', cat: '', kind: '', topic: '', compat: '', status: '', sort: 'name' };
 let entries = [];
@@ -155,7 +156,7 @@ function card(e) {
   const src = e.repoPath ? `${e.repoUrl.replace(/\/+$/, '')}/tree/HEAD/${e.repoPath}` : e.repoUrl;
   const links = [`<a href="${esc(src)}" rel="noopener">Repository</a>`];
   if (e.npmPackage) links.push(`<a href="https://www.npmjs.com/package/${esc(e.npmPackage)}" rel="noopener">npm</a>`);
-  if (e.homepageUrl && !/npmjs\.com\/package\//.test(e.homepageUrl)) links.push(`<a href="${esc(e.homepageUrl)}" rel="noopener">Docs</a>`);
+  if (e.homepageUrl && !isNpmPage(e.homepageUrl)) links.push(`<a href="${esc(e.homepageUrl)}" rel="noopener">Docs</a>`);
   if (e.pushedAt) links.push(`<span class="stars">updated ${esc(e.pushedAt.slice(0, 10))}</span>`);
   const long = (e.description || '').length > 180;
   return `<article class="card">

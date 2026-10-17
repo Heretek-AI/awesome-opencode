@@ -9,7 +9,7 @@
 
 const { CATEGORIES, KINDS, KIND_LABELS, TOPICS, TOPIC_LABELS, V1_SUNSET, checkCatalog, formatProblems, loadCatalog } = require('./utils/catalog');
 const { addedDates } = require('./utils/history');
-const { escapeHtml, readTemplate, replacePlaceholder, generateEntryHtml, writeReadme } = require('./utils/template');
+const { escapeCell, escapeHtml, readTemplate, replacePlaceholder, generateEntryHtml, writeReadme } = require('./utils/template');
 
 const RECENT_COUNT = 15;
 const README_WARN_KB = 450;
@@ -72,7 +72,7 @@ function generateRecent(entries) {
     .filter(e => dates.has(e.file))
     .sort((a, b) => dates.get(b.file).localeCompare(dates.get(a.file)) || byName(a, b))
     .slice(0, RECENT_COUNT);
-  const rows = recent.map(e => `| **[${escapeHtml(e.data.name).replace(/\|/g, '\\|')}](${e.data.repo})** | ${e.category} | ${escapeHtml(e.data.tagline).replace(/\|/g, '\\|')} |`);
+  const rows = recent.map(e => `| **[${escapeCell(escapeHtml(e.data.name))}](${e.data.repo})** | ${e.category} | ${escapeCell(escapeHtml(e.data.tagline))} |`);
   return ['| Name | Category | Tagline |', '| :--- | :--- | :--- |', ...rows].join('\n');
 }
 

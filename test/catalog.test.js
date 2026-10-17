@@ -73,6 +73,6 @@ test('README entries escape contributor text and show compat badges', () => {
   assert.match(html, /&lt;prompt&gt;/);
   assert.match(html, /<code>V1 only<\/code>/);
   assert.match(html, /tree\/HEAD\/pkg\/x/);
-  assert.match(html, /npmjs\.com\/package\/thing/);
+  assert.ok(html.includes('href="https://www.npmjs.com/package/thing"'));
   assert.doesNotMatch(generateEntryHtml({ ...base, compat: 'n/a' }, 'projects'), /<code>/);
 });
