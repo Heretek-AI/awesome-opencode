@@ -271,6 +271,23 @@
     "minVersion": "1.0.0"
   },
   {
+    "productId": "pptx-from-layouts-skill",
+    "type": "agents",
+    "displayName": "PPTX from Layouts",
+    "repoUrl": "https://github.com/tristan-mcinnis/pptx-from-layouts-skill",
+    "tagline": "PowerPoint from slide master layouts",
+    "description": "Generate consultant-quality PowerPoint presentations from markdown outlines using your template's actual slide master layouts, not text overlays. Includes template profiling, visual types, and surgical edit mode.",
+    "kind": "skill",
+    "topics": [
+      "media"
+    ],
+    "compat": "n/a",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
     "productId": "python-agent",
     "type": "agents",
     "displayName": "Python Expert Agent for OpenCode",
@@ -8757,6 +8774,24 @@
       "cli"
     ],
     "homepageUrl": "https://github.com/rezzminator/professor"
+  },
+  {
+    "productId": "promption",
+    "type": "projects",
+    "displayName": "Promption",
+    "repoUrl": "https://github.com/Abdssamie/promption",
+    "tagline": "Manage AI agent configs",
+    "description": "A desktop app + CLI for managing AI agent configurations across projects. Stop copy-pasting .cursorrules.",
+    "kind": "client",
+    "topics": [
+      "prompting",
+      "ui"
+    ],
+    "compat": "n/a",
+    "scope": [
+      "global"
+    ],
+    "tags": []
   },
   {
     "productId": "qwen-audio-agent",
