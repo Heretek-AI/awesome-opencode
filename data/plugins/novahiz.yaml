@@ -1,0 +1,11 @@
+name: novahiz
+repo: https://github.com/novahiz/novahiz
+npm: novahiz
+tagline: "Enforce AI agent skills before every file edit: prompt classifier, skill catalog, and pre-edit gate."
+description: "One-line install: npm install -g --allow-scripts=novahiz novahiz. Deterministic toolkit for OpenCode agents: prompt classification, a skill gate that blocks edits until skills load, six-step plan->converge pipeline, 94 skills with dart/flutter/expo/impeccable packs by default, local MCP servers, Obsidian memory. Fully local, no model calls."
+kind: plugin
+topics:
+  - memory
+  - workflow
+  - integrations
+compat: v2
