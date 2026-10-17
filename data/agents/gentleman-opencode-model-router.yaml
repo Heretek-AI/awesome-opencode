@@ -1,0 +1,4 @@
+name: Opencode Model Router
+repo: https://github.com/LuisAlbertoMK/gentleman-agent-gh/tree/main/.agents/skills/opencode-model-router
+tagline: Route tasks by model strength (reasoning tier)
+description: Route tasks by model strength via reasoning tier table. Domains map to agents (security, seo, infra, frontend, performance). P0-3 nemotron tier — KB r2-fundesk.

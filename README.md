@@ -1100,6 +1100,15 @@ suggestions. All processing stays local by default — no data leaves the machin
 </details>
 
 <details>
+  <summary><b>Session Resume</b> <img src="https://badgen.net/github/stars/LuisAlbertoMK/gentleman-agent-gh" height="14"/> - <i>Session continuity — save/restore, git gate, Engram recall</i></summary>
+  <blockquote>
+    Session continuity — save/restore state, git gate, sparse skill pre-load, Engram recall. Dirty/ahead detection with 4-option handoff. Part of gentleman-agent-gh SDD suite.
+    <br><br>
+    <a href="https://github.com/LuisAlbertoMK/gentleman-agent-gh/tree/main/.agents/skills/session-resume">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
   <summary><b>Shell Strategy</b> <img src="https://badgen.net/github/stars/JRedeker/opencode-shell-strategy" height="14"/> - <i>Avoid interactive shell hangs</i></summary>
   <blockquote>
     Instructions file that teaches LLMs how to avoid interactive shell commands that hang in non-TTY environments.
@@ -1441,6 +1450,15 @@ Also available for bat and Ghostty in the same repository.
 </details>
 
 <details>
+  <summary><b>Delivery Harness</b> <img src="https://badgen.net/github/stars/LuisAlbertoMK/gentleman-agent-gh" height="14"/> - <i>Multi-agent orchestration harness (4-field contract)</i></summary>
+  <blockquote>
+    Orchestrate multi-agent work — break goals into work units, delegate with isolation, collect results, handle failures. Anti-rationalization flow with clean context per delegation (R2-1).
+    <br><br>
+    <a href="https://github.com/LuisAlbertoMK/gentleman-agent-gh/tree/main/.agents/skills/delivery-harness">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
   <summary><b>Gem Team</b> <img src="https://badgen.net/github/stars/mubaidr/gem-team" height="14"/> - <i>Self-Learning Multi-agent orchestration harness for spec-driven development and automated verification.</i></summary>
   <blockquote>
     Self-Learning Multi-agent orchestration harness for spec-driven development and automated verification.
@@ -1464,6 +1482,15 @@ Also available for bat and Ghostty in the same repository.
     A set of opencode configurations, prompts, agents, and plugins for enhanced development workflows.
     <br><br>
     <a href="https://github.com/darrenhinde/opencode-agents">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
+  <summary><b>Opencode Model Router</b> <img src="https://badgen.net/github/stars/LuisAlbertoMK/gentleman-agent-gh" height="14"/> - <i>Route tasks by model strength (reasoning tier)</i></summary>
+  <blockquote>
+    Route tasks by model strength via reasoning tier table. Domains map to agents (security, seo, infra, frontend, performance). P0-3 nemotron tier — KB r2-fundesk.
+    <br><br>
+    <a href="https://github.com/LuisAlbertoMK/gentleman-agent-gh/tree/main/.agents/skills/opencode-model-router">🔗 <b>View Repository</b></a>
   </blockquote>
 </details>
 
@@ -1548,6 +1575,15 @@ Also available for bat and Ghostty in the same repository.
     Local-first Bubble Tea TUI and report CLI for inspecting OpenCode and other AI coding-agent logs with cost, tokens, latency, tool failures, anomalies, health gates, diffs, and reports.
     <br><br>
     <a href="https://github.com/luoyuctl/agenttrace">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
+  <summary><b>Baseline UI</b> <img src="https://badgen.net/github/stars/LuisAlbertoMK/gentleman-agent-gh" height="14"/> - <i>Anti-slop UI — tokens, @layer, container queries, polish</i></summary>
+  <blockquote>
+    Anti-slop UI audit and cleanup — layout, typography, responsive, animation, OKLCH tokens. Stack CSS/Tailwind + cn(). Offline-first, no Ollama required. R2-1 anti-rationalization.
+    <br><br>
+    <a href="https://github.com/LuisAlbertoMK/gentleman-agent-gh/tree/main/.agents/skills/baseline-ui">🔗 <b>View Repository</b></a>
   </blockquote>
 </details>
 

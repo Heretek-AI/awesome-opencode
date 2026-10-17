@@ -1,0 +1,4 @@
+name: Baseline UI
+repo: https://github.com/LuisAlbertoMK/gentleman-agent-gh/tree/main/.agents/skills/baseline-ui
+tagline: Anti-slop UI — tokens, @layer, container queries, polish
+description: Anti-slop UI audit and cleanup — layout, typography, responsive, animation, OKLCH tokens. Stack CSS/Tailwind + cn(). Offline-first, no Ollama required. R2-1 anti-rationalization.
