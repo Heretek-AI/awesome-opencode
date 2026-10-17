@@ -39,7 +39,7 @@
 > **Active Hard Fork**: `Heretek-AI/awesome-opencode` is the actively maintained community continuation of `awesome-opencode`.
 > All original upstream issues, pull requests, and discussions are preserved and imported. Submissions and PRs are actively reviewed!
 
-<p><b>555</b> entries &nbsp;•&nbsp; <b>289</b> plugins: <b>153</b> <code>V2</code>, <b>124</b> <code>V1 only</code> (removed after 2027-01-01), <b>12</b> <code>unverified</code></p>
+<p><b>563</b> entries &nbsp;•&nbsp; <b>290</b> plugins: <b>154</b> <code>V2</code>, <b>124</b> <code>V1 only</code> (removed after 2027-01-01), <b>12</b> <code>unverified</code></p>
 
 <p>
 <a href="https://heretek-ai.github.io/awesome-opencode/"><b>🔎 Search &amp; filter the catalog</b></a>
@@ -79,6 +79,14 @@
 
 | Name | Category | Tagline |
 | :--- | :--- | :--- |
+| **[WaveSpeed Skill](https://github.com/WaveSpeedAI/wavespeed-cli)** | agents | AI media generation via the wavespeed CLI |
+| **[Telai](https://github.com/inventopiano/telai)** | projects | macOS terminal for OpenCode with vertical tabs, sessions and groups |
+| **[SandBase CLI](https://github.com/sandbaseai/cli)** | projects | Connect OpenCode to 2,000+ AI models and APIs through one local MCP bridge |
+| **[auto-resume](https://github.com/neohiro/auto-resume)** | plugins | Keeps OpenCode sessions running through network blips, rate limits, outages and max-token cutoffs |
+| **[Data Olympus](https://github.com/knaisoma/data-olympus)** | resources | Self-hosted MCP server for governed project knowledge: standards, decisions, runbooks and workflows |
+| **[Zara Agent OPC](https://github.com/aldok10/zara-agent-opc)** | agents | Persistent AI engineering partner for OpenCode with layered memory and 10 coordinated agents |
+| **[OneTicket Core](https://github.com/dsissoko/oneticket-core)** | projects | Turns GitHub issues, PRs and Actions into an agentic delivery pipeline with OpenCode as the engine |
+| **[Qi Men Dun Jia (奇门遁甲 八门化气阵)](https://github.com/skyfiredao/qmenpowers)** | agents | Qi Men Dun Jia plate-setting engine and skills for classical Chinese cosmological forecasting |
 | **[Oh My TCM Powers (中医之心)](https://github.com/skyfiredao/oh-my-tcmpowers)** | agents | Skills and agents for analyzing Traditional Chinese Medicine formulas, symptoms, pulse patterns and acupoints |
 | **[dreampowers](https://github.com/skyfiredao/dreampowers)** | agents | 13 skills for Chinese novel writing, from story ideation to finished manuscript |
 | **[zosma-qa](https://github.com/zosmaai/zosma-qa)** | agents | QA agents for OpenCode: test planner, generator, healer and analyzer for Playwright, Appium and k6 |
@@ -86,21 +94,13 @@
 | **[Agent Relay](https://github.com/AgentWorkforce/skills)** | plugins | Connect OpenCode sessions to other coding agents through Agent Relay |
 | **[OpenRouter Websearch](https://github.com/pichenka007gd/opencode-openrouter-websearch)** | plugins | Web search via OpenRouter's web plugin with optional AI summarization |
 | **[opencode-voice](https://github.com/vaibhavgupta0786/opencode-voice)** | plugins | Local-only push-to-talk dictation for OpenCode. Press F9, speak, press F9 |
-| **[OpenCode Model Router](https://github.com/sertdisk/OpenCode-Model-Router)** | plugins | Per-agent model fallback chains (primary/secondary/tertiary) for OpenCode v2.x with a local web UI |
-| **[open-memex](https://github.com/stoneskin/open-memex)** | plugins | Local-first persistent memory for AI agents — opencode, VS Code, Visual Studio, Cursor, Claude Code |
-| **[opencode-headroom-plugin](https://github.com/goldfix/opencode-headroom-plugin)** | plugins | OpenCode v2 plugin compressing large tool results via Headroom at the message level |
-| **[OCSM - OpenCode Session Manager](https://github.com/evil-qq-intestine/OpenCode-Session-Manager)** | projects | Standalone CLI for OpenCode session management |
-| **[opencode-kevin](https://github.com/jmtrin/opencode-kevin)** | plugins | Local-first project memory that learns from coding sessions and turns approved knowledge into durable project guidance. |
-| **[Opencode Autopilot Logbook](https://github.com/smapira/opencode-autopilot-logbook)** | plugins | Auto-generates daily logbooks on session idle |
-| **[opencode-prewalk](https://github.com/vivekascoder/opencode-prewalk)** | plugins | Save token costs by planning with a frontier model, then finishing with a faster model. |
-| **[Chat Sidebar for OpenCode](https://github.com/SenCha930511/chat-sidebar-for-opencode)** | projects | VS Code sidebar chat GUI for OpenCode |
 
 <br>
 
 <div id="plugins"></div>
 
 <details open>
-<summary><strong>🧩 PLUGINS (289)</strong></summary>
+<summary><strong>🧩 PLUGINS (290)</strong></summary>
 <br>
 
 <h4>Memory <sub>(30)</sub></h4>
@@ -1635,7 +1635,7 @@ new assistant messages arrive.
 
 <br>
 
-<h4>Sessions & History <sub>(15)</sub></h4>
+<h4>Sessions & History <sub>(16)</sub></h4>
 
 <details>
   <summary><b>AI Project Tracker</b> <img src="https://badgen.net/github/stars/Helixventures-AI/ai-project-tracker" height="14"/> <code>V2</code> - <i>Real-time project progress tracker with dashboard, MCP, CLI and git-history import</i></summary>
@@ -1649,6 +1649,15 @@ new assistant messages arrive.
 - Installed via npm (`ai-project-tracker`) or local plugin file
     <br><br>
     <a href="https://github.com/Helixventures-AI/ai-project-tracker">🔗 <b>View Repository</b></a> &nbsp;•&nbsp; <a href="https://github.com/Helixventures-AI/ai-project-tracker#readme">📖 <b>Docs</b></a>
+  </blockquote>
+</details>
+
+<details>
+  <summary><b>auto-resume</b> <img src="https://badgen.net/github/stars/neohiro/auto-resume" height="14"/> <code>V2</code> - <i>Keeps OpenCode sessions running through network blips, rate limits, outages and max-token cutoffs</i></summary>
+  <blockquote>
+    Single-file plugin that hooks the event bus to resume sessions after network errors, provider outages, free-tier limits, truncations, stalled streams, permission prompts and unfinished todo lists, then has the model critique its finished work.
+    <br><br>
+    <a href="https://github.com/neohiro/auto-resume">🔗 <b>View Repository</b></a>
   </blockquote>
 </details>
 
@@ -2982,10 +2991,10 @@ Also available for bat and Ghostty in the same repository.
 <div id="agents"></div>
 
 <details>
-<summary><strong>🤖 AGENTS (33)</strong></summary>
+<summary><strong>🤖 AGENTS (36)</strong></summary>
 <br>
 
-<h4>Agents <sub>(17)</sub></h4>
+<h4>Agents <sub>(18)</sub></h4>
 
 <details>
   <summary><b>Agentic</b> <img src="https://badgen.net/github/stars/Cluster444/agentic" height="14"/> - <i>Modular AI agents</i></summary>
@@ -3132,6 +3141,15 @@ Also available for bat and Ghostty in the same repository.
 </details>
 
 <details>
+  <summary><b>Zara Agent OPC</b> <img src="https://badgen.net/github/stars/aldok10/zara-agent-opc" height="14"/> - <i>Persistent AI engineering partner for OpenCode with layered memory and 10 coordinated agents</i></summary>
+  <blockquote>
+    Agent system for OpenCode combining 3-layer cognitive memory with embeddings, 10 orchestrated agents, an MCP server with 24+ tools, adaptive skill routing, self-improving reflection loops and doom-loop detection.
+    <br><br>
+    <a href="https://github.com/aldok10/zara-agent-opc">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
   <summary><b>zosma-qa</b> <img src="https://badgen.net/github/stars/zosmaai/zosma-qa" height="14"/> - <i>QA agents for OpenCode: test planner, generator, healer and analyzer for Playwright, Appium and k6</i></summary>
   <blockquote>
     Zero-config QA platform that scaffolds four OpenCode agent prompts (test planner, generator, healer, analyzer) into .opencode/prompts/ for Playwright web tests, Appium mobile tests and k6 load tests.
@@ -3142,7 +3160,7 @@ Also available for bat and Ghostty in the same repository.
 
 <br>
 
-<h4>Skills <sub>(16)</sub></h4>
+<h4>Skills <sub>(18)</sub></h4>
 
 <details>
   <summary><b>AwareCode</b> <img src="https://badgen.net/github/stars/Wudi12317/aware-code" height="14"/> - <i>Documentation-aware coding protocol for OpenCode</i></summary>
@@ -3272,6 +3290,15 @@ skills stay model- and provider-neutral.
 </details>
 
 <details>
+  <summary><b>Qi Men Dun Jia (奇门遁甲 八门化气阵)</b> <img src="https://badgen.net/github/stars/skyfiredao/qmenpowers" height="14"/> - <i>Qi Men Dun Jia plate-setting engine and skills for classical Chinese cosmological forecasting</i></summary>
+  <blockquote>
+    A pure-Bash Qi Men Dun Jia plate-setting engine with zero dependencies, packaged with skills that let the agent set up and read the nine-palace plate of stems, stars, gates and deities.
+    <br><br>
+    <a href="https://github.com/skyfiredao/qmenpowers">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
   <summary><b>sensitive-operations</b> <img src="https://badgen.net/github/stars/LDLZM/sensitive-operations-skill" height="14"/> - <i>Gatekeeper for privileged operations</i></summary>
   <blockquote>
     Detects sensitive operations (passwords, sudo, tokens, destructive commands) and delegates them to the user for manual execution with verification.
@@ -3298,6 +3325,15 @@ skills stay model- and provider-neutral.
   </blockquote>
 </details>
 
+<details>
+  <summary><b>WaveSpeed Skill</b> <img src="https://badgen.net/github/stars/WaveSpeedAI/wavespeed-cli" height="14"/> - <i>AI media generation via the wavespeed CLI</i></summary>
+  <blockquote>
+    Agent skill for generating and editing images, video, audio, and 3D through the WaveSpeed platform via the open-source wavespeed CLI: live model catalog search, per-model input-schema introspection, local-file upload with @path markers, and price quotes before running. Works out of the box — `wavespeed skill install` writes to `.claude/skills/`, one of the directories OpenCode loads skills from.
+    <br><br>
+    <a href="https://github.com/WaveSpeedAI/wavespeed-cli">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
 <br>
 <a href="https://github.com/Heretek-AI/awesome-opencode/issues/new?template=add-entry.yml"><b>➕ Add an Agent</b></a>
 </details>
@@ -3307,7 +3343,7 @@ skills stay model- and provider-neutral.
 <div id="projects"></div>
 
 <details>
-<summary><strong>🛠 PROJECTS (196)</strong></summary>
+<summary><strong>🛠 PROJECTS (199)</strong></summary>
 <br>
 
 <h4>Agents <sub>(1)</sub></h4>
@@ -3718,7 +3754,7 @@ first 401, so no API key goes in the config file.
 
 <br>
 
-<h4>Clients & GUIs <sub>(61)</sub></h4>
+<h4>Clients & GUIs <sub>(62)</sub></h4>
 
 <details>
   <summary><b>Agent of Empires</b> <img src="https://badgen.net/github/stars/agent-of-empires/agent-of-empires" height="14"/> - <i>Multi-session TUI for OpenCode</i></summary>
@@ -4234,6 +4270,15 @@ first 401, so no API key goes in the config file.
 </details>
 
 <details>
+  <summary><b>Telai</b> <img src="https://badgen.net/github/stars/inventopiano/telai" height="14"/> - <i>macOS terminal for OpenCode with vertical tabs, sessions and groups</i></summary>
+  <blockquote>
+    Native macOS terminal (SwiftUI with libghostty) with a vertical-tab sidebar built around OpenCode: installs a TUI plugin, restores sessions on relaunch and can share one background opencode server.
+    <br><br>
+    <a href="https://github.com/inventopiano/telai">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
   <summary><b>TelegramCode</b> <img src="https://badgen.net/github/stars/olosegres/charness" height="14"/> - <i>Telegram bot for OpenCode and Claude Code, run coding agents from your phone</i></summary>
   <blockquote>
     Run your coding agents on your own machine or VPS and drive them from Telegram, by voice or text. Each forum topic is its own project session, like terminal tabs on your phone. Self-hosted, no open ports, MIT.
@@ -4271,7 +4316,7 @@ first 401, so no API key goes in the config file.
 
 <br>
 
-<h4>Tools & Utilities <sub>(89)</sub></h4>
+<h4>Tools & Utilities <sub>(91)</sub></h4>
 
 <details>
   <summary><b>Agent Run Inspector</b> <img src="https://badgen.net/github/stars/kaboumou/agent-run-inspector-docs" height="14"/> - <i>Local, read-only reports for OpenCode session exports - repeated tool calls, failures, completion</i></summary>
@@ -4742,6 +4787,15 @@ first 401, so no API key goes in the config file.
 </details>
 
 <details>
+  <summary><b>OneTicket Core</b> <img src="https://badgen.net/github/stars/dsissoko/oneticket-core" height="14"/> - <i>Turns GitHub issues, PRs and Actions into an agentic delivery pipeline with OpenCode as the engine</i></summary>
+  <blockquote>
+    Uses native GitHub objects (issues, pull requests, comments, reviews, Actions) as the collaboration layer: users talk to agents through comments, and GitHub Actions run OpenCode agents that analyze requirements, ask questions, write code and open or update PRs.
+    <br><br>
+    <a href="https://github.com/dsissoko/oneticket-core">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
   <summary><b>oos</b> <img src="https://badgen.net/github/stars/wsaaaqqq/oos" height="14"/> - <i>Find any OpenCode session across all projects and resume it instantly</i></summary>
   <blockquote>
     A TUI fuzzy finder over every OpenCode session from every project — type keywords to filter in real time, pick with ↑/↓, Enter to jump back into the conversation. Go, zero config, single binary.
@@ -4960,6 +5014,15 @@ Exposes an OpenAI-compatible local proxy at 127.0.0.1:8787/v1. From OpenCode, `n
 </details>
 
 <details>
+  <summary><b>SandBase CLI</b> <img src="https://badgen.net/github/stars/sandbaseai/cli" height="14"/> - <i>Connect OpenCode to 2,000+ AI models and APIs through one local MCP bridge</i></summary>
+  <blockquote>
+    SandBase CLI installs an ownership-aware local MCP bridge for OpenCode, updates its JSONC configuration while preserving comments, and provides doctor and unregister flows that only change the exact managed entry.
+    <br><br>
+    <a href="https://github.com/sandbaseai/cli">🔗 <b>View Repository</b></a> &nbsp;•&nbsp; <a href="https://www.npmjs.com/package/@sandbaseai/cli">📦 <b>npm</b></a>
+  </blockquote>
+</details>
+
+<details>
   <summary><b>Session Coherence</b> <img src="https://badgen.net/github/stars/OutcomeFocusAi/session-coherence" height="14"/> - <i>Cross-tool session memory for AI coding assistants</i></summary>
   <blockquote>
     Cross-tool session memory for AI coding assistants. One markdown chronicle shared by 9 tools (Claude Code, Cursor, Codex, Gemini CLI, Aider, and more). Zero dependencies, ~300 token fixed cost, 100% local.
@@ -5134,7 +5197,7 @@ Exposes an OpenAI-compatible local proxy at 127.0.0.1:8787/v1. From OpenCode, `n
 <div id="resources"></div>
 
 <details>
-<summary><strong>📚 RESOURCES (28)</strong></summary>
+<summary><strong>📚 RESOURCES (29)</strong></summary>
 <br>
 
 <h4>Skills <sub>(7)</sub></h4>
@@ -5204,7 +5267,7 @@ Exposes an OpenAI-compatible local proxy at 127.0.0.1:8787/v1. From OpenCode, `n
 
 <br>
 
-<h4>MCP Servers <sub>(7)</sub></h4>
+<h4>MCP Servers <sub>(8)</sub></h4>
 
 <details>
   <summary><b>Baizhi Cloud Agent Toolkit</b> <img src="https://badgen.net/github/stars/chaitin/baizhi-agent-toolkit" height="14"/> - <i>Remote web search and page extraction MCP for OpenCode agents</i></summary>
@@ -5212,6 +5275,15 @@ Exposes an OpenAI-compatible local proxy at 127.0.0.1:8787/v1. From OpenCode, `n
     For OpenCode V2, configure a remote MCP server at https://agent-toolkit.app.baizhi.cloud/mcp with oauth disabled and Authorization: Bearer {env:BAIZHI_API_KEY}. It offers web search, page reading, and structured extraction. The linked MIT repository publishes integration configuration and documentation, not the hosted backend. Users need their own Baizhi account and API key; calls may consume paid credits.
     <br><br>
     <a href="https://github.com/chaitin/baizhi-agent-toolkit">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
+  <summary><b>Data Olympus</b> <img src="https://badgen.net/github/stars/knaisoma/data-olympus" height="14"/> - <i>Self-hosted MCP server for governed project knowledge: standards, decisions, runbooks and workflows</i></summary>
+  <blockquote>
+    Git-native knowledge base and MCP server for coding agents. Serves reviewed project guidance (accepted standards, decisions, workflows, supersession history) and accepts proposed knowledge changes, separate from recalled chat memory.
+    <br><br>
+    <a href="https://github.com/knaisoma/data-olympus">🔗 <b>View Repository</b></a>
   </blockquote>
 </details>
 

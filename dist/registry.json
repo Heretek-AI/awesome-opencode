@@ -442,6 +442,23 @@
     "tags": []
   },
   {
+    "productId": "qmenpowers",
+    "type": "agents",
+    "displayName": "Qi Men Dun Jia (奇门遁甲 八门化气阵)",
+    "repoUrl": "https://github.com/skyfiredao/qmenpowers",
+    "tagline": "Qi Men Dun Jia plate-setting engine and skills for classical Chinese cosmological forecasting",
+    "description": "A pure-Bash Qi Men Dun Jia plate-setting engine with zero dependencies, packaged with skills that let the agent set up and read the nine-palace plate of stems, stars, gates and deities.",
+    "kind": "skill",
+    "topics": [
+      "domain"
+    ],
+    "compat": "n/a",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
     "productId": "review-pro",
     "type": "agents",
     "displayName": "review-pro",
@@ -599,6 +616,41 @@
     "kind": "skill",
     "topics": [
       "environment"
+    ],
+    "compat": "n/a",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
+    "productId": "wavespeed-cli",
+    "type": "agents",
+    "displayName": "WaveSpeed Skill",
+    "repoUrl": "https://github.com/WaveSpeedAI/wavespeed-cli",
+    "tagline": "AI media generation via the wavespeed CLI",
+    "description": "Agent skill for generating and editing images, video, audio, and 3D through the WaveSpeed platform via the open-source wavespeed CLI: live model catalog search, per-model input-schema introspection, local-file upload with @path markers, and price quotes before running. Works out of the box — `wavespeed skill install` writes to `.claude/skills/`, one of the directories OpenCode loads skills from.",
+    "kind": "skill",
+    "topics": [
+      "media"
+    ],
+    "compat": "n/a",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
+    "productId": "zara-agent-opc",
+    "type": "agents",
+    "displayName": "Zara Agent OPC",
+    "repoUrl": "https://github.com/aldok10/zara-agent-opc",
+    "tagline": "Persistent AI engineering partner for OpenCode with layered memory and 10 coordinated agents",
+    "description": "Agent system for OpenCode combining 3-layer cognitive memory with embeddings, 10 orchestrated agents, an MCP server with 24+ tools, adaptive skill routing, self-improving reflection loops and doom-loop detection.",
+    "kind": "agent",
+    "topics": [
+      "memory",
+      "orchestration"
     ],
     "compat": "n/a",
     "scope": [
@@ -915,6 +967,23 @@
     "kind": "plugin",
     "topics": [
       "prompting"
+    ],
+    "compat": "v2",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
+    "productId": "auto-resume",
+    "type": "plugins",
+    "displayName": "auto-resume",
+    "repoUrl": "https://github.com/neohiro/auto-resume",
+    "tagline": "Keeps OpenCode sessions running through network blips, rate limits, outages and max-token cutoffs",
+    "description": "Single-file plugin that hooks the event bus to resume sessions after network errors, provider outages, free-tier limits, truncations, stalled streams, permission prompts and unfinished todo lists, then has the model critique its finished work.",
+    "kind": "plugin",
+    "topics": [
+      "sessions"
     ],
     "compat": "v2",
     "scope": [
@@ -2046,7 +2115,7 @@
       "langchain"
     ],
     "homepageUrl": "https://www.npmjs.com/package/opencode-llm-proxy",
-    "installation": "Add the package to `opencode.json`:\n\n```json\n{\n  \"plugin\": [\"opencode-llm-proxy\"]\n}\n```\n\nThe proxy starts automatically on `http://127.0.0.1:4010`.\n"
+    "installation": "Add the package to `opencode.json`:\n\n```json\n{\n  \"plugins\": [\"opencode-llm-proxy\"]\n}\n```\n\nThis is the OpenCode V2 key. On OpenCode V1, use `\"plugin\": [\"opencode-llm-proxy\"]` instead; the package supports both.\n\nThe proxy starts automatically on `http://127.0.0.1:4010`.\n"
   },
   {
     "productId": "lmstudio-warm",
@@ -8516,6 +8585,24 @@
     "tags": []
   },
   {
+    "productId": "oneticket-core",
+    "type": "projects",
+    "displayName": "OneTicket Core",
+    "repoUrl": "https://github.com/dsissoko/oneticket-core",
+    "tagline": "Turns GitHub issues, PRs and Actions into an agentic delivery pipeline with OpenCode as the engine",
+    "description": "Uses native GitHub objects (issues, pull requests, comments, reviews, Actions) as the collaboration layer: users talk to agents through comments, and GitHub Actions run OpenCode agents that analyze requirements, ask questions, write code and open or update PRs.",
+    "kind": "tool",
+    "topics": [
+      "git",
+      "orchestration"
+    ],
+    "compat": "n/a",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
     "productId": "oos",
     "type": "projects",
     "displayName": "oos",
@@ -9685,6 +9772,26 @@
     "homepageUrl": "https://github.com/vizuh/sabi/blob/main/docs/adapters/opencode.md"
   },
   {
+    "productId": "sandbase-cli",
+    "type": "projects",
+    "displayName": "SandBase CLI",
+    "repoUrl": "https://github.com/sandbaseai/cli",
+    "npmPackage": "@sandbaseai/cli",
+    "tagline": "Connect OpenCode to 2,000+ AI models and APIs through one local MCP bridge",
+    "description": "SandBase CLI installs an ownership-aware local MCP bridge for OpenCode, updates its JSONC configuration while preserving comments, and provides doctor and unregister flows that only change the exact managed entry.",
+    "kind": "tool",
+    "topics": [
+      "providers",
+      "integrations"
+    ],
+    "compat": "n/a",
+    "scope": [
+      "global"
+    ],
+    "tags": [],
+    "installation": "npx -y @sandbaseai/cli connect --client opencode"
+  },
+  {
     "productId": "scvd-general-store",
     "type": "projects",
     "displayName": "SCVD General Store",
@@ -10019,6 +10126,24 @@
     ],
     "tags": [],
     "homepageUrl": "https://swemux.dev"
+  },
+  {
+    "productId": "telai",
+    "type": "projects",
+    "displayName": "Telai",
+    "repoUrl": "https://github.com/inventopiano/telai",
+    "tagline": "macOS terminal for OpenCode with vertical tabs, sessions and groups",
+    "description": "Native macOS terminal (SwiftUI with libghostty) with a vertical-tab sidebar built around OpenCode: installs a TUI plugin, restores sessions on relaunch and can share one background opencode server.",
+    "kind": "client",
+    "topics": [
+      "ui",
+      "sessions"
+    ],
+    "compat": "n/a",
+    "scope": [
+      "global"
+    ],
+    "tags": []
   },
   {
     "productId": "telegramcode",
@@ -10444,6 +10569,24 @@
       "task-ledger"
     ],
     "installation": "```bash\nnpx cosmosmith@latest init --all\n```\n\nThe initializer creates OpenCode-compatible project guidance alongside AGENTS.md and other tool adapters.\n"
+  },
+  {
+    "productId": "data-olympus",
+    "type": "resources",
+    "displayName": "Data Olympus",
+    "repoUrl": "https://github.com/knaisoma/data-olympus",
+    "tagline": "Self-hosted MCP server for governed project knowledge: standards, decisions, runbooks and workflows",
+    "description": "Git-native knowledge base and MCP server for coding agents. Serves reviewed project guidance (accepted standards, decisions, workflows, supersession history) and accepts proposed knowledge changes, separate from recalled chat memory.",
+    "kind": "mcp-server",
+    "topics": [
+      "memory",
+      "docs"
+    ],
+    "compat": "n/a",
+    "scope": [
+      "global"
+    ],
+    "tags": []
   },
   {
     "productId": "dataecho-skills",
