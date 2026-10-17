@@ -1,4 +1,8 @@
 name: Opencode Neovim
-repo: https://github.com/NickvanDyke/opencode.nvim
+repo: https://github.com/nickjvandyke/opencode.nvim
 tagline: Neovim plugin
 description: Neovim plugin for making convenient editor-aware prompts.
+kind: client
+topics:
+  - ui
+compat: n/a

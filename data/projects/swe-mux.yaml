@@ -1,0 +1,10 @@
+name: swe-mux
+repo: https://github.com/jatoran/swe-mux
+homepage: https://swemux.dev
+tagline: Run OpenCode sessions side by side with a status each, and on your phone over Tailscale
+description: Terminal multiplexer for coding agents. Runs OpenCode (plus Claude Code, Codex and pi) in real terminals on your own machine, shows which session is waiting on you, and serves the same live sessions to your phone over your own Tailscale network. Sessions survive app restarts and updates.
+kind: client
+topics:
+  - sessions
+  - remote
+compat: n/a

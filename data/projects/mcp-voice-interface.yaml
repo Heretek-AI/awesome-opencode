@@ -1,4 +1,10 @@
 name: MCP Voice Interface
-repo: https://github.com/shantur/mcp-voice-interface
+repo: https://github.com/shantur/jarvis-mcp
 tagline: Talk to AI assistants
 description: Talk to AI assistants using your voice through a web browser. Compatible with Claude Desktop and opencode.
+kind: client
+also:
+  - mcp-server
+topics:
+  - voice
+compat: v1

@@ -1,8 +1,12 @@
 name: OpenCode Vim
 repo: https://github.com/leohenon/opencode-vim
+homepage: https://leohenon.github.io/opencode-vim/
 tagline: OpenCode fork with built-in Vim mode
 description: An unofficial OpenCode fork that adds Vim motions, navigation, and editing directly to the OpenCode TUI.
-homepage: https://leohenon.github.io/opencode-vim/
+kind: fork
+topics:
+  - ui
+compat: v2
 tags:
   - fork
   - vim

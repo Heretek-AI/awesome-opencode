@@ -1,35 +1,17 @@
-## Submission Type
+<!--
+Easiest path: use the "Add an entry" issue form instead of a PR. A bot writes the YAML and opens the PR for you:
+https://github.com/Heretek-AI/awesome-opencode/issues/new?template=add-entry.yml
 
-- [ ] Plugin
-- [ ] Project
-- [ ] Theme
-- [ ] Agent
-- [ ] Resource
+Editing by hand? Add data/<category>/<name>.yaml (see contributing.md). Do not edit README.md; it is generated.
+`npm run new -- --category plugins --repo <url> --tagline "..." --topics memory` writes a valid file for you.
+-->
 
-## Details
+## What does this add or change?
 
-**Name:** 
-**Repository:** 
-**Tagline:** 
+<!-- One or two sentences. -->
 
-## Checklist
+## Plugins only: OpenCode V2
 
-- [ ] Relevant to OpenCode
-- [ ] Repository is public and accessible
-- [ ] Actively maintained
-- [ ] Not a duplicate
-- [ ] YAML file in correct folder (`data/{category}/`)
-- [ ] Filename is kebab-case (e.g., `my-plugin.yaml`)
+- [ ] The plugin depends on `@opencode/plugin` (not the legacy `@opencode-ai/plugin` 1.x) and exports `Plugin.define({ id, setup(ctx) })`.
 
-## YAML Format
-
-Create a file in `data/{category}/your-entry.yaml`:
-
-```yaml
-name: Your Entry Name
-repo: https://github.com/owner/repo
-tagline: Short punchy summary (shown in collapsed view)
-description: Longer description explaining what it does.
-```
-
-See [contributing.md](contributing.md) for full instructions.
+New V1 plugins are not accepted. The `validate` check verifies this automatically and explains anything it can't confirm. See [docs/policy.md](https://github.com/Heretek-AI/awesome-opencode/blob/main/docs/policy.md).
