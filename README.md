@@ -39,7 +39,7 @@
 > **Active Hard Fork**: `Heretek-AI/awesome-opencode` is the actively maintained community continuation of `awesome-opencode`.
 > All original upstream issues, pull requests, and discussions are preserved and imported. Submissions and PRs are actively reviewed!
 
-<p><b>515</b> entries &nbsp;•&nbsp; <b>271</b> plugins: <b>135</b> <code>V2</code>, <b>124</b> <code>V1 only</code> (removed after 2027-01-01), <b>12</b> <code>unverified</code></p>
+<p><b>528</b> entries &nbsp;•&nbsp; <b>271</b> plugins: <b>135</b> <code>V2</code>, <b>124</b> <code>V1 only</code> (removed after 2027-01-01), <b>12</b> <code>unverified</code></p>
 
 <p>
 <a href="https://heretek-ai.github.io/awesome-opencode/"><b>🔎 Search &amp; filter the catalog</b></a>
@@ -79,21 +79,21 @@
 
 | Name | Category | Tagline |
 | :--- | :--- | :--- |
+| **[handoff](https://github.com/dazuiba/handoff)** | agents | Delegate tasks to OpenCode / DeepSeek V4 right inside your Claude Code / Codex sessions. |
+| **[Reflection-3](https://github.com/dzianisv/opencode-plugins)** | projects | Judge layer that catches premature agent stops |
+| **[crowdsource-debugger](https://github.com/LDLZM/crowdsource-debugger)** | agents | Debug stubborn errors with community help |
+| **[opencode-mcp-registry](https://github.com/LDLZM/opencode-mcp-registry)** | agents | Register MCP servers in opencode |
+| **[sensitive-operations](https://github.com/LDLZM/sensitive-operations-skill)** | agents | Gatekeeper for privileged operations |
+| **[uv-skill](https://github.com/LDLZM/uv-skill)** | agents | Use uv for all Python package management |
+| **[Prompt to Asset](https://github.com/MohamedAbdallah-14/prompt-to-asset)** | projects | Generate visual assets across 30+ image models via MCP |
+| **[Emdash Skills](https://github.com/heymegabyte/agent-skills)** | agents | 14-category autonomous product-building OS |
+| **[MorningAI](https://github.com/octo-patch/MorningAI)** | agents | AI news tracking skill |
+| **[opencode-telegram](https://github.com/raulvalverdeleal/opencode-telegram)** | projects | Control OpenCode sessions from Telegram |
+| **[MonadicSharp](https://github.com/Danny4897/MonadicSharp-OpenCode)** | projects | Railway-Oriented Programming for C# |
+| **[AgenTopology](https://github.com/agentopology/agentopology)** | projects | Declarative multi-agent topology language |
+| **[Untether](https://github.com/littlebearapps/untether)** | projects | Telegram bridge for remote task control |
 | **[PPTX from Layouts](https://github.com/tristan-mcinnis/pptx-from-layouts-skill)** | agents | PowerPoint from slide master layouts |
 | **[Promption](https://github.com/Abdssamie/promption)** | projects | Manage AI agent configs |
-| **[agent-sessions](https://github.com/prajwalgajakesari/agent-sessions)** | projects | Share OpenCode, Claude Code and Codex sessions with your team through git |
-| **[OpenClient](https://github.com/ntoporcov/openclient)** | projects | Native iPhone and iPad companion for self-hosted OpenCode servers |
-| **[PPT Design Skill](https://github.com/sunchaokun/PPT-Design-Skill)** | projects | One-liner PPT generation —40,000+ styles, AI images, fully editable .pptx |
-| **[PDCA Skills](https://github.com/AlexeyShirshov/skills)** | agents | PDCA orchestration skills: PLAN → DO → CHECK → ACT with evidence-based verification |
-| **[OpenChamber Design Studio](https://github.com/lastonoga/openchamber-design-studio)** | projects | Open, local alternative to Claude Design inside OpenChamber |
-| **[Tapetide MCP](https://github.com/Tapetide-hq/nse-bse-indian-stock-market-data-mcp)** | resources | Indian stock market data (NSE and BSE) for OpenCode agents |
-| **[assay](https://github.com/awss1i/assay)** | projects | Deterministic QA that drives every control on a web page and reports where it contradicts itself |
-| **[Crit](https://github.com/tomasz-tomczyk/crit)** | projects | Review OpenCode plans and diffs in a local browser UI and send comments back to the agent. |
-| **[PriceWin](https://github.com/PriceDotWin/pricewin-agent-plugin)** | projects | Remote MCP server and skill for live hotel and flight prices across Booking.com, Agoda, Trip.com and Traveloka |
-| **[OpenCode Sentry](https://github.com/sudo-heyu/OpenCodesentry)** | projects | Android companion: scan-to-pair live OpenCode console + screen-off alerts over Tailscale |
-| **[Kranz](https://github.com/kranz-org/kranz)** | projects | Inspect and control live development services from OpenCode over MCP |
-| **[DataCloak](https://github.com/pratikwayal01/datacloak)** | plugins | Swap secrets and PII for realistic fakes before AI sees them; restore originals on return. |
-| **[Sabi](https://github.com/vizuh/sabi)** | projects | Adaptive per-round inference routing for coding agents — model, effort and provider scheduled against the trajectory |
 
 <br>
 
@@ -2814,10 +2814,10 @@ Also available for bat and Ghostty in the same repository.
 <div id="agents"></div>
 
 <details>
-<summary><strong>🤖 AGENTS (22)</strong></summary>
+<summary><strong>🤖 AGENTS (29)</strong></summary>
 <br>
 
-<h4>Agents <sub>(14)</sub></h4>
+<h4>Agents <sub>(15)</sub></h4>
 
 <details>
   <summary><b>Agentic</b> <img src="https://badgen.net/github/stars/Cluster444/agentic" height="14"/> - <i>Modular AI agents</i></summary>
@@ -2861,6 +2861,15 @@ Also available for bat and Ghostty in the same repository.
     A model-expandable OpenCode development-agent system that separates stable development behavior from thin model-specific overlays, with skill routing, bounded waits, evidence-backed verification, durable chunk closeout, and cold-session recovery.
     <br><br>
     <a href="https://github.com/es-3581100/Goblin-Logic-Manager">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
+  <summary><b>handoff</b> <img src="https://badgen.net/github/stars/dazuiba/handoff" height="14"/> - <i>Delegate tasks to OpenCode / DeepSeek V4 right inside your Claude Code / Codex sessions.</i></summary>
+  <blockquote>
+    Cross-agent task dispatcher — hand off work to DeepSeek V4 (via OpenCode), Codex, or Claude Opus without leaving your current session. Runs in the background; result comes back automatically.
+    <br><br>
+    <a href="https://github.com/dazuiba/handoff">🔗 <b>View Repository</b></a>
   </blockquote>
 </details>
 
@@ -2947,7 +2956,7 @@ Also available for bat and Ghostty in the same repository.
 
 <br>
 
-<h4>Skills <sub>(8)</sub></h4>
+<h4>Skills <sub>(14)</sub></h4>
 
 <details>
   <summary><b>AwareCode</b> <img src="https://badgen.net/github/stars/Wudi12317/aware-code" height="14"/> - <i>Documentation-aware coding protocol for OpenCode</i></summary>
@@ -2955,6 +2964,24 @@ Also available for bat and Ghostty in the same repository.
     A 5-phase meta-skill that enforces documentation-first coding. Scans project docs before writing code, remembers root causes of errors, reviews code quality and security, synchronizes docs after changes, and outputs structured summaries. Designed for OpenCode's skill system.
     <br><br>
     <a href="https://github.com/Wudi12317/aware-code">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
+  <summary><b>crowdsource-debugger</b> <img src="https://badgen.net/github/stars/LDLZM/crowdsource-debugger" height="14"/> - <i>Debug stubborn errors with community help</i></summary>
+  <blockquote>
+    Stops agents from going in circles. When stuck on the same error 3+ times, guides searching Stack Overflow, GitHub Issues, Reddit, and Discourse forums for vetted solutions.
+    <br><br>
+    <a href="https://github.com/LDLZM/crowdsource-debugger">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
+  <summary><b>Emdash Skills</b> <img src="https://badgen.net/github/stars/heymegabyte/agent-skills" height="14"/> - <i>14-category autonomous product-building OS</i></summary>
+  <blockquote>
+    Turns one-line prompts into deployed products on Cloudflare Workers. 18 specialized agents (architect, test-writer, deploy-verifier, security-reviewer, visual-qa, etc.) self-coordinate through parallel build phases. Full-stack skills covering architecture, planning, quality verification, brand, media, observability, and more. Compatible with Claude Code, OpenCode, Gemini CLI, and Windsurf.
+    <br><br>
+    <a href="https://github.com/heymegabyte/agent-skills">🔗 <b>View Repository</b></a>
   </blockquote>
 </details>
 
@@ -2977,11 +3004,29 @@ Also available for bat and Ghostty in the same repository.
 </details>
 
 <details>
+  <summary><b>MorningAI</b> <img src="https://badgen.net/github/stars/octo-patch/MorningAI" height="14"/> - <i>AI news tracking skill</i></summary>
+  <blockquote>
+    AI news tracking skill that monitors 80+ entities across 6 free sources (Reddit, HN, GitHub, HuggingFace, arXiv, X/Twitter). Generates scored daily reports with infographics and message digests. Works via SKILL.md — no Docker or servers required.
+    <br><br>
+    <a href="https://github.com/octo-patch/MorningAI">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
   <summary><b>OpenCode Agent Orchestration Kit</b> <img src="https://badgen.net/github/stars/jcarlosrodicio/opencode-agent-orchestration-kit" height="14"/> - <i>Structured product-development workflows</i></summary>
   <blockquote>
     A reproducible OpenCode configuration kit with specialized agents, structured handoffs for research, design, specification, implementation, and review, plus local skills, validation checks, safe installation, and optional design integrations.
     <br><br>
     <a href="https://github.com/jcarlosrodicio/opencode-agent-orchestration-kit">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
+  <summary><b>opencode-mcp-registry</b> <img src="https://badgen.net/github/stars/LDLZM/opencode-mcp-registry" height="14"/> - <i>Register MCP servers in opencode</i></summary>
+  <blockquote>
+    Guides agents through installing and registering MCP (Model Context Protocol) servers. Supports pre-built binaries, pip, npm, Docker, and remote HTTP endpoints with proper auth handling.
+    <br><br>
+    <a href="https://github.com/LDLZM/opencode-mcp-registry">🔗 <b>View Repository</b></a>
   </blockquote>
 </details>
 
@@ -3023,11 +3068,29 @@ skills stay model- and provider-neutral.
 </details>
 
 <details>
+  <summary><b>sensitive-operations</b> <img src="https://badgen.net/github/stars/LDLZM/sensitive-operations-skill" height="14"/> - <i>Gatekeeper for privileged operations</i></summary>
+  <blockquote>
+    Detects sensitive operations (passwords, sudo, tokens, destructive commands) and delegates them to the user for manual execution with verification.
+    <br><br>
+    <a href="https://github.com/LDLZM/sensitive-operations-skill">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
   <summary><b>ShipFrame</b> <img src="https://badgen.net/github/stars/juanitourquiza/shipframe" height="14"/> - <i>AI coding workflows for OpenCode, Claude Code, and Codex</i></summary>
   <blockquote>
     AI coding workflow toolkit with installable OpenCode skills, converted agents, project profiles, release evidence, and disciplined PR/MR workflows.
     <br><br>
     <a href="https://github.com/juanitourquiza/shipframe">🔗 <b>View Repository</b></a> &nbsp;•&nbsp; <a href="https://shipframe.hackeruna.com/">📖 <b>Docs</b></a>
+  </blockquote>
+</details>
+
+<details>
+  <summary><b>uv-skill</b> <img src="https://badgen.net/github/stars/LDLZM/uv-skill" height="14"/> - <i>Use uv for all Python package management</i></summary>
+  <blockquote>
+    Mandates using uv for ALL Python dependency, virtual environment, and project management tasks. Replaces pip, poetry, pipx, pyenv, and virtualenv.
+    <br><br>
+    <a href="https://github.com/LDLZM/uv-skill">🔗 <b>View Repository</b></a>
   </blockquote>
 </details>
 
@@ -3040,7 +3103,7 @@ skills stay model- and provider-neutral.
 <div id="projects"></div>
 
 <details>
-<summary><strong>🛠 PROJECTS (185)</strong></summary>
+<summary><strong>🛠 PROJECTS (191)</strong></summary>
 <br>
 
 <h4>Agents <sub>(1)</sub></h4>
@@ -3150,7 +3213,7 @@ skills stay model- and provider-neutral.
 
 <br>
 
-<h4>MCP Servers <sub>(28)</sub></h4>
+<h4>MCP Servers <sub>(30)</sub></h4>
 
 <details>
   <summary><b>/call-me</b> <img src="https://badgen.net/github/stars/radres/call-me" height="14"/> - <i>Let OpenCode ring your iPhone, read you a question and return your spoken answer</i></summary>
@@ -3288,6 +3351,15 @@ skills stay model- and provider-neutral.
 </details>
 
 <details>
+  <summary><b>MonadicSharp</b> <img src="https://badgen.net/github/stars/Danny4897/MonadicSharp-OpenCode" height="14"/> - <i>Railway-Oriented Programming for C#</i></summary>
+  <blockquote>
+    MCP server + Green Code Agent + MonadicForge CLI analyzer for C#/.NET. Includes 5 MonadicSharp resources, 21 code generation scenarios, inline ROP compliance review, and skills for green-code-advisor and saas-module-design. .NET 8+, MIT license.
+    <br><br>
+    <a href="https://github.com/Danny4897/MonadicSharp-OpenCode">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
   <summary><b>myc</b> <img src="https://badgen.net/github/stars/aistastudio/myc" height="14"/> - <i>Local task queue and decision memory for coding agents, wired into opencode with one command</i></summary>
   <blockquote>
     A local task-and-memory layer for coding agents (opencode, Claude Code, Codex, Kimi). One SQLite file next to the repo holds a task queue with dependencies, blockers and atomic claims, an oplog of decisions with hybrid search, and a code index; `myc wire` installs the opencode plugin and MCP server. No network calls of its own, no API key, MIT.
@@ -3338,6 +3410,15 @@ skills stay model- and provider-neutral.
     Compares live hotel and flight prices in USD across Booking.com, Agoda, Trip.com, Traveloka and Google Flights through one remote MCP server (https://mcp.price.win/mcp, no account or API key). Add it to opencode.json as a remote MCP server and copy the bundled pricewin-travel-search skill to ~/.agents/skills, which OpenCode loads automatically. Results name their source and link to it for booking.
     <br><br>
     <a href="https://github.com/PriceDotWin/pricewin-agent-plugin">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
+  <summary><b>Prompt to Asset</b> <img src="https://badgen.net/github/stars/MohamedAbdallah-14/prompt-to-asset" height="14"/> - <i>Generate visual assets across 30+ image models via MCP</i></summary>
+  <blockquote>
+    MCP server that generates production-ready visual assets (app icons, favicons, OG images, logos, wordmarks) by routing prompts across 30+ image generation models. Three execution modes: inline SVG, external prompt, and full API generation. Zero API key required for first run via Pollinations and Stable Horde free tiers.
+    <br><br>
+    <a href="https://github.com/MohamedAbdallah-14/prompt-to-asset">🔗 <b>View Repository</b></a>
   </blockquote>
 </details>
 
@@ -3415,7 +3496,7 @@ first 401, so no API key goes in the config file.
 
 <br>
 
-<h4>Clients & GUIs <sub>(58)</sub></h4>
+<h4>Clients & GUIs <sub>(60)</sub></h4>
 
 <details>
   <summary><b>Agent of Empires</b> <img src="https://badgen.net/github/stars/agent-of-empires/agent-of-empires" height="14"/> - <i>Multi-session TUI for OpenCode</i></summary>
@@ -3814,6 +3895,15 @@ first 401, so no API key goes in the config file.
 </details>
 
 <details>
+  <summary><b>opencode-telegram</b> <img src="https://badgen.net/github/stars/raulvalverdeleal/opencode-telegram" height="14"/> <code>V1 only</code> - <i>Control OpenCode sessions from Telegram</i></summary>
+  <blockquote>
+    A Telegram bot that bridges your chats to an OpenCode server with real-time SSE progress, session management, and access control via user allowlists.
+    <br><br>
+    <a href="https://github.com/raulvalverdeleal/opencode-telegram">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
   <summary><b>OpenMate</b> <img src="https://badgen.net/github/stars/bob-dawson/openmate" height="14"/> - <i>Offline-first Android client for OpenCode, connect from anywhere</i></summary>
   <blockquote>
     Native Android (Kotlin/Compose) client for a self-hosted opencode server. Connects over your local network or automatically through a cloud relay, so you can reach your agent from anywhere. A lightweight Bridge streams incremental, seq-based sync from opencode's own database into a local copy on your phone, so you can read and reply to sessions offline. Supports opencode v2 only.
@@ -3922,6 +4012,15 @@ first 401, so no API key goes in the config file.
 </details>
 
 <details>
+  <summary><b>Untether</b> <img src="https://badgen.net/github/stars/littlebearapps/untether" height="14"/> - <i>Telegram bridge for remote task control</i></summary>
+  <blockquote>
+    Telegram bridge for OpenCode (and 5 other agents). Send tasks by voice or text, stream progress live, and manage sessions remotely. Supports 75+ providers via OpenCode's model system.
+    <br><br>
+    <a href="https://github.com/littlebearapps/untether">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
   <summary><b>Vibe Kanban</b> <img src="https://badgen.net/github/stars/BloopAI/vibe-kanban" height="14"/> - <i>Manage AI in parallel</i></summary>
   <blockquote>
     A Kanban board to manage and orchestrate AI coding agents in parallel.
@@ -3941,7 +4040,7 @@ first 401, so no API key goes in the config file.
 
 <br>
 
-<h4>Tools & Utilities <sub>(85)</sub></h4>
+<h4>Tools & Utilities <sub>(87)</sub></h4>
 
 <details>
   <summary><b>Agent Run Inspector</b> <img src="https://badgen.net/github/stars/kaboumou/agent-run-inspector-docs" height="14"/> - <i>Local, read-only reports for OpenCode session exports - repeated tool calls, failures, completion</i></summary>
@@ -4021,6 +4120,15 @@ first 401, so no API key goes in the config file.
     Reads the session logs OpenCode, Claude Code, Codex and Gemini CLI already leave on disk and turns them into token and dollar totals. Prices cache reads and cache writes at their own rates instead of counting them as input, attributes spend by project/branch/model, detects context churn, and projects a budget. Zero dependencies, no network calls — your entire coding history never leaves the machine.
     <br><br>
     <a href="https://github.com/garyleelty/agentledger">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
+  <summary><b>AgenTopology</b> <img src="https://badgen.net/github/stars/agentopology/agentopology" height="14"/> - <i>Declarative multi-agent topology language</i></summary>
+  <blockquote>
+    Generate platform configs for OpenCode/OpenClaw and 6 other platforms (Claude Code, Codex, Gemini CLI, Copilot CLI, Kiro) from a single declarative .at file. Define agents, flows, gates, hooks, and group chats. Ships with a Claude Code skill and interactive visualizer. Apache 2.0.
+    <br><br>
+    <a href="https://github.com/agentopology/agentopology">🔗 <b>View Repository</b></a>
   </blockquote>
 </details>
 
@@ -4562,6 +4670,15 @@ Zero config. One env var if you want a default agent.
     An OpenAI-Compatible Proxy Server for Qwen models.
     <br><br>
     <a href="https://github.com/aptdnfapt/qwen-code-oai-proxy">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
+  <summary><b>Reflection-3</b> <img src="https://badgen.net/github/stars/dzianisv/opencode-plugins" height="14"/> <code>V1 only</code> - <i>Judge layer that catches premature agent stops</i></summary>
+  <blockquote>
+    LLM-as-judge plugin for OpenCode and Claude Code: fires on every agent stop, classifies stops as premature or legitimate using a rubric mined from 227 real sessions (78% were premature), and re-prompts the agent with targeted feedback. Enforces workflow gates (tests, CI, PRs). Implements the Reflexion self-improvement loop. Works on both OpenCode (session.idle event) and Claude Code (Stop hook).
+    <br><br>
+    <a href="https://github.com/dzianisv/opencode-plugins/tree/HEAD/packages/reflection">🔗 <b>View Repository</b></a>
   </blockquote>
 </details>
 

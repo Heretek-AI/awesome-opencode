@@ -1,5 +1,23 @@
 [
   {
+    "productId": "agent-skills",
+    "type": "agents",
+    "displayName": "Emdash Skills",
+    "repoUrl": "https://github.com/heymegabyte/agent-skills",
+    "tagline": "14-category autonomous product-building OS",
+    "description": "Turns one-line prompts into deployed products on Cloudflare Workers. 18 specialized agents (architect, test-writer, deploy-verifier, security-reviewer, visual-qa, etc.) self-coordinate through parallel build phases. Full-stack skills covering architecture, planning, quality verification, brand, media, observability, and more. Compatible with Claude Code, OpenCode, Gemini CLI, and Windsurf.",
+    "kind": "skill",
+    "topics": [
+      "workflow",
+      "code-quality"
+    ],
+    "compat": "n/a",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
     "productId": "agentic",
     "type": "agents",
     "displayName": "Agentic",
@@ -43,6 +61,23 @@
     "kind": "agent",
     "topics": [
       "orchestration"
+    ],
+    "compat": "n/a",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
+    "productId": "crowdsource-debugger",
+    "type": "agents",
+    "displayName": "crowdsource-debugger",
+    "repoUrl": "https://github.com/LDLZM/crowdsource-debugger",
+    "tagline": "Debug stubborn errors with community help",
+    "description": "Stops agents from going in circles. When stuck on the same error 3+ times, guides searching Stack Overflow, GitHub Issues, Reddit, and Discourse forums for vetted solutions.",
+    "kind": "skill",
+    "topics": [
+      "web"
     ],
     "compat": "n/a",
     "scope": [
@@ -112,6 +147,23 @@
     "tags": []
   },
   {
+    "productId": "handoff",
+    "type": "agents",
+    "displayName": "handoff",
+    "repoUrl": "https://github.com/dazuiba/handoff",
+    "tagline": "Delegate tasks to OpenCode / DeepSeek V4 right inside your Claude Code / Codex sessions.",
+    "description": "Cross-agent task dispatcher — hand off work to DeepSeek V4 (via OpenCode), Codex, or Claude Opus without leaving your current session. Runs in the background; result comes back automatically.",
+    "kind": "agent",
+    "topics": [
+      "orchestration"
+    ],
+    "compat": "n/a",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
     "productId": "iamhumans",
     "type": "agents",
     "displayName": "iamhumans",
@@ -153,6 +205,23 @@
     ],
     "homepageUrl": "https://dinhkarate.github.io/llm-roundtable/",
     "installation": "```bash\nnpx skills add dinhkarate/llm-roundtable --skill llm-roundtable\nnpx llm-roundtable doctor --probe\n```\n"
+  },
+  {
+    "productId": "morningai",
+    "type": "agents",
+    "displayName": "MorningAI",
+    "repoUrl": "https://github.com/octo-patch/MorningAI",
+    "tagline": "AI news tracking skill",
+    "description": "AI news tracking skill that monitors 80+ entities across 6 free sources (Reddit, HN, GitHub, HuggingFace, arXiv, X/Twitter). Generates scored daily reports with infographics and message digests. Works via SKILL.md — no Docker or servers required.",
+    "kind": "skill",
+    "topics": [
+      "docs"
+    ],
+    "compat": "n/a",
+    "scope": [
+      "global"
+    ],
+    "tags": []
   },
   {
     "productId": "nerv",
@@ -202,6 +271,23 @@
       "workflow"
     ],
     "compat": "v1",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
+    "productId": "opencode-mcp-registry",
+    "type": "agents",
+    "displayName": "opencode-mcp-registry",
+    "repoUrl": "https://github.com/LDLZM/opencode-mcp-registry",
+    "tagline": "Register MCP servers in opencode",
+    "description": "Guides agents through installing and registering MCP (Model Context Protocol) servers. Supports pre-built binaries, pip, npm, Docker, and remote HTTP endpoints with proper auth handling.",
+    "kind": "skill",
+    "topics": [
+      "integrations"
+    ],
+    "compat": "n/a",
     "scope": [
       "global"
     ],
@@ -348,6 +434,23 @@
     "tags": []
   },
   {
+    "productId": "sensitive-operations-skill",
+    "type": "agents",
+    "displayName": "sensitive-operations",
+    "repoUrl": "https://github.com/LDLZM/sensitive-operations-skill",
+    "tagline": "Gatekeeper for privileged operations",
+    "description": "Detects sensitive operations (passwords, sudo, tokens, destructive commands) and delegates them to the user for manual execution with verification.",
+    "kind": "skill",
+    "topics": [
+      "security"
+    ],
+    "compat": "n/a",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
     "productId": "server-manager",
     "type": "agents",
     "displayName": "server-manager",
@@ -428,6 +531,23 @@
       "orchestration",
       "workflow",
       "code-quality"
+    ],
+    "compat": "n/a",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
+    "productId": "uv-skill",
+    "type": "agents",
+    "displayName": "uv-skill",
+    "repoUrl": "https://github.com/LDLZM/uv-skill",
+    "tagline": "Use uv for all Python package management",
+    "description": "Mandates using uv for ALL Python dependency, virtual environment, and project management tasks. Replaces pip, poetry, pipx, pyenv, and virtualenv.",
+    "kind": "skill",
+    "topics": [
+      "environment"
     ],
     "compat": "n/a",
     "scope": [
@@ -6137,6 +6257,23 @@
     "tags": []
   },
   {
+    "productId": "agentopology",
+    "type": "projects",
+    "displayName": "AgenTopology",
+    "repoUrl": "https://github.com/agentopology/agentopology",
+    "tagline": "Declarative multi-agent topology language",
+    "description": "Generate platform configs for OpenCode/OpenClaw and 6 other platforms (Claude Code, Codex, Gemini CLI, Copilot CLI, Kiro) from a single declarative .at file. Define agents, flows, gates, hooks, and group chats. Ships with a Claude Code skill and interactive visualizer. Apache 2.0.",
+    "kind": "tool",
+    "topics": [
+      "orchestration"
+    ],
+    "compat": "n/a",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
     "productId": "agenttrace",
     "type": "projects",
     "displayName": "agenttrace",
@@ -7650,6 +7787,24 @@
     "homepageUrl": "https://mnemoverse.com/docs/api/remote-mcp-server"
   },
   {
+    "productId": "monadicsharp-opencode",
+    "type": "projects",
+    "displayName": "MonadicSharp",
+    "repoUrl": "https://github.com/Danny4897/MonadicSharp-OpenCode",
+    "tagline": "Railway-Oriented Programming for C#",
+    "description": "MCP server + Green Code Agent + MonadicForge CLI analyzer for C#/.NET. Includes 5 MonadicSharp resources, 21 code generation scenarios, inline ROP compliance review, and skills for green-code-advisor and saas-module-design. .NET 8+, MIT license.",
+    "kind": "mcp-server",
+    "topics": [
+      "code-quality",
+      "domain"
+    ],
+    "compat": "n/a",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
     "productId": "myc",
     "type": "projects",
     "displayName": "myc",
@@ -8362,6 +8517,24 @@
     "tags": []
   },
   {
+    "productId": "opencode-telegram",
+    "type": "projects",
+    "displayName": "opencode-telegram",
+    "repoUrl": "https://github.com/raulvalverdeleal/opencode-telegram",
+    "tagline": "Control OpenCode sessions from Telegram",
+    "description": "A Telegram bot that bridges your chats to an OpenCode server with real-time SSE progress, session management, and access control via user allowlists.",
+    "kind": "client",
+    "topics": [
+      "sessions",
+      "remote"
+    ],
+    "compat": "v1",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
     "productId": "opencode-telegram-bot",
     "type": "projects",
     "displayName": "Opencode Telegram Bot",
@@ -8776,6 +8949,23 @@
     "homepageUrl": "https://github.com/rezzminator/professor"
   },
   {
+    "productId": "prompt-to-asset",
+    "type": "projects",
+    "displayName": "Prompt to Asset",
+    "repoUrl": "https://github.com/MohamedAbdallah-14/prompt-to-asset",
+    "tagline": "Generate visual assets across 30+ image models via MCP",
+    "description": "MCP server that generates production-ready visual assets (app icons, favicons, OG images, logos, wordmarks) by routing prompts across 30+ image generation models. Three execution modes: inline SVG, external prompt, and full API generation. Zero API key required for first run via Pollinations and Stable Horde free tiers.",
+    "kind": "mcp-server",
+    "topics": [
+      "media"
+    ],
+    "compat": "n/a",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
     "productId": "promption",
     "type": "projects",
     "displayName": "Promption",
@@ -8856,6 +9046,25 @@
       "memory",
       "ai-agent"
     ]
+  },
+  {
+    "productId": "reflection",
+    "type": "projects",
+    "displayName": "Reflection-3",
+    "repoUrl": "https://github.com/dzianisv/opencode-plugins",
+    "repoPath": "packages/reflection",
+    "tagline": "Judge layer that catches premature agent stops",
+    "description": "LLM-as-judge plugin for OpenCode and Claude Code: fires on every agent stop, classifies stops as premature or legitimate using a rubric mined from 227 real sessions (78% were premature), and re-prompts the agent with targeted feedback. Enforces workflow gates (tests, CI, PRs). Implements the Reflexion self-improvement loop. Works on both OpenCode (session.idle event) and Claude Code (Stop hook).",
+    "kind": "tool",
+    "topics": [
+      "workflow",
+      "code-quality"
+    ],
+    "compat": "v1",
+    "scope": [
+      "global"
+    ],
+    "tags": []
   },
   {
     "productId": "ritemark",
@@ -9454,6 +9663,24 @@
     "topics": [
       "ui",
       "code-quality"
+    ],
+    "compat": "n/a",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
+    "productId": "untether",
+    "type": "projects",
+    "displayName": "Untether",
+    "repoUrl": "https://github.com/littlebearapps/untether",
+    "tagline": "Telegram bridge for remote task control",
+    "description": "Telegram bridge for OpenCode (and 5 other agents). Send tasks by voice or text, stream progress live, and manage sessions remotely. Supports 75+ providers via OpenCode's model system.",
+    "kind": "client",
+    "topics": [
+      "remote",
+      "sessions"
     ],
     "compat": "n/a",
     "scope": [
