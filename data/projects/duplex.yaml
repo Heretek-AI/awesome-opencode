@@ -2,6 +2,11 @@ name: Duplex
 repo: https://github.com/Eric-huang799/duplex
 tagline: A browser shared by a human and an AI — same tabs, same live session
 description: Electron desktop browser with a bundled stdio MCP bridge (24 tools — snapshot, click, type, screenshot, tabs, annotations) plus an opencode mirror plugin that streams session events into a side panel and injects panel messages back into the same session. Built-in multi-protocol model support (OpenAI / Anthropic / Responses / Gemini) and an Esc takeover for the human.
+kind: client
+topics:
+  - sessions
+  - web
+compat: n/a
 scope:
   - global
 tags:

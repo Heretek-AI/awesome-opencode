@@ -44,7 +44,7 @@ Even if code is technically compatible, it must meet the quality standards of `a
 1. **Relevance**: Directly enhances or integrates with the OpenCode ecosystem.
 2. **Maintenance & Health**:
    * Repository is public, accessible, and not archived.
-   * Recent commit activity (ideally active within the last 6 months).
+   * Not archived, deleted or deprecated (inactivity alone is fine; see docs/policy.md).
    * Not abandoned or broken.
 3. **Safety & Policy**:
    * **STRICT PROHIBITION**: Zero tolerance for cryptocurrency, tokens, Web3 trading bots, or token pumps (per repository governance policy).
@@ -71,7 +71,7 @@ Assign one of the following verdicts to every reviewed item:
 | **`APPROVE_AND_MERGE`** | High quality, active, fully compatible with OpenCode V2, valid YAML. | Recommend merging PR. |
 | **`NEEDS_V2_UPDATE`** | Good concept and maintained, but currently implemented with legacy V1 plugin API (`@opencode-ai/plugin`). | Request update from author to migrate to `@opencode/plugin` / `Plugin.define`. |
 | **`NEEDS_METADATA_FIX`** | Good project, but YAML has schema errors (e.g. tagline > 120 chars, invalid category, missing fields). | Request author adjust YAML. |
-| **`REJECT_ABANDONED`** | Repository deleted, 404, archived, or no commits in > 1 year. | Recommend closing. |
+| **`REJECT_ABANDONED`** | Repository deleted (404), archived, or npm package deprecated. | Recommend closing. |
 | **`REJECT_POLICY`** | Crypto, spam, duplicate, or unrelated to OpenCode. | Recommend closing with reason. |
 | **`ISSUE_CONVERT_TO_PR`** | (For Issues) Listing suggestion is high quality and V2 compatible. | Recommend creating catalog entry YAML. |
 | **`ISSUE_CLOSE`** | (For Issues) Bug report meant for upstream core, invalid, or already resolved. | Recommend closing with guidance. |
@@ -114,3 +114,21 @@ When executing the loop:
 3. **Validate Schema**: Check the YAML formatting against `data/schema.json`.
 4. **Render JSON Verdict**: Output the structured assessment JSON.
 5. **Report & Proceed**: Provide a clear, human-readable executive summary followed by the next queued item.
+
+---
+
+## Deterministic Pre-Checks (run these first; do not re-derive them)
+
+The repository now automates everything mechanical. Your job is the judgment calls only.
+
+1. **Do not hand-check schema, URLs, duplicates or V2 markers.** The required `validate` check (`scripts/check-pr.js`) and the triage bot already do, and the PR carries labels: `ready`, `needs-v2`, `needs-metadata`, `needs-human`. Read them with `gh pr view <n> --json labels,statusCheckRollup`.
+2. **V2 detection authority is `scripts/utils/compat.js`.** Run `node -e "require('./scripts/utils/compat').probeCompat([{key:'x',repo:'<url>',npm:'<pkg>',plugin:true}]).then(r=>console.log(r.get('x')))"` instead of reading package.json by hand. Pre-release V2 pins (`@opencode-ai/plugin@0.0.0-beta-*`, `@next`, `@opencode-ai/client`) are V2; `@opencode-ai/plugin@1.x` is V1.
+3. **Only review PRs whose `validate` check is green** (or labeled `needs-human`, where you resolve the open question). A PR with no `validate` run can get one with `gh workflow run validate-pr.yml --ref <headRefName>`.
+4. **Your verdict covers:** relevance to OpenCode, real utility (not a duplicate in spirit), safety/policy (zero tolerance for crypto/token/trading), and copy quality of `tagline`/`description`/`topics`.
+5. **Inactivity is not a rejection reason.** Archived, deleted or npm-deprecated targets are; see `docs/policy.md`. The old "commits within 6 months" bar no longer applies.
+
+## Merging Rules
+
+- Merge with `gh pr merge <n> --squash` so the required check applies. **Never push catalog changes directly to `main`** and never "apply" a PR by committing its files separately; if a PR needs edits, push them to the PR branch.
+- Before merging anything you edited, run `npm run validate && npm run generate` locally and confirm both exit 0.
+- New entries must include `kind`, `topics` and (for plugins) `compat`; `npm run fmt` fixes formatting.

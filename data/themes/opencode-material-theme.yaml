@@ -2,3 +2,7 @@ name: opencode-material-theme
 repo: https://github.com/sandlada/opencode-material-theme
 tagline: Material Design 3 themes for the OpenCode TUI.
 description: "Material Design 3 themes for the OpenCode TUI: 194 static JSON themes across 9 variants x 12 hues, plain + OLED."
+kind: theme
+topics:
+  - ui
+compat: n/a

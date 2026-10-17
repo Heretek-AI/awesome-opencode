@@ -1,8 +1,13 @@
 name: OpenClient
 repo: https://github.com/ntoporcov/openclient
+homepage: https://open-client.com/
 tagline: Native iPhone and iPad companion for self-hosted OpenCode servers
 description: Native SwiftUI client for browsing projects, resuming sessions, streaming chat, handling permission and question prompts, and following active work through Live Activities and widgets.
-homepage: https://open-client.com/
+kind: client
+topics:
+  - remote
+  - ui
+compat: n/a
 tags:
   - ios
   - ipad

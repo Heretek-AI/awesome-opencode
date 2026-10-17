@@ -1,7 +1,14 @@
 name: OpenCode Teamwork
 repo: https://github.com/sorcnr/opencode-teamwork-v2
+npm: opencode-teamwork-v2
+homepage: https://www.npmjs.com/package/opencode-teamwork-v2
 tagline: Antigravity-style multi-agent orchestration with verification loops
 description: Brings the Antigravity-style Teamwork orchestration model to OpenCode V2, where a Sentinel coordinator dispatches a DAG of specialist agents and a verifier gates every task until it passes. Ships 10 agents (Sentinel, Orchestrator, Crafter, Scout, Worker, Proof Worker, Proposer, Falsifier, Synthesizer, Verifier), 7 slash commands, per-agent git worktrees, cost tracking, and a 9-step prompt-crafting wizard.
+kind: plugin
+topics:
+  - orchestration
+  - workflow
+compat: v2
 scope:
   - global
 tags:
@@ -12,7 +19,6 @@ tags:
   - verification
   - commands
 min_version: 2.0.0
-homepage: https://www.npmjs.com/package/opencode-teamwork-v2
 installation: |
   Install the plugin and choose a model for each agent:
 

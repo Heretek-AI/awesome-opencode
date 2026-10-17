@@ -1,11 +1,14 @@
 name: Veris Sim
 repo: https://github.com/veris-ai/plugins
+npm: "@veris-ai/veris-sim-opencode"
+homepage: https://github.com/veris-ai/plugins#readme
 tagline: Three engineer-invoked commands that test an application against Veris twins of its services
-description: >-
-  Three engineer-invoked commands that test an application against Veris twins of the services it
-  calls. setup wires a repository once. build measures every vendor claim the task rests on before
-  designing, then proves the change through veris-proxy. fix reproduces the failure before touching
-  source and proves it closed. Ships the veris MCP server.
+description: Three engineer-invoked commands that test an application against Veris twins of the services it calls. setup wires a repository once. build measures every vendor claim the task rests on before designing, then proves the change through veris-proxy. fix reproduces the failure before touching source and proves it closed. Ships the veris MCP server.
+kind: plugin
+topics:
+  - code-quality
+  - security
+compat: v2
 scope:
   - global
   - project
@@ -16,7 +19,6 @@ tags:
   - mcp
   - testing
   - commands
-homepage: https://github.com/veris-ai/plugins#readme
 installation: |
   ## Links
 

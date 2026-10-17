@@ -2,6 +2,10 @@ name: telepathy
 repo: https://github.com/Winterrks/telepathy
 tagline: OpenCode sessions message Claude Code, Codex, Gemini CLI and other agent sessions on the same machine
 description: Adds telepathy_list_peers, telepathy_send_message and telepathy_read_messages as native OpenCode tools, so an OpenCode session can find and message the Claude Code, Codex, Gemini CLI, Copilot CLI, Cursor and other agent sessions running on the same machine. The plugin runs inside OpenCode and starts a turn in an idle session when a message arrives, so agents can coordinate without polling. Everything stays local (messages are JSON files in ~/.telepathy, with no network calls and no telemetry). MIT licensed.
+kind: plugin
+topics:
+  - orchestration
+compat: v2
 scope:
   - global
 tags:

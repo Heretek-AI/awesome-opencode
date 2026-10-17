@@ -1,10 +1,11 @@
 name: LWC
 repo: https://github.com/JanYork/llm-wiki-cli
 tagline: Source-grounded project memory for OpenCode with an Agent Skill, CLI, and read-only MCP server
-description: Local-first project memory for coding agents with bounded recall,
-  source citations, provenance, atomic changesets, and optional document and
-  code graphs. Includes the installable using-lwc Agent Skill and a stdio MCP
-  server exposing one bounded, read-only exploration tool.
+description: Local-first project memory for coding agents with bounded recall, source citations, provenance, atomic changesets, and optional document and code graphs. Includes the installable using-lwc Agent Skill and a stdio MCP server exposing one bounded, read-only exploration tool.
+kind: mcp-server
+topics:
+  - memory
+compat: n/a
 scope:
   - global
   - project

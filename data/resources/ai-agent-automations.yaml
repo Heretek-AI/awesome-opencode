@@ -1,10 +1,13 @@
 name: AI Agent Automations
 repo: https://github.com/ChmaraX/ai-agent-automations
+homepage: https://trigger.tools
 tagline: Automation prompts for OpenCode, Codex, Claude Code, and Cursor workflows
-description: A curated collection of agent automation prompts for real-world
-  engineering and operations workflows. Covers OpenCode, Codex, Claude Code,
-  and Cursor patterns for code maintenance, security reviews, research,
-  support, billing, and work triage.
+description: A curated collection of agent automation prompts for real-world engineering and operations workflows. Covers OpenCode, Codex, Claude Code, and Cursor patterns for code maintenance, security reviews, research, support, billing, and work triage.
+kind: config
+topics:
+  - prompting
+  - workflow
+compat: n/a
 tags:
   - automations
   - prompts
@@ -12,4 +15,3 @@ tags:
   - codex
   - claude-code
   - cursor
-homepage: https://trigger.tools

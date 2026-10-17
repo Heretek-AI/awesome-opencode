@@ -1,14 +1,12 @@
 name: Stacktree
 repo: https://github.com/stevysmith/stacktree-skill
+homepage: https://stacktr.ee/agents
 tagline: Publish HTML from your agent to a private, unguessable link
-description: >-
-  Turns HTML an agent produced into a link a person can open — a report, a
-  dashboard, a brief. Links are unguessable and uncrawlable by default, with an
-  optional passcode and expiry, and republishing replaces the page in place so a
-  shared URL stays current. Connects as a local MCP server, and the skill is
-  fetchable over HTTP so it stays current without reinstalling. Free anonymous
-  pages need no account at all; agents with a wallet can pay per page over x402
-  instead of signing up.
+description: Turns HTML an agent produced into a link a person can open — a report, a dashboard, a brief. Links are unguessable and uncrawlable by default, with an optional passcode and expiry, and republishing replaces the page in place so a shared URL stays current. Connects as a local MCP server, and the skill is fetchable over HTTP so it stays current without reinstalling. Free anonymous pages need no account at all; agents with a wallet can pay per page over x402 instead of signing up.
+kind: mcp-server
+topics:
+  - integrations
+compat: n/a
 scope:
   - global
   - project
@@ -20,7 +18,6 @@ tags:
   - html
   - sharing
   - x402
-homepage: https://stacktr.ee/agents
 installation: |
   Skill over HTTP (always current, no install):
 

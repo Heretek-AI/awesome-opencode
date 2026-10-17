@@ -1,13 +1,12 @@
 name: Free Models Router
 repo: https://github.com/murcanlat/opencode-free-models
 tagline: Free model discovery, prompt routing, and seamless quota fallback
-description: >-
-  Discovers free models from OpenRouter and models.dev, routes each prompt to
-  the best free candidate by capability and score, and falls back to the next
-  free model on rate limits, quota exhaustion, or 5xx errors. Ships
-  cycle/stop/retry-last/wait fallback modes, cooldowns, configurable backoff,
-  an optional circuit breaker, status/refresh/select tools, an RPC API, and an
-  optional TUI plugin for toast notifications.
+description: Discovers free models from OpenRouter and models.dev, routes each prompt to the best free candidate by capability and score, and falls back to the next free model on rate limits, quota exhaustion, or 5xx errors. Ships cycle/stop/retry-last/wait fallback modes, cooldowns, configurable backoff, an optional circuit breaker, status/refresh/select tools, an RPC API, and an optional TUI plugin for toast notifications.
+kind: plugin
+topics:
+  - providers
+  - cost
+compat: v2
 scope:
   - global
   - project

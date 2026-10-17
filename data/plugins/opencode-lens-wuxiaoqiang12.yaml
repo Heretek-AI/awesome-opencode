@@ -1,8 +1,15 @@
 name: opencode-lens
 repo: https://github.com/wuxiaoqiang12/opencode-lens
+npm: opencode-lens
 homepage: https://github.com/wuxiaoqiang12/opencode-lens
 tagline: TUI bridge and MCP toolkit for inspecting and controlling live opencode sessions
 description: opencode-lens is an opencode TUI plugin plus MCP server that lets external agents inspect running opencode instances, send prompts, read messages/diffs/todos, handle permission and question prompts, and monitor session completion through a local Unix socket bridge.
+kind: plugin
+topics:
+  - sessions
+  - ui
+  - observability
+compat: v1
 scope:
   - global
 tags:

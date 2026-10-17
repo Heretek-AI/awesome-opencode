@@ -2,3 +2,8 @@ name: OpenCode Ultra Setup
 repo: https://github.com/benogoulart/opencode-ultra-setup
 tagline: A full OpenCode setup with a team of 11 agents, persistent memory, context compression, and a real terminal.
 description: An "ultra" OpenCode setup combining oh-my-openagent (11 agents with team mode), supermemory (persistent memory), headroom (context compression up to ~57%), opencode-pty (interactive terminal), cited web search, and wakatime metrics. Includes Cortex and GitHub MCPs, an OmniRoute free AI gateway, and Karpathy + anti-slop guidelines in a global AGENTS.md.
+kind: config
+topics:
+  - orchestration
+  - memory
+compat: n/a

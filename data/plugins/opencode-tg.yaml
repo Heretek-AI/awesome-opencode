@@ -1,8 +1,13 @@
 name: opencode-tg
 repo: https://github.com/par4987/opencode-tg
+homepage: https://github.com/par4987/opencode-tg#readme
 tagline: Control OpenCode from Telegram — every session gets its own thread
-description: |
-  Runs inside the OpenCode server as a plugin (zero runtime dependencies) and mirrors every session into a Telegram chat: each session and subagent gets its own thread, and writing in the thread is prompting the agent. Answer the agent's questions and approve permissions with a tap, run shell commands in the session (a three-tier guard passes read-only commands, asks for confirmation on service-breaking ones, and blocks the irreversible), browse and attach project files, schedule tasks, switch models and agents, watch CI runs, and steer the message queue mid-turn. Optional extras: multi-bot topologies (one bot per project or per session), local whisper.cpp voice transcription, and a dead-prompt watchdog that reports the real cause when a turn never starts.
+description: "Runs inside the OpenCode server as a plugin (zero runtime dependencies) and mirrors every session into a Telegram chat: each session and subagent gets its own thread, and writing in the thread is prompting the agent. Answer the agent's questions and approve permissions with a tap, run shell commands in the session (a three-tier guard passes read-only commands, asks for confirmation on service-breaking ones, and blocks the irreversible), browse and attach project files, schedule tasks, switch models and agents, watch CI runs, and steer the message queue mid-turn. Optional extras: multi-bot topologies (one bot per project or per session), local whisper.cpp voice transcription, and a dead-prompt watchdog that reports the real cause when a turn never starts."
+kind: plugin
+topics:
+  - remote
+  - notifications
+compat: v2
 scope:
   - global
   - project
@@ -13,7 +18,6 @@ tags:
   - i18n
   - voice
 min_version: 2.0.15
-homepage: https://github.com/par4987/opencode-tg#readme
 installation: |
   Register the plugin in your OpenCode config (`opencode.jsonc`) pointing at the directory:
 

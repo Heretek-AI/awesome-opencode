@@ -2,3 +2,8 @@ name: axi-memory (mem-axi)
 repo: https://github.com/masculinecache/axi-memory
 tagline: Filesystem + git agent memory CLI with TOON output
 description: A bash CLI (@masculinecache/mem-axi) giving terminal coding agents durable cross-session memory stored as markdown + YAML frontmatter in a git repository — no daemon, no database, no lock-in. Adds are structured records (decision, howto, failure, constraint, preference) with confidence and priority, retrieved via ripgrep-backed keyword search over frontmatter; output follows the AXI 10 principles for agent ergonomics (TOON, minimal schemas, definitive empty states, structured errors, exit 0/1/2). Composable with OpenCode sessions as a memory bridge — skill entry points can route capture and recall through the same CLI, and dedicated never-write-secrets handling redacts common secret patterns from stored records.
+kind: tool
+topics:
+  - memory
+  - git
+compat: n/a

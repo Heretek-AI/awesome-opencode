@@ -2,18 +2,35 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://github.com/Heretek-AI/awesome-opencode/data/schema.json",
   "title": "Awesome Opencode Entry",
-  "description": "Schema for validating YAML entries in the Heretek-AI/awesome-opencode list",
+  "description": "Schema for validating YAML entries in the Heretek-AI/awesome-opencode list. Cross-entry rules (unique repos, kind per category, compat for plugins) live in scripts/utils/catalog.js.",
   "type": "object",
   "properties": {
     "name": {
       "type": "string",
       "minLength": 1,
+      "maxLength": 80,
       "description": "Display name of the project or tool"
     },
     "repo": {
       "type": "string",
       "format": "uri",
-      "description": "URL to the repository (https://github.com/...)"
+      "pattern": "^https://((github\\.com|gitlab\\.com|codeberg\\.org|gitee\\.com)/[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+|github\\.com/[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+/discussions/[0-9]+|gist\\.github\\.com/[A-Za-z0-9_-]+/[0-9a-f]+)/?$",
+      "description": "Repository root URL (no /tree/ or /blob/ paths, no npm or marketing pages). Gists and GitHub discussions (for guides) are also accepted. Use `path` for a package inside a monorepo."
+    },
+    "path": {
+      "type": "string",
+      "pattern": "^(?!/)(?!.*\\.\\.)(?!.*/$)[A-Za-z0-9_.@/-]+$",
+      "description": "Subdirectory of `repo` that holds this entry, for monorepos (e.g. packages/my-plugin)"
+    },
+    "npm": {
+      "type": "string",
+      "pattern": "^(@[a-z0-9-~][a-z0-9-._~]*/)?[a-z0-9-~][a-z0-9-._~]*$",
+      "description": "npm package name, for entries installed from npm. Used for the V2 compatibility check and health checks."
+    },
+    "homepage": {
+      "type": "string",
+      "format": "uri",
+      "description": "Documentation URL if different from repository"
     },
     "tagline": {
       "type": "string",
@@ -24,13 +41,99 @@
     "description": {
       "type": "string",
       "minLength": 1,
+      "maxLength": 1500,
       "description": "Full description of the project (shown when expanded)"
+    },
+    "kind": {
+      "type": "string",
+      "enum": [
+        "plugin",
+        "theme",
+        "agent",
+        "skill",
+        "mcp-server",
+        "client",
+        "tool",
+        "config",
+        "guide",
+        "fork"
+      ],
+      "description": "What the entry is. plugin: OpenCode plugin package. theme: color theme. agent: agent/subagent configuration. skill: SKILL.md pack. mcp-server: Model Context Protocol server. client: GUI, TUI, web, mobile, editor or chat front-end for OpenCode. tool: CLI, proxy, library or other utility. config: starter config, commands or templates. guide: docs, tutorials or articles. fork: a modified build of OpenCode."
+    },
+    "also": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "plugin",
+          "theme",
+          "agent",
+          "skill",
+          "mcp-server",
+          "client",
+          "tool",
+          "config",
+          "guide",
+          "fork"
+        ]
+      },
+      "uniqueItems": true,
+      "maxItems": 3,
+      "description": "Secondary kinds, e.g. a plugin that also ships an MCP server. Cross-listed in the README and site."
+    },
+    "topics": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "memory",
+          "context",
+          "orchestration",
+          "workflow",
+          "providers",
+          "cost",
+          "notifications",
+          "sessions",
+          "code-quality",
+          "security",
+          "git",
+          "remote",
+          "web",
+          "ui",
+          "voice",
+          "media",
+          "docs",
+          "environment",
+          "observability",
+          "integrations",
+          "code-intel",
+          "prompting",
+          "domain"
+        ]
+      },
+      "minItems": 1,
+      "maxItems": 3,
+      "uniqueItems": true,
+      "description": "1-3 use-case topics from a fixed list. The first one is the primary topic used for README grouping."
+    },
+    "compat": {
+      "type": "string",
+      "enum": [
+        "v2",
+        "v1",
+        "n/a",
+        "unknown"
+      ],
+      "description": "OpenCode API generation. v2: depends on @opencode/* (e.g. @opencode/plugin with Plugin.define). v1: legacy @opencode-ai/* only. n/a: does not use the plugin/SDK API. unknown: not yet verified. Required for plugins; CI verifies it."
     },
     "scope": {
       "type": "array",
       "items": {
         "type": "string",
-        "enum": ["global", "project"]
+        "enum": [
+          "global",
+          "project"
+        ]
       },
       "minItems": 1,
       "uniqueItems": true,
@@ -41,23 +144,25 @@
       "items": {
         "type": "string"
       },
-      "description": "Tags for filtering and discoverability"
+      "description": "Free-form search keywords. Not rendered; use `topics` for categorization."
     },
     "min_version": {
       "type": "string",
       "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+",
-      "description": "Minimum OpenCode version required (semver format, e.g. '1.0.0')"
-    },
-    "homepage": {
-      "type": "string",
-      "format": "uri",
-      "description": "Documentation URL if different from repository"
+      "description": "Minimum OpenCode version required (semver format, e.g. '2.0.0')"
     },
     "installation": {
       "type": "string",
       "description": "Detailed installation instructions in markdown format"
     }
   },
-  "required": ["name", "repo", "tagline", "description"],
-  "additionalProperties": true
+  "required": [
+    "name",
+    "repo",
+    "tagline",
+    "description",
+    "kind",
+    "topics"
+  ],
+  "additionalProperties": false
 }

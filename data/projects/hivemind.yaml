@@ -2,6 +2,11 @@ name: Hivemind
 repo: https://github.com/Hanishchow/hivemind
 tagline: Delegate grunt work to headless opencode worker swarms while your main agent plans and reviews
 description: Runs opencode as a disposable worker fleet driven by a planning agent. Every worker returns exactly one compact JSON line (result, tokens, cost, duration), so raw agent streams never flood the orchestrator's context. Writing workers each get their own git worktree so parallel edits cannot corrupt each other, and an explicit fallback ladder retries once, then falls back to the orchestrator doing the subtask itself, so a swarm never fails a task a single agent could have finished. Ships scout, coder and tester agent definitions plus slash commands for parallel review panels, research sweeps, batched migrations and partitioned test runs.
+kind: tool
+topics:
+  - orchestration
+  - code-quality
+compat: n/a
 scope:
   - global
 tags:

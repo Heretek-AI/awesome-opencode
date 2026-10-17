@@ -1,11 +1,13 @@
 name: Orchestrator
 repo: https://github.com/KelpHect/opencode-orchestrator
 tagline: Cost-aware subagent routing skill plus injected orchestration instructions
-description: >-
-  Teaches the primary agent to route work to the right subagent tier: an
-  `orchestrator` skill with routing rules, prompt templates and an escalation
-  ladder; routing rules injected into primary sessions; subagent conduct rules
-  injected into child sessions; and example agent-tier definitions.
+description: "Teaches the primary agent to route work to the right subagent tier: an `orchestrator` skill with routing rules, prompt templates and an escalation ladder; routing rules injected into primary sessions; subagent conduct rules injected into child sessions; and example agent-tier definitions."
+kind: plugin
+topics:
+  - orchestration
+  - providers
+  - cost
+compat: v2
 scope:
   - global
   - project
@@ -13,8 +15,8 @@ tags:
   - orchestration
   - agents
   - skills
-min_version: "2.0.0"
-install: |
+min_version: 2.0.0
+installation: |
   ```bash
   opencode plugin add github:KelpHect/opencode-orchestrator
   ```

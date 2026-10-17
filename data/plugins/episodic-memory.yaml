@@ -2,6 +2,11 @@ name: Episodic Memory
 repo: https://github.com/robertn702/opencode-episodic-memory
 tagline: Semantic search over your past conversations — local embeddings, no cloud
 description: Indexes your OpenCode session history into a local SQLite store and lets the agent recall past discussions, decisions, and patterns via native episodic_search/episodic_read tools. Fully local and offline — embeddings run in-process via Transformers.js (Snowflake arctic-embed, model chosen by empirical eval), with vector, BM25, and hybrid RRF search modes. Auto-reindexes on session idle; opt-out marker for sensitive chats. Inspired by obra/episodic-memory for Claude Code, rebuilt natively for OpenCode primitives.
+kind: plugin
+topics:
+  - memory
+  - sessions
+compat: v2
 tags:
   - memory
   - semantic-search

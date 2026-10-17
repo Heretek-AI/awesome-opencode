@@ -1,10 +1,9 @@
 name: Solo Memory
 repo: https://github.com/baaai123/solo-memory
 tagline: Transparent long-term memory — auto weave/ingest, no agent discipline required
-description: >-
-  A transparent long-term memory plugin for OpenCode. The chat.message hook
-  auto-injects memory context before every turn, and the event hook auto-stores
-  user+assistant pairs after replies — the agent never needs to remember to call
-  memory tools. Local-first (SQLite + ChromaDB, zero cloud), bilingual
-  (Chinese via BM25/jieba, English via semantic bge-large-en-v1.5), with a
-  gap-detection → crawl → synthesize → verify learning loop and 7 MCP tools.
+description: A transparent long-term memory plugin for OpenCode. The chat.message hook auto-injects memory context before every turn, and the event hook auto-stores user+assistant pairs after replies — the agent never needs to remember to call memory tools. Local-first (SQLite + ChromaDB, zero cloud), bilingual (Chinese via BM25/jieba, English via semantic bge-large-en-v1.5), with a gap-detection → crawl → synthesize → verify learning loop and 7 MCP tools.
+kind: plugin
+topics:
+  - memory
+  - workflow
+compat: v1

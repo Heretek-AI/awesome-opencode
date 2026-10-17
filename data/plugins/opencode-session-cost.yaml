@@ -1,12 +1,17 @@
 name: OpenCode Session Cost
 repo: https://github.com/igorvelho/opencode-session-cost
 tagline: Sidebar block showing true session cost including all subagents
-description: |
+description: |-
   Subagent costs hide from you by default in OpenCode's session cost display.
   This TUI plugin adds a sidebar block showing your true total — the active
   session plus every subagent (task) it spawned — and lets you expand it to
   see the cost of each one individually. Works for every session regardless
   of model or provider, no configuration required.
+kind: plugin
+topics:
+  - cost
+  - ui
+compat: v2
 scope:
   - global
 tags:

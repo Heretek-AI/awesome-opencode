@@ -2,3 +2,8 @@ name: agent-sessions
 repo: https://github.com/prajwalgajakesari/agent-sessions
 tagline: Share OpenCode, Claude Code and Codex sessions with your team through git
 description: Push the current OpenCode session into the repo as a redacted transcript plus a handoff summary under .claude/sessions/, and pull teammates' sessions from any coding agent straight into your chat. Ships as an Agent Skills skill that OpenCode loads from ~/.agents/skills, plus a Claude Code plugin and a CLI on PyPI (agent-sessions-cli).
+kind: tool
+topics:
+  - sessions
+  - git
+compat: n/a

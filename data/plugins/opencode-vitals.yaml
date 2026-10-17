@@ -2,3 +2,8 @@ name: OpenCode Vitals
 repo: https://github.com/moutazideal/opencode-vitals
 tagline: Turns, steps and streaming tok/s in a small always-on-top bar
 description: A desktop bar for the session you are working in - turns, steps, and average streaming tokens per second, measured as generated tokens over active stream time so tool waiting stays out of the denominator. One-command install with no configuration file edit and no network calls; standard-library Python only, built for OpenCode V2.
+kind: plugin
+topics:
+  - observability
+  - ui
+compat: v2

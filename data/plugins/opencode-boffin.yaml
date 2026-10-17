@@ -1,8 +1,14 @@
 name: Boffin
 repo: https://github.com/MicSm/boffin
+homepage: https://github.com/MicSm/boffin#readme
 tagline: Routed architectural guardrails for AI coding agents in OpenCode
-description: Staff-engineer layer for AI coding agents: routes per-edit architectural constraints and requires verification. Not another AGENTS.md.
-installation: npx boffinit opencode
+description: "Staff-engineer layer for AI coding agents: routes per-edit architectural constraints and requires verification. Not another AGENTS.md."
+kind: plugin
+topics:
+  - code-quality
+compat: v2
+scope:
+  - project
 tags:
   - opencode
   - architecture
@@ -10,6 +16,4 @@ tags:
   - code-review
   - cplusplus
   - python
-scope:
-  - project
-homepage: https://github.com/MicSm/boffin#readme
+installation: npx boffinit opencode

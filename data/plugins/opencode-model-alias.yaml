@@ -2,3 +2,7 @@ name: OpenCode Model Alias
 repo: https://github.com/renaudcerrato/opencode-model-alias
 tagline: Portable model aliases with variants and chains — one config entry, per-machine remapping
 description: Define short model aliases (cheap, smart, reviewer...) in a central alias file and reference them in any agent or command model field. Each machine maps aliases to whatever provider/model it prefers, so shared agent and command configs stay portable across machines and providers. Supports model variants, alias chains (stable role names layered on machine-specific mappings), and a /alias command for managing aliases in-session.
+kind: plugin
+topics:
+  - providers
+compat: v2

@@ -1,5 +1,10 @@
 name: opencode-shield-bash
 repo: https://github.com/acramsay/opencode-shield-bash
+npm: "@acramsay/opencode-shield-bash"
+homepage: https://www.npmjs.com/package/@acramsay/opencode-shield-bash
 tagline: Gate bash calls through an LLM judge subagent session to allow or deny their execution
 description: Gate every bash tool call through a second judge session. The judge applies a fixed policy covering destructive file operations, disk/device writes, piping remote output to interpreters, privilege escalation, reverse shells, secret exfiltration, resource bombs, and system-wide installs, and returns an allow/deny verdict before the command runs. Denials surface the reason to the calling agent; verdicts are cached per root session.
-homepage: https://www.npmjs.com/package/@acramsay/opencode-shield-bash
+kind: plugin
+topics:
+  - security
+compat: v2

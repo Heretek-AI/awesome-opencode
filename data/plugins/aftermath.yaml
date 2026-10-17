@@ -1,22 +1,20 @@
 name: Aftermath
 repo: https://github.com/moah0911/aftermath
 tagline: Post-failure recovery for agents — stop, revert cheap damage, return to last-known-good
-description: Aftermath is a post-failure recovery skill for OpenCode. When something breaks — a test suite goes green to red,
-  the same error recurs, a destructive command looms, or the user says "you broke it" — it stops forward motion,
-  reverts the actual bad hunk instead of patching around it, and returns the session to last-known-good.
-  Includes four intensity levels (lite/full/ultra/off), four slash commands (status, revert, audit, log),
-  and lifecycle tripwires for test failures, repeat errors, and destructive commands.
-
+description: Aftermath is a post-failure recovery skill for OpenCode. When something breaks — a test suite goes green to red, the same error recurs, a destructive command looms, or the user says "you broke it" — it stops forward motion, reverts the actual bad hunk instead of patching around it, and returns the session to last-known-good. Includes four intensity levels (lite/full/ultra/off), four slash commands (status, revert, audit, log), and lifecycle tripwires for test failures, repeat errors, and destructive commands.
+kind: plugin
+topics:
+  - security
+  - workflow
+compat: v1
 scope:
   - global
   - project
-
 tags:
   - productivity
   - testing
   - debugging
   - safety
-
 installation: |
   ## Prerequisites
   - OpenCode 1.0.0 or later

@@ -1,7 +1,13 @@
 name: kibi-opencode
 repo: https://github.com/Looted/kibi
+npm: kibi-opencode
 tagline: OpenCode guidance for keeping requirements linked to code and tests
 description: Kibi connects project requirements to code and tests. This optional OpenCode plugin gives agents relevant guidance and runs background sync and checks.
+kind: plugin
+topics:
+  - code-quality
+  - workflow
+compat: v1
 scope:
   - project
 tags:

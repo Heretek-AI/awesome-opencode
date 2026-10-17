@@ -1,10 +1,14 @@
 name: Veris for E2B
 repo: https://github.com/veris-ai/veris-e2b
+npm: "@veris-ai/e2b-opencode"
+homepage: https://github.com/veris-ai/veris-e2b/tree/main/e2b-opencode#readme
 tagline: OpenCode sessions run in an E2B sandbox whose vendor API calls are answered by Veris twins
-description: >-
-  Every OpenCode session runs in an E2B sandbox whose outbound vendor API calls are answered by
-  stateful Veris twins, with a receipt of what the vendor actually received. One line in
-  opencode.json - no template to register, no server to start.
+description: Every OpenCode session runs in an E2B sandbox whose outbound vendor API calls are answered by stateful Veris twins, with a receipt of what the vendor actually received. One line in opencode.json - no template to register, no server to start.
+kind: plugin
+topics:
+  - code-quality
+  - security
+compat: v1
 scope:
   - global
   - project
@@ -15,7 +19,6 @@ tags:
   - integration-testing
   - api-mocking
   - testing
-homepage: https://github.com/veris-ai/veris-e2b/tree/main/e2b-opencode#readme
 installation: |
   ## Links
 

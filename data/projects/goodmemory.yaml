@@ -1,9 +1,13 @@
 name: GoodMemory
 repo: https://github.com/hjqcan/GoodMemory
+homepage: https://github.com/hjqcan/GoodMemory
 tagline: Local-first, auditable memory for OpenCode through MCP
-description: Gives OpenCode durable user and project memory across sessions
-  through a standalone MCP server. Uses SQLite by default, keeps recall
-  inspectable, and makes memory writes opt-in.
+description: Gives OpenCode durable user and project memory across sessions through a standalone MCP server. Uses SQLite by default, keeps recall inspectable, and makes memory writes opt-in.
+kind: mcp-server
+topics:
+  - memory
+  - observability
+compat: n/a
 scope:
   - global
   - project
@@ -13,7 +17,6 @@ tags:
   - local-first
   - opencode
   - ai-agents
-homepage: https://github.com/hjqcan/GoodMemory
 installation: |
   npm install -g goodmemory@0.7.2
 

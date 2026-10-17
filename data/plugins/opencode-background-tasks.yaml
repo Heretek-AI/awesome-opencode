@@ -2,3 +2,8 @@ name: opencode-background-tasks
 repo: https://github.com/PrismKitty/opencode-background-tasks
 tagline: A sidebar list of the background shells and subagents still running in an OpenCode v2 session
 description: Adds a Background list to the OpenCode v2 session sidebar with every shell and subagent sent to the background, a live timer on each, and a done or failed mark when it ends.
+kind: plugin
+topics:
+  - orchestration
+  - ui
+compat: v2

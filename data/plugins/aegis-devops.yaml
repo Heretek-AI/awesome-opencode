@@ -2,6 +2,10 @@ name: Aegis-DevOps
 repo: https://github.com/moneytool/aegis-devops
 tagline: Blocks kubectl delete, terraform destroy or DROP TABLE unless your signed policy allows it
 description: A tool.execute.before plugin that checks every bash command OpenCode wants to run (kubectl, terraform/tofu, aws/az/gcloud, helm, argocd, git, SQL) against a signed, authority-checked policy before it runs. A rule only counts if it hasn't been edited since it was signed and its author was allowed to write that kind of rule, so a line planted in a ticket can't become policy. Only active in projects with a .aegis/ policy. Install with `pip install aegis-devops && aegis install opencode`.
+kind: plugin
+topics:
+  - security
+compat: v1
 scope:
   - global
   - project

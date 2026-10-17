@@ -1,7 +1,7 @@
 name: PDCA Skills
 repo: https://github.com/AlexeyShirshov/skills
 tagline: "PDCA orchestration skills: PLAN → DO → CHECK → ACT with evidence-based verification"
-description: |
+description: |-
   A family of four OpenCode skills that drive a task through a PDCA cycle
   (PLAN → DO → CHECK → ACT) with transition gates, evidence-based verification,
   escalation accounting, durable status, and recovery after compaction.
@@ -13,6 +13,11 @@ description: |
 
   Roles (planner, coder, check, scout, escalate) are bound by the host, so the
   skills stay model- and provider-neutral.
+kind: skill
+topics:
+  - workflow
+  - code-quality
+compat: n/a
 scope:
   - global
   - project
@@ -23,7 +28,7 @@ tags:
   - subagents
   - workflow
   - verification
-min_version: "1.0.0"
+min_version: 1.0.0
 installation: |
   Copy the skills you want into an OpenCode skills directory.
 

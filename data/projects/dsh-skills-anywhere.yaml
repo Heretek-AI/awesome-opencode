@@ -2,3 +2,7 @@ name: dsh-skills-anywhere
 repo: https://github.com/noteflowai/dsh-skills-anywhere
 tagline: Serve the skills installed for 60+ agents to OpenCode over MCP, zero copies
 description: MCP server that reads the Agent Skills (SKILL.md) already installed for OpenCode, Claude Code, Codex, Cursor, Gemini CLI and 60+ other agents, plus Claude Code plugin marketplaces and any GitHub skills repo, and exposes them as find_skills/open_skill tools and skill:// resources without copying or symlinking.
+kind: mcp-server
+topics:
+  - prompting
+compat: n/a

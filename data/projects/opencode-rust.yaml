@@ -2,6 +2,10 @@ name: opencode-rust
 repo: https://github.com/vakandi/opencode-rust
 tagline: The open source AI coding agent, in Rust - CLI, TUI and HTTP server
 description: "An independent Rust implementation of the TypeScript opencode, providing a CLI, a TUI and an HTTP server for local AI agents, with no Docker required. MIT licensed, 21 crates and 571 tests. The command is `opr`; install with `npm install -g opencode-rust` or `brew install vakandi/tap/opencode-rust`. Not affiliated with the OpenCode team. Docs: https://vakandi.github.io/opencode-rust/"
+kind: fork
+topics:
+  - environment
+compat: n/a
 tags:
   - rust
   - fork

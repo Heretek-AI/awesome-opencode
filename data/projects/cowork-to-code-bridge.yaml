@@ -1,21 +1,12 @@
 name: cowork-to-code-bridge
 repo: https://github.com/abhinaykrupa/cowork-to-code-bridge
 tagline: Run agent tasks on your own machine from a sandboxed caller, with no inbound port
-description: >-
-  A local-first async bridge that lets an agent running somewhere else — a cloud
-  sandbox, a container, a hosted chat session, a CI job — execute work on the
-  developer's real machine. There is no network listener, no inbound port and no
-  tunnel: a daemon watches a shared directory, the remote side drops a JSON task
-  file in, and the daemon runs it locally and writes a result file back. Any
-  shared folder works (bind mount, Syncthing, Dropbox, NFS). Execution is
-  allow-listed — only scripts installed into the daemon's scripts directory can
-  run, so a remote caller cannot request arbitrary shell. Tasks are non-blocking
-  and cancellable (SIGTERM to the whole process group, then SIGKILL after a grace
-  period), output is size-capped while streaming with truncation reported, and
-  results carry real exit codes. Ships ~25 scripts (host health, disk, ports,
-  docker ps/logs, git status, package updates), a wrapper that hands a whole task
-  to a local CLI coding agent, and an MCP proxy that relays JSON-RPC to local
-  stdio MCP servers. Python client, stdlib-only, MIT, macOS and Linux.
+description: "A local-first async bridge that lets an agent running somewhere else — a cloud sandbox, a container, a hosted chat session, a CI job — execute work on the developer's real machine. There is no network listener, no inbound port and no tunnel: a daemon watches a shared directory, the remote side drops a JSON task file in, and the daemon runs it locally and writes a result file back. Any shared folder works (bind mount, Syncthing, Dropbox, NFS). Execution is allow-listed — only scripts installed into the daemon's scripts directory can run, so a remote caller cannot request arbitrary shell. Tasks are non-blocking and cancellable (SIGTERM to the whole process group, then SIGKILL after a grace period), output is size-capped while streaming with truncation reported, and results carry real exit codes. Ships ~25 scripts (host health, disk, ports, docker ps/logs, git status, package updates), a wrapper that hands a whole task to a local CLI coding agent, and an MCP proxy that relays JSON-RPC to local stdio MCP servers. Python client, stdlib-only, MIT, macOS and Linux."
+kind: tool
+topics:
+  - remote
+  - security
+compat: n/a
 tags:
   - bridge
   - remote-execution
