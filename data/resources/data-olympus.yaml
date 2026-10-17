@@ -1,0 +1,9 @@
+name: Data Olympus
+repo: https://github.com/knaisoma/data-olympus
+tagline: "Self-hosted MCP server for governed project knowledge: standards, decisions, runbooks and workflows"
+description: Git-native knowledge base and MCP server for coding agents. Serves reviewed project guidance (accepted standards, decisions, workflows, supersession history) and accepts proposed knowledge changes, separate from recalled chat memory.
+kind: mcp-server
+topics:
+  - memory
+  - docs
+compat: n/a
