@@ -1,0 +1,10 @@
+name: Sortie-dogs
+repo: https://github.com/zufall-upon/Sortie-dogs
+tagline: Agents write only the files they declared — manifest-gated orchestration loop
+description: >
+  An opt-in OpenCode orchestration plugin. Every task starts with an
+  explicit write manifest; edits and handoffs outside that scope are
+  rejected. Three bounded scouts investigate read-only, a dedicated
+  worker implements, and canonical validation plus risk-based review
+  gate coordinator-owned completion. Dormant until you run /sortie —
+  ordinary OpenCode sessions are untouched.
