@@ -731,6 +731,15 @@ startup.
 </details>
 
 <details>
+  <summary><b>Opencode MemPalace Persistence</b> <img src="https://badgen.net/github/stars/geco/opencode-mempalace-persistence" height="14"/> - <i>Local-first persistent memory for OpenCode, backed by MemPalace</i></summary>
+  <blockquote>
+    Saves every conversation to a local MemPalace palace and recalls it verbatim in later sessions. Mines run on idle, exit and startup — never mid-reply. Zero-config: the plugin registers its own read-only MCP entry, so multiple OpenCode tabs never starve each other on the palace writer lock. Ships a live sidebar status line and a companion local browser/curator (penfield) for timeline, knowledge graph, thread view and duplicate healing.
+    <br><br>
+    <a href="https://github.com/geco/opencode-mempalace-persistence">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
   <summary><b>OpenCode Mission Control</b> <img src="https://badgen.net/github/stars/nigel-dev/opencode-mission-control" height="14"/> - <i>Command center for parallel agents — worktree isolation, DAG plans, merge train, PRs</i></summary>
   <blockquote>
     Orchestrates parallel OpenCode agents in tmux-isolated git worktrees with live inspection (capture/attach/diff), a dashboard overview, agent status reporting, and in-chat notifications. Supports DAG-based plans with autopilot/copilot/supervisor modes and a merge train with test gating and automatic rollback.

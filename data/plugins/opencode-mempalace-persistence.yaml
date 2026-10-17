@@ -1,0 +1,27 @@
+name: Opencode MemPalace Persistence
+repo: https://github.com/geco/opencode-mempalace-persistence
+tagline: Local-first persistent memory for OpenCode, backed by MemPalace
+description: >-
+  Saves every conversation to a local MemPalace palace and recalls it verbatim
+  in later sessions. Mines run on idle, exit and startup — never mid-reply.
+  Zero-config: the plugin registers its own read-only MCP entry, so multiple
+  OpenCode tabs never starve each other on the palace writer lock. Ships a live
+  sidebar status line and a companion local browser/curator (penfield) for
+  timeline, knowledge graph, thread view and duplicate healing.
+homepage: https://www.npmjs.com/package/opencode-mempalace-persistence
+scope:
+  - global
+min_version: 1.18.29
+tags:
+  - memory
+  - mempalace
+  - persistence
+  - knowledge-graph
+  - mcp
+installation: |-
+  1. Install MemPalace: `pipx install mempalace` then `mempalace init ~/opencode-memory`
+  2. Add to `~/.config/opencode/opencode.json`:
+     ```json
+     { "plugin": ["opencode-mempalace-persistence"] }
+     ```
+  3. Restart OpenCode. The plugin registers its own read-only MemPalace MCP entry; to backfill existing history once, run `OPENCODE_MEMPALACE_BACKFILL=1 opencode`.
