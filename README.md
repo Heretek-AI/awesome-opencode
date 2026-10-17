@@ -45,6 +45,8 @@
 <a href="https://heretek-ai.github.io/awesome-opencode/"><b>🔎 Search &amp; filter the catalog</b></a>
 &nbsp;•&nbsp;
 <a href="https://github.com/Heretek-AI/awesome-opencode/issues/new?template=add-entry.yml"><b>➕ Submit an entry</b></a>
+&nbsp;•&nbsp;
+<a href="https://github.com/Heretek-AI/awesome-opencode/blob/main/docs/policy.md"><b>📋 Catalog policy</b></a>
 </p>
 
 <br>
