@@ -10,8 +10,12 @@ on:
       - 'scripts/**'
   workflow_dispatch:
 
+# main requires a passing "validate" check on every commit, so the regenerated README is first pushed
+# to a bot/readme-* branch, validated there, and then fast-forwarded onto main.
 permissions:
   contents: write
+  actions: write
+  checks: read
 
 concurrency:
   group: auto-generate-readme-main
@@ -39,7 +43,9 @@ jobs:
       - name: Install dependencies
         run: npm ci --ignore-scripts
 
-      - name: Generate and push README/registry
+      - name: Generate, validate and publish README/registry
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
 
@@ -62,14 +68,34 @@ jobs:
 
             git add README.md dist/registry.json
             git commit -m "docs: auto-regenerate README and registry data"
+            sha="$(git rev-parse HEAD)"
+            branch="bot/readme-${sha:0:12}"
 
-            if git push origin HEAD:main; then
+            # Stage the commit and run the required "validate" check on it
+            git push --force origin "HEAD:refs/heads/${branch}"
+            gh workflow run validate-pr.yml --ref "${branch}"
+            conclusion=""
+            for i in $(seq 1 60); do
+              sleep 10
+              conclusion="$(gh api "repos/${GITHUB_REPOSITORY}/commits/${sha}/check-runs?check_name=validate" \
+                --jq '[.check_runs[] | select(.status == "completed") | .conclusion][0] // ""')"
+              [ -n "${conclusion}" ] && break
+            done
+
+            if [ "${conclusion}" != "success" ]; then
+              git push origin --delete "${branch}" || true
+              echo "validate on ${sha} finished with '${conclusion:-timeout}'; not publishing" >&2
+              exit 1
+            fi
+
+            if git push origin "${sha}:refs/heads/main"; then
+              git push origin --delete "${branch}" || true
               exit 0
             fi
 
-            echo "Push raced with another main update; retrying..."
-            sleep 2
+            git push origin --delete "${branch}" || true
+            echo "main moved while validating; retrying..."
           done
 
-          echo "Failed to push regenerated README/registry after retries" >&2
+          echo "Failed to publish regenerated README/registry after retries" >&2
           exit 1
