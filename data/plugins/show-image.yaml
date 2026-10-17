@@ -1,0 +1,11 @@
+name: Show Image
+repo: https://github.com/Ttg1ithub/opencode-show-image
+tagline: Display images inline in the conversation without vision-capable models
+description: "Custom tool that shows local or remote images directly in the conversation via a local HTTP short-URL server. Works on desktop and web. No vision-capable model required and no terminal-graphics support needed. The AI copies a Markdown image line into its reply and the user sees the image inline; registration is persisted so historical URLs survive restarts."
+scope:
+  - global
+  - project
+tags:
+  - image-display
+  - image-preview
+  - local-server

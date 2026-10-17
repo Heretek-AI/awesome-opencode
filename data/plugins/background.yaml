@@ -1,4 +1,12 @@
-name: Background
-repo: https://github.com/zenobi-us/opencode-background
-tagline: Background process management
-description: Background process management plugin for opencode.
+name: Background Process
+repo: https://github.com/Ttg1ithub/opencode-background-process
+tagline: Pure-Node background process management, UTF-8/GBK decoding on Windows, process-tree cleanup on exit
+description: "Launch, monitor, read output, send stdin input, and kill long-running tasks in the background without blocking the session. Pure Node (no Bun), works on the desktop app. Windows-specific features: automatic UTF-8/GBK output decoding, taskkill-based process-tree cleanup, and processes auto-terminate when OpenCode exits. Replaces the archived zenobi-us/opencode-background."
+scope:
+  - global
+  - project
+tags:
+  - background-process
+  - process-management
+  - dev-server
+  - windows
