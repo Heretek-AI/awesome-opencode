@@ -1,0 +1,10 @@
+name: Reflection-3
+repo: https://github.com/dzianisv/opencode-plugins
+path: packages/reflection
+tagline: Judge layer that catches premature agent stops
+description: "LLM-as-judge plugin for OpenCode and Claude Code: fires on every agent stop, classifies stops as premature or legitimate using a rubric mined from 227 real sessions (78% were premature), and re-prompts the agent with targeted feedback. Enforces workflow gates (tests, CI, PRs). Implements the Reflexion self-improvement loop. Works on both OpenCode (session.idle event) and Claude Code (Stop hook)."
+kind: tool
+topics:
+  - workflow
+  - code-quality
+compat: v1
