@@ -104,6 +104,15 @@
 </details>
 
 <details>
+  <summary><b>AION</b> <img src="https://badgen.net/github/stars/ztxtech/aion" height="14"/> - <i>Time-series harness with multi-agent review, skills, tools, and hooks</i></summary>
+  <blockquote>
+    A compiled TypeScript OpenCode plugin that turns OpenCode into a time-series research harness. Bundles six specialized agents (orchestrator, requirements analyst, information collector, coder, and two critic roles), seventeen skills, twenty-plus tools, and eight coordination protocols into one self-contained bundle installed via a one-command CLI. Enforces a four-layer model (task, workspace, execution, review) with hard gates for data-leakage detection, ablation-backed statistical rigor, and dual-critic governance before any output ships.
+    <br><br>
+    <a href="https://github.com/ztxtech/aion">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
   <summary><b>Antigravity Auth</b> <img src="https://badgen.net/github/stars/NoeFabris/opencode-antigravity-auth" height="14"/> - <i>Google Antigravity models</i></summary>
   <blockquote>
     Use Gemini and Anthropic models for free via Google Antigravity IDE authentication.
@@ -1060,6 +1069,15 @@ suggestions. All processing stays local by default — no data leaves the machin
     Plugin that automatically appends AI model signature to Pull Requests, Issues, and git commit messages. Supports GitHub MCP tools, git CLI, and gh CLI. Recognizes 90+ AI models including Claude, GPT, Gemini, DeepSeek, Llama, Mistral, and more.
     <br><br>
     <a href="https://github.com/arttttt/opencode-pr-signature">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
+  <summary><b>Quota Board</b> <img src="https://badgen.net/github/stars/gilvex/opencode-quota-board" height="14"/> - <i>Provider quotas, reset countdowns, and credit balances in the OpenCode V2 terminal</i></summary>
+  <blockquote>
+    V2-native quota sidebar and /quota popup using existing active provider connections. Displays remaining allowances, reset countdowns, and credit balances, with collapsible providers, persistent visibility and pinning preferences, and stale-value retention after failed refreshes. Includes adapters for OpenAI, Anthropic, OpenCode Console, OpenRouter, Z.AI, Synthetic, and MiniMax.
+    <br><br>
+    <a href="https://github.com/gilvex/opencode-quota-board">🔗 <b>View Repository</b></a>
   </blockquote>
 </details>
 
