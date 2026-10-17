@@ -24,6 +24,12 @@
 
 <br>
 
+> [!NOTE]
+> **Active Hard Fork**: `Heretek-AI/awesome-opencode` is the actively maintained community continuation of `awesome-opencode`.
+> All original upstream issues, pull requests, and discussions are preserved and imported. Submissions and PRs are actively reviewed!
+
+<br>
+
 [**OFFICIAL**](#official) • [**PLUGINS**](#plugins) • [**THEMES**](#themes) • [**AGENTS**](#agents) • [**PROJECTS**](#projects) • [**RESOURCES**](#resources)
 
 <br>
@@ -1316,7 +1322,7 @@ suggestions. All processing stays local by default — no data leaves the machin
 </details>
 
 <br>
-<a href="https://github.com/awesome-opencode/awesome-opencode/blob/main/contributing.md"><b>➕ Add a Plugin via PR</b></a>
+<a href="https://github.com/Heretek-AI/awesome-opencode/blob/main/contributing.md"><b>➕ Add a Plugin via PR</b></a>
 </details>
 
 <br>
@@ -1396,7 +1402,7 @@ Also available for bat and Ghostty in the same repository.
 </details>
 
 <br>
-<a href="https://github.com/awesome-opencode/awesome-opencode/blob/main/contributing.md"><b>➕ Add a Theme via PR</b></a>
+<a href="https://github.com/Heretek-AI/awesome-opencode/blob/main/contributing.md"><b>➕ Add a Theme via PR</b></a>
 </details>
 
 <br>
@@ -1489,7 +1495,7 @@ Also available for bat and Ghostty in the same repository.
 </details>
 
 <br>
-<a href="https://github.com/awesome-opencode/awesome-opencode/blob/main/contributing.md"><b>➕ Add an Agent via PR</b></a>
+<a href="https://github.com/Heretek-AI/awesome-opencode/blob/main/contributing.md"><b>➕ Add an Agent via PR</b></a>
 </details>
 
 <br>
@@ -2084,7 +2090,7 @@ template (cowork-with-github). Install: drag-and-drop .plugin into Cowork.
 </details>
 
 <br>
-<a href="https://github.com/awesome-opencode/awesome-opencode/blob/main/contributing.md"><b>➕ Add a Project via PR</b></a>
+<a href="https://github.com/Heretek-AI/awesome-opencode/blob/main/contributing.md"><b>➕ Add a Project via PR</b></a>
 </details>
 
 <br>
@@ -2159,7 +2165,7 @@ template (cowork-with-github). Install: drag-and-drop .plugin into Cowork.
 </details>
 
 <br>
-<a href="https://github.com/awesome-opencode/awesome-opencode/blob/main/contributing.md"><b>➕ Add a Resource via PR</b></a>
+<a href="https://github.com/Heretek-AI/awesome-opencode/blob/main/contributing.md"><b>➕ Add a Resource via PR</b></a>
 </details>
 
 <br><br>
@@ -2167,7 +2173,7 @@ template (cowork-with-github). Install: drag-and-drop .plugin into Cowork.
 <div align="center">
 <h3>🤝 Contributing</h3>
 Found an Awesome Opencode project? <br>
-<a href="https://github.com/awesome-opencode/awesome-opencode/blob/main/contributing.md"><b>Submit a Pull Request</b></a> to add it to the list!
+<a href="https://github.com/Heretek-AI/awesome-opencode/blob/main/contributing.md"><b>Submit a Pull Request</b></a> to add it to the list!
 <br><br>
 <sub>Released under <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0 Universal</a>.</sub>
 </div>

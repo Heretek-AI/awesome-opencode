@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://github.com/awesome-opencode/awesome-opencode/data/schema.json",
+  "$id": "https://github.com/Heretek-AI/awesome-opencode/data/schema.json",
   "title": "Awesome Opencode Entry",
-  "description": "Schema for validating YAML entries in the awesome-opencode list",
+  "description": "Schema for validating YAML entries in the Heretek-AI/awesome-opencode list",
   "type": "object",
   "properties": {
     "name": {
