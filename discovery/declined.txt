@@ -1,0 +1,3 @@
+# Packages or repos the weekly scout should stop suggesting, one per line.
+# Use an npm package name (e.g. opencode-foo) or a repo URL (e.g. https://github.com/owner/repo).
+# Add a short reason after a '#' so the next maintainer knows why.
