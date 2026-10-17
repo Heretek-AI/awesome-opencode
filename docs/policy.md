@@ -30,7 +30,9 @@ Themes, agents, projects and resources are not blocked on V2. Their `compat` is 
 
 ## Existing V1 plugins: sunset on 2027-01-01
 
-Plugins already in the catalog that are V1-only carry a `V1 only` badge in the README and on the site. **After 2027-01-01 they are removed** by the nightly health job's removal PR unless they have migrated (the check runs again before removal). Plugins with `unknown` compatibility are listed in the health report for manual verification before that date.
+Plugins already in the catalog that are V1-only carry a `V1 only` badge in the README and on the site. The nightly health job re-detects every plugin not marked `v2`; when one is detected as V2 it opens a PR (`bot/health-compat`) marking the entry `compat: v2`. **After 2027-01-01 V1-only plugins are removed** by the health job's removal PR, but only when that night's re-check still detects V1: a V2 or inconclusive result keeps the entry, and inconclusive ones are listed in the health report for a maintainer. Plugins with `unknown` compatibility are listed there too for manual verification.
+
+The bot keeps the list in the V1 sunset tracking issue (label `v1-sunset`) current, posts one reminder there 31 days before the sunset, and closes the issue once no V1-only plugins remain.
 
 ## Health checks and removal
 
@@ -40,7 +42,8 @@ A nightly job checks every entry and maintains the **Catalog health report** iss
 | :--- | :--- |
 | Repository renamed or transferred | Bot PR updates the `repo` URL |
 | Repository archived, deleted (404), or npm package deprecated | Listed in the report; **removal PR after 30 days** if it doesn't recover |
-| V1-only plugin after 2027-01-01 | Removal PR |
+| Plugin not marked `v2` now detected as V2 | Bot PR sets `compat: v2` |
+| V1-only plugin after 2027-01-01, still detected as V1 | Removal PR |
 | No push for 6–12 months / 12+ months | `quiet` / `stale` badge on the site. **Never removed for inactivity alone**: small, finished tools are fine |
 
 Removal PRs are reviewed like any other PR; closing one keeps the entries until the next run proposes them again. Git history is the archive; there is no separate retired list.
@@ -61,7 +64,7 @@ A weekly scout searches npm for packages published since V2 shipped that depend 
 | `triage.yml` | PR opened/updated | Labels and a results comment (base-branch code only). `needs-human` is only ever removed by a maintainer |
 | `generate-readme.yml` | push to main | README.md and dist/registry.json; fails without writing on any invalid entry. The regenerated commit goes through a bot PR (`bot/readme-*`) that merges itself once `validate` passes |
 | `site.yml` | push to main, daily | Search site on GitHub Pages |
-| `health.yml` | daily | Health report issue, rename and removal PRs |
+| `health.yml` | daily | Health report and V1 sunset issues; rename, V2-migration and removal PRs |
 | `reprobe.yml` | daily | Re-checks `needs-v2` PRs |
 | `scout.yml` | weekly | Scout issue with V2 plugin candidates |
 | `issues.yml` | issue opened/edited | Issue-form submissions and scout acceptances become PRs |

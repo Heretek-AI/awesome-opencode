@@ -1,5 +1,6 @@
 # Nightly catalog health: updates the "Catalog health report" issue, and opens bot PRs that follow
-# renamed repos and remove entries dead for 30+ days (or V1-only plugins after the sunset date).
+# renamed repos, mark plugins that migrated to V2, and remove entries dead for 30+ days (or V1-only
+# plugins still detected as V1 after the sunset date). Also keeps the V1 sunset tracking issue current.
 name: Catalog health
 
 on:
