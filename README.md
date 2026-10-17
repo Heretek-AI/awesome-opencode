@@ -2521,6 +2521,15 @@ template (cowork-with-github). Install: drag-and-drop .plugin into Cowork.
 </details>
 
 <details>
+  <summary><b>Cosmosmith</b> <img src="https://badgen.net/github/stars/devnomad-byte/cosmosmith" height="14"/> - <i>Multi-agent workflow initializer with OpenCode adapters</i></summary>
+  <blockquote>
+    Generates AGENTS.md, task.md, proposal/design templates, and adapters for OpenCode, Claude Code, Cursor, Copilot, and Trae so mixed-agent projects can share one governance layer and verification ledger.
+    <br><br>
+    <a href="https://github.com/devnomad-byte/cosmosmith">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
   <summary><b>Debug Log to Text File</b> - <i>Troubleshooting guide</i></summary>
   <blockquote>
     How to output a debug log from opencode to a text file for troubleshooting.

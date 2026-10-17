@@ -1,0 +1,18 @@
+name: Cosmosmith
+repo: https://github.com/devnomad-byte/cosmosmith
+tagline: Multi-agent workflow initializer with OpenCode adapters
+description: Generates AGENTS.md, task.md, proposal/design templates, and adapters for OpenCode, Claude Code, Cursor, Copilot, and Trae so mixed-agent projects can share one governance layer and verification ledger.
+scope:
+  - project
+tags:
+  - agents-md
+  - workflow
+  - governance
+  - adapters
+  - task-ledger
+installation: |
+  ```bash
+  npx cosmosmith@latest init --all
+  ```
+
+  The initializer creates OpenCode-compatible project guidance alongside AGENTS.md and other tool adapters.
