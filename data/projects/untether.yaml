@@ -1,0 +1,9 @@
+name: Untether
+repo: https://github.com/littlebearapps/untether
+tagline: Telegram bridge for remote task control
+description: Telegram bridge for OpenCode (and 5 other agents). Send tasks by voice or text, stream progress live, and manage sessions remotely. Supports 75+ providers via OpenCode's model system.
+kind: client
+topics:
+  - remote
+  - sessions
+compat: n/a
