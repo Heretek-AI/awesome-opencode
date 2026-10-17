@@ -1,0 +1,8 @@
+name: opencode-mcp-registry
+repo: https://github.com/LDLZM/opencode-mcp-registry
+tagline: Register MCP servers in opencode
+description: Guides agents through installing and registering MCP (Model Context Protocol) servers. Supports pre-built binaries, pip, npm, Docker, and remote HTTP endpoints with proper auth handling.
+kind: skill
+topics:
+  - integrations
+compat: n/a

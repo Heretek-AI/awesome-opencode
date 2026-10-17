@@ -1,0 +1,8 @@
+name: sensitive-operations
+repo: https://github.com/LDLZM/sensitive-operations-skill
+tagline: Gatekeeper for privileged operations
+description: Detects sensitive operations (passwords, sudo, tokens, destructive commands) and delegates them to the user for manual execution with verification.
+kind: skill
+topics:
+  - security
+compat: n/a

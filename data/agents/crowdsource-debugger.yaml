@@ -1,0 +1,8 @@
+name: crowdsource-debugger
+repo: https://github.com/LDLZM/crowdsource-debugger
+tagline: Debug stubborn errors with community help
+description: Stops agents from going in circles. When stuck on the same error 3+ times, guides searching Stack Overflow, GitHub Issues, Reddit, and Discourse forums for vetted solutions.
+kind: skill
+topics:
+  - web
+compat: n/a
