@@ -458,15 +458,6 @@ sync and targeted validation checks, and helps keep repo knowledge branch-local 
 </details>
 
 <details>
-  <summary><b>AgentCode</b> <img src="https://badgen.net/github/stars/mrcbrbn5361/agentcode" height="14"/> - <i>7 ücretsiz modelin en iyi yeteneklerini tek çatı altında toplayan akıllı coding agent'ı</i></summary>
-  <blockquote>
-    MiMo-V2.5, DeepSeek V4 Flash, Laguna S 2.1, Ling-3.0-flash, North Mini Code, Nemotron 3 Ultra ve Big Pickle modellerini otomatik yönlendirir. Görev türüne göre en uygun modeli seçer.
-    <br><br>
-    <a href="https://github.com/mrcbrbn5361/agentcode">🔗 <b>View Repository</b></a>
-  </blockquote>
-</details>
-
-<details>
   <summary><b>Micode</b> <img src="https://badgen.net/github/stars/vtemian/micode" height="14"/> - <i>Brainstorm-Plan-Implement workflow</i></summary>
   <blockquote>
     Structured workflow with session continuity, subagent orchestration, git worktree isolation, and AST-aware tools.
