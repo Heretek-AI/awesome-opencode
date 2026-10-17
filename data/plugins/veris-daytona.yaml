@@ -1,10 +1,14 @@
 name: Veris for Daytona
 repo: https://github.com/veris-ai/veris-daytona
+npm: "@veris-ai/daytona-opencode"
+homepage: https://github.com/veris-ai/veris-daytona/tree/main/daytona-opencode#readme
 tagline: OpenCode sessions run in a Daytona sandbox whose vendor API calls are answered by Veris twins
-description: >-
-  Every OpenCode session runs in a Daytona sandbox whose calls to Stripe and the rest of your
-  vendor stack are answered by stateful Veris twins, and the agent gets a receipt of what the
-  vendor actually received. Unmodified code, real hostnames, no image to build.
+description: Every OpenCode session runs in a Daytona sandbox whose calls to Stripe and the rest of your vendor stack are answered by stateful Veris twins, and the agent gets a receipt of what the vendor actually received. Unmodified code, real hostnames, no image to build.
+kind: plugin
+topics:
+  - code-quality
+  - security
+compat: v1
 scope:
   - global
   - project
@@ -15,7 +19,6 @@ tags:
   - integration-testing
   - api-mocking
   - testing
-homepage: https://github.com/veris-ai/veris-daytona/tree/main/daytona-opencode#readme
 installation: |
   ## Links
 

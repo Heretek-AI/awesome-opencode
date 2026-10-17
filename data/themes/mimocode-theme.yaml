@@ -1,6 +1,8 @@
 name: MiMoCode Theme
 repo: https://github.com/jadmadi/opencode-MiMoCode-Theme
 tagline: Warm dark/light OpenCode theme with signature orange accents.
-description: MiMoCode is a warm dark/light theme for OpenCode with
-  signature orange accents, ported from the Zed MimoCode-theme. Dark mode
-  uses warm-black surfaces, light mode uses warm cream surfaces.
+description: MiMoCode is a warm dark/light theme for OpenCode with signature orange accents, ported from the Zed MimoCode-theme. Dark mode uses warm-black surfaces, light mode uses warm cream surfaces.
+kind: theme
+topics:
+  - ui
+compat: n/a

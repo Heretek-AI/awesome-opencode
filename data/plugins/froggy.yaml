@@ -2,3 +2,7 @@ name: Froggy
 repo: https://github.com/smartfrog/opencode-froggy
 tagline: XP-guided multi-agent orchestration
 description: Multi-agent delegation and orchestration guided by XP, KISS, and YAGNI, with specialized agents, independent code review, and a persistent loop to keep work moving toward the objective.
+kind: plugin
+topics:
+  - orchestration
+compat: v2

@@ -2,3 +2,8 @@ name: fractal
 repo: https://github.com/plasma-ai/fractal
 tagline: Hierarchical coding-agent loops with recursive delegation and per-node worktrees
 description: Supports OpenCode as one of five coding-agent backends. Each node runs in its own Git worktree, delegates separable subtasks recursively, and records state and cost data in a local SQLite database with live terminal controls.
+kind: tool
+topics:
+  - orchestration
+  - git
+compat: n/a

@@ -2,6 +2,11 @@ name: OpenCode Zellij Indicator
 repo: https://github.com/aidan-gallagher/opencode-zellij-indicator
 tagline: Show each OpenCode session's status and title on its Zellij tab
 description: Puts a status icon (working, needs-you, done-unseen, done-seen) and the session title on each Zellij tab, so you can see at a glance which of your parallel OpenCode agents is busy, blocked on a prompt, or finished — without switching tabs. Includes an optional stopwatch and sound notifications.
+kind: plugin
+topics:
+  - environment
+  - notifications
+compat: v2
 tags:
   - zellij
   - terminal

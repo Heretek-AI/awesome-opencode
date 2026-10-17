@@ -1,7 +1,7 @@
 name: OpenCode Crosstalk
 repo: https://github.com/MrDoe/opencode-crosstalk
 tagline: Peer discovery, messaging, and expiring file leases between concurrent OpenCode sessions
-description: |
+description: |-
   Coordination for agents that share a workspace. Six tools let concurrent sessions
   discover each other, talk to each other, and take exclusive expiring leases on the
   files they are editing, so two agents never rewrite the same file at once.
@@ -17,6 +17,10 @@ description: |
   rule. The core coordination logic (presence registry, mailboxes, claim table) is
   host-free and unit tested — the plugin imports nothing from OpenCode outside its
   single entry point.
+kind: plugin
+topics:
+  - orchestration
+compat: v2
 scope:
   - global
   - project
@@ -26,7 +30,7 @@ tags:
   - file-locking
   - messaging
   - agents
-min_version: "2.0.0"
+min_version: 2.0.0
 installation: |
   ## Prerequisites
   - OpenCode 2.0.0 or later

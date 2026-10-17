@@ -1,7 +1,12 @@
 name: Professor
 repo: https://github.com/rezzminator/professor
+homepage: https://github.com/rezzminator/professor
 tagline: Fleet-boost discipline layer for Claude Code, Codex & OpenCode agents
 description: An LLM-harness fleet boost framework that turns your AI coding agents into a disciplined engineering team you can see, message, and hold to the rules. Ships a compiled .opencode/ layer (agents, commands, skill symlinks, opencode.jsonc with pinned denies) generated from its Claude sources, plus pfm, a Go CLI/TUI that lists OpenCode chats alongside Claude Code and Codex sessions.
+kind: skill
+topics:
+  - workflow
+compat: n/a
 scope:
   - project
 tags:
@@ -10,4 +15,3 @@ tags:
   - codex
   - multi-agent
   - cli
-homepage: https://github.com/rezzminator/professor

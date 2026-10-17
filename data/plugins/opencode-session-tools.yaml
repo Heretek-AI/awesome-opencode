@@ -1,14 +1,12 @@
 name: opencode-session-tools
 repo: https://github.com/kernel-oops/opencode-session-tools
 tagline: OpenCode v2 session tools – session metadata, history recall, and Claude Code-style messaging between sessions
-description: >-
-  Two plugins for OpenCode v2, built on the public v2 plugin API. opencode-meta adds
-  opencode_meta (bounded session metadata, relations, statistics and tool usage) and
-  send_message, which lets one session send plain text to another by ID or title; the
-  target receives it as a queued message marked as coming from a peer, never as user
-  approval. opencode-recall-lite adds recall and recall_get to search and read back
-  earlier sessions across projects, with a short reminder to check history before
-  answering questions about past work.
+description: Two plugins for OpenCode v2, built on the public v2 plugin API. opencode-meta adds opencode_meta (bounded session metadata, relations, statistics and tool usage) and send_message, which lets one session send plain text to another by ID or title; the target receives it as a queued message marked as coming from a peer, never as user approval. opencode-recall-lite adds recall and recall_get to search and read back earlier sessions across projects, with a short reminder to check history before answering questions about past work.
+kind: plugin
+topics:
+  - sessions
+  - memory
+compat: v2
 scope:
   - global
 tags:

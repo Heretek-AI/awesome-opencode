@@ -2,3 +2,7 @@ name: Esuyo Custom Provider
 repo: https://github.com/8perezm/esuyo-opencode-custom-provider
 tagline: Auto-discover models from any OpenAI-compatible gateway on startup
 description: Opencode plugin that syncs /v1/models from any OpenAI-compatible gateway into providers. Global ~/.config/opencode or project .opencode config, {env:} / {file:} secrets, include/exclude regex, and zero manual model maintenance.
+kind: plugin
+topics:
+  - providers
+compat: v2

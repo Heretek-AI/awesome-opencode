@@ -1,10 +1,8 @@
 name: semantic-search-mcp
 repo: https://github.com/Zulaxy/semantic-search-mcp
 tagline: Semantic code search MCP server - find code by meaning across thousands of files
-description: >
-  Adds semantic code search to OpenCode.
-  Find code by meaning across 6,900+ files in 2 seconds.
-  100% local 80MB model (bge-small-en-v1.5), zero API calls.
-  Function-level extraction for PHP, JS, TS, Python, Go, Rust, Java.
-  Hybrid scoring (70% embedding + 30% keyword), TUI config wizard,
-  live progress bar, per-project caching.
+description: Adds semantic code search to OpenCode. Find code by meaning across 6,900+ files in 2 seconds. 100% local 80MB model (bge-small-en-v1.5), zero API calls. Function-level extraction for PHP, JS, TS, Python, Go, Rust, Java. Hybrid scoring (70% embedding + 30% keyword), TUI config wizard, live progress bar, per-project caching.
+kind: mcp-server
+topics:
+  - code-intel
+compat: n/a

@@ -1,12 +1,11 @@
 name: looot MCP config
 repo: https://github.com/loootai/looot-agent-integrations
 tagline: opencode.json snippet for the looot remote MCP server, 2,500+ data API endpoints
-description: A ready opencode.json block that adds the looot remote MCP server
-  (https://api.looot.ai/mcp) with browser sign-in, plus a variant that reads a
-  token from {env:LOOOT_TOKEN}. looot gives an agent one key and one prepaid
-  balance for work-email lookup, enrichment, SERP, backlinks and web page
-  data. The same repo has snippets for other agent platforms and a starter
-  SKILL.md that opencode loads from .agents/skills.
+description: A ready opencode.json block that adds the looot remote MCP server (https://api.looot.ai/mcp) with browser sign-in, plus a variant that reads a token from {env:LOOOT_TOKEN}. looot gives an agent one key and one prepaid balance for work-email lookup, enrichment, SERP, backlinks and web page data. The same repo has snippets for other agent platforms and a starter SKILL.md that opencode loads from .agents/skills.
+kind: config
+topics:
+  - integrations
+compat: n/a
 scope:
   - global
   - project

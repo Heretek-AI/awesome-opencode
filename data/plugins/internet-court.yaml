@@ -1,8 +1,12 @@
 name: Internet Court
 repo: https://github.com/internet-court/internet-court-skill
+homepage: https://internetcourt.org
 tagline: "Trust layer for agent-to-agent commerce: mandates, payments, escrow, dispute resolution."
 description: The trust layer for agent-to-agent commerce — natural-language mandates, delegated permissions, x402 payments, escrow, and dispute resolution as one open, catch-all skill. By the Internet Court Consortium (internetcourt.org). MIT licensed.
-homepage: https://internetcourt.org
+kind: plugin
+topics:
+  - integrations
+compat: v2
 tags:
   - agent-payments
   - x402

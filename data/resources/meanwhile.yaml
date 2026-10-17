@@ -2,3 +2,7 @@ name: Meanwhile
 repo: https://github.com/vaddisrinivas/meanwhile
 tagline: Optional human side quests while OpenCode continues long work
 description: A portable Agent Skill that offers one bounded, opt-in learning, recovery, play, or reality-check quest while the coding agent continues. It requires no account, callback, or completion tracking.
+kind: skill
+topics:
+  - workflow
+compat: n/a

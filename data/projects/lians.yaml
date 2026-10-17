@@ -1,13 +1,11 @@
 name: Lians
 repo: https://github.com/Lians-ai/Lians
 tagline: Local-first memory for OpenCode and any MCP-compatible AI agent
-description: >
-  Gives OpenCode durable memory across chats through its native MCP support.
-  Ships a ready-to-copy OpenCode configuration and five-tool starter profile
-  for remembering, recalling, inspecting, correcting, and explicitly erasing
-  local memory. No Lians account, API key, model download, or cloud service is
-  required; memory stays in a local SQLite database and can be shared with
-  other compatible agents.
+description: Gives OpenCode durable memory across chats through its native MCP support. Ships a ready-to-copy OpenCode configuration and five-tool starter profile for remembering, recalling, inspecting, correcting, and explicitly erasing local memory. No Lians account, API key, model download, or cloud service is required; memory stays in a local SQLite database and can be shared with other compatible agents.
+kind: mcp-server
+topics:
+  - memory
+compat: n/a
 tags:
   - memory
   - mcp

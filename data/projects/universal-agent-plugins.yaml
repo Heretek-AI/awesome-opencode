@@ -2,3 +2,7 @@ name: Universal Agent Plugins
 repo: https://github.com/777genius/universal-agent-plugins
 tagline: Manage Agent Plugins across OpenCode and other AI coding agents
 description: A cross-platform CLI for installing, updating, repairing, and removing Agent Plugins 1.0 across OpenCode, Codex, Claude Code, Cursor, Gemini CLI, and other compatible agents. It also includes tools and an SDK for building portable plugins.
+kind: tool
+topics:
+  - environment
+compat: n/a

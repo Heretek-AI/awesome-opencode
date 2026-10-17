@@ -2,4 +2,9 @@ name: keep-going
 repo: https://github.com/ferdousbhai/keep-going
 tagline: Sends an idle session back to work when a reviewer model judges the request unfinished
 description: When a session goes idle, a reviewer model reads the owner's request and the last assistant message and answers CONTINUE or STOP; on CONTINUE the plugin sends a short fixed nudge such as "Keep going." as the next message. It stops for work that is done, blocked, or waiting on the owner's consent or answer, caps continuations per turn, and fails open on any error. Install with `npx github:ferdousbhai/keep-going --opencode`.
-scope: [global]
+kind: plugin
+topics:
+  - workflow
+compat: v1
+scope:
+  - global

@@ -2,3 +2,7 @@ name: Solenta
 repo: https://github.com/currentbits/solenta
 tagline: Desktop app for OpenCode and other coding agents with one shared local memory
 description: A local-first desktop app (macOS, Windows, Linux) that runs OpenCode, Claude Code, Codex, Cursor, Kimi and Grok threads in git worktrees. A local memory server is injected into every session over MCP, so what one thread learns the next one knows; the plan is your GitHub issues, with Git review, terminal and browser panes, and verify-gated completion.
+kind: client
+topics:
+  - memory
+compat: n/a

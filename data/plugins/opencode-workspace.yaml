@@ -2,3 +2,7 @@ name: Opencode Workspace
 repo: https://github.com/kdcokenny/opencode-workspace
 tagline: Multi-agent orchestration
 description: Bundled multi-agent orchestration harness with 16 components in one install.
+kind: plugin
+topics:
+  - orchestration
+compat: v1

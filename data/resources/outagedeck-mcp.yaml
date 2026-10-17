@@ -1,11 +1,13 @@
 name: OutageDeck MCP
 repo: https://github.com/outagedeck/mcp
+homepage: https://outagedeck.com/developers/mcp?utm_source=awesome_opencode&utm_medium=directory&utm_campaign=opencode_mcp
 tagline: Vendor-published cloud and SaaS outage checks for OpenCode agents
-description: OutageDeck gives OpenCode agents current provider status, incident timelines,
-  and observed uptime history for cloud and SaaS vendors, based on their official
-  status feeds. Its hosted remote
-  MCP server connects without a package, daemon, account, or API key for public
-  status checks, so an agent can rule out dependency outages before changing code.
+description: OutageDeck gives OpenCode agents current provider status, incident timelines, and observed uptime history for cloud and SaaS vendors, based on their official status feeds. Its hosted remote MCP server connects without a package, daemon, account, or API key for public status checks, so an agent can rule out dependency outages before changing code.
+kind: mcp-server
+topics:
+  - observability
+  - integrations
+compat: n/a
 scope:
   - global
   - project
@@ -14,7 +16,6 @@ tags:
   - incident-response
   - status-monitoring
   - devops
-homepage: https://outagedeck.com/developers/mcp?utm_source=awesome_opencode&utm_medium=directory&utm_campaign=opencode_mcp
 installation: |
   Add the remote server to `opencode.json`:
 

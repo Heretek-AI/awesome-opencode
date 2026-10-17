@@ -1,11 +1,15 @@
 name: Azdaja
 repo: https://github.com/kubet/azdaja
+homepage: https://azdaja.dev
 tagline: Local context evaluator for OpenCode with bounded semantic calls and validated results.
 description: A Rust binary that keeps source material outside the root prompt, runs exact analysis in a local Python sandbox, and requests bounded semantic judgments through OpenCode when needed.
+kind: tool
+topics:
+  - context
+compat: n/a
 tags:
   - cli
   - large-context
   - opencode
   - receipts
   - rust
-homepage: https://azdaja.dev

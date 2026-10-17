@@ -1,25 +1,12 @@
 name: staffetta
 repo: https://github.com/RaffaeleSpezia/staffetta
 tagline: "Model-decided context handoff: close a milestone, write memory to disk, restart with a clean session"
-description: >-
-  A relay-race alternative to compaction for long-running agents. Instead of a
-  threshold rewriting the conversation in place, the agent itself decides when a
-  milestone is closed, writes what the next session needs to disk, and hands over
-  — the session ends and a fresh one picks up the baton. Memory lives in files
-  (MEMORY.md overwritten, JOURNAL.md append-only, AGENTS.md for rules), so it is
-  readable, diffable, correctable and survives the session. Four tools the agent
-  calls itself: checkpoint (verifies by checksum that memory actually changed,
-  rejects journal entries with no numbers in them, detects tampering with older
-  entries), ask (pauses for a human decision, requires the agent to state what it
-  would do without an answer), resume (refuses until the decision is written
-  down), and loop (reopens the session and nothing else — it ends when the model
-  declares --done or --blocked, not when a counter infers it). Measured on a
-  local KAT-Coder V2.5 via llama.cpp: 7 milestones closed autonomously, 7 of 7
-  checkpoints invoked unprompted, 587 tests green, ~5,500 tokens of context per
-  round instead of a compacted session restarting from 142,000 — and it does not
-  grow across rounds. Pure bash, no dependencies; adapters/opencode/loop.sh is
-  the opencode adapter and everything under core/ works with any agent that can
-  run a shell command.
+description: "A relay-race alternative to compaction for long-running agents. Instead of a threshold rewriting the conversation in place, the agent itself decides when a milestone is closed, writes what the next session needs to disk, and hands over — the session ends and a fresh one picks up the baton. Memory lives in files (MEMORY.md overwritten, JOURNAL.md append-only, AGENTS.md for rules), so it is readable, diffable, correctable and survives the session. Four tools the agent calls itself: checkpoint (verifies by checksum that memory actually changed, rejects journal entries with no numbers in them, detects tampering with older entries), ask (pauses for a human decision, requires the agent to state what it would do without an answer), resume (refuses until the decision is written down), and loop (reopens the session and nothing else — it ends when the model declares --done or --blocked, not when a counter infers it). Measured on a local KAT-Coder V2.5 via llama.cpp: 7 milestones closed autonomously, 7 of 7 checkpoints invoked unprompted, 587 tests green, ~5,500 tokens of context per round instead of a compacted session restarting from 142,000 — and it does not grow across rounds. Pure bash, no dependencies; adapters/opencode/loop.sh is the opencode adapter and everything under core/ works with any agent that can run a shell command."
+kind: tool
+topics:
+  - context
+  - memory
+compat: n/a
 tags:
   - context-management
   - memory

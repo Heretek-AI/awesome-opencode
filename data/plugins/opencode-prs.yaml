@@ -1,7 +1,15 @@
 name: PRs
 repo: https://github.com/vvo/opencode-plugins
+path: packages/prs
+npm: opencode-prs
+homepage: https://www.npmjs.com/package/opencode-prs
 tagline: Lists GitHub pull requests referenced by the current session
 description: OpenCode TUI plugin that lists GitHub pull requests opened by the current session in the sidebar, with titles scrolling on hover. Requires an installed and authenticated GitHub CLI.
+kind: plugin
+topics:
+  - git
+  - ui
+compat: v2
 scope:
   - global
 tags:
@@ -9,7 +17,6 @@ tags:
   - pull-requests
   - tui
   - sidebar
-homepage: https://www.npmjs.com/package/opencode-prs
 installation: |
   OpenCode 2, in `~/.config/opencode/cli.json`:
 

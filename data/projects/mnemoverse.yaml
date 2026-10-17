@@ -1,9 +1,13 @@
 name: Mnemoverse
 repo: https://github.com/mnemoverse/mcp-memory-server
+homepage: https://mnemoverse.com/docs/api/remote-mcp-server
 tagline: MCP memory server that re-ranks recall from reported outcomes, backed by a hosted engine
 description: MIT-licensed MCP server for agent memory, backed by a hosted engine that re-ranks recall from reported outcomes rather than similarity alone. OpenCode can use it as a local MCP server (npm `@mnemoverse/mcp-memory-server`) or as a remote MCP server at https://mcp.mnemoverse.com/mcp with OAuth sign-in, and the same memory is shared with Claude Code, Cursor, VS Code, and ChatGPT. The engine is hosted and needs a Mnemoverse account, with a free tier.
+kind: mcp-server
+topics:
+  - memory
+compat: n/a
 tags:
   - mcp
   - memory
   - opencode
-homepage: https://mnemoverse.com/docs/api/remote-mcp-server

@@ -1,11 +1,11 @@
 name: Dialbot MCP
 repo: https://github.com/R2100/dialbot-mcp
 tagline: Local MCP browser control for OpenCode with an unpacked Chrome extension
-description: >-
-  Control Chrome tabs from OpenCode through a local stdio MCP server and a
-  Chrome Manifest V3 extension. Includes fast DOM and selector actions, plus
-  visual screenshot, mouse and keyboard control. Also works with Pi and other
-  MCP stdio clients.
+description: Control Chrome tabs from OpenCode through a local stdio MCP server and a Chrome Manifest V3 extension. Includes fast DOM and selector actions, plus visual screenshot, mouse and keyboard control. Also works with Pi and other MCP stdio clients.
+kind: mcp-server
+topics:
+  - web
+compat: n/a
 scope:
   - global
   - project

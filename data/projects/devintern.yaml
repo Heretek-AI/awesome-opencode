@@ -1,21 +1,15 @@
 name: DevIntern
 repo: https://github.com/getdevintern/devintern
+homepage: https://devintern.com
 tagline: Turn tracker tickets into OpenCode-authored, self-reviewed pull requests
-description: >-
-  Wires the task tracker your team already uses (Jira, Linear, Trello, Asana,
-  Azure DevOps, GitHub Issues, or plain markdown files) to OpenCode. Running
-  `devintern PROJ-123 --create-pr` picks up the ticket, runs OpenCode
-  non-interactively in your repo, self-reviews the diff, and opens a pull
-  request. A feasibility gate bounces vague tickets back to the tracker with
-  questions instead of producing a confidently wrong PR. An optional unattended
-  mode fully automates ticket handling: scheduled ticket pickup plus
-  webhook-driven handling of PR review comments, so reviewer feedback becomes
-  commits on the same branch. Includes a companion `devpm` tool that turns
-  rough prompts, logs, or Figma frames into well-specified, codebase-grounded
-  tickets. Runs on your machines with your own model keys.
+description: "Wires the task tracker your team already uses (Jira, Linear, Trello, Asana, Azure DevOps, GitHub Issues, or plain markdown files) to OpenCode. Running `devintern PROJ-123 --create-pr` picks up the ticket, runs OpenCode non-interactively in your repo, self-reviews the diff, and opens a pull request. A feasibility gate bounces vague tickets back to the tracker with questions instead of producing a confidently wrong PR. An optional unattended mode fully automates ticket handling: scheduled ticket pickup plus webhook-driven handling of PR review comments, so reviewer feedback becomes commits on the same branch. Includes a companion `devpm` tool that turns rough prompts, logs, or Figma frames into well-specified, codebase-grounded tickets. Runs on your machines with your own model keys."
+kind: tool
+topics:
+  - git
+  - integrations
+compat: n/a
 tags:
   - automation
   - task-tracker
   - pull-requests
   - opencode
-homepage: https://devintern.com

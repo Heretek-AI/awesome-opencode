@@ -2,4 +2,9 @@ name: Quota Board
 repo: https://github.com/gilvex/opencode-quota-board
 tagline: Provider quotas, reset countdowns, and credit balances in the OpenCode V2 terminal
 description: V2-native quota sidebar and /quota popup using existing active provider connections. Displays remaining allowances, reset countdowns, and credit balances, with collapsible providers, persistent visibility and pinning preferences, and stale-value retention after failed refreshes. Includes adapters for OpenAI, Anthropic, OpenCode Console, OpenRouter, Z.AI, Synthetic, and MiniMax.
-min_version: "2.0.28"
+kind: plugin
+topics:
+  - cost
+  - providers
+compat: v2
+min_version: 2.0.28

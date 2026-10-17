@@ -2,6 +2,10 @@ name: DataCloak
 repo: https://github.com/pratikwayal01/datacloak
 tagline: Swap secrets and PII for realistic fakes before AI sees them; restore originals on return.
 description: Local-first sensitive-data protection for OpenCode. Cloaks API keys, JWTs, PEMs, env vars, DSNs, emails, phones and IPs with Faker-generated synthetics pre-dispatch, blocks env-dump tool calls, redacts tool output, and auto-restores originals into file writes. Zero-config and fully automatic.
+kind: plugin
+topics:
+  - security
+compat: v1
 scope:
   - global
 tags:

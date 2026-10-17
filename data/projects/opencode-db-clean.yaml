@@ -1,11 +1,12 @@
 name: OpenCode Database Cleaner
 repo: https://github.com/chncaesar/opencode-db-clean
 tagline: Safely analyze and reclaim unused space in OpenCode's SQLite database
-description: >-
-  A zero-dependency Python CLI that reports live data and freelist bloat in
-  OpenCode's local SQLite database, then safely reclaims unused disk space with
-  process checks, WAL checkpointing, verified backups, VACUUM, and integrity
-  checks. It does not delete sessions.
+description: A zero-dependency Python CLI that reports live data and freelist bloat in OpenCode's local SQLite database, then safely reclaims unused disk space with process checks, WAL checkpointing, verified backups, VACUUM, and integrity checks. It does not delete sessions.
+kind: tool
+topics:
+  - sessions
+  - environment
+compat: n/a
 scope:
   - global
 tags:

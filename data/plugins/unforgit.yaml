@@ -1,7 +1,13 @@
 name: Unforgit
 repo: https://github.com/MiguelMedeiros/unforgit
+homepage: https://unforgit.com/docs/mcp
 tagline: Git-backed repository memory for AI agents
 description: Unforgit gives OpenCode and other coding agents durable, repository-scoped memory through MCP. Store and recall project decisions, conventions, gotchas, and playbooks locally in a Git-backed memory base, with optional sync and curation workflows.
+kind: plugin
+topics:
+  - memory
+  - git
+compat: v2
 scope:
   - project
 tags:
@@ -10,7 +16,6 @@ tags:
   - agents
   - knowledge-base
   - repository
-homepage: https://unforgit.com/docs/mcp
 installation: |
   Install the published CLI, then generate OpenCode project instructions and MCP config:
 

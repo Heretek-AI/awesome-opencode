@@ -2,3 +2,7 @@ name: Claude Skills Pro
 repo: https://github.com/Hahaknight/claude-skills-pro
 tagline: 15 battle-tested engineering skills (review, testing, debugging, security) that install into OpenCode in one command.
 description: A pack of 15 expert-workflow skills - seven-dimension code review, root-cause debugging, tests that catch real bugs, feature specs, security audit, safe refactoring, API design, zero-downtime migrations and more. Each skill encodes trigger conditions, a step-by-step procedure, and hard anti-patterns, so the agent follows senior-engineer discipline automatically. 7 skills are free (MIT). Install into OpenCode via npx skills add Hahaknight/claude-skills-pro --agent opencode.
+kind: skill
+topics:
+  - code-quality
+compat: n/a

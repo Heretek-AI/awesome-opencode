@@ -1,6 +1,10 @@
 name: SWE-AF
 repo: https://github.com/Agent-Field/SWE-AF
 tagline: Autonomous software engineering agent team — orchestrates a 400+ agent swarm for planning, coding, testing, and review
-description: >
-  Autonomous software engineering agent team. Orchestrates a 400+ agent swarm
-  across the full development lifecycle from a single API call. Apache 2.0.
+description: Autonomous software engineering agent team. Orchestrates a 400+ agent swarm across the full development lifecycle from a single API call. Apache 2.0.
+kind: agent
+topics:
+  - orchestration
+  - workflow
+  - code-quality
+compat: n/a

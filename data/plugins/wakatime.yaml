@@ -2,3 +2,8 @@ name: WakaTime
 repo: https://github.com/angristan/opencode-wakatime
 tagline: WakaTime integration
 description: WakaTime integration plugin for tracking coding activity in opencode sessions.
+kind: plugin
+topics:
+  - observability
+  - integrations
+compat: v2

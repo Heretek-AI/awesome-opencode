@@ -1,15 +1,13 @@
 name: OpenCode Todo Supervisor
 repo: https://github.com/N0K0/opencode-todo-supervisor
+npm: "@hacky.software/opencode-todo-supervisor"
 tagline: Session todo lists, plus a supervisor that keeps nudging idle sessions until the list is done
-description: >-
-  Gives every OpenCode V2 session a real todo list and then keeps the agent working on it.
-  Ships todo_write, todo_read, todo_add and todo_remove tools (V2 ships none), stored per
-  session with stable per-item ids, with a live progress strip in the composer. A supervisor
-  re-prompts any session that goes idle while its list still has open items, and stays quiet
-  while the agent is actually working, including during tool calls, subagent runs and
-  background shells. Any markdown file can be subscribed so its GFM checklists count as
-  todos, and the TUI panel can tick them off by hand. Nudges are delivered as synthetic
-  session input, so the model reads them as ordinary instructions. Tested against 2.0.24.
+description: Gives every OpenCode V2 session a real todo list and then keeps the agent working on it. Ships todo_write, todo_read, todo_add and todo_remove tools (V2 ships none), stored per session with stable per-item ids, with a live progress strip in the composer. A supervisor re-prompts any session that goes idle while its list still has open items, and stays quiet while the agent is actually working, including during tool calls, subagent runs and background shells. Any markdown file can be subscribed so its GFM checklists count as todos, and the TUI panel can tick them off by hand. Nudges are delivered as synthetic session input, so the model reads them as ordinary instructions. Tested against 2.0.24.
+kind: plugin
+topics:
+  - workflow
+  - ui
+compat: v2
 scope:
   - global
   - project
@@ -19,7 +17,7 @@ tags:
   - productivity
   - automation
   - tui
-min_version: "2.0.0"
+min_version: 2.0.0
 installation: |
   ## Install
 

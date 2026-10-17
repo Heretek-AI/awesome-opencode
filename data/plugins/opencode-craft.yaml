@@ -1,8 +1,13 @@
 name: opencode-craft
 repo: https://github.com/pauloralves/opencode-craft
+npm: opencode-craft
 homepage: https://www.npmjs.com/package/opencode-craft
 tagline: Senior pair programmer, craftsmanship coach, and knowledge ledger for OpenCode
 description: Transforms OpenCode into a seasoned Principal Engineer / Technical Craft Lead who builds software at full velocity while coaching system architecture, trade-offs, and interview readiness. Includes auto-synced LEARNING_PATH.md and @expand / @interview-angle skills.
+kind: plugin
+topics:
+  - docs
+compat: v1
 scope:
   - global
   - project

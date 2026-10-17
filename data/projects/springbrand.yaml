@@ -1,7 +1,8 @@
 name: SpringBrand
 repo: https://github.com/springbrand-lab/springbrand-agent-setup
+homepage: https://springbrand.ai
 tagline: Remote MCP server with go-to-market tools for agents
-description: |
+description: |-
   Hosted remote MCP server that gives OpenCode go-to-market tools: social
   listening, traffic and SEO research, lead discovery, and creator discovery.
 
@@ -12,6 +13,10 @@ description: |
   Transport is Streamable HTTP. Auth is OAuth 2.1 with Dynamic Client
   Registration (RFC 7591) and PKCE, which OpenCode handles automatically on the
   first 401, so no API key goes in the config file.
+kind: mcp-server
+topics:
+  - domain
+compat: n/a
 tags:
   - mcp
   - remote-mcp
@@ -19,7 +24,6 @@ tags:
   - seo
   - social-listening
   - lead-generation
-homepage: https://springbrand.ai
 installation: |
   Add the server to `opencode.json` (project) or
   `~/.config/opencode/opencode.json` (global):

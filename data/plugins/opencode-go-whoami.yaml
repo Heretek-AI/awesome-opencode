@@ -1,8 +1,10 @@
 name: opencode-go-whoami
 repo: https://github.com/senorMk/opencode-go-whoami
 tagline: Display local email labels for OpenCode Go/Zen accounts
-description: >
-  Identify your OpenCode Go/Zen accounts through user-assigned
-  email labels, a permanent sidebar panel, and /go-whoami.
-  Runs locally and displays only masked keys and fingerprints.
-min_version: "2.0.0"
+description: Identify your OpenCode Go/Zen accounts through user-assigned email labels, a permanent sidebar panel, and /go-whoami. Runs locally and displays only masked keys and fingerprints.
+kind: plugin
+topics:
+  - providers
+  - ui
+compat: v2
+min_version: 2.0.0

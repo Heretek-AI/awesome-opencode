@@ -1,7 +1,12 @@
 name: Tree Ring Memory
 repo: https://github.com/TerminallyLazy/Tree-Ring-Memory
+homepage: https://terminallylazy.github.io/Tree-Ring-Memory/
 tagline: Local-first memory lifecycle CLI for AI agents
 description: Rust-native memory lifecycle layer for AI agents with project-scoped SQLite/FTS recall, forgetting, audit, consolidation, DOX/Revolve sync adapters, terminal TUI, and agent-framework discovery for OpenCode-style workflows.
+kind: tool
+topics:
+  - memory
+compat: n/a
 scope:
   - global
   - project
@@ -12,7 +17,6 @@ tags:
   - rust
   - opencode
   - ai-agents
-homepage: https://terminallylazy.github.io/Tree-Ring-Memory/
 installation: |
   Install globally:
   ```bash

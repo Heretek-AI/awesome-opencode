@@ -2,3 +2,7 @@ name: opencode-shortcuts
 repo: https://github.com/PrismKitty/opencode-shortcuts
 tagline: A keyboard shortcut cheatsheet and rebinder for the OpenCode v1 and v2 TUI
 description: Press ctrl+/ to see every key you can use in the screen you're on, including your overrides. Rebind any built-in command in place, with clash handling and comment-preserving config edits. OpenCode v1 and v2.
+kind: plugin
+topics:
+  - ui
+compat: v2

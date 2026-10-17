@@ -2,3 +2,7 @@ name: WPM
 repo: https://github.com/nohavye-dev/wpm-system
 tagline: Confidence-weighted persistent memory with proofs
 description: Local project memory maintained automatically during work. Every memory carries a 0-1 confidence score that only rises with external proofs; entries are validated or contradicted with evidence, never deleted, and deduplicated. Hybrid semantic + graph retrieval recalls the right memory when it matters.
+kind: plugin
+topics:
+  - memory
+compat: v1

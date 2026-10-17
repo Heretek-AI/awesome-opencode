@@ -2,3 +2,7 @@ name: Agent Memory
 repo: https://github.com/Ghilteras/opencode-agent-memory
 tagline: Persistent, self-editable memory and a local semantic journal
 description: Maintained OpenCode plugin providing shared global and project memory blocks, dedicated memory tools, and an opt-in append-only journal with local multilingual semantic search.
+kind: plugin
+topics:
+  - memory
+compat: v2

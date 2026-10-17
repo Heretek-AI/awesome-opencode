@@ -1,4 +1,8 @@
 name: growth-architect-foundry
 repo: https://github.com/mohamedOmar11111/growth-architect-foundry
 tagline: "Ad-agency growth ops skill for OpenCode: audits, client reports, ROAS maths, human-approved live writes"
-description: "Deterministic growth-ops commands for ad agencies (audit, diagnose, EN/AR client reports, COD-aware economics) as an Agent Skill plus AGENTS.md. Live Google/Meta budget or pause changes are enforced in code to need a person typing the campaign key at a terminal, so an agent cannot self-approve. Installs into .agents/skills with one script and is checked against the real OpenCode CLI in CI."
+description: Deterministic growth-ops commands for ad agencies (audit, diagnose, EN/AR client reports, COD-aware economics) as an Agent Skill plus AGENTS.md. Live Google/Meta budget or pause changes are enforced in code to need a person typing the campaign key at a terminal, so an agent cannot self-approve. Installs into .agents/skills with one script and is checked against the real OpenCode CLI in CI.
+kind: skill
+topics:
+  - domain
+compat: n/a

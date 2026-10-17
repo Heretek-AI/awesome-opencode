@@ -2,3 +2,8 @@ name: PickySteve
 repo: https://github.com/KernelLord/pickysteve
 tagline: Local skill router and context picker for coding agents
 description: A cheap local model routes each prompt to the right skill via hybrid retrieval (BM25 + embeddings, RRF-fused) with cross-encoder reranking and an LLM judge, then assembles a minimal context bundle for the execution model. Runs fully offline on local Ollama by default and ships a fail-closed prompt-injection gate (ONNX classifier) that scans both requests and retrieved documents. Exposes an MCP stdio server and an OpenAI-compatible proxy, with a one-command installer wiring 18 coding agents including Claude Code, Cursor, and OpenCode.
+kind: mcp-server
+topics:
+  - prompting
+  - context
+compat: n/a

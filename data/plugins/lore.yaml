@@ -1,5 +1,10 @@
 name: Lore
 repo: https://github.com/FFatTiger/lore
+homepage: https://loremem.com/documents/agents/opencode
 tagline: Long-term memory for OpenCode with boot baseline and per-prompt recall
 description: Native plugin that connects OpenCode to a Lore memory server. A fixed boot baseline loads identity, workflow and preference memories into the system context at session start, recall surfaces relevant memories before each prompt, and durable facts are written back through guarded lore_* tools to a URI-addressed memory graph shared with Claude Code, Codex and other runtimes. Self-hosted with Docker or use the managed Loremem service.
-homepage: https://loremem.com/documents/agents/opencode
+kind: plugin
+topics:
+  - memory
+  - prompting
+compat: v1

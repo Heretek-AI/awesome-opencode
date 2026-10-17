@@ -1,7 +1,8 @@
 name: OpenCode Indexing
 repo: https://github.com/Javierkaiser/opencode-indexing
+homepage: https://github.com/Javierkaiser/opencode-indexing#readme
 tagline: Semantic code search for OpenCode that reuses Kilo Code's index and keeps its own incremental one.
-description: |
+description: |-
   Adds semantic (vector) code search to OpenCode. It reads Kilo Code's existing
   index (Qdrant ws-* collections and Kilo's local LanceDB) without ever modifying
   it, and can import those vectors and chunks at zero embedding cost, then keep
@@ -16,6 +17,10 @@ description: |
   - Settings and index actions from the TUI, Desktop and web clients
   - Supported embedding providers: Mistral, OpenAI, Ollama, Gemini, Voyage,
     OpenRouter and any OpenAI-compatible endpoint
+kind: plugin
+topics:
+  - code-intel
+compat: v2
 scope:
   - global
 tags:
@@ -26,7 +31,6 @@ tags:
   - qdrant
   - lancedb
 min_version: 2.0.0
-homepage: https://github.com/Javierkaiser/opencode-indexing#readme
 installation: |
   ## Prerequisites
   - OpenCode v2 (plugin API `@opencode/plugin` 2.x)
