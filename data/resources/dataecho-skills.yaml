@@ -1,0 +1,13 @@
+name: DataEcho Skills
+repo: https://github.com/mohocp/dataecho
+tagline: Deploy files, sites, and Dockerfile apps to live URLs + persistent agent memory, from opencode.
+description: Two zero-dependency Agent Skills for the DataEcho platform (dataecho.ai). `dataecho` publishes anything the agent builds — a single file, a static site, or a server-side app via Dockerfile — to a live URL in seconds, with anonymous publishing (24h claim flow), incremental deploys, and private cloud Drives with scoped share tokens. `dataecho-memory` gives the agent durable memory across sessions and machines — an indexed fact store on a private versioned drive with atomic concurrent-safe writes, history/restore, and one-command handoff. Install with `npx skills add mohocp/dataecho`; opencode discovers them via its standard skill paths. Also available as an MCP server (https://dataecho.ai/mcp).
+scope:
+  - global
+  - project
+tags:
+  - skills
+  - deploy
+  - hosting
+  - memory
+  - mcp-server
