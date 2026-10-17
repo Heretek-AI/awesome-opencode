@@ -2455,6 +2455,15 @@ template (cowork-with-github). Install: drag-and-drop .plugin into Cowork.
 </details>
 
 <details>
+  <summary><b>TelegramCode</b> <img src="https://badgen.net/github/stars/olosegres/telegramcode" height="14"/> - <i>Telegram bot for OpenCode and Claude Code, run coding agents from your phone</i></summary>
+  <blockquote>
+    Run your coding agents on your own machine or VPS and drive them from Telegram, by voice or text. Each forum topic is its own project session, like terminal tabs on your phone. Self-hosted, no open ports, MIT.
+    <br><br>
+    <a href="https://github.com/olosegres/telegramcode">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
   <summary><b>Tokscale</b> <img src="https://badgen.net/github/stars/junhoyeo/tokscale" height="14"/> - <i>Token usage tracking CLI</i></summary>
   <blockquote>
     A CLI tool for tracking token usage from OpenCode and other coding agents (Claude Code, Codex, Gemini CLI, and Cursor IDE).
