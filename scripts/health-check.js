@@ -125,7 +125,7 @@ async function recheckCompat(entries) {
   try {
     return await probeCompat(plugins.map(e => ({ key: e.file, repo: e.data.repo, path: e.data.path, npm: e.data.npm, plugin: true })));
   } catch (err) {
-    console.error(`compat re-check failed: ${err.message}`);
+    console.error(`compat re-check failed: ${String(err.message).replace(/[\r\n]+/g, ' ')}`);
     return new Map();
   }
 }
@@ -164,7 +164,7 @@ function removalCandidates(entries, state, compat, date = today()) {
     const s = state[e.file];
     const now = compat.get(e.file);
     if (s && daysSince(s.since) >= GRACE_DAYS) out.push({ entry: e, reason: `${s.reason} since ${s.since}` });
-    else if (e.category === 'plugins' && e.data.compat === 'v1' && date >= V1_SUNSET && now && now.compat === 'v1') {
+    else if (e.category === 'plugins' && e.data.compat === 'v1' && date >= V1_SUNSET && now?.compat === 'v1') {
       out.push({ entry: e, reason: `V1-only plugin past the ${V1_SUNSET} sunset (${now.evidence.join('; ')})` });
     }
   }
@@ -173,7 +173,7 @@ function removalCandidates(entries, state, compat, date = today()) {
 
 /** Plugins not marked v2 that tonight's re-check detects as V2. */
 function migratedPlugins(entries, compat) {
-  return entries.filter(e => e.category === 'plugins' && e.data.compat !== 'v2' && (compat.get(e.file) || {}).compat === 'v2');
+  return entries.filter(e => e.category === 'plugins' && e.data.compat !== 'v2' && compat.get(e.file)?.compat === 'v2');
 }
 
 function report(entries, health, state, compat) {
@@ -185,7 +185,7 @@ function report(entries, health, state, compat) {
   const v1 = plugins.filter(e => e.data.compat === 'v1');
   const unknown = plugins.filter(e => e.data.compat === 'unknown');
   const migrated = migratedPlugins(entries, compat);
-  const unconfirmed = v1.filter(e => !['v1', 'v2'].includes((compat.get(e.file) || {}).compat));
+  const unconfirmed = v1.filter(e => !['v1', 'v2'].includes(compat.get(e.file)?.compat));
   const stale = entries.filter(e => health.get(e.file).status === 'stale');
   const npmMissing = entries.filter(e => health.get(e.file).npmMissing);
 
@@ -393,7 +393,7 @@ async function main() {
         labels: ['health'],
         dryRun: opts.dryRun
       });
-      if (pr) console.log(`V2 migrations: #${pr.number}`);
+      if (pr) console.log(`V2 migrations: #${Number(pr.number)}`);
     }
     if (removals.lines.length) {
       const pr = await openPullRequest({
