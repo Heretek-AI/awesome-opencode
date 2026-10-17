@@ -1,0 +1,9 @@
+name: opencode-roundtable
+repo: https://github.com/NeoMei/opencode-roundtable
+tagline: Multi-agent roundtable discussion skill with per-member model routing and meeting minutes
+description: A roundtable discussion (圆桌讨论) skill for opencode — TUI, CLI and Desktop. Pick members one by one via inline cards (role, persona, model — any provider); each member is a real subagent run via opencode run -m provider/model, a neutral host summarizes each round, and on termination a structured meeting-minutes Markdown file is written. Uses only built-in primitives — no plugin required.
+kind: skill
+topics:
+  - orchestration
+  - providers
+compat: n/a

@@ -1,0 +1,21 @@
+name: Vision
+repo: https://github.com/KelpHect/opencode-vision
+tagline: Screen recording and video analysis tools (record_screen, watch_video, video_frames)
+description: "Gives OpenCode agents eyes: record the full screen or a single window with ffmpeg, send clips to a video-capable model for timestamped Q&A, or turn videos into timestamped contact sheets for image-only vision models. Windows-focused, with a bundled video-analysis skill."
+kind: plugin
+topics:
+  - media
+compat: v2
+scope:
+  - global
+  - project
+tags:
+  - vision
+  - tools
+min_version: 2.0.0
+installation: |
+  ```bash
+  opencode plugin add github:KelpHect/opencode-vision
+  ```
+  Requires `ffmpeg` and `ffprobe` on PATH. Pin a release with
+  `github:KelpHect/opencode-vision#v0.2.1`.

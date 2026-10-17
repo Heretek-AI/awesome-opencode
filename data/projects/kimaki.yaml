@@ -2,3 +2,7 @@ name: Kimaki
 repo: https://github.com/remorses/kimaki/
 tagline: Discord bot controller
 description: A Discord bot to control opencode sessions on any computer via Discord.
+kind: client
+topics:
+  - remote
+compat: n/a

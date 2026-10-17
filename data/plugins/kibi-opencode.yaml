@@ -1,0 +1,43 @@
+name: kibi-opencode
+repo: https://github.com/Looted/kibi
+npm: kibi-opencode
+tagline: OpenCode guidance for keeping requirements linked to code and tests
+description: Kibi connects project requirements to code and tests. This optional OpenCode plugin gives agents relevant guidance and runs background sync and checks.
+kind: plugin
+topics:
+  - code-quality
+  - workflow
+compat: v1
+scope:
+  - project
+tags:
+  - opencode
+  - plugin
+  - mcp
+  - traceability
+installation: |
+  ## Install
+  Install Kibi's core tools in your project, then initialize it:
+
+  ```sh
+  npm install --save-dev kibi-core kibi-cli kibi-mcp
+  npm exec -- kibi init
+  ```
+
+  Add the MCP server and optional plugin to your project `opencode.json`:
+
+  ```json
+  {
+    "$schema": "https://opencode.ai/config.json",
+    "mcp": {
+      "kibi": {
+        "type": "local",
+        "enabled": true,
+        "command": ["npx", "--no-install", "kibi-mcp"]
+      }
+    },
+    "plugin": ["kibi-opencode"]
+  }
+  ```
+
+  After startup, run `/kibi-bootstrap` to plan and review the knowledge base for an existing project.

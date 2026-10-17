@@ -1,0 +1,9 @@
+name: Gem Team
+repo: https://github.com/mubaidr/gem-team
+tagline: Self-Learning Multi-agent orchestration harness for spec-driven development and automated verification.
+description: Self-Learning Multi-agent orchestration harness for spec-driven development and automated verification.
+kind: agent
+topics:
+  - orchestration
+  - workflow
+compat: n/a

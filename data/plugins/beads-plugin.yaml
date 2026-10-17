@@ -2,3 +2,8 @@ name: Beads Plugin
 repo: https://github.com/joshuadavidthomas/opencode-beads
 tagline: Beads issue tracker integration
 description: Integration for Steve Yegge's beads issue tracker with /bd-* commands.
+kind: plugin
+topics:
+  - integrations
+  - workflow
+compat: v1

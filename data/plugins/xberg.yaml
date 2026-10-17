@@ -1,0 +1,28 @@
+name: Xberg
+repo: https://github.com/xberg-io/xberg
+npm: "@xberg-io/opencode-xberg"
+homepage: https://www.npmjs.com/package/@xberg-io/opencode-xberg
+tagline: Local document extraction for 97+ formats
+description: OpenCode plugin exposing xberg CLI tools for document extraction, MIME detection, and supported-format discovery.
+kind: plugin
+topics:
+  - media
+compat: v2
+scope:
+  - global
+  - project
+tags:
+  - documents
+  - extraction
+  - ocr
+  - cli
+installation: |
+  Add the package to `opencode.json`:
+
+  ```json
+  {
+    "plugin": ["@xberg-io/opencode-xberg"]
+  }
+  ```
+
+  Requires the `xberg` CLI.
