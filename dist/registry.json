@@ -294,6 +294,23 @@
     "tags": []
   },
   {
+    "productId": "opencode-profiles",
+    "type": "agents",
+    "displayName": "Opencode Profiles",
+    "repoUrl": "https://github.com/gtmdev-br/opencode-profiles",
+    "tagline": "17 agent personalities for OpenCode — switch with one command",
+    "description": "17 specialized agent personalities for OpenCode with dedicated agents, MCP servers, and permissions. Switch between engineer, designer, sales, and more with a single command. Also includes agent-ci, a CLI to validate, test, and benchmark profiles.",
+    "kind": "agent",
+    "topics": [
+      "prompting"
+    ],
+    "compat": "n/a",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
     "productId": "opencode-redstone",
     "type": "agents",
     "displayName": "Redstone",
@@ -597,6 +614,33 @@
     ]
   },
   {
+    "productId": "aerovato-operator-memory",
+    "type": "plugins",
+    "displayName": "@aerovato/operator-memory",
+    "repoUrl": "https://github.com/aerovato/operator-memory",
+    "tagline": "Durable context for agent-driven development",
+    "description": "Operator Memory gives the agent durable memory made of ordinary Markdown: specs, decisions, standards, and research, kept across private, shared, and user partitions. Every file is yours to read, correct, or remove, and new sessions start from that knowledge. No embeddings, no vector database, no hosted service.",
+    "kind": "plugin",
+    "topics": [
+      "memory",
+      "context",
+      "sessions"
+    ],
+    "compat": "v2",
+    "scope": [
+      "global",
+      "project"
+    ],
+    "tags": [
+      "memory",
+      "context",
+      "documentation",
+      "markdown"
+    ],
+    "homepageUrl": "https://www.npmjs.com/package/@aerovato/operator-opencode",
+    "installation": "Install the Helper globally:\n\n```sh\nnpm install --global @aerovato/operator-helper\n```\n\nThen install the plugin for OpenCode:\n\n```sh\noperator-helper install opencode\n```\n"
+  },
+  {
     "productId": "aftermath",
     "type": "plugins",
     "displayName": "Aftermath",
@@ -654,6 +698,52 @@
       "global"
     ],
     "tags": []
+  },
+  {
+    "productId": "agy-auth",
+    "type": "plugins",
+    "displayName": "OpenCode Antigravity CLI Auth",
+    "repoUrl": "https://github.com/anthonyhaussman/opencode-agy-auth",
+    "tagline": "Google Antigravity account auth",
+    "description": "Authenticate the Opencode CLI with your Google account so you can use your existing Antigravity plan.",
+    "kind": "plugin",
+    "topics": [
+      "providers"
+    ],
+    "compat": "v2",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
+    "productId": "ai-project-tracker",
+    "type": "plugins",
+    "displayName": "AI Project Tracker",
+    "repoUrl": "https://github.com/Helixventures-AI/ai-project-tracker",
+    "tagline": "Real-time project progress tracker with dashboard, MCP, CLI and git-history import",
+    "description": "Tracks 7 development phases (research, setup, implementation, testing, docs, deployment, delivery) automatically from tool activity, and shows progress percentages, growth charts, ETA prediction, milestones and a bilingual (EN/FA) HTML dashboard.\n\n- Zero npm dependencies, 100% local — data lives in the project (.opencode/project-tracker/state.json), nothing is uploaded\n- Works beyond opencode: same state engine powers a CLI (pt), an MCP server (Claude Code, Cursor, Copilot, Claude Desktop) and Claude Code hooks\n- Git-history import: `pt import-git` backfills all phases from past commits (honest timestamps, no fake growth)\n- Notes with phase & weight: `pt note success \"...\" --phase deploy --weight 3` records retroactive scoring\n- Installed via npm (`ai-project-tracker`) or local plugin file",
+    "kind": "plugin",
+    "topics": [
+      "sessions",
+      "code-quality",
+      "git"
+    ],
+    "compat": "v2",
+    "scope": [
+      "global",
+      "project"
+    ],
+    "tags": [
+      "progress",
+      "tracking",
+      "dashboard",
+      "mcp",
+      "cli",
+      "productivity"
+    ],
+    "homepageUrl": "https://github.com/Helixventures-AI/ai-project-tracker#readme",
+    "installation": "### npm (easiest)\n```bash\nnpm i -g ai-project-tracker\n```\n\n### opencode\nAdd to `opencode.json`:\n```json\n{\n  \"plugin\": [\"ai-project-tracker\"]\n}\n```\nor copy `project-tracker.ts` into `.opencode/plugins/`.\n\n### MCP (Claude Code, Cursor, Copilot)\nRegister `mcp/server.mjs` as a stdio server:\n```json\n{ \"command\": \"node\", \"args\": [\"<path>/mcp/server.mjs\"] }\n```\n\n### Claude Code hooks\nPoint `settings.json` hooks at `hooks/claude-code/pt-hook.mjs` (PostToolUse / SessionStart / UserPromptSubmit / Stop).\n"
   },
   {
     "productId": "aidevops",
@@ -732,6 +822,23 @@
       "providers"
     ],
     "compat": "v1",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
+    "productId": "async-prompt-injector",
+    "type": "plugins",
+    "displayName": "OpenCode Async Prompt Injector",
+    "repoUrl": "https://github.com/theOnlyBoy/opencode-async-prompt-injector",
+    "tagline": "Slide a sticky note under your agent's nose: inject prompts mid-task without interrupting agent's flow.",
+    "description": "Injects prompts into your OpenCode agent mid-task — async, without interrupting its flow. Like a sticky note slid under the agent's nose while it's busy thinking. Drop a message via `/inject_prompt <your message>` — the agent picks it up the moment it's free to look, without you having to wait for the current task to finish.",
+    "kind": "plugin",
+    "topics": [
+      "prompting"
+    ],
+    "compat": "v2",
     "scope": [
       "global"
     ],
@@ -1062,6 +1169,24 @@
       "orchestration"
     ],
     "compat": "v1",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
+    "productId": "cursor-opencode-provider",
+    "type": "plugins",
+    "displayName": "Cursor Provider",
+    "repoUrl": "https://github.com/oakimov/cursor-opencode-provider",
+    "tagline": "Run Cursor subscription models from OpenCode",
+    "description": "AI SDK provider and OpenCode plugin that speaks Cursor's native Connect-RPC agent protocol — not a generic chat-completions API. Handles authentication (OAuth PKCE / API key), model discovery, streaming, tool calls (exec-server, subagent, read/bash/edit/write/grep/find/ls), and thinking deltas.",
+    "kind": "plugin",
+    "topics": [
+      "orchestration",
+      "providers"
+    ],
+    "compat": "v2",
     "scope": [
       "global"
     ],
@@ -2821,6 +2946,23 @@
     "minVersion": "2.0.0"
   },
   {
+    "productId": "opencode-cursor",
+    "type": "plugins",
+    "displayName": "Cursor Auth",
+    "repoUrl": "https://github.com/ephraimduncan/opencode-cursor",
+    "tagline": "Use your Cursor subscription models in OpenCode via OAuth",
+    "description": "Connects Cursor's API to OpenCode via OAuth login, automatic model discovery, and a local OpenAI-compatible proxy — use the models included in your Cursor subscription directly from OpenCode.",
+    "kind": "plugin",
+    "topics": [
+      "providers"
+    ],
+    "compat": "v2",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
     "productId": "opencode-cut",
     "type": "plugins",
     "displayName": "Cut",
@@ -3675,6 +3817,25 @@
     "tags": []
   },
   {
+    "productId": "opencode-prewalk",
+    "type": "plugins",
+    "displayName": "opencode-prewalk",
+    "repoUrl": "https://github.com/vivekascoder/opencode-prewalk",
+    "tagline": "Save token costs by planning with a frontier model, then finishing with a faster model.",
+    "description": "Plans, explores, and begins implementation with a frontier model, then hands the same grounded OpenCode session to a faster model to finish the task while reducing token costs.",
+    "kind": "plugin",
+    "topics": [
+      "workflow",
+      "cost",
+      "sessions"
+    ],
+    "compat": "v2",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
     "productId": "opencode-provider-alias",
     "type": "plugins",
     "displayName": "OpenCode Provider Alias",
@@ -3877,6 +4038,23 @@
       "workflow"
     ],
     "compat": "v1",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
+    "productId": "opencode-rtl",
+    "type": "plugins",
+    "displayName": "opencode-rtl",
+    "repoUrl": "https://github.com/razavioo/opencode-rtl",
+    "tagline": "RTL language support for Persian, Arabic, Hebrew and other right-to-left languages",
+    "description": "Automatic RTL text detection, bidi isolation, and alignment for Persian/Arabic/Hebrew workflows in OpenCode's terminal and web UI.",
+    "kind": "plugin",
+    "topics": [
+      "ui"
+    ],
+    "compat": "v2",
     "scope": [
       "global"
     ],
@@ -4237,6 +4415,25 @@
     "topics": [
       "ui",
       "prompting"
+    ],
+    "compat": "v2",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
+    "productId": "opencode-smartsnip",
+    "type": "plugins",
+    "displayName": "OpenCode SmartSnip",
+    "repoUrl": "https://github.com/carson2222/opencode-smartsnip",
+    "tagline": "Cuts shell-output tokens safely by wrapping only commands snip can filter.",
+    "description": "An OpenCode plugin that routes shell commands through snip only when filtering is safe, reducing context usage without breaking pipes, quotes, redirects, heredocs, or raw API output.",
+    "kind": "plugin",
+    "topics": [
+      "context",
+      "cost",
+      "environment"
     ],
     "compat": "v2",
     "scope": [
@@ -6607,6 +6804,23 @@
     "tags": []
   },
   {
+    "productId": "chat-sidebar-for-opencode",
+    "type": "projects",
+    "displayName": "Chat Sidebar for OpenCode",
+    "repoUrl": "https://github.com/SenCha930511/chat-sidebar-for-opencode",
+    "tagline": "VS Code sidebar chat GUI for OpenCode",
+    "description": "A VS Code extension that gives a locally installed OpenCode server a full GUI chat panel in the editor sidebar — multi-session streaming, inline permission approvals and question cards, slash commands with agent/model pickers, @-mention file attachments, todos and native diff previews. Bilingual English / 繁體中文 UI. Available on the VS Code Marketplace.",
+    "kind": "client",
+    "topics": [
+      "ui"
+    ],
+    "compat": "v1",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
     "productId": "chronotile",
     "type": "projects",
     "displayName": "Chronotile",
@@ -7124,6 +7338,23 @@
     "installation": "## Install the Duplex app\nDownload the installer for Windows / macOS / Linux from the\n[Releases](https://github.com/Eric-huang799/duplex/releases) page (or build from source).\n\n## Install the opencode mirror plugin\n```bash\nmkdir -p ~/.config/opencode/plugins\ncurl -o ~/.config/opencode/plugins/cobrowse-mirror.ts \\\n  https://raw.githubusercontent.com/Eric-huang799/duplex/master/integrations/opencode/plugins/cobrowse-mirror.ts\n```\n\n## Register the MCP server\nAdd to `opencode.json` (project-level or global — see `opencode.example.json`):\n```json\n{\n  \"mcp\": {\n    \"duplex\": {\n      \"type\": \"local\",\n      \"command\": [\"node\", \"/path/to/duplex/dist-bridge/index.cjs\"],\n      \"enabled\": true\n    }\n  }\n}\n```\n"
   },
   {
+    "productId": "egc",
+    "type": "projects",
+    "displayName": "EGC",
+    "repoUrl": "https://github.com/Fmarzochi/EGC",
+    "tagline": "Persistent cross-session memory MCP server for 13+ AI coding tools including OpenCode",
+    "description": "Local-first MCP runtime with persistent SQLite-backed memory that survives context resets. Keeps Claude Code, Cursor, Gemini CLI, Codex, Windsurf, Amp, Kiro, VS Code Copilot, Trae, OpenCode, and more in sync across sessions. Install: npm install -g @egchq/egc",
+    "kind": "mcp-server",
+    "topics": [
+      "memory"
+    ],
+    "compat": "v1",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
     "productId": "employed",
     "type": "projects",
     "displayName": "Employed by Guaq AI",
@@ -7243,6 +7474,23 @@
     "kind": "tool",
     "topics": [
       "providers"
+    ],
+    "compat": "n/a",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
+    "productId": "generative-media-skills",
+    "type": "projects",
+    "displayName": "Generative Media Skills",
+    "repoUrl": "https://github.com/SamurAIGPT/Generative-Media-Skills",
+    "tagline": "Multi-modal AI media generation skills",
+    "description": "13 OpenCode-native skills for image, video, and audio generation powered by 100+ AI models (FLUX, Midjourney v7, Veo3, Kling 3.0, Suno, HunyuanVideo). Includes expert skills: Cinema Director, Nano-Banana image generation, UI Designer, Logo Creator, UGC Video Factory, AI Clipping, and more. Clone the repo and skills auto-load from .opencode/skills/.",
+    "kind": "skill",
+    "topics": [
+      "media"
     ],
     "compat": "n/a",
     "scope": [
@@ -8008,6 +8256,23 @@
       "environment"
     ],
     "compat": "v2",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
+    "productId": "omoctl",
+    "type": "projects",
+    "displayName": "omoctl",
+    "repoUrl": "https://github.com/anfreire/omoctl",
+    "tagline": "Define, patch, and switch oh-my-openagent profiles with one command",
+    "description": "CLI profile manager for oh-my-openagent configs: define profiles in one YAML, patch models declaratively across providers, agents, and categories, rebuild profiles from fresh OMO configs on update, validate against live model data, and switch the active config with a single command.",
+    "kind": "tool",
+    "topics": [
+      "environment"
+    ],
+    "compat": "n/a",
     "scope": [
       "global"
     ],
