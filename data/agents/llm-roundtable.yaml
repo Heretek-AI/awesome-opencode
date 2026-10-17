@@ -1,0 +1,24 @@
+name: llm-roundtable
+repo: https://github.com/dinhkarate/llm-roundtable
+tagline: Six models from five vendors vote on choices, plans and PRs when an unattended agent would stop to ask you
+description: >-
+  Agent Skill plus a stdlib-only Python script (MIT). When an unattended coding agent would
+  stop to ask its user to choose, approve, or review, it convenes a council through each
+  vendor's CLI: Claude Fable and Opus (claude), GPT (codex), Grok (grok), Gemini (agy), and
+  the newest free OpenCode model (opencode, no login needed). Round 1 is blind, round 2 is an
+  anonymous cross-examination (M1..Mn), peers rate each other's evidence 0-2, and a weighted
+  vote decides with no chairman model; an undecided council falls back to a safe default.
+  Seats run read-only and sandboxed. Review mode returns APPROVE/CHANGES/REJECT for plans and
+  PRs. Runs from OpenCode as the host too; --private drops free-model seats that may train on prompts.
+tags:
+  - skill
+  - multi-model
+  - council
+  - voting
+  - code-review
+homepage: https://dinhkarate.github.io/llm-roundtable/
+installation: |
+  ```bash
+  npx skills add dinhkarate/llm-roundtable --skill llm-roundtable
+  npx llm-roundtable doctor --probe
+  ```
