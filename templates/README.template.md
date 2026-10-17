@@ -1,3 +1,4 @@
+<!-- GENERATED FILE: do not edit README.md directly. Add or edit data/<category>/<name>.yaml (see contributing.md); README.md is rebuilt from templates/README.template.md on every merge. -->
 <!-- HEADER -->
 <div align="center">
 
@@ -38,9 +39,17 @@
 > **Active Hard Fork**: `Heretek-AI/awesome-opencode` is the actively maintained community continuation of `awesome-opencode`.
 > All original upstream issues, pull requests, and discussions are preserved and imported. Submissions and PRs are actively reviewed!
 
+{{STATS}}
+
+<p>
+<a href="https://heretek-ai.github.io/awesome-opencode/"><b>🔎 Search &amp; filter the catalog</b></a>
+&nbsp;•&nbsp;
+<a href="https://github.com/Heretek-AI/awesome-opencode/issues/new?template=add-entry.yml"><b>➕ Submit an entry</b></a>
+</p>
+
 <br>
 
-[**OFFICIAL**](#official) • [**PLUGINS**](#plugins) • [**THEMES**](#themes) • [**AGENTS**](#agents) • [**PROJECTS**](#projects) • [**RESOURCES**](#resources)
+[**OFFICIAL**](#official) • [**NEW**](#recently-added) • [**PLUGINS**](#plugins) • [**THEMES**](#themes) • [**AGENTS**](#agents) • [**PROJECTS**](#projects) • [**RESOURCES**](#resources)
 
 <br>
 <hr>
@@ -62,16 +71,24 @@
 
 <br>
 
+<div id="recently-added"></div>
+
+<h3>🆕 Recently Added</h3>
+
+{{RECENT}}
+
+<br>
+
 <div id="plugins"></div>
 
 <details open>
-<summary><strong>🧩 PLUGINS</strong></summary>
+<summary><strong>🧩 PLUGINS ({{COUNT_PLUGINS}})</strong></summary>
 <br>
 
 {{PLUGINS}}
 
 <br>
-<a href="https://github.com/Heretek-AI/awesome-opencode/blob/main/contributing.md"><b>➕ Add a Plugin via PR</b></a>
+<a href="https://github.com/Heretek-AI/awesome-opencode/issues/new?template=add-entry.yml"><b>➕ Add a Plugin</b></a>
 </details>
 
 <br>
@@ -79,13 +96,13 @@
 <div id="themes"></div>
 
 <details>
-<summary><strong>🎨 THEMES</strong></summary>
+<summary><strong>🎨 THEMES ({{COUNT_THEMES}})</strong></summary>
 <br>
 
 {{THEMES}}
 
 <br>
-<a href="https://github.com/Heretek-AI/awesome-opencode/blob/main/contributing.md"><b>➕ Add a Theme via PR</b></a>
+<a href="https://github.com/Heretek-AI/awesome-opencode/issues/new?template=add-entry.yml"><b>➕ Add a Theme</b></a>
 </details>
 
 <br>
@@ -93,13 +110,13 @@
 <div id="agents"></div>
 
 <details>
-<summary><strong>🤖 AGENTS</strong></summary>
+<summary><strong>🤖 AGENTS ({{COUNT_AGENTS}})</strong></summary>
 <br>
 
 {{AGENTS}}
 
 <br>
-<a href="https://github.com/Heretek-AI/awesome-opencode/blob/main/contributing.md"><b>➕ Add an Agent via PR</b></a>
+<a href="https://github.com/Heretek-AI/awesome-opencode/issues/new?template=add-entry.yml"><b>➕ Add an Agent</b></a>
 </details>
 
 <br>
@@ -107,13 +124,13 @@
 <div id="projects"></div>
 
 <details>
-<summary><strong>🛠 PROJECTS</strong></summary>
+<summary><strong>🛠 PROJECTS ({{COUNT_PROJECTS}})</strong></summary>
 <br>
 
 {{PROJECTS}}
 
 <br>
-<a href="https://github.com/Heretek-AI/awesome-opencode/blob/main/contributing.md"><b>➕ Add a Project via PR</b></a>
+<a href="https://github.com/Heretek-AI/awesome-opencode/issues/new?template=add-entry.yml"><b>➕ Add a Project</b></a>
 </details>
 
 <br>
@@ -121,13 +138,13 @@
 <div id="resources"></div>
 
 <details>
-<summary><strong>📚 RESOURCES</strong></summary>
+<summary><strong>📚 RESOURCES ({{COUNT_RESOURCES}})</strong></summary>
 <br>
 
 {{RESOURCES}}
 
 <br>
-<a href="https://github.com/Heretek-AI/awesome-opencode/blob/main/contributing.md"><b>➕ Add a Resource via PR</b></a>
+<a href="https://github.com/Heretek-AI/awesome-opencode/issues/new?template=add-entry.yml"><b>➕ Add a Resource</b></a>
 </details>
 
 <br><br>

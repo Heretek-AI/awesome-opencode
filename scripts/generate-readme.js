@@ -2,153 +2,124 @@
 
 /**
  * Generate README.md from YAML files
- * Reads all category YAML files, validates them, sorts alphabetically,
- * generates HTML, and writes the final README.md
+ * Loads and validates the whole catalog, groups each category (plugins by primary topic, other
+ * categories by kind), and writes README.md. Fails without writing anything if any entry is invalid,
+ * so a single bad file can never publish a README with missing sections.
  */
 
+const { CATEGORIES, KINDS, KIND_LABELS, TOPICS, TOPIC_LABELS, V1_SUNSET, checkCatalog, formatProblems, loadCatalog } = require('./utils/catalog');
+const { addedDates } = require('./utils/history');
+const { escapeHtml, readTemplate, replacePlaceholder, generateEntryHtml, writeReadme } = require('./utils/template');
 
-const path = require('path');
-const { readYamlDir } = require('./utils/yaml');
-const { validateEntry, formatValidationErrors } = require('./utils/validation');
-const { readTemplate, replacePlaceholder, generateEntryHtml, writeReadme } = require('./utils/template');
+const RECENT_COUNT = 15;
+const README_WARN_KB = 450;
 
-// Category processing order
-const CATEGORIES = ['plugins', 'themes', 'agents', 'projects', 'resources'];
-
-// Placeholder names for each category
-const CATEGORY_PLACEHOLDERS = {
-  plugins: 'PLUGINS',
-  themes: 'THEMES',
-  agents: 'AGENTS',
-  projects: 'PROJECTS',
-  resources: 'RESOURCES'
+// How each category is subdivided in the README
+const GROUP_BY = {
+  plugins: { field: 'topic', order: TOPICS, labels: TOPIC_LABELS },
+  themes: null,
+  agents: { field: 'kind', order: KINDS, labels: KIND_LABELS },
+  projects: { field: 'kind', order: KINDS, labels: KIND_LABELS },
+  resources: { field: 'kind', order: KINDS, labels: KIND_LABELS }
 };
+
+const byName = (a, b) => a.data.name.toLowerCase().localeCompare(b.data.name.toLowerCase());
 
 /**
  * Generate HTML for a single category
- * @param {string} categoryName - Category directory name
- * @returns {Promise<string>} Generated HTML for all entries in the category
+ * @param {string} category - Category directory name
+ * @param {object[]} entries - Entries in this category
+ * @returns {string}
  */
-async function generateCategorySection(categoryName) {
-  const categoryPath = path.join(__dirname, '../data', categoryName);
+function generateCategorySection(category, entries) {
+  const grouping = GROUP_BY[category];
+  const render = list => list.sort(byName).map(e => generateEntryHtml(e.data, category)).join('\n\n');
+  if (!grouping) return render(entries);
 
-  let entries = [];
-  let errors = [];
-
-  try {
-    entries = await readYamlDir(categoryPath);
-  } catch (err) {
-    // If directory doesn't exist, return empty string
-    if (err.code === 'ENOENT') {
-      return { html: '', count: 0, errors: [] };
-    }
-    // Re-throw other errors
-    throw err;
-  }
-
-  // Validate and filter entries
-  const validEntries = [];
+  const groups = new Map(grouping.order.map(key => [key, []]));
   for (const entry of entries) {
-    const result = validateEntry(entry, entry._filePath || path.join(categoryPath, `${entry.name || 'unknown'}.yaml`));
-    
-    if (result.valid) {
-      validEntries.push(entry);
-    } else {
-      const errorMsg = formatValidationErrors(result);
-      errors.push(errorMsg);
-      console.error(errorMsg);
-    }
+    const key = grouping.field === 'topic' ? entry.data.topics[0] : entry.data.kind;
+    groups.get(key).push(entry);
   }
+  return [...groups]
+    .filter(([, list]) => list.length > 0)
+    .map(([key, list]) => `<h4>${grouping.labels[key]} <sub>(${list.length})</sub></h4>\n\n${render(list)}`)
+    .join('\n\n<br>\n\n');
+}
 
-  // Sort alphabetically by name (case-insensitive)
-  validEntries.sort((a, b) => {
-    const nameA = (a.name || '').toLowerCase();
-    const nameB = (b.name || '').toLowerCase();
-    return nameA.localeCompare(nameB);
-  });
+/**
+ * One-line catalog summary under the header.
+ * @param {object[]} entries
+ * @returns {string}
+ */
+function generateStats(entries) {
+  const plugins = entries.filter(e => e.category === 'plugins');
+  const count = compat => plugins.filter(e => e.data.compat === compat).length;
+  return `<p><b>${entries.length}</b> entries &nbsp;•&nbsp; <b>${plugins.length}</b> plugins: ` +
+    `<b>${count('v2')}</b> <code>V2</code>, <b>${count('v1')}</b> <code>V1 only</code> ` +
+    `(removed after ${V1_SUNSET}), <b>${count('unknown')}</b> <code>unverified</code></p>`;
+}
 
-  // Generate HTML for each entry
-  const htmlParts = validEntries.map(entry => generateEntryHtml(entry));
-
-  // Join with double newlines for proper spacing
-  const html = htmlParts.join('\n\n');
-
-  return { html, count: validEntries.length, errors };
+/**
+ * Most recently added entries, from git history.
+ * @param {object[]} entries
+ * @returns {string}
+ */
+function generateRecent(entries) {
+  const dates = addedDates();
+  if (dates.size === 0) return '<p><i>History unavailable.</i></p>';
+  const recent = entries
+    .filter(e => dates.has(e.file))
+    .sort((a, b) => dates.get(b.file).localeCompare(dates.get(a.file)) || byName(a, b))
+    .slice(0, RECENT_COUNT);
+  const rows = recent.map(e => `| **[${escapeHtml(e.data.name).replace(/\|/g, '\\|')}](${e.data.repo})** | ${e.category} | ${escapeHtml(e.data.tagline).replace(/\|/g, '\\|')} |`);
+  return ['| Name | Category | Tagline |', '| :--- | :--- | :--- |', ...rows].join('\n');
 }
 
 /**
  * Main function to generate the README
  */
-async function main() {
+function main() {
   console.log('Starting README generation...\n');
 
-  // Read template
-  let template;
-  try {
-    template = readTemplate();
-    console.log('Template loaded successfully');
-  } catch (err) {
-    throw new Error(`Failed to read template: ${err.message}`);
+  const { entries, errors } = loadCatalog();
+  const problems = [...errors, ...checkCatalog(entries)];
+  if (problems.length > 0) {
+    console.error(formatProblems(problems));
+    throw new Error(`${problems.length} validation problem(s); README.md was not written`);
   }
 
-  // Process each category in order
-  const results = {};
-  let totalEntries = 0;
-  let allErrors = [];
-
+  let content = readTemplate();
   for (const category of CATEGORIES) {
-    const placeholder = CATEGORY_PLACEHOLDERS[category];
-    console.log(`Processing ${category}...`);
+    const list = entries.filter(e => e.category === category);
+    const placeholder = category.toUpperCase();
+    content = replacePlaceholder(content, placeholder, generateCategorySection(category, list));
+    content = replacePlaceholder(content, `COUNT_${placeholder}`, String(list.length));
+    console.log(`  - ${category}: ${list.length} entries`);
+  }
+  content = replacePlaceholder(content, 'STATS', generateStats(entries));
+  content = replacePlaceholder(content, 'RECENT', generateRecent(entries));
 
-    try {
-      const result = await generateCategorySection(category);
-      results[placeholder] = result.html;
-      totalEntries += result.count;
-      allErrors = allErrors.concat(result.errors);
-
-      if (result.count > 0) {
-        console.log(`  - Found ${result.count} valid entries`);
-      } else {
-        console.log(`  - No entries found`);
-      }
-    } catch (err) {
-      console.error(`  - Error processing ${category}: ${err.message}`);
-      results[placeholder] = '';
-    }
+  // Every entry must appear exactly once
+  const rendered = (content.match(/<details>\n {2}<summary>/g) || []).length;
+  if (rendered !== entries.length) {
+    throw new Error(`rendered ${rendered} entries but the catalog has ${entries.length}; README.md was not written`);
+  }
+  if (/\{\{[A-Z_]+\}\}/.test(content)) {
+    throw new Error(`unreplaced placeholder ${content.match(/\{\{[A-Z_]+\}\}/)[0]}; README.md was not written`);
   }
 
-  // Replace each placeholder in template
-  let content = template;
-  for (const [placeholder, html] of Object.entries(results)) {
-    content = replacePlaceholder(content, placeholder, html);
+  writeReadme(content);
+  console.log(`\n✅ Generated README.md with ${entries.length} entries across ${CATEGORIES.length} categories`);
+  const kb = Math.round(Buffer.byteLength(content) / 1024);
+  if (kb > README_WARN_KB) {
+    console.log(`::warning title=README size::README.md is ${kb} KB; GitHub stops rendering large markdown files. Consider trimming descriptions or moving the full list to the site.`);
   }
-
-  // Write final README
-  try {
-    writeReadme(content);
-    console.log('\nREADME.md written successfully');
-  } catch (err) {
-    throw new Error(`Failed to write README.md: ${err.message}`);
-  }
-
-  // Log summary
-  const errorCount = allErrors.length;
-  if (errorCount > 0) {
-    console.log(`\n⚠️  Generated README.md with ${totalEntries} entries across ${CATEGORIES.length} categories`);
-    console.log(`   ${errorCount} validation error(s) were logged (affected entries were skipped)`);
-  } else {
-    console.log(`\n✅ Generated README.md with ${totalEntries} entries across ${CATEGORIES.length} categories`);
-  }
-
-  return { totalEntries, categoryCount: CATEGORIES.length, errorCount };
 }
 
-// Execute main function
-main()
-  .then(({ totalEntries, categoryCount, errorCount }) => {
-    process.exit(errorCount > 0 ? 1 : 0);
-  })
-  .catch(err => {
-    console.error('\n❌ Generation failed:', err.message);
-    process.exit(1);
-  });
+try {
+  main();
+} catch (err) {
+  console.error('\n❌ Generation failed:', err.message);
+  process.exit(1);
+}
