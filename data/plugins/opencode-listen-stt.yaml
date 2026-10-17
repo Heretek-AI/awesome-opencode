@@ -1,0 +1,8 @@
+name: Listen STT
+repo: https://github.com/fahrim/opencode-listen-stt
+tagline: Offline dictation, 99 languages
+description: Voice dictation for OpenCode V2 on Windows. Runs whisper.cpp locally across 99 languages, pins the spoken language so it is not mis-detected, and uses CUDA or Vulkan automatically. Nothing leaves the machine.
+kind: plugin
+topics:
+  - voice
+compat: v2

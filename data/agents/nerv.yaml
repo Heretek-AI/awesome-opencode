@@ -1,4 +1,9 @@
 name: NERV
-repo: https://github.com/juanmanueldaza/nerv
+repo: https://github.com/juanmanueldaza/n3rv
 tagline: Invisible engineering infrastructure for AI agents
 description: Spec-Driven Development pipeline, A2A task delegation hub, persistent semantic memory (MAGI), and 9 specialized subagents for OpenCode. Scaffolds 45+ files via `nerv init` including SDD skills, slash commands, MCP servers, and lifecycle plugins.
+kind: agent
+topics:
+  - workflow
+  - orchestration
+compat: n/a

@@ -1,0 +1,8 @@
+name: OpenCode Vision
+repo: https://github.com/venespana/opencode-vision
+tagline: Give text-only OpenCode models the ability to see images
+description: Intercepts images pasted into chat, routes them through a configurable vision backend (an MCP server or a local CLI like MiniMax mmx), and injects the resulting text description back into the conversation so non-vision models can reason about images. Ships no vision of its own — you provide the backend, it provides the wiring.
+kind: plugin
+topics:
+  - media
+compat: v2

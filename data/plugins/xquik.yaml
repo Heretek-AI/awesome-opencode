@@ -2,3 +2,10 @@ name: Xquik
 repo: https://github.com/Xquik-dev/x-twitter-scraper
 tagline: X/Twitter data skill & MCP server
 description: X/Twitter data skill — MCP server, REST API, 20 extraction tools. Works with Claude Code, Cursor, Codex, and 40+ agents.
+kind: plugin
+also:
+  - mcp-server
+topics:
+  - web
+  - integrations
+compat: unknown

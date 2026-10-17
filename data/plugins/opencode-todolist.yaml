@@ -1,0 +1,9 @@
+name: Todolist
+repo: https://github.com/aiev/opencode-todolist
+tagline: Restores todowrite/todoread with a sidebar todo strip
+description: Brings back the V1 session todo tools as a server plugin. Lists are stored per session and a compact summary of open tasks is injected into the model context on every request, so the agent keeps track across long conversations and context compaction.
+kind: plugin
+topics:
+  - workflow
+  - ui
+compat: v2

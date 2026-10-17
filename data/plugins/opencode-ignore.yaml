@@ -2,3 +2,8 @@ name: Opencode Ignore
 repo: https://github.com/lgladysz/opencode-ignore
 tagline: Ignore files based on pattern
 description: Plugin to ignore directory/file based on pattern.
+kind: plugin
+topics:
+  - context
+  - security
+compat: v1

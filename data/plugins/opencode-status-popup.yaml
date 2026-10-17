@@ -1,0 +1,20 @@
+name: Opencode Status Popup
+repo: https://github.com/LucasInstra/opencode-status-popup
+npm: opencode-status-popup
+tagline: Always-on-top status pill or tray icon that shows what the agent is doing (Windows)
+description: A second screen for your agent. While a session is thinking, a small always-on-top pill types the word out letter by letter, or a tray icon draws the letter o pixel by pixel. It turns amber on provider retries, red when an execution fails, and violet when OpenCode is waiting for a permission, so you can be in another window and still notice. One PowerShell host starts on demand and is shared by every instance, and the renderer can be switched at runtime with the /popup-* commands or a tool.
+kind: plugin
+topics:
+  - notifications
+  - ui
+compat: v2
+scope:
+  - global
+  - project
+tags:
+  - windows
+  - notifications
+  - status
+  - tray
+min_version: 2.0.0
+installation: opencode plugin add opencode-status-popup

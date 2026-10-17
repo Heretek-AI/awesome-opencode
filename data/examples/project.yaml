@@ -18,6 +18,10 @@ description: A standalone web application for monitoring and managing
   - Token usage analytics
   - Multi-project overview
 
+kind: client   # plugin, theme, agent, skill, mcp-server, client, tool, config, guide, fork
+topics:   # 1-3 from the fixed list in data/schema.json; the first is used for README grouping
+  - sessions
+
 # ============================================================================
 # OPTIONAL FIELDS
 # ============================================================================

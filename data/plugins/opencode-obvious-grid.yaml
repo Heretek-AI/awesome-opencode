@@ -1,0 +1,19 @@
+name: OpenCode Obvious Grid
+repo: https://github.com/ray062/opencode-obvious-grid
+npm: opencode-obvious-grid
+tagline: The obvious grid — know what every agent is doing from across the room
+description: "Ever squinted at five terminals trying to figure out who's actually working? This plugin puts every opencode instance on one big screen as a giant color-coded card — orange = working, blue = waiting on you, red = errored, green = idle. Readable from across the room, so \"obvious\" is not just a vibe, it's a font size. Stick it on the wall display and you'll never walk over to squint again. It's a grid, but make it fashion: each card carries live tokens, cost, cache rates, speed graphs, git branch, and deep links into web sessions — plus built-in ntfy push and alarm-sound notifications, because even an obvious grid needs to yell at you sometimes. Zero infrastructure: the plugin serves its own page. One install. Infinite peace of mind. Your agents will never know they're being watched."
+kind: plugin
+topics:
+  - observability
+  - ui
+  - notifications
+compat: v1
+scope:
+  - global
+tags:
+  - status
+  - dashboard
+  - monitoring
+  - notifications
+installation: Run `opencode plugin opencode-obvious-grid -g`, restart opencode, and open http://localhost:8765.

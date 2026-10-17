@@ -16,3 +16,6 @@ Thumbs.db
 *.swo
 
 # Generated (for local testing only - README.md is committed)
+
+# Built search site (deployed by .github/workflows/site.yml)
+_site/

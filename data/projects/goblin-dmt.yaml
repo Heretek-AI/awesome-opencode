@@ -1,0 +1,8 @@
+name: Goblin-D.M.T.
+repo: https://github.com/es-3581100/Goblin-D.M.T.
+tagline: Model-agnostic OpenCode runtime for bounded exploration, evidence-driven decisions, and user-gated execution.
+description: An actor-driven OpenCode control runtime that turns model exploration, branching, uncertainty, and tool use into bounded work with lazy skill routing, persistent state, evidence-driven decisions, verification, checkpointing, and user-gated execution.
+kind: agent
+topics:
+  - workflow
+compat: v2
