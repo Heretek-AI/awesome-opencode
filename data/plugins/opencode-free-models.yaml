@@ -1,0 +1,39 @@
+name: Free Models Router
+repo: https://github.com/murcanlat/opencode-free-models
+tagline: Free model discovery, prompt routing, and seamless quota fallback
+description: >-
+  Discovers free models from OpenRouter and models.dev, routes each prompt to
+  the best free candidate by capability and score, and falls back to the next
+  free model on rate limits, quota exhaustion, or 5xx errors. Ships
+  cycle/stop/retry-last/wait fallback modes, cooldowns, configurable backoff,
+  an optional circuit breaker, status/refresh/select tools, an RPC API, and an
+  optional TUI plugin for toast notifications.
+scope:
+  - global
+  - project
+tags:
+  - models
+  - routing
+  - fallback
+  - rate-limit
+  - free-models
+  - openrouter
+min_version: 2.0.16
+installation: |
+  Add it to `opencode.jsonc`:
+
+  ```jsonc
+  {
+    "$schema": "https://opencode.ai/config.json",
+    "plugins": ["opencode-free-models"]
+  }
+  ```
+
+  Or install from the CLI:
+
+  ```sh
+  opencode plugin add opencode-free-models
+  ```
+
+  Optional TUI toasts: add `"opencode-free-models/tui"` to the `plugins` array
+  in `cli.json`.
