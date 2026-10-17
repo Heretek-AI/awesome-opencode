@@ -2,6 +2,12 @@ name: open-memex
 repo: https://github.com/stoneskin/open-memex
 tagline: Local-first persistent memory for AI agents — opencode, VS Code, Visual Studio, Cursor, Claude Code
 description: Native opencode plugin (keyword-triggered capture, first-turn memory injection) backed by plain Markdown memories with a SQLite FTS5 index. One memory shared by every editor you code with, a human review ladder, and team sharing via git PRs. No cloud, no telemetry. Install with `npm install -g open-memex`, then `open-memex init` wires the plugin for you.
+kind: plugin
+topics:
+  - memory
+  - code-quality
+  - security
+compat: v2
 tags:
   - memory
   - mcp
