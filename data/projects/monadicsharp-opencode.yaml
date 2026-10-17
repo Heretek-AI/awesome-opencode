@@ -1,0 +1,9 @@
+name: MonadicSharp
+repo: https://github.com/Danny4897/MonadicSharp-OpenCode
+tagline: Railway-Oriented Programming for C#
+description: MCP server + Green Code Agent + MonadicForge CLI analyzer for C#/.NET. Includes 5 MonadicSharp resources, 21 code generation scenarios, inline ROP compliance review, and skills for green-code-advisor and saas-module-design. .NET 8+, MIT license.
+kind: mcp-server
+topics:
+  - code-quality
+  - domain
+compat: n/a
