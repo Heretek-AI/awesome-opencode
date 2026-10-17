@@ -804,6 +804,18 @@
     "tags": []
   },
   {
+    "productId": "opencode-agent-loop",
+    "type": "plugins",
+    "displayName": "Agent Loop",
+    "repoUrl": "https://github.com/dwrdx/opencode-agent-loop",
+    "tagline": "Goal-oriented agent loop that nudges agents toward objectives",
+    "description": "Iteratively drives agents toward configurable objectives with turn/time budgets, marker/regex-based termination conditions, idle detection, and a /loop slash command for manual control.",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
     "productId": "opencode-agent-tmux",
     "type": "plugins",
     "displayName": "OpenCode Agent Tmux",
@@ -1202,6 +1214,18 @@
     "tags": []
   },
   {
+    "productId": "opencode-qoder-bridge",
+    "type": "plugins",
+    "displayName": "Qoder Bridge for OpenCode",
+    "repoUrl": "https://github.com/naoufalelbani/opencode-qoder-bridge",
+    "tagline": "Use Qoder AI models in OpenCode via the official Qoder Agent SDK, with tools, MCP, sessions, and quota tracking.",
+    "description": "OpenCode plugin that integrates Qoder AI models through the official Qoder Agent SDK. Provides dynamic model discovery, streaming, tool calling, MCP integration, multimodal input, persistent sessions, live quota visibility, and usage tracking.\n",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
     "productId": "opencode-quota",
     "type": "plugins",
     "displayName": "Opencode Quota",
@@ -1281,6 +1305,37 @@
     "repoUrl": "https://github.com/IgorWarzocha/Opencode-Roadmap",
     "tagline": "Strategic planning",
     "description": "Strategic roadmap planning and multi-agent coordination plugin. Provides project-wide planning capabilities.",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
+    "productId": "opencode-session-cost",
+    "type": "plugins",
+    "displayName": "OpenCode Session Cost",
+    "repoUrl": "https://github.com/igorvelho/opencode-session-cost",
+    "tagline": "Sidebar block showing true session cost including all subagents",
+    "description": "Subagent costs hide from you by default in OpenCode's session cost display.\nThis TUI plugin adds a sidebar block showing your true total — the active\nsession plus every subagent (task) it spawned — and lets you expand it to\nsee the cost of each one individually. Works for every session regardless\nof model or provider, no configuration required.\n",
+    "scope": [
+      "global"
+    ],
+    "tags": [
+      "cost",
+      "session",
+      "subagent",
+      "tui",
+      "sidebar"
+    ],
+    "minVersion": "1.18.0"
+  },
+  {
+    "productId": "opencode-session-tracker",
+    "type": "plugins",
+    "displayName": "OpenCode Session Tracker",
+    "repoUrl": "https://github.com/ykocaman/opencode-session-tracker",
+    "tagline": "TUI sidebar extension and Telegram integration to track active sessions/subagents and interact remotely.",
+    "description": "A lightweight, robust TUI sidebar extension and interactive Telegram Integration for OpenCode that brings real-time session tracking, multi-process routing, and remote monitoring directly to your terminal and phone. Monitor and drive your terminal agents remotely from your mobile device, answer interactive questions, approve or deny commands, and track status streams.",
     "scope": [
       "global"
     ],
@@ -1456,6 +1511,18 @@
     "repoUrl": "https://github.com/Mark1708/opencode-usage-monitor",
     "tagline": "Monitor OpenAI and Z.AI usage quotas in the TUI",
     "description": "OpenCode sidebar plugin that displays API usage quotas for OpenAI and Z.AI providers with per-model breakdowns, spend tracking, and configurable refresh controls.",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
+    "productId": "opencode-vision",
+    "type": "plugins",
+    "displayName": "OpenCode Vision",
+    "repoUrl": "https://github.com/venespana/opencode-vision",
+    "tagline": "Give text-only OpenCode models the ability to see images",
+    "description": "Intercepts images pasted into chat, routes them through a configurable vision backend (an MCP server or a local CLI like MiniMax mmx), and injects the resulting text description back into the conversation so non-vision models can reason about images. Ships no vision of its own — you provide the backend, it provides the wiring.",
     "scope": [
       "global"
     ],

@@ -86,6 +86,15 @@
 </details>
 
 <details>
+  <summary><b>Agent Loop</b> <img src="https://badgen.net/github/stars/dwrdx/opencode-agent-loop" height="14"/> - <i>Goal-oriented agent loop that nudges agents toward objectives</i></summary>
+  <blockquote>
+    Iteratively drives agents toward configurable objectives with turn/time budgets, marker/regex-based termination conditions, idle detection, and a /loop slash command for manual control.
+    <br><br>
+    <a href="https://github.com/dwrdx/opencode-agent-loop">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
   <summary><b>Agent Memory</b> <img src="https://badgen.net/github/stars/joshuadavidthomas/opencode-agent-memory" height="14"/> - <i>Letta-inspired memory</i></summary>
   <blockquote>
     Gives the agent persistent, self-editable memory blocks inspired by Letta agents.
@@ -767,6 +776,29 @@ startup.
 </details>
 
 <details>
+  <summary><b>OpenCode Session Cost</b> <img src="https://badgen.net/github/stars/igorvelho/opencode-session-cost" height="14"/> - <i>Sidebar block showing true session cost including all subagents</i></summary>
+  <blockquote>
+    Subagent costs hide from you by default in OpenCode's session cost display.
+This TUI plugin adds a sidebar block showing your true total — the active
+session plus every subagent (task) it spawned — and lets you expand it to
+see the cost of each one individually. Works for every session regardless
+of model or provider, no configuration required.
+
+    <br><br>
+    <a href="https://github.com/igorvelho/opencode-session-cost">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
+  <summary><b>OpenCode Session Tracker</b> <img src="https://badgen.net/github/stars/ykocaman/opencode-session-tracker" height="14"/> - <i>TUI sidebar extension and Telegram integration to track active sessions/subagents and interact remotely.</i></summary>
+  <blockquote>
+    A lightweight, robust TUI sidebar extension and interactive Telegram Integration for OpenCode that brings real-time session tracking, multi-process routing, and remote monitoring directly to your terminal and phone. Monitor and drive your terminal agents remotely from your mobile device, answer interactive questions, approve or deny commands, and track status streams.
+    <br><br>
+    <a href="https://github.com/ykocaman/opencode-session-tracker">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
   <summary><b>Opencode Sessions</b> <img src="https://badgen.net/github/stars/malhashemi/opencode-sessions" height="14"/> - <i>Session management</i></summary>
   <blockquote>
     Session management plugin for OpenCode with multi-agent collaboration support.
@@ -853,6 +885,15 @@ startup.
     OpenCode sidebar plugin that displays API usage quotas for OpenAI and Z.AI providers with per-model breakdowns, spend tracking, and configurable refresh controls.
     <br><br>
     <a href="https://github.com/Mark1708/opencode-usage-monitor">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
+  <summary><b>OpenCode Vision</b> <img src="https://badgen.net/github/stars/venespana/opencode-vision" height="14"/> - <i>Give text-only OpenCode models the ability to see images</i></summary>
+  <blockquote>
+    Intercepts images pasted into chat, routes them through a configurable vision backend (an MCP server or a local CLI like MiniMax mmx), and injects the resulting text description back into the conversation so non-vision models can reason about images. Ships no vision of its own — you provide the backend, it provides the wiring.
+    <br><br>
+    <a href="https://github.com/venespana/opencode-vision">🔗 <b>View Repository</b></a>
   </blockquote>
 </details>
 
@@ -1069,6 +1110,16 @@ suggestions. All processing stays local by default — no data leaves the machin
     Plugin that automatically appends AI model signature to Pull Requests, Issues, and git commit messages. Supports GitHub MCP tools, git CLI, and gh CLI. Recognizes 90+ AI models including Claude, GPT, Gemini, DeepSeek, Llama, Mistral, and more.
     <br><br>
     <a href="https://github.com/arttttt/opencode-pr-signature">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
+  <summary><b>Qoder Bridge for OpenCode</b> <img src="https://badgen.net/github/stars/naoufalelbani/opencode-qoder-bridge" height="14"/> - <i>Use Qoder AI models in OpenCode via the official Qoder Agent SDK, with tools, MCP, sessions, and quota tracking.</i></summary>
+  <blockquote>
+    OpenCode plugin that integrates Qoder AI models through the official Qoder Agent SDK. Provides dynamic model discovery, streaming, tool calling, MCP integration, multimodal input, persistent sessions, live quota visibility, and usage tracking.
+
+    <br><br>
+    <a href="https://github.com/naoufalelbani/opencode-qoder-bridge">🔗 <b>View Repository</b></a>
   </blockquote>
 </details>
 
