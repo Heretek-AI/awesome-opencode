@@ -1,0 +1,8 @@
+name: run-long-script
+repo: https://github.com/Thexinyi/run-long-script
+tagline: Run long Python/Shell scripts with stdout/stderr on disk + freeze-kill watchdog
+description: An opencode custom tool for long-running scripts (>30s, tqdm/akshare/PDF-heavy). Redirects stdout/stderr to disk so progress bars and tracebacks never pollute the agent context - only a small summary (RESULT line + key lines + error tail) returns. A PowerShell watchdog monitors the process with a tri-layer progress signal (stderr tail, stdout tail, CPU time); if a whole 100s round sees no change, it force-kills the stuck process and reports `stuck`.
+kind: plugin
+topics:
+  - environment
+compat: v1
