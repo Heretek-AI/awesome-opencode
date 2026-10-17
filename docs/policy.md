@@ -51,7 +51,7 @@ A weekly scout searches npm for packages published since V2 shipped that depend 
 
 ## Branch protection
 
-`main` has a ruleset: every commit that lands on it must have a passing `validate` check, and force-pushes and deletion are blocked. Contributors and maintainers get the check through pull requests; bots get it by dispatching `validate` on their branch. Repository admins can merge a PR whose check is failing or pending (for a broken CI), but cannot push unvalidated commits directly.
+`main` has a ruleset: changes land only through pull requests with a passing `validate` check (GitHub rulesets do not accept direct pushes while a status check is required), and force-pushes and deletion are blocked. Bots open PRs too and get the check by dispatching `validate` on their branch. Repository admins can merge a PR whose check is failing or pending (for a broken CI).
 
 ## Automation map
 
@@ -59,7 +59,7 @@ A weekly scout searches npm for packages published since V2 shipped that depend 
 | :--- | :--- | :--- |
 | `validate-pr.yml` | every PR | Required `validate` check |
 | `triage.yml` | PR opened/updated | Labels and a results comment (base-branch code only) |
-| `generate-readme.yml` | push to main | README.md and dist/registry.json; fails without writing on any invalid entry. The regenerated commit is staged on `bot/readme-*`, validated, then fast-forwarded onto main |
+| `generate-readme.yml` | push to main | README.md and dist/registry.json; fails without writing on any invalid entry. The regenerated commit goes through a bot PR (`bot/readme-*`) that merges itself once `validate` passes |
 | `site.yml` | push to main, daily | Search site on GitHub Pages |
 | `health.yml` | daily | Health report issue, rename and removal PRs |
 | `reprobe.yml` | daily | Re-checks `needs-v2` PRs |
