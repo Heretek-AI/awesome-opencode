@@ -1,0 +1,9 @@
+name: OpenCOOP
+repo: https://github.com/Pajand/opencoop
+npm: "@opencoop/opencode-plugin"
+tagline: Real-time team collaboration plugin for OpenCode (up to 50 users)
+description: "Enables multiple developers to collaborate on the same project simultaneously. Each developer runs their own OpenCode with their own AI, but they all connect to a shared MCP server. Features: file locking, change tracking, auto SSH tunnel, secure sandbox, web dashboard."
+kind: plugin
+topics:
+  - remote
+compat: v1

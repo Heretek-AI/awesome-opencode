@@ -1316,16 +1316,6 @@ suggestions. All processing stays local by default — no data leaves the machin
 </details>
 
 <br>
-<details>
-  <summary><b>OpenCOOP</b> <img src="https://badgen.net/github/stars/Pajand/opencoop" height="14"/> - <i>Real-time team collaboration plugin for OpenCode (up to 50 users)</i></summary>
-  <blockquote>
-    Enables multiple developers to collaborate on the same project simultaneously. Each developer runs their own OpenCode with their own AI, but they all connect to a shared MCP server. Features: file locking, change tracking, auto SSH tunnel, secure sandbox, web dashboard.
-    <br><br>
-    <a href="https://github.com/Pajand/opencoop">🔗 <b>View Repository</b></a> | <a href="https://www.npmjs.com/package/@opencoop/opencode-plugin">📦 <b>npm</b></a>
-  </blockquote>
-</details>
-
-
 <a href="https://github.com/awesome-opencode/awesome-opencode/blob/main/contributing.md"><b>➕ Add a Plugin via PR</b></a>
 </details>
 
