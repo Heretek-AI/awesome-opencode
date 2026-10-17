@@ -1,0 +1,15 @@
+name: opencode-safety-gates
+repo: https://github.com/yg-codes/opencode-safety-gates
+tagline: Run Claude Code bash-gate scripts inside OpenCode, deny self-revoking commands, catch fabricated CLI syntax.
+description: >
+  Safety gates for OpenCode built on the V2 plugin API, with zero runtime
+  dependencies. Wraps the built-in bash tool executor and runs your Claude
+  Code PreToolUse/Bash gate scripts unchanged, from the same settings.json
+  wiring — one script enforces in both tools. Ships a bundled example gate
+  (options.exampleGates) that denies self-revoking commands — service stops
+  that destroy the session's own access to the host (sssd, sshd,
+  NetworkManager, firewalld, iptables flush, SSSD cache wipe). A
+  config-driven verify-cli-syntax guard sends one corrective prompt per
+  session when a reply recommends CLI syntax the session shows no
+  verification for (--help, man page, or upstream source). Setup logs a
+  health line with the active gate count, so a dead gate is never silent.
