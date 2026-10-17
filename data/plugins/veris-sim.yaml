@@ -1,0 +1,55 @@
+name: Veris Sim
+repo: https://github.com/veris-ai/plugins
+tagline: Three engineer-invoked commands that test an application against Veris twins of its services
+description: >-
+  Three engineer-invoked commands that test an application against Veris twins of the services it
+  calls. setup wires a repository once. build measures every vendor claim the task rests on before
+  designing, then proves the change through veris-proxy. fix reproduces the failure before touching
+  source and proves it closed. Ships the veris MCP server.
+scope:
+  - global
+  - project
+tags:
+  - veris
+  - integration-testing
+  - sandbox
+  - mcp
+  - testing
+  - commands
+homepage: https://github.com/veris-ai/plugins#readme
+installation: |
+  ## Links
+
+  - npm: https://www.npmjs.com/package/@veris-ai/veris-sim-opencode
+  - Source: https://github.com/veris-ai/plugins/tree/main/veris-sim
+  - Docs: https://github.com/veris-ai/plugins#readme
+  - Veris: https://veris.ai
+
+  ## Installation
+
+  ```sh
+  opencode plugin @veris-ai/veris-sim-opencode -g
+  ```
+
+  Equivalently, add `"@veris-ai/veris-sim-opencode"` to the `plugin` array in
+  `~/.config/opencode/opencode.json`. Then export your credential and restart
+  opencode:
+
+  ```sh
+  export VERIS_API_KEY=...        # https://app.veris.ai
+  ```
+
+  `VERIS_API_BASE` overrides the control plane (it defaults to
+  `https://svc.api.veris.ai`). Until the key is set, `opencode mcp list` shows the
+  `veris` server as failed; the commands still run, and `setup` walks you through it.
+
+  ## Commands
+
+  | command | what it does |
+  |---|---|
+  | `/veris-sim:setup` | wires the repository to a Veris environment, once: credential, environment, transport, one smoke run with proof of arrival |
+  | `/veris-sim:build <issue link \| prompt>` | measures every vendor claim the task rests on against the twin before designing, proves the change through veris-proxy with a receipt |
+  | `/veris-sim:fix <issue link \| prompt>` | reproduces the failure the issue describes before designing, proves the same failure closed with a receipt |
+
+  The three are plain OpenCode commands: only the engineer starts them, the model
+  cannot invoke them on its own. The same three are also registered as skills.

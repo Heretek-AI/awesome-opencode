@@ -1,0 +1,54 @@
+name: Veris for Daytona
+repo: https://github.com/veris-ai/veris-daytona
+tagline: OpenCode sessions run in a Daytona sandbox whose vendor API calls are answered by Veris twins
+description: >-
+  Every OpenCode session runs in a Daytona sandbox whose calls to Stripe and the rest of your
+  vendor stack are answered by stateful Veris twins, and the agent gets a receipt of what the
+  vendor actually received. Unmodified code, real hostnames, no image to build.
+scope:
+  - global
+  - project
+tags:
+  - veris
+  - daytona
+  - sandbox
+  - integration-testing
+  - api-mocking
+  - testing
+homepage: https://github.com/veris-ai/veris-daytona/tree/main/daytona-opencode#readme
+installation: |
+  ## Links
+
+  - npm: https://www.npmjs.com/package/@veris-ai/daytona-opencode
+  - Source: https://github.com/veris-ai/veris-daytona/tree/main/daytona-opencode
+  - Docs: https://github.com/veris-ai/veris-daytona/tree/main/daytona-opencode#readme
+  - Veris: https://veris.ai
+
+  ## Installation
+
+  Add the plugin to `opencode.json`:
+
+  ```jsonc
+  { "plugin": ["@veris-ai/daytona-opencode"] }
+  ```
+
+  Then export three keys:
+
+  ```sh
+  export DAYTONA_API_KEY=...      # https://app.daytona.io/dashboard/keys
+  export VERIS_API_KEY=...        # https://studio.veris.ai
+  export VERIS_ENVIRONMENT_ID=... # the Veris environment that decides which vendor twins you get
+  ```
+
+  Then run `opencode`. No image to build, no network configuration, nothing to start.
+
+  ## What the agent gets
+
+  - The ten sandbox-backed tools from `@daytona/opencode`: bash, read, write, edit,
+    multiedit, ls, glob, grep, getPreviewURL, gitSync.
+  - `verisReceipt`, which reports what the twin *received*.
+  - The Veris MCP server.
+
+  An empty receipt after a green run means the code never reached its dependency.
+  Ask an agent to call the Stripe API and it will report success whether or not it
+  made the call. The transcripts are identical; the receipts are not.

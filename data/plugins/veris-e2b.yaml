@@ -1,0 +1,57 @@
+name: Veris for E2B
+repo: https://github.com/veris-ai/veris-e2b
+tagline: OpenCode sessions run in an E2B sandbox whose vendor API calls are answered by Veris twins
+description: >-
+  Every OpenCode session runs in an E2B sandbox whose outbound vendor API calls are answered by
+  stateful Veris twins, with a receipt of what the vendor actually received. One line in
+  opencode.json - no template to register, no server to start.
+scope:
+  - global
+  - project
+tags:
+  - veris
+  - e2b
+  - sandbox
+  - integration-testing
+  - api-mocking
+  - testing
+homepage: https://github.com/veris-ai/veris-e2b/tree/main/e2b-opencode#readme
+installation: |
+  ## Links
+
+  - npm: https://www.npmjs.com/package/@veris-ai/e2b-opencode
+  - Source: https://github.com/veris-ai/veris-e2b/tree/main/e2b-opencode
+  - Docs: https://github.com/veris-ai/veris-e2b/tree/main/e2b-opencode#readme
+  - Veris: https://veris.ai
+
+  ## Installation
+
+  Add the plugin to `opencode.json`:
+
+  ```jsonc
+  { "plugin": ["@veris-ai/e2b-opencode"] }
+  ```
+
+  Then export three keys:
+
+  ```sh
+  export E2B_API_KEY=...          # https://e2b.dev/dashboard
+  export VERIS_API_KEY=...        # https://app.veris.ai
+  export VERIS_ENVIRONMENT_ID=... # the Veris environment that decides which vendor twins you get
+  ```
+
+  Then run `opencode`. No image to build, no template to register, no server to start,
+  no URL to copy.
+
+  ## What the agent gets
+
+  Eight sandbox-backed replacements for OpenCode's built-in tools (bash, read, write,
+  edit, multiedit, ls, glob, grep), plus three additions:
+
+  - `verisReceipt`: what the twin *received*, the tool that separates a real
+    integration from a plausible-looking one.
+  - `gitSync`: commit in the sandbox and pull into the local `opencode/N` branch,
+    returning only once the changes are on your machine.
+  - `getPreviewURL`: the public URL for a port inside the sandbox.
+
+  An empty receipt after a green run means the code never reached its dependency.
