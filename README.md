@@ -758,6 +758,15 @@ startup.
 </details>
 
 <details>
+  <summary><b>OpenCode Model Aliases</b> <img src="https://badgen.net/github/stars/vmvarela/opencode-model-aliases" height="14"/> - <i>Provider-scoped aliases for the newest eligible OpenCode models</i></summary>
+  <blockquote>
+    Create stable model IDs within a provider using glob, capability, and context filters. On catalog refresh, each alias resolves to the newest eligible model already in OpenCode's catalog.
+    <br><br>
+    <a href="https://github.com/vmvarela/opencode-model-aliases">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
   <summary><b>Opencode Models Discovery</b> <img src="https://badgen.net/github/stars/yuhp/opencode-models-discovery" height="14"/> - <i>Configurable model discovery and filtering without long manual config</i></summary>
   <blockquote>
     OpenCode plugin for discovering models from OpenAI-compatible providers and API gateways, with provider and model filtering so users can avoid maintaining large configs or loading every model at once.
@@ -817,6 +826,15 @@ startup.
     Strategic roadmap planning and multi-agent coordination plugin. Provides project-wide planning capabilities.
     <br><br>
     <a href="https://github.com/IgorWarzocha/Opencode-Roadmap">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
+  <summary><b>OpenCode Seatbelt</b> <img src="https://badgen.net/github/stars/ssmirr/opencode-seatbelt" height="14"/> - <i>macOS kernel sandbox that blocks agents from reading secrets via .ocignore</i></summary>
+  <blockquote>
+    Applies a macOS Seatbelt profile to the OpenCode process the moment the plugin loads, so every tool and child process (read, glob, grep, the shell, MCP servers, custom tools) is confined by the kernel. Patterns from .ocignore plus a built-in secret baseline are compiled to syscall-level rules instead of being matched against command text, so "tail" instead of "cat", symlinks, hardlinks, base64 and interpreters are all covered, and rename/unlink of protected files is blocked too. Requires macOS and OpenCode v2.
+    <br><br>
+    <a href="https://github.com/ssmirr/opencode-seatbelt">🔗 <b>View Repository</b></a>
   </blockquote>
 </details>
 
@@ -1009,6 +1027,15 @@ of model or provider, no configuration required.
 </details>
 
 <details>
+  <summary><b>opencode-cache-compact</b> <img src="https://badgen.net/github/stars/lennartschoch/opencode-cache-compact" height="14"/> - <i>Cache-friendly compaction for locally hosted models</i></summary>
+  <blockquote>
+    Replaces OpenCode's built-in compaction, which rebuilds the prompt from scratch (no system prompt, no tools, history re-serialized) and therefore cold-prefills the whole conversation. This plugin appends the summary turn instead — a cache hit — and then rewrites only the outgoing message list down to that summary, so a locally hosted model reuses its KV cache instead of re-reading everything. Aimed at llama.cpp / LM Studio / vLLM setups where prefilling a large context is the expensive part.
+    <br><br>
+    <a href="https://github.com/lennartschoch/opencode-cache-compact">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
   <summary><b>opencode-mystatus</b> <img src="https://badgen.net/github/stars/vbgate/opencode-mystatus" height="14"/> - <i>Check AI subscription quotas</i></summary>
   <blockquote>
     Check all your AI subscription quotas in one command. Supports OpenAI (Plus/Pro/Codex, etc.), Zhipu AI, Google Antigravity, and more.
@@ -1045,6 +1072,15 @@ of model or provider, no configuration required.
 </details>
 
 <details>
+  <summary><b>opencode-serpapi</b> <img src="https://badgen.net/github/stars/serpapi/opencode-serpapi" height="14"/> - <i>Real-time web search for OpenCode via the SerpApi API</i></summary>
+  <blockquote>
+    Adds a native serpapi_search tool to OpenCode, giving it real-time access to Google, Amazon, YouTube, and 100+ other search engines through SerpApi, without manual MCP configuration.
+    <br><br>
+    <a href="https://github.com/serpapi/opencode-serpapi">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
   <summary><b>opencode-short-term-memory</b> <img src="https://badgen.net/github/stars/andrejtonev/opencode-short-term-memory" height="14"/> - <i>Maintain user instructions and preferences throughout long sessions. No more repeating yourself.</i></summary>
   <blockquote>
     Automatically summarizes conversation context into structured session memory and injects it back into the system prompt every few turns — preserving user instructions, project context, decisions, and active references across long chats and compactions.
@@ -1059,6 +1095,15 @@ of model or provider, no configuration required.
     Automatically prefixes supported shell commands (git, go, cargo, npm, docker, etc.) with snip to filter output before it reaches your LLM context window.
     <br><br>
     <a href="https://github.com/VincentHardouin/opencode-snip">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
+  <summary><b>opencode-workflows</b> <img src="https://badgen.net/github/stars/rphang/opencode-workflows" height="14"/> - <i>Claude Code-style dynamic workflows for opencode v2 — a JS script fans work out to parallel subagents</i></summary>
+  <blockquote>
+    A native opencode v2 plugin that reproduces Claude Code's dynamic workflows. The model writes a small JavaScript orchestration script (agent, parallel, pipeline, phase, budget, nested workflows) that runs in a sandboxed interpreter in the background, fans work out to subagents as child sessions, and can resume from its journal. Includes a live TUI tree to watch, steer, or stop running agents. Uses your configured opencode models; no extra daemon.
+    <br><br>
+    <a href="https://github.com/rphang/opencode-workflows">🔗 <b>View Repository</b></a>
   </blockquote>
 </details>
 

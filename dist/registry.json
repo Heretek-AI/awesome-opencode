@@ -906,6 +906,26 @@
     "tags": []
   },
   {
+    "productId": "opencode-cache-compact",
+    "type": "plugins",
+    "displayName": "opencode-cache-compact",
+    "repoUrl": "https://github.com/lennartschoch/opencode-cache-compact",
+    "tagline": "Cache-friendly compaction for locally hosted models",
+    "description": "Replaces OpenCode's built-in compaction, which rebuilds the prompt from scratch (no system prompt, no tools, history re-serialized) and therefore cold-prefills the whole conversation. This plugin appends the summary turn instead — a cache hit — and then rewrites only the outgoing message list down to that summary, so a locally hosted model reuses its KV cache instead of re-reading everything. Aimed at llama.cpp / LM Studio / vLLM setups where prefilling a large context is the expensive part.",
+    "scope": [
+      "global",
+      "project"
+    ],
+    "tags": [
+      "context",
+      "compaction",
+      "prompt-cache",
+      "local-models",
+      "llama.cpp"
+    ],
+    "minVersion": "1.17.9"
+  },
+  {
     "productId": "opencode-canvas",
     "type": "plugins",
     "displayName": "Opencode Canvas",
@@ -1133,6 +1153,27 @@
     "tags": []
   },
   {
+    "productId": "opencode-mempalace-persistence",
+    "type": "plugins",
+    "displayName": "Opencode MemPalace Persistence",
+    "repoUrl": "https://github.com/geco/opencode-mempalace-persistence",
+    "tagline": "Local-first persistent memory for OpenCode, backed by MemPalace",
+    "description": "Saves every conversation to a local MemPalace palace and recalls it verbatim in later sessions. Mines run on idle, exit and startup — never mid-reply. Zero-config: the plugin registers its own read-only MCP entry, so multiple OpenCode tabs never starve each other on the palace writer lock. Ships a live sidebar status line and a companion local browser/curator (penfield) for timeline, knowledge graph, thread view and duplicate healing.",
+    "scope": [
+      "global"
+    ],
+    "tags": [
+      "memory",
+      "mempalace",
+      "persistence",
+      "knowledge-graph",
+      "mcp"
+    ],
+    "homepageUrl": "https://www.npmjs.com/package/opencode-mempalace-persistence",
+    "installation": "1. Install MemPalace: `pipx install mempalace` then `mempalace init ~/opencode-memory`\n2. Add to `~/.config/opencode/opencode.json`:\n   ```json\n   { \"plugin\": [\"opencode-mempalace-persistence\"] }\n   ```\n3. Restart OpenCode. The plugin registers its own read-only MemPalace MCP entry; to backfill existing history once, run `OPENCODE_MEMPALACE_BACKFILL=1 opencode`.",
+    "minVersion": "1.18.29"
+  },
+  {
     "productId": "opencode-mission-control",
     "type": "plugins",
     "displayName": "OpenCode Mission Control",
@@ -1151,6 +1192,18 @@
     "repoUrl": "https://github.com/renaudcerrato/opencode-model-alias",
     "tagline": "Portable model aliases with variants and chains — one config entry, per-machine remapping",
     "description": "Define short model aliases (cheap, smart, reviewer...) in a central alias file and reference them in any agent or command model field. Each machine maps aliases to whatever provider/model it prefers, so shared agent and command configs stay portable across machines and providers. Supports model variants, alias chains (stable role names layered on machine-specific mappings), and a /alias command for managing aliases in-session.",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
+    "productId": "opencode-model-aliases",
+    "type": "plugins",
+    "displayName": "OpenCode Model Aliases",
+    "repoUrl": "https://github.com/vmvarela/opencode-model-aliases",
+    "tagline": "Provider-scoped aliases for the newest eligible OpenCode models",
+    "description": "Create stable model IDs within a provider using glob, capability, and context filters. On catalog refresh, each alias resolves to the newest eligible model already in OpenCode's catalog.",
     "scope": [
       "global"
     ],
@@ -1368,6 +1421,38 @@
     "repoUrl": "https://github.com/IgorWarzocha/Opencode-Roadmap",
     "tagline": "Strategic planning",
     "description": "Strategic roadmap planning and multi-agent coordination plugin. Provides project-wide planning capabilities.",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
+    "productId": "opencode-seatbelt",
+    "type": "plugins",
+    "displayName": "OpenCode Seatbelt",
+    "repoUrl": "https://github.com/ssmirr/opencode-seatbelt",
+    "tagline": "macOS kernel sandbox that blocks agents from reading secrets via .ocignore",
+    "description": "Applies a macOS Seatbelt profile to the OpenCode process the moment the plugin loads, so every tool and child process (read, glob, grep, the shell, MCP servers, custom tools) is confined by the kernel. Patterns from .ocignore plus a built-in secret baseline are compiled to syscall-level rules instead of being matched against command text, so \"tail\" instead of \"cat\", symlinks, hardlinks, base64 and interpreters are all covered, and rename/unlink of protected files is blocked too. Requires macOS and OpenCode v2.",
+    "scope": [
+      "global",
+      "project"
+    ],
+    "tags": [
+      "security",
+      "sandbox",
+      "macos",
+      "secrets"
+    ],
+    "installation": "Install from npm:\n\n```sh\nopencode plugin add opencode-seatbelt\n```\n\nOr add it to `opencode.json(c)` yourself:\n\n```jsonc\n{\n  \"$schema\": \"https://opencode.ai/config.json\",\n  \"plugins\": [\"opencode-seatbelt\"]\n}\n```\n",
+    "minVersion": "2.0.0"
+  },
+  {
+    "productId": "opencode-serpapi",
+    "type": "plugins",
+    "displayName": "opencode-serpapi",
+    "repoUrl": "https://github.com/serpapi/opencode-serpapi",
+    "tagline": "Real-time web search for OpenCode via the SerpApi API",
+    "description": "Adds a native serpapi_search tool to OpenCode, giving it real-time access to Google, Amazon, YouTube, and 100+ other search engines through SerpApi, without manual MCP configuration.",
     "scope": [
       "global"
     ],
@@ -1634,6 +1719,24 @@
       "global"
     ],
     "tags": []
+  },
+  {
+    "productId": "opencode-workflows",
+    "type": "plugins",
+    "displayName": "opencode-workflows",
+    "repoUrl": "https://github.com/rphang/opencode-workflows",
+    "tagline": "Claude Code-style dynamic workflows for opencode v2 — a JS script fans work out to parallel subagents",
+    "description": "A native opencode v2 plugin that reproduces Claude Code's dynamic workflows. The model writes a small JavaScript orchestration script (agent, parallel, pipeline, phase, budget, nested workflows) that runs in a sandboxed interpreter in the background, fans work out to subagents as child sessions, and can resume from its journal. Includes a live TUI tree to watch, steer, or stop running agents. Uses your configured opencode models; no extra daemon.",
+    "scope": [
+      "global"
+    ],
+    "tags": [
+      "workflows",
+      "subagents",
+      "orchestration"
+    ],
+    "installation": "```sh\nopencode plugin add @rphang/opencode-workflows\n```\n",
+    "minVersion": "2.0.15"
   },
   {
     "productId": "opencode-workspace",
