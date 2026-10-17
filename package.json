@@ -13,7 +13,7 @@
     "health": "node scripts/health-check.js --dry-run",
     "scout": "node scripts/scout.js run --dry-run",
     "site": "node scripts/build-site.js",
-    "test": "node --test test/"
+    "test": "node --test \"test/*.test.js\""
   },
   "keywords": [
     "opencode",
