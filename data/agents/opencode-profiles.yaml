@@ -1,0 +1,8 @@
+name: Opencode Profiles
+repo: https://github.com/gtmdev-br/opencode-profiles
+tagline: 17 agent personalities for OpenCode — switch with one command
+description: 17 specialized agent personalities for OpenCode with dedicated agents, MCP servers, and permissions. Switch between engineer, designer, sales, and more with a single command. Also includes agent-ci, a CLI to validate, test, and benchmark profiles.
+kind: agent
+topics:
+  - prompting
+compat: n/a
