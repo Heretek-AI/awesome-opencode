@@ -1,0 +1,9 @@
+name: Telai
+repo: https://github.com/inventopiano/telai
+tagline: macOS terminal for OpenCode with vertical tabs, sessions and groups
+description: "Native macOS terminal (SwiftUI with libghostty) with a vertical-tab sidebar built around OpenCode: installs a TUI plugin, restores sessions on relaunch and can share one background opencode server."
+kind: client
+topics:
+  - ui
+  - sessions
+compat: n/a
