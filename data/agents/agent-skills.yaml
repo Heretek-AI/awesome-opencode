@@ -1,0 +1,9 @@
+name: Emdash Skills
+repo: https://github.com/heymegabyte/agent-skills
+tagline: 14-category autonomous product-building OS
+description: Turns one-line prompts into deployed products on Cloudflare Workers. 18 specialized agents (architect, test-writer, deploy-verifier, security-reviewer, visual-qa, etc.) self-coordinate through parallel build phases. Full-stack skills covering architecture, planning, quality verification, brand, media, observability, and more. Compatible with Claude Code, OpenCode, Gemini CLI, and Windsurf.
+kind: skill
+topics:
+  - workflow
+  - code-quality
+compat: n/a
