@@ -1,0 +1,8 @@
+name: AgenTopology
+repo: https://github.com/agentopology/agentopology
+tagline: Declarative multi-agent topology language
+description: Generate platform configs for OpenCode/OpenClaw and 6 other platforms (Claude Code, Codex, Gemini CLI, Copilot CLI, Kiro) from a single declarative .at file. Define agents, flows, gates, hooks, and group chats. Ships with a Claude Code skill and interactive visualizer. Apache 2.0.
+kind: tool
+topics:
+  - orchestration
+compat: n/a
