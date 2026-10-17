@@ -1,4 +1,4 @@
 name: Plain
 repo: https://github.com/rubenxyz/opencode-plain-english
-tagline: Plain-English replies: everyday words, no jargon, no code in explanations
+tagline: 'Plain-English replies: everyday words, no jargon, no code in explanations'
 description: Puts the assistant into plain-English mode. While active, a short ruleset is injected into the system prompt so it explains its work in everyday words and full sentences, with no jargon or acronyms and no code in explanations. On by default in every session; /plain toggles it, with /plain-commit and /plain-review commands for commits and diffs. Small, dependency-free, inspired by caveman - inverted.
