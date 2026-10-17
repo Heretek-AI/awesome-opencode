@@ -842,15 +842,6 @@ startup.
 </details>
 
 <details>
-  <summary><b>OpenCode Version Footer</b> <img src="https://badgen.net/github/stars/vvaldez/opencode-plugins" height="14"/> - <i>Show the OpenCode version in the session footer</i></summary>
-  <blockquote>
-    Small TUI plugin that displays the harness version (e.g. v2.0.27) in the in-session footer status row via the documented prompt.footer.status slot. The session footer has no built-in version display, and the home footer hides its version below 64 columns. ~15 lines — no network calls, no filesystem access, no shell execution, no telemetry. MIT licensed.
-    <br><br>
-    <a href="https://github.com/vvaldez/opencode-plugins">🔗 <b>View Repository</b></a>
-  </blockquote>
-</details>
-
-<details>
   <summary><b>Opencode Visualizer</b> <img src="https://badgen.net/github/stars/psinetron/opencode-visualiser" height="14"/> - <i>2D pixel-art office for AI agents</i></summary>
   <blockquote>
     Turning raw OpenCode terminal logs into cozy 2D pixel office chaos. Watch your agents work, idle, and celebrate success in a bustling virtual office.
