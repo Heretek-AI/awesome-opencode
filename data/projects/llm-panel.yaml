@@ -1,0 +1,10 @@
+name: llm-panel
+repo: https://github.com/musharna/llm-panel
+tagline: Put one question or diff to several LLM CLIs in parallel — opencode runs as a verified read-only agent
+description: Put one question or diff to several LLM CLIs in parallel — opencode judges run as a verified read-only agent alongside codex, claude and ollama — with every answer shown in full, an anonymised rebuttal round, cost accounting, a GitHub Action, and a measured miss rate on AACR-Bench.
+tags:
+  - cli
+  - code-review
+  - multi-model
+  - opencode
+homepage: https://pypi.org/project/llm-panel/
