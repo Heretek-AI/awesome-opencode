@@ -1,0 +1,10 @@
+name: opencode-kevin
+repo: https://github.com/jmtrin/opencode-kevin
+tagline: Local-first project memory that learns from coding sessions and turns approved knowledge into durable project guidance.
+description: Kevin is a local-first memory plugin for OpenCode that learns from coding sessions, recalls relevant knowledge, and helps turn approved memories into durable, Git-friendly project guidance. It provides project-scoped persistent memory, confidence-aware retrieval, human curation, and cross-harness memory sources while keeping data local and under the user's control.
+kind: plugin
+topics:
+  - memory
+  - sessions
+  - git
+compat: v2
