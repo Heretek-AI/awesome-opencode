@@ -10,10 +10,12 @@ on:
       - 'scripts/**'
   workflow_dispatch:
 
-# main requires a passing "validate" check on every commit, so the regenerated README is first pushed
-# to a bot/readme-* branch, validated there, and then fast-forwarded onto main.
+# main requires a passing "validate" check, which rulesets only accept through a pull request merge.
+# The regenerated README therefore goes through a bot PR: branch bot/readme-<sha>, validate dispatched on
+# it, then squash-merged by this job once the check passes.
 permissions:
   contents: write
+  pull-requests: write
   actions: write
   checks: read
 
@@ -29,7 +31,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v7
         with:
-          ref: ${{ github.ref }}
+          ref: main
           # Full history: "Recently added" is derived from when each entry file was first committed
           fetch-depth: 0
           persist-credentials: true
@@ -43,7 +45,7 @@ jobs:
       - name: Install dependencies
         run: npm ci --ignore-scripts
 
-      - name: Generate, validate and publish README/registry
+      - name: Generate, validate and merge README/registry
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
@@ -52,50 +54,51 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          for attempt in 1 2 3 4 5; do
-            echo "Generation attempt ${attempt}"
-            git fetch origin main
-            git reset --hard origin/main
-
-            # Both scripts validate the whole catalog and exit non-zero without writing on any error
-            node scripts/generate-readme.js
-            node scripts/export-json.js --pretty --output dist/registry.json
-
-            if git diff --quiet -- README.md dist/registry.json; then
-              echo "README.md and dist/registry.json are already current."
-              exit 0
-            fi
-
-            git add README.md dist/registry.json
-            git commit -m "docs: auto-regenerate README and registry data"
-            sha="$(git rev-parse HEAD)"
-            branch="bot/readme-${sha:0:12}"
-
-            # Stage the commit and run the required "validate" check on it
-            git push --force origin "HEAD:refs/heads/${branch}"
-            gh workflow run validate-pr.yml --ref "${branch}"
-            conclusion=""
-            for i in $(seq 1 60); do
-              sleep 10
-              conclusion="$(gh api "repos/${GITHUB_REPOSITORY}/commits/${sha}/check-runs?check_name=validate" \
-                --jq '[.check_runs[] | select(.status == "completed") | .conclusion][0] // ""')"
-              [ -n "${conclusion}" ] && break
-            done
-
-            if [ "${conclusion}" != "success" ]; then
-              git push origin --delete "${branch}" || true
-              echo "validate on ${sha} finished with '${conclusion:-timeout}'; not publishing" >&2
-              exit 1
-            fi
-
-            if git push origin "${sha}:refs/heads/main"; then
-              git push origin --delete "${branch}" || true
-              exit 0
-            fi
-
-            git push origin --delete "${branch}" || true
-            echo "main moved while validating; retrying..."
+          # Close bot README PRs left open by earlier failed runs; this run supersedes them
+          for old in $(gh pr list --state open --search "head:bot/readme-" --json number,headRefName \
+                         --jq '.[] | select(.headRefName | startswith("bot/readme-")) | .number'); do
+            gh pr close "$old" --delete-branch --comment "Superseded by a newer README regeneration." || true
           done
 
-          echo "Failed to publish regenerated README/registry after retries" >&2
+          # Both scripts validate the whole catalog and exit non-zero without writing on any error
+          node scripts/generate-readme.js
+          node scripts/export-json.js --pretty --output dist/registry.json
+
+          if git diff --quiet -- README.md dist/registry.json; then
+            echo "README.md and dist/registry.json are already current."
+            exit 0
+          fi
+
+          git add README.md dist/registry.json
+          git commit -m "docs: auto-regenerate README and registry data"
+          sha="$(git rev-parse HEAD)"
+          branch="bot/readme-${sha:0:12}"
+          git push --force origin "HEAD:refs/heads/${branch}"
+
+          pr="$(gh pr create --base main --head "${branch}" \
+                  --title "docs: auto-regenerate README and registry data" \
+                  --body "Automated by \`generate-readme.yml\` after ${GITHUB_SHA:0:12}. Merged automatically once \`validate\` passes.")"
+          echo "Opened ${pr}"
+
+          gh workflow run validate-pr.yml --ref "${branch}"
+          conclusion=""
+          for i in $(seq 1 60); do
+            sleep 10
+            conclusion="$(gh api "repos/${GITHUB_REPOSITORY}/commits/${sha}/check-runs?check_name=validate" \
+              --jq '[.check_runs[] | select(.status == "completed") | .conclusion][0] // ""')"
+            [ -n "${conclusion}" ] && break
+          done
+          if [ "${conclusion}" != "success" ]; then
+            echo "validate on ${sha} finished with '${conclusion:-timeout}'; leaving ${pr} open for a maintainer" >&2
+            exit 1
+          fi
+
+          # The required check can take a moment to register on the PR
+          for i in 1 2 3 4 5 6; do
+            if gh pr merge "${pr}" --squash --delete-branch --subject "docs: auto-regenerate README and registry data"; then
+              exit 0
+            fi
+            sleep 10
+          done
+          echo "Could not merge ${pr}; leaving it open for a maintainer" >&2
           exit 1
