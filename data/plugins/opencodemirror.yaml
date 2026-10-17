@@ -1,0 +1,4 @@
+name: OpenCodeMirror
+repo: https://github.com/iceberghbs/OpenCodeMirror
+tagline: Bridge OpenCode sessions to chat platforms from your phone
+description: Native OpenCode plugin that mirrors session output to Telegram and lets you approve permissions, answer questions, and send prompts from chat. Runs inside the OpenCode process with no separate server.
