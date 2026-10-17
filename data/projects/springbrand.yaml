@@ -1,0 +1,46 @@
+name: SpringBrand
+repo: https://github.com/springbrand-lab/springbrand-agent-setup
+tagline: Remote MCP server with go-to-market tools for agents
+description: |
+  Hosted remote MCP server that gives OpenCode go-to-market tools: social
+  listening, traffic and SEO research, lead discovery, and creator discovery.
+
+  Exposes five tools — search_tools, get_tool_schemas, execute_tools,
+  manage_connections, and get_execution — so the agent discovers and calls
+  capabilities on demand instead of loading every tool schema into context.
+
+  Transport is Streamable HTTP. Auth is OAuth 2.1 with Dynamic Client
+  Registration (RFC 7591) and PKCE, which OpenCode handles automatically on the
+  first 401, so no API key goes in the config file.
+tags:
+  - mcp
+  - remote-mcp
+  - oauth
+  - seo
+  - social-listening
+  - lead-generation
+homepage: https://springbrand.ai
+installation: |
+  Add the server to `opencode.json` (project) or
+  `~/.config/opencode/opencode.json` (global):
+
+  ```json
+  {
+    "$schema": "https://opencode.ai/config.json",
+    "mcp": {
+      "springbrand": {
+        "type": "remote",
+        "url": "https://connector.springbrand.ai/mcp",
+        "enabled": true
+      }
+    }
+  }
+  ```
+
+  No `headers` entry is needed. The server answers unauthenticated requests
+  with `401` plus a `WWW-Authenticate` challenge, so OpenCode starts its OAuth
+  flow on first use. To trigger it manually:
+
+  ```bash
+  opencode mcp auth springbrand
+  ```
