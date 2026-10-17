@@ -40,7 +40,9 @@ jobs:
       - name: Check catalog changes
         env:
           GITHUB_TOKEN: ${{ github.token }}
-          BASE_REF: ${{ github.event.pull_request.base.sha || 'origin/main' }}
+          # Compare against the current base branch, not pull_request.base.sha: on an older PR that is the base
+          # commit from when the PR was opened, which would count everything merged since as part of the PR
+          BASE_REF: origin/${{ github.event.pull_request.base.ref || 'main' }}
           # Only the README bot's own PRs (opened by github-actions[bot] from this repo's bot/readme-* branches)
           # may change the generated files
           ALLOW_GENERATED: ${{ github.event_name == 'pull_request' && github.event.pull_request.user.login == 'github-actions[bot]' && github.event.pull_request.head.repo.full_name == github.repository && startsWith(github.head_ref, 'bot/readme-') }}
