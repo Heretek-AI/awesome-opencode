@@ -1,0 +1,8 @@
+name: Oh My TCM Powers (中医之心)
+repo: https://github.com/skyfiredao/oh-my-tcmpowers
+tagline: Skills and agents for analyzing Traditional Chinese Medicine formulas, symptoms, pulse patterns and acupoints
+description: 14 domain skills and 3 orchestration agents that analyze Traditional Chinese Medicine formulas, symptoms, pulse patterns and acupoints through the Fuxingjue five-phase framework, cross-validating herbal and acupuncture paths.
+kind: skill
+topics:
+  - domain
+compat: n/a
