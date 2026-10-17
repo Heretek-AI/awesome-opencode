@@ -1,0 +1,28 @@
+name: Unforgit
+repo: https://github.com/MiguelMedeiros/unforgit
+homepage: https://unforgit.com/docs/mcp
+tagline: Git-backed repository memory for AI agents
+description: Unforgit gives OpenCode and other coding agents durable, repository-scoped memory through MCP. Store and recall project decisions, conventions, gotchas, and playbooks locally in a Git-backed memory base, with optional sync and curation workflows.
+kind: plugin
+topics:
+  - memory
+  - git
+compat: v2
+scope:
+  - project
+tags:
+  - memory
+  - mcp
+  - agents
+  - knowledge-base
+  - repository
+installation: |
+  Install the published CLI, then generate OpenCode project instructions and MCP config:
+
+  ```bash
+  npm install -g unforgit
+  cd your-project
+  unforgit init --ide opencode
+  ```
+
+  This writes `AGENTS.md` guidance and `opencode.json` MCP configuration using the `unforgit-mcp` stdio server.

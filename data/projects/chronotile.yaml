@@ -1,0 +1,17 @@
+name: Chronotile
+repo: https://github.com/xterr/chronotile
+homepage: https://xterr.github.io/chronotile/
+tagline: Local usage analytics dashboard for OpenCode — cost, tokens, models, agents, tools, and sessions
+description: Native desktop app (Tauri 2, Rust backend, React UI) that turns OpenCode's local SQLite history into a dashboard — spend, token breakdown including reasoning and cache, per-model, per-agent, per-tool and per-skill analytics, project and file activity, quota burn rate, a full-year spend heatmap, and a session browser with full transcripts. OpenCode records $0 for subscription and OAuth-plan traffic, so Chronotile also estimates cost from models.dev rates and shows reported and estimated figures side by side. Databases are opened read-only, an incremental rollup cache keeps queries instant on multi-gigabyte histories, and no usage data ever leaves your machine.
+kind: client
+topics:
+  - cost
+  - observability
+compat: n/a
+tags:
+  - analytics
+  - dashboard
+  - desktop
+  - cost-tracking
+  - token-usage
+  - tauri

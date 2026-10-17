@@ -1,7 +1,13 @@
 name: HTML to Markdown
-repo: https://github.com/xberg-io/plugins
+repo: https://github.com/xberg-io/html-to-markdown
+npm: "@xberg-io/opencode-html-to-markdown"
+homepage: https://www.npmjs.com/package/@xberg-io/opencode-html-to-markdown
 tagline: Fast, lossless HTML to Markdown conversion
 description: OpenCode plugin exposing html-to-markdown CLI tools for converting HTML to clean Markdown with metadata, tables, and document structure.
+kind: plugin
+topics:
+  - web
+compat: v2
 scope:
   - global
   - project
@@ -10,7 +16,6 @@ tags:
   - markdown
   - conversion
   - cli
-homepage: https://www.npmjs.com/package/@xberg-io/opencode-html-to-markdown
 installation: |
   Add the package to `opencode.json`:
 

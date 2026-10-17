@@ -1,4 +1,9 @@
 name: Opencode Web
-repo: https://github.com/kcrommett/opencode-web
+repo: https://github.com/shuv1337/oc-web
 tagline: Browser-based access
 description: Web interface for opencode - browser-based access to AI coding agent.
+kind: client
+topics:
+  - remote
+  - ui
+compat: v1

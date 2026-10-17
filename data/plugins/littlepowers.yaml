@@ -1,0 +1,9 @@
+name: Littlepowers
+repo: https://github.com/clsaa/littlepowers
+tagline: Proportional planning, recovery, and phase review gates for consequential work
+description: A proportional planning, recovery, and engineering-discipline protocol. Scales planning depth to risk (direct, compact shape, or full brainstorm → spec → design → plan), pauses for review at each phase gate, recovers the last checkpoint after interruptions, and mirrors task checklists to OpenCode's native todo surface. Registers its skills directory through the config hook and injects read-only recovery context through the message-transform hook; the same implementation also ships for Codex, Claude Code, and Qoder.
+kind: plugin
+topics:
+  - workflow
+  - code-quality
+compat: v1

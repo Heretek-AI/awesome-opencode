@@ -1,0 +1,2774 @@
+{
+  "130": {
+    "upstream_number": 130,
+    "new_pr_number": 46,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/46",
+    "title": "feat: add Opencode Auto Update plugin"
+  },
+  "132": {
+    "upstream_number": 132,
+    "new_pr_number": 47,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/47",
+    "title": "feat: add vsync - config sync across AI coding tools"
+  },
+  "133": {
+    "upstream_number": 133,
+    "new_pr_number": 48,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/48",
+    "title": "docs: add opencode-pollinations-plugin to plugins"
+  },
+  "136": {
+    "upstream_number": 136,
+    "new_pr_number": 49,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/49",
+    "title": "Add Promption to Projects list"
+  },
+  "137": {
+    "upstream_number": 137,
+    "new_pr_number": 50,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/50",
+    "title": "Add PPTX from Layouts plugin"
+  },
+  "150": {
+    "upstream_number": 150,
+    "new_pr_number": 51,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/51",
+    "title": "docs: add opencode-morphllm to plugins"
+  },
+  "152": {
+    "upstream_number": 152,
+    "new_pr_number": 52,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/52",
+    "title": "feat: add OhMyOpenCode website resource"
+  },
+  "153": {
+    "upstream_number": 153,
+    "new_pr_number": 53,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/53",
+    "title": "docs: add cyberpunk to themes"
+  },
+  "160": {
+    "upstream_number": 160,
+    "new_pr_number": 54,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/54",
+    "title": "docs: add OpenPrism to plugins"
+  },
+  "161": {
+    "upstream_number": 161,
+    "new_pr_number": 55,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/55",
+    "title": "docs: add openkilo to plugins"
+  },
+  "162": {
+    "upstream_number": 162,
+    "new_pr_number": 56,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/56",
+    "title": "Add Hum \u2014 AI author publishing agent"
+  },
+  "167": {
+    "upstream_number": 167,
+    "new_pr_number": 57,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/57",
+    "title": "Add Oh My Kiro plugin"
+  },
+  "170": {
+    "upstream_number": 170,
+    "new_pr_number": 58,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/58",
+    "title": "feat: add opencode-crawl4ai plugin"
+  },
+  "172": {
+    "upstream_number": 172,
+    "new_pr_number": 59,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/59",
+    "title": "docs: add opencode-remote-agent to plugins"
+  },
+  "173": {
+    "upstream_number": 173,
+    "new_pr_number": 60,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/60",
+    "title": "docs: add worktoolai to plugins"
+  },
+  "182": {
+    "upstream_number": 182,
+    "new_pr_number": 61,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/61",
+    "title": "Add opencode memento plugin"
+  },
+  "202": {
+    "upstream_number": 202,
+    "new_pr_number": 62,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/62",
+    "title": "feat: add AgentField, SWE-AF, and SEC-AF"
+  },
+  "206": {
+    "upstream_number": 206,
+    "new_pr_number": 63,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/63",
+    "title": "Add marcodiniz/ag-local-bridge to Projects"
+  },
+  "207": {
+    "upstream_number": 207,
+    "new_pr_number": 64,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/64",
+    "title": "Add Untether \u2014 Telegram bridge with OpenCode support"
+  },
+  "218": {
+    "upstream_number": 218,
+    "new_pr_number": 65,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/65",
+    "title": "Add AgenTopology"
+  },
+  "220": {
+    "upstream_number": 220,
+    "new_pr_number": 66,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/66",
+    "title": "docs: add session-coherence and claude-learn to projects"
+  },
+  "224": {
+    "upstream_number": 224,
+    "new_pr_number": 67,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/67",
+    "title": "Add MonadicSharp-OpenCode \u2014 C#/.NET MCP server integration"
+  },
+  "225": {
+    "upstream_number": 225,
+    "new_pr_number": 68,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/68",
+    "title": "Add Termly \u2014 free native mobile app for OpenCode"
+  },
+  "226": {
+    "upstream_number": 226,
+    "new_pr_number": 69,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/69",
+    "title": "docs: add rehydra to plugins"
+  },
+  "231": {
+    "upstream_number": 231,
+    "new_pr_number": 70,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/70",
+    "title": "feat: add opencode-llm-proxy plugin"
+  },
+  "233": {
+    "upstream_number": 233,
+    "new_pr_number": 71,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/71",
+    "title": "Add AIRIS MCP Gateway"
+  },
+  "239": {
+    "upstream_number": 239,
+    "new_pr_number": 72,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/72",
+    "title": "Add Parallel Code"
+  },
+  "247": {
+    "upstream_number": 247,
+    "new_pr_number": 73,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/73",
+    "title": "docs: add opencode-preview to plugins"
+  },
+  "248": {
+    "upstream_number": 248,
+    "new_pr_number": 74,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/74",
+    "title": "Add StringRay agent entry"
+  },
+  "256": {
+    "upstream_number": 256,
+    "new_pr_number": 75,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/75",
+    "title": "docs: add opencode-telegram to projects"
+  },
+  "259": {
+    "upstream_number": 259,
+    "new_pr_number": 76,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/76",
+    "title": "docs: add Global Chat to projects"
+  },
+  "263": {
+    "upstream_number": 263,
+    "new_pr_number": 77,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/77",
+    "title": "Add ocp to Projects"
+  },
+  "264": {
+    "upstream_number": 264,
+    "new_pr_number": 78,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/78",
+    "title": "Add opencode-copilot-budget plugin"
+  },
+  "268": {
+    "upstream_number": 268,
+    "new_pr_number": 79,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/79",
+    "title": "docs: add Google Drive \u2013 Memyard to plugins"
+  },
+  "271": {
+    "upstream_number": 271,
+    "new_pr_number": 80,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/80",
+    "title": "docs: add opencode-trace to plugins"
+  },
+  "277": {
+    "upstream_number": 277,
+    "new_pr_number": 81,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/81",
+    "title": "feat: OpenCode Models Usage"
+  },
+  "284": {
+    "upstream_number": 284,
+    "new_pr_number": 82,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/82",
+    "title": "docs: add opencode-session-recall to plugins"
+  },
+  "285": {
+    "upstream_number": 285,
+    "new_pr_number": 83,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/83",
+    "title": "docs: add opencode-model-scout to plugins"
+  },
+  "286": {
+    "upstream_number": 286,
+    "new_pr_number": 84,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/84",
+    "title": "feat: WSL Notifications plugin"
+  },
+  "288": {
+    "upstream_number": 288,
+    "new_pr_number": 85,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/85",
+    "title": "plugins: add opencode-cost-guard: Warn or stop your OpenCode session \u2026"
+  },
+  "289": {
+    "upstream_number": 289,
+    "new_pr_number": 86,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/86",
+    "title": "Add MorningAI to Plugins"
+  },
+  "291": {
+    "upstream_number": 291,
+    "new_pr_number": 87,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/87",
+    "title": "docs: add contexty plugin to plugins"
+  },
+  "302": {
+    "upstream_number": 302,
+    "new_pr_number": 88,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/88",
+    "title": "docs: add 8 new entries (opencode-easy-workflow, opencode-auto-resume, zosma-qa, anvevoice, opencode-remote-control, clarvia, dreampowers, super-local-memory)"
+  },
+  "306": {
+    "upstream_number": 306,
+    "new_pr_number": 89,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/89",
+    "title": "Add Emdash Skills agent to AGENTS section"
+  },
+  "308": {
+    "upstream_number": 308,
+    "new_pr_number": 90,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/90",
+    "title": "Add Skills\u5b9d (skilery.com) to Projects"
+  },
+  "309": {
+    "upstream_number": 309,
+    "new_pr_number": 91,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/91",
+    "title": "docs: add opencode-byterover plugin"
+  },
+  "312": {
+    "upstream_number": 312,
+    "new_pr_number": 92,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/92",
+    "title": "docs: add prompt-to-asset (projects) and unslop (plugins)"
+  },
+  "314": {
+    "upstream_number": 314,
+    "new_pr_number": 93,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/93",
+    "title": "Add Hindsight Auto-Memory plugin"
+  },
+  "316": {
+    "upstream_number": 316,
+    "new_pr_number": 94,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/94",
+    "title": "Add opencode-background-tasks plugin"
+  },
+  "318": {
+    "upstream_number": 318,
+    "new_pr_number": 95,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/95",
+    "title": "docs: add SuperBased to plugins"
+  },
+  "325": {
+    "upstream_number": 325,
+    "new_pr_number": 96,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/96",
+    "title": "Add SKILLS section with 4 OpenCode skills"
+  },
+  "326": {
+    "upstream_number": 326,
+    "new_pr_number": 97,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/97",
+    "title": "Add lean-ctx"
+  },
+  "335": {
+    "upstream_number": 335,
+    "new_pr_number": 98,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/98",
+    "title": "Plugins: add terminal-bell-macos.yaml"
+  },
+  "355": {
+    "upstream_number": 355,
+    "new_pr_number": 99,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/99",
+    "title": "Add APort Agent Guardrails"
+  },
+  "366": {
+    "upstream_number": 366,
+    "new_pr_number": 100,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/100",
+    "title": "Add Ano - collaborative shell with Claude Code and MCP"
+  },
+  "369": {
+    "upstream_number": 369,
+    "new_pr_number": 101,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/101",
+    "title": "Add multilingual README support (Chinese & Russian)"
+  },
+  "373": {
+    "upstream_number": 373,
+    "new_pr_number": 102,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/102",
+    "title": "Add OpenToken \u2014 token-saving plugin with 42 compression layers"
+  },
+  "375": {
+    "upstream_number": 375,
+    "new_pr_number": 103,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/103",
+    "title": "docs: add Superpowers plugin"
+  },
+  "376": {
+    "upstream_number": 376,
+    "new_pr_number": 104,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/104",
+    "title": "docs: add discord-presence to plugins"
+  },
+  "377": {
+    "upstream_number": 377,
+    "new_pr_number": 105,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/105",
+    "title": "Add Mem0 OpenCode Plugin to plugins"
+  },
+  "378": {
+    "upstream_number": 378,
+    "new_pr_number": 106,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/106",
+    "title": "Add Ivy Tendril to Projects"
+  },
+  "381": {
+    "upstream_number": 381,
+    "new_pr_number": 107,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/107",
+    "title": "Add Agent Sessions"
+  },
+  "383": {
+    "upstream_number": 383,
+    "new_pr_number": 108,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/108",
+    "title": "docs: add Snitch plugin"
+  },
+  "387": {
+    "upstream_number": 387,
+    "new_pr_number": 109,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/109",
+    "title": "docs: add iamhumans \u2014 human-shaped conversation skill for opencode, 99/100 eval"
+  },
+  "388": {
+    "upstream_number": 388,
+    "new_pr_number": 110,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/110",
+    "title": "Add opencode-crawl4ai plugin"
+  },
+  "393": {
+    "upstream_number": 393,
+    "new_pr_number": 111,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/111",
+    "title": "Add El Primor \u2014 agente de excelencia para OpenCode"
+  },
+  "394": {
+    "upstream_number": 394,
+    "new_pr_number": 112,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/112",
+    "title": "Add Reflection-3 \u2014 judge layer that catches premature agent stops"
+  },
+  "395": {
+    "upstream_number": 395,
+    "new_pr_number": 113,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/113",
+    "title": "feat: add supereasy-memory plugin"
+  },
+  "397": {
+    "upstream_number": 397,
+    "new_pr_number": 114,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/114",
+    "title": "docs: add Ory for OpenCode to plugins"
+  },
+  "404": {
+    "upstream_number": 404,
+    "new_pr_number": 115,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/115",
+    "title": "docs: add opencode-trace to plugins"
+  },
+  "419": {
+    "upstream_number": 419,
+    "new_pr_number": 116,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/116",
+    "title": "Add MiMo-Code (voice-driven multimodal desktop coding agent for MiMo)"
+  },
+  "421": {
+    "upstream_number": 421,
+    "new_pr_number": 117,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/117",
+    "title": "docs: add opencode-mimo-free-plugin to plugins"
+  },
+  "422": {
+    "upstream_number": 422,
+    "new_pr_number": 118,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/118",
+    "title": "Add handoff \u2014 cross-agent task dispatcher for Claude Code / Codex"
+  },
+  "423": {
+    "upstream_number": 423,
+    "new_pr_number": 119,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/119",
+    "title": "Add Generative Media Skills \u2014 13 OpenCode-native skills for image/video/audio generation"
+  },
+  "424": {
+    "upstream_number": 424,
+    "new_pr_number": 120,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/120",
+    "title": "docs: add opencode-skill-stats, opencode-hermes, opencode-auto-ocr-image"
+  },
+  "425": {
+    "upstream_number": 425,
+    "new_pr_number": 121,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/121",
+    "title": "docs: add OpenCode rotator projects"
+  },
+  "427": {
+    "upstream_number": 427,
+    "new_pr_number": 122,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/122",
+    "title": "docs: add CLAUDE.md for opencode to plugins"
+  },
+  "428": {
+    "upstream_number": 428,
+    "new_pr_number": 123,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/123",
+    "title": "docs: add opencode-token-counter to plugins"
+  },
+  "429": {
+    "upstream_number": 429,
+    "new_pr_number": 124,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/124",
+    "title": "docs: add opencode-sessions-explorer to plugins"
+  },
+  "431": {
+    "upstream_number": 431,
+    "new_pr_number": 125,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/125",
+    "title": "docs: add AIDevOps to plugins"
+  },
+  "432": {
+    "upstream_number": 432,
+    "new_pr_number": 126,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/126",
+    "title": "docs: add @jimicze-opencode/opencode-tps to plugins"
+  },
+  "436": {
+    "upstream_number": 436,
+    "new_pr_number": 127,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/127",
+    "title": "feat(plugins): add Antigravity CLI Auth plugin"
+  },
+  "438": {
+    "upstream_number": 438,
+    "new_pr_number": 128,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/128",
+    "title": "docs: add opencode-lens plugin"
+  },
+  "439": {
+    "upstream_number": 439,
+    "new_pr_number": 129,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/129",
+    "title": "Add AccInt plugin"
+  },
+  "441": {
+    "upstream_number": 441,
+    "new_pr_number": 130,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/130",
+    "title": "Add Coverage Guard, Flaky Test Detector and Task Decomposer"
+  },
+  "442": {
+    "upstream_number": 442,
+    "new_pr_number": 131,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/131",
+    "title": "Add AION \u2014 time-series harness plugin"
+  },
+  "443": {
+    "upstream_number": 443,
+    "new_pr_number": 132,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/132",
+    "title": "docs: add Argus framework to projects"
+  },
+  "444": {
+    "upstream_number": 444,
+    "new_pr_number": 133,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/133",
+    "title": "docs: add ocp to projects"
+  },
+  "445": {
+    "upstream_number": 445,
+    "new_pr_number": 134,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/134",
+    "title": "docs: add setup-chat-workflows plugin"
+  },
+  "447": {
+    "upstream_number": 447,
+    "new_pr_number": 135,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/135",
+    "title": "docs: add opencode-smartsnip to plugins"
+  },
+  "449": {
+    "upstream_number": 449,
+    "new_pr_number": 136,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/136",
+    "title": "docs: add amore to plugins"
+  },
+  "450": {
+    "upstream_number": 450,
+    "new_pr_number": 137,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/137",
+    "title": "docs: add opencode-fusion to plugins"
+  },
+  "451": {
+    "upstream_number": 451,
+    "new_pr_number": 138,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/138",
+    "title": "docs: add basemind to plugins"
+  },
+  "452": {
+    "upstream_number": 452,
+    "new_pr_number": 139,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/139",
+    "title": "Add OpenChamber Mobile Bridge"
+  },
+  "454": {
+    "upstream_number": 454,
+    "new_pr_number": 140,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/140",
+    "title": "docs: add opencode-helper to projects"
+  },
+  "455": {
+    "upstream_number": 455,
+    "new_pr_number": 141,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/141",
+    "title": "Add ax project"
+  },
+  "456": {
+    "upstream_number": 456,
+    "new_pr_number": 142,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/142",
+    "title": "docs: add LoopTroop to projects"
+  },
+  "458": {
+    "upstream_number": 458,
+    "new_pr_number": 143,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/143",
+    "title": "docs: add neuralyzer to plugins"
+  },
+  "459": {
+    "upstream_number": 459,
+    "new_pr_number": 144,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/144",
+    "title": "feat: add EGC - persistent memory MCP server"
+  },
+  "461": {
+    "upstream_number": 461,
+    "new_pr_number": 145,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/145",
+    "title": "Add opencode-rtl to Plugins list"
+  },
+  "462": {
+    "upstream_number": 462,
+    "new_pr_number": 146,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/146",
+    "title": "add @openstellar/mcp-adapter and @openstellar/tool-search plugins"
+  },
+  "463": {
+    "upstream_number": 463,
+    "new_pr_number": 147,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/147",
+    "title": "docs: add opencode-openai-compact to plugins"
+  },
+  "464": {
+    "upstream_number": 464,
+    "new_pr_number": 148,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/148",
+    "title": "docs: add agent-historian to projects"
+  },
+  "465": {
+    "upstream_number": 465,
+    "new_pr_number": 149,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/149",
+    "title": "docs: add aware-code to agents"
+  },
+  "466": {
+    "upstream_number": 466,
+    "new_pr_number": 150,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/150",
+    "title": "docs: add opencode-sidebar-usage to plugins"
+  },
+  "468": {
+    "upstream_number": 468,
+    "new_pr_number": 151,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/151",
+    "title": "docs: add opencode-git-trailers plugin"
+  },
+  "469": {
+    "upstream_number": 469,
+    "new_pr_number": 152,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/152",
+    "title": "docs: add opencode-thinking-fix to plugins"
+  },
+  "472": {
+    "upstream_number": 472,
+    "new_pr_number": 153,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/153",
+    "title": "docs: Add opencode-kasper plugin"
+  },
+  "473": {
+    "upstream_number": 473,
+    "new_pr_number": 154,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/154",
+    "title": "Create echoes-vault"
+  },
+  "474": {
+    "upstream_number": 474,
+    "new_pr_number": 155,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/155",
+    "title": "docs: add PatchWarden project"
+  },
+  "476": {
+    "upstream_number": 476,
+    "new_pr_number": 156,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/156",
+    "title": "docs: add specralph to projects"
+  },
+  "477": {
+    "upstream_number": 477,
+    "new_pr_number": 157,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/157",
+    "title": "docs(plugins): add Lens, Image Preview, and Voice plugins for OpenCode Web"
+  },
+  "478": {
+    "upstream_number": 478,
+    "new_pr_number": 158,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/158",
+    "title": "Add OpenCode Agent Orchestration Kit"
+  },
+  "480": {
+    "upstream_number": 480,
+    "new_pr_number": 159,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/159",
+    "title": "Add eval-harness to PROJECTS section"
+  },
+  "481": {
+    "upstream_number": 481,
+    "new_pr_number": 160,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/160",
+    "title": "Add Claudescope to projects"
+  },
+  "483": {
+    "upstream_number": 483,
+    "new_pr_number": 161,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/161",
+    "title": "docs: add AI Agent Automations resource"
+  },
+  "486": {
+    "upstream_number": 486,
+    "new_pr_number": 162,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/162",
+    "title": "Add Roborev and djimitflo to Projects"
+  },
+  "487": {
+    "upstream_number": 487,
+    "new_pr_number": 163,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/163",
+    "title": "docs: add AionUi to projects"
+  },
+  "488": {
+    "upstream_number": 488,
+    "new_pr_number": 164,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/164",
+    "title": "Add juhe-skills to resources"
+  },
+  "489": {
+    "upstream_number": 489,
+    "new_pr_number": 165,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/165",
+    "title": "docs: add SpriteCook MCP to plugins"
+  },
+  "490": {
+    "upstream_number": 490,
+    "new_pr_number": 166,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/166",
+    "title": "Add OpenCode Alchemyst Context plugin configuration"
+  },
+  "491": {
+    "upstream_number": 491,
+    "new_pr_number": 167,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/167",
+    "title": "Add semantic search mcp"
+  },
+  "492": {
+    "upstream_number": 492,
+    "new_pr_number": 168,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/168",
+    "title": "docs: add OpenCode Model Scorecard"
+  },
+  "493": {
+    "upstream_number": 493,
+    "new_pr_number": 169,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/169",
+    "title": "Add LM Studio Warm plugin"
+  },
+  "494": {
+    "upstream_number": 494,
+    "new_pr_number": 170,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/170",
+    "title": "docs: add DataEcho skills to resources"
+  },
+  "497": {
+    "upstream_number": 497,
+    "new_pr_number": 171,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/171",
+    "title": "feat: add opencode-lazy-load plugin"
+  },
+  "498": {
+    "upstream_number": 498,
+    "new_pr_number": 172,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/172",
+    "title": "docs: add Cosmosmith resource"
+  },
+  "499": {
+    "upstream_number": 499,
+    "new_pr_number": 173,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/173",
+    "title": "docs: add OpenCode Primer to resources"
+  },
+  "500": {
+    "upstream_number": 500,
+    "new_pr_number": 174,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/174",
+    "title": "docs: add opencode-failover to plugins"
+  },
+  "501": {
+    "upstream_number": 501,
+    "new_pr_number": 175,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/175",
+    "title": "docs: add Tree Ring Memory"
+  },
+  "503": {
+    "upstream_number": 503,
+    "new_pr_number": 176,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/176",
+    "title": "Add Adversarial Goal plugin"
+  },
+  "504": {
+    "upstream_number": 504,
+    "new_pr_number": 177,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/177",
+    "title": "Add AgentBox to projects"
+  },
+  "505": {
+    "upstream_number": 505,
+    "new_pr_number": 178,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/178",
+    "title": "Add Unforgit plugin"
+  },
+  "506": {
+    "upstream_number": 506,
+    "new_pr_number": 179,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/179",
+    "title": "Add Internet Court"
+  },
+  "508": {
+    "upstream_number": 508,
+    "new_pr_number": 180,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/180",
+    "title": "docs: add DevIntern to projects"
+  },
+  "510": {
+    "upstream_number": 510,
+    "new_pr_number": 181,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/181",
+    "title": "Add SuperSpec to resources"
+  },
+  "514": {
+    "upstream_number": 514,
+    "new_pr_number": 182,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/182",
+    "title": "docs: add ditto to plugins"
+  },
+  "515": {
+    "upstream_number": 515,
+    "new_pr_number": 183,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/183",
+    "title": "docs: add PickySteve project"
+  },
+  "516": {
+    "upstream_number": 516,
+    "new_pr_number": 184,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/184",
+    "title": "docs: add Agent Teams project"
+  },
+  "518": {
+    "upstream_number": 518,
+    "new_pr_number": 185,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/185",
+    "title": "docs: add opencode-zellij-indicator to plugins"
+  },
+  "519": {
+    "upstream_number": 519,
+    "new_pr_number": 186,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/186",
+    "title": "opencode-fractal-memory"
+  },
+  "521": {
+    "upstream_number": 521,
+    "new_pr_number": 187,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/187",
+    "title": "Add Sema plugin (LSP + MCP + theme for Sema Lisp)"
+  },
+  "522": {
+    "upstream_number": 522,
+    "new_pr_number": 188,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/188",
+    "title": "docs: add my-opencode-deepseek-config to resources"
+  },
+  "523": {
+    "upstream_number": 523,
+    "new_pr_number": 189,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/189",
+    "title": "docs: add opencode-todo-progress to plugins"
+  },
+  "524": {
+    "upstream_number": 524,
+    "new_pr_number": 190,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/190",
+    "title": "docs: add opencode-usage-bar to plugins"
+  },
+  "525": {
+    "upstream_number": 525,
+    "new_pr_number": 191,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/191",
+    "title": "docs: add oc-monitor to plugins"
+  },
+  "526": {
+    "upstream_number": 526,
+    "new_pr_number": 192,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/192",
+    "title": "docs: add find-mcp to resources"
+  },
+  "527": {
+    "upstream_number": 527,
+    "new_pr_number": 193,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/193",
+    "title": "docs: add opencode-session-id-plugin to plugins"
+  },
+  "528": {
+    "upstream_number": 528,
+    "new_pr_number": 194,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/194",
+    "title": "docs: add superpowers-controller to plugins"
+  },
+  "530": {
+    "upstream_number": 530,
+    "new_pr_number": 195,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/195",
+    "title": "docs: add opencode-parley (MIT Parley provider) to plugins"
+  },
+  "532": {
+    "upstream_number": 532,
+    "new_pr_number": 196,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/196",
+    "title": "docs: add littlepowers to plugins"
+  },
+  "533": {
+    "upstream_number": 533,
+    "new_pr_number": 197,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/197",
+    "title": "docs: add opencode-pollinations-plugin to plugins"
+  },
+  "534": {
+    "upstream_number": 534,
+    "new_pr_number": 198,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/198",
+    "title": "docs: add opencode-session-tracker to plugins"
+  },
+  "536": {
+    "upstream_number": 536,
+    "new_pr_number": 199,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/199",
+    "title": "Create opencode-rmux.yaml"
+  },
+  "537": {
+    "upstream_number": 537,
+    "new_pr_number": 200,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/200",
+    "title": "docs: add Wuniq to projects"
+  },
+  "538": {
+    "upstream_number": 538,
+    "new_pr_number": 201,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/201",
+    "title": "docs: add Orkas to projects"
+  },
+  "539": {
+    "upstream_number": 539,
+    "new_pr_number": 202,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/202",
+    "title": "Add Claudexor to projects"
+  },
+  "540": {
+    "upstream_number": 540,
+    "new_pr_number": 203,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/203",
+    "title": "docs: add episodic-memory to plugins"
+  },
+  "542": {
+    "upstream_number": 542,
+    "new_pr_number": 204,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/204",
+    "title": "docs: add fractal project"
+  },
+  "543": {
+    "upstream_number": 543,
+    "new_pr_number": 205,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/205",
+    "title": "Add opencode-profiles to Agents section"
+  },
+  "545": {
+    "upstream_number": 545,
+    "new_pr_number": 206,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/206",
+    "title": "Add AgentCode - Multi-model coding agent skill"
+  },
+  "546": {
+    "upstream_number": 546,
+    "new_pr_number": 207,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/207",
+    "title": "docs: add Cursor Provider to plugins"
+  },
+  "547": {
+    "upstream_number": 547,
+    "new_pr_number": 208,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/208",
+    "title": "docs: add opencode-cliproxyapi plugin"
+  },
+  "549": {
+    "upstream_number": 549,
+    "new_pr_number": 209,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/209",
+    "title": "docs: add opencode-plugin-loop to plugins"
+  },
+  "550": {
+    "upstream_number": 550,
+    "new_pr_number": 210,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/210",
+    "title": "docs: add opencode-caffeinate-win32 to plugins"
+  },
+  "551": {
+    "upstream_number": 551,
+    "new_pr_number": 211,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/211",
+    "title": "docs: add cc-oc and omoctl to projects"
+  },
+  "552": {
+    "upstream_number": 552,
+    "new_pr_number": 212,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/212",
+    "title": "docs: add modellix to plugins"
+  },
+  "553": {
+    "upstream_number": 553,
+    "new_pr_number": 213,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/213",
+    "title": "docs: add openwts to projects"
+  },
+  "554": {
+    "upstream_number": 554,
+    "new_pr_number": 214,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/214",
+    "title": "Add boffin architectural guardrails for AI coding agents into OpenCode"
+  },
+  "556": {
+    "upstream_number": 556,
+    "new_pr_number": 215,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/215",
+    "title": "Add cowork-to-code-bridge to projects"
+  },
+  "557": {
+    "upstream_number": 557,
+    "new_pr_number": 216,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/216",
+    "title": "docs: add agent-loop to plugins"
+  },
+  "558": {
+    "upstream_number": 558,
+    "new_pr_number": 217,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/217",
+    "title": "docs: add PPT Design Skill - AI-powered PPT generation"
+  },
+  "559": {
+    "upstream_number": 559,
+    "new_pr_number": 218,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/218",
+    "title": "Add GoodMemory to projects"
+  },
+  "560": {
+    "upstream_number": 560,
+    "new_pr_number": 219,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/219",
+    "title": "docs: add opencode-council plugin"
+  },
+  "561": {
+    "upstream_number": 561,
+    "new_pr_number": 220,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/220",
+    "title": "docs: add opencode-vision to plugins"
+  },
+  "562": {
+    "upstream_number": 562,
+    "new_pr_number": 221,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/221",
+    "title": "docs: add solo-memory plugin to plugins"
+  },
+  "563": {
+    "upstream_number": 563,
+    "new_pr_number": 222,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/222",
+    "title": "docs: add opencode-tabs to plugins"
+  },
+  "564": {
+    "upstream_number": 564,
+    "new_pr_number": 223,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/223",
+    "title": "docs: add sortie-dogs to plugins"
+  },
+  "565": {
+    "upstream_number": 565,
+    "new_pr_number": 224,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/224",
+    "title": "Add OpenCode Focus plugin"
+  },
+  "566": {
+    "upstream_number": 566,
+    "new_pr_number": 225,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/225",
+    "title": "docs: add opencode-subagent-model-selector to plugins"
+  },
+  "567": {
+    "upstream_number": 567,
+    "new_pr_number": 226,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/226",
+    "title": "docs: add OpenClient project"
+  },
+  "568": {
+    "upstream_number": 568,
+    "new_pr_number": 227,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/227",
+    "title": "docs: add opencode-plugin-statusbar to plugins"
+  },
+  "569": {
+    "upstream_number": 569,
+    "new_pr_number": 228,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/228",
+    "title": "docs: add opencode-plugin-cost-guard to plugins"
+  },
+  "570": {
+    "upstream_number": 570,
+    "new_pr_number": 229,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/229",
+    "title": "docs: add opencode-tasksmd to plugins"
+  },
+  "571": {
+    "upstream_number": 571,
+    "new_pr_number": 230,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/230",
+    "title": "docs: add OutageDeck MCP resource"
+  },
+  "572": {
+    "upstream_number": 572,
+    "new_pr_number": 231,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/231",
+    "title": "docs: add qwen-audio-agent to projects"
+  },
+  "573": {
+    "upstream_number": 573,
+    "new_pr_number": 232,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/232",
+    "title": "docs: update oh-my-opencode -> oh-my-openagent (renamed)"
+  },
+  "575": {
+    "upstream_number": 575,
+    "new_pr_number": 233,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/233",
+    "title": "docs: add cache-stats to plugins"
+  },
+  "576": {
+    "upstream_number": 576,
+    "new_pr_number": 234,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/234",
+    "title": "Add context-workflow to Plugins"
+  },
+  "577": {
+    "upstream_number": 577,
+    "new_pr_number": 235,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/235",
+    "title": "Add run-long-script to Plugins"
+  },
+  "578": {
+    "upstream_number": 578,
+    "new_pr_number": 236,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/236",
+    "title": "docs: add opencode-browser-cdp to plugins"
+  },
+  "579": {
+    "upstream_number": 579,
+    "new_pr_number": 237,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/237",
+    "title": "docs: add Shell Tasks plugin"
+  },
+  "580": {
+    "upstream_number": 580,
+    "new_pr_number": 238,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/238",
+    "title": "docs: add intentic to projects"
+  },
+  "581": {
+    "upstream_number": 581,
+    "new_pr_number": 239,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/239",
+    "title": "docs: add opencode-autonomy and opencode-ambient to plugins"
+  },
+  "582": {
+    "upstream_number": 582,
+    "new_pr_number": 240,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/240",
+    "title": "docs: add opencode-fusion to agents"
+  },
+  "583": {
+    "upstream_number": 583,
+    "new_pr_number": 241,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/241",
+    "title": "docs: add opencode-eye to plugins"
+  },
+  "584": {
+    "upstream_number": 584,
+    "new_pr_number": 242,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/242",
+    "title": "docs: add staffetta to projects"
+  },
+  "586": {
+    "upstream_number": 586,
+    "new_pr_number": 243,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/243",
+    "title": "docs: add opencode-taskmarket to plugins"
+  },
+  "587": {
+    "upstream_number": 587,
+    "new_pr_number": 244,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/244",
+    "title": "docs: add review-pro to agents"
+  },
+  "588": {
+    "upstream_number": 588,
+    "new_pr_number": 245,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/245",
+    "title": "docs: add opencode-plugin-peers to plugins"
+  },
+  "589": {
+    "upstream_number": 589,
+    "new_pr_number": 246,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/246",
+    "title": "docs: add Hexis to projects"
+  },
+  "590": {
+    "upstream_number": 590,
+    "new_pr_number": 247,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/247",
+    "title": "docs: add db-semantic-mcp to projects"
+  },
+  "591": {
+    "upstream_number": 591,
+    "new_pr_number": 248,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/248",
+    "title": "docs: add oya to plugins"
+  },
+  "592": {
+    "upstream_number": 592,
+    "new_pr_number": 249,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/249",
+    "title": "docs: add Beads Sidebar to plugins"
+  },
+  "593": {
+    "upstream_number": 593,
+    "new_pr_number": 250,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/250",
+    "title": "docs: add opencode-db-clean to projects"
+  },
+  "594": {
+    "upstream_number": 594,
+    "new_pr_number": 251,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/251",
+    "title": "docs: add opencode-obvious-grid to plugins"
+  },
+  "595": {
+    "upstream_number": 595,
+    "new_pr_number": 252,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/252",
+    "title": "docs: add Meanwhile to resources"
+  },
+  "596": {
+    "upstream_number": 596,
+    "new_pr_number": 253,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/253",
+    "title": "docs: add Lians to OpenCode projects"
+  },
+  "597": {
+    "upstream_number": 597,
+    "new_pr_number": 254,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/254",
+    "title": "Add OpenCode Agent Harness to projects"
+  },
+  "598": {
+    "upstream_number": 598,
+    "new_pr_number": 255,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/255",
+    "title": "docs: add opencode-clarify to plugins"
+  },
+  "599": {
+    "upstream_number": 599,
+    "new_pr_number": 256,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/256",
+    "title": "docs: add ai-project-tracker to plugins"
+  },
+  "600": {
+    "upstream_number": 600,
+    "new_pr_number": 257,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/257",
+    "title": "docs: add trustless to projects"
+  },
+  "601": {
+    "upstream_number": 601,
+    "new_pr_number": 258,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/258",
+    "title": "docs: add context-optimizer to plugins"
+  },
+  "603": {
+    "upstream_number": 603,
+    "new_pr_number": 259,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/259",
+    "title": "docs: add OpenCodeMirror plugin"
+  },
+  "604": {
+    "upstream_number": 604,
+    "new_pr_number": 260,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/260",
+    "title": "docs: add LWC project memory resource"
+  },
+  "605": {
+    "upstream_number": 605,
+    "new_pr_number": 261,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/261",
+    "title": "docs: add caspian-opencode-plugin to plugins"
+  },
+  "606": {
+    "upstream_number": 606,
+    "new_pr_number": 262,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/262",
+    "title": "docs: add Agent QA to projects"
+  },
+  "608": {
+    "upstream_number": 608,
+    "new_pr_number": 263,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/263",
+    "title": "docs: add wpm to plugins"
+  },
+  "609": {
+    "upstream_number": 609,
+    "new_pr_number": 264,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/264",
+    "title": "docs: add UIZZE project"
+  },
+  "610": {
+    "upstream_number": 610,
+    "new_pr_number": 265,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/265",
+    "title": "docs: add clawmetry to projects"
+  },
+  "611": {
+    "upstream_number": 611,
+    "new_pr_number": 266,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/266",
+    "title": "docs: add forgeo to projects"
+  },
+  "612": {
+    "upstream_number": 612,
+    "new_pr_number": 267,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/267",
+    "title": "docs: add Oh My Cassette to plugins"
+  },
+  "613": {
+    "upstream_number": 613,
+    "new_pr_number": 268,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/268",
+    "title": "Add opencode-prompt-suggester to plugins"
+  },
+  "614": {
+    "upstream_number": 614,
+    "new_pr_number": 269,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/269",
+    "title": "docs: add opencode-cursor to plugins"
+  },
+  "615": {
+    "upstream_number": 615,
+    "new_pr_number": 270,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/270",
+    "title": "Add rolecraft to projects"
+  },
+  "616": {
+    "upstream_number": 616,
+    "new_pr_number": 271,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/271",
+    "title": "docs: add opencode-roundtable to agents"
+  },
+  "617": {
+    "upstream_number": 617,
+    "new_pr_number": 272,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/272",
+    "title": "Add WaveSpeed Skill (AI media generation)"
+  },
+  "618": {
+    "upstream_number": 618,
+    "new_pr_number": 273,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/273",
+    "title": "docs: add opencode-autorecord to plugins"
+  },
+  "619": {
+    "upstream_number": 619,
+    "new_pr_number": 274,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/274",
+    "title": "docs: add MARGINAL to plugins"
+  },
+  "620": {
+    "upstream_number": 620,
+    "new_pr_number": 275,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/275",
+    "title": "docs: add aerovato-operator-memory to plugins"
+  },
+  "621": {
+    "upstream_number": 621,
+    "new_pr_number": 276,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/276",
+    "title": "docs: add repo-cover to resources"
+  },
+  "622": {
+    "upstream_number": 622,
+    "new_pr_number": 277,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/277",
+    "title": "docs: add opencode-async-prompt-injector to plugins"
+  },
+  "624": {
+    "upstream_number": 624,
+    "new_pr_number": 278,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/278",
+    "title": "Add opencode-copy-picker"
+  },
+  "625": {
+    "upstream_number": 625,
+    "new_pr_number": 279,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/279",
+    "title": "docs: add aGiTrack to projects"
+  },
+  "628": {
+    "upstream_number": 628,
+    "new_pr_number": 280,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/280",
+    "title": "docs: add opencode-session-cost to plugins"
+  },
+  "630": {
+    "upstream_number": 630,
+    "new_pr_number": 281,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/281",
+    "title": "docs: add ShipFrame to agents"
+  },
+  "631": {
+    "upstream_number": 631,
+    "new_pr_number": 282,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/282",
+    "title": "Add Chat Sidebar for OpenCode (VS Code extension) to Projects"
+  },
+  "632": {
+    "upstream_number": 632,
+    "new_pr_number": 283,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/283",
+    "title": "docs: add background-process and show-image plugins, replace archived opencode-background"
+  },
+  "634": {
+    "upstream_number": 634,
+    "new_pr_number": 284,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/284",
+    "title": "docs: add opencode-qoder-bridge to plugins"
+  },
+  "635": {
+    "upstream_number": 635,
+    "new_pr_number": 285,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/285",
+    "title": "Add dsh-movein to projects"
+  },
+  "636": {
+    "upstream_number": 636,
+    "new_pr_number": 286,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/286",
+    "title": "docs: add deja to plugins"
+  },
+  "637": {
+    "upstream_number": 637,
+    "new_pr_number": 287,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/287",
+    "title": "add dejavu \u2014 cross-session error-gate plugin"
+  },
+  "640": {
+    "upstream_number": 640,
+    "new_pr_number": 288,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/288",
+    "title": "docs: add opencode2-shell-tasks to plugins"
+  },
+  "642": {
+    "upstream_number": 642,
+    "new_pr_number": 289,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/289",
+    "title": "docs: add opencode-prewalk to plugins"
+  },
+  "645": {
+    "upstream_number": 645,
+    "new_pr_number": 290,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/290",
+    "title": "docs: add Stacktree to projects"
+  },
+  "647": {
+    "upstream_number": 647,
+    "new_pr_number": 291,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/291",
+    "title": "docs: add chronotile to projects"
+  },
+  "648": {
+    "upstream_number": 648,
+    "new_pr_number": 292,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/292",
+    "title": "docs: add OpenCode CN Deployment Guide to resources"
+  },
+  "649": {
+    "upstream_number": 649,
+    "new_pr_number": 293,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/293",
+    "title": "docs: add opencode-caelestia-notify to plugins"
+  },
+  "650": {
+    "upstream_number": 650,
+    "new_pr_number": 294,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/294",
+    "title": "docs: add Azdaja to projects"
+  },
+  "652": {
+    "upstream_number": 652,
+    "new_pr_number": 295,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/295",
+    "title": "docs: add topic-compaction to plugins"
+  },
+  "653": {
+    "upstream_number": 653,
+    "new_pr_number": 296,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/296",
+    "title": "Add godmode"
+  },
+  "654": {
+    "upstream_number": 654,
+    "new_pr_number": 297,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/297",
+    "title": "docs: add hivemind to projects"
+  },
+  "655": {
+    "upstream_number": 655,
+    "new_pr_number": 298,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/298",
+    "title": "docs: add Godmode to plugins"
+  },
+  "656": {
+    "upstream_number": 656,
+    "new_pr_number": 299,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/299",
+    "title": "Add opencode autopilot logbook"
+  },
+  "658": {
+    "upstream_number": 658,
+    "new_pr_number": 300,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/300",
+    "title": "docs: add openkrak MCP server to projects"
+  },
+  "659": {
+    "upstream_number": 659,
+    "new_pr_number": 301,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/301",
+    "title": "Add DashScope Imagegen plugin"
+  },
+  "660": {
+    "upstream_number": 660,
+    "new_pr_number": 302,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/302",
+    "title": "Add Image Reader Relay plugin"
+  },
+  "662": {
+    "upstream_number": 662,
+    "new_pr_number": 303,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/303",
+    "title": "docs: add Claude Skills Pro to resources"
+  },
+  "663": {
+    "upstream_number": 663,
+    "new_pr_number": 304,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/304",
+    "title": "docs: add esuyo-opencode-custom-provider to plugins"
+  },
+  "664": {
+    "upstream_number": 664,
+    "new_pr_number": 305,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/305",
+    "title": "docs: add Veris for Daytona, Veris for E2B, and Veris Sim to plugins"
+  },
+  "665": {
+    "upstream_number": 665,
+    "new_pr_number": 306,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/306",
+    "title": "docs: add opencode-model-alias to plugins"
+  },
+  "666": {
+    "upstream_number": 666,
+    "new_pr_number": 307,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/307",
+    "title": "docs: add scionwood to plugins"
+  },
+  "668": {
+    "upstream_number": 668,
+    "new_pr_number": 308,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/308",
+    "title": "Add heyGRC to plugins"
+  },
+  "669": {
+    "upstream_number": 669,
+    "new_pr_number": 309,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/309",
+    "title": "feat: add gentleman-agent-gh skills (R2-2 batch)"
+  },
+  "670": {
+    "upstream_number": 670,
+    "new_pr_number": 310,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/310",
+    "title": "docs: add OrcaReplay to projects"
+  },
+  "671": {
+    "upstream_number": 671,
+    "new_pr_number": 311,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/311",
+    "title": "docs: add opencode-craft to plugins"
+  },
+  "672": {
+    "upstream_number": 672,
+    "new_pr_number": 312,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/312",
+    "title": "docs: add opencode-startup-commands to plugins"
+  },
+  "673": {
+    "upstream_number": 673,
+    "new_pr_number": 313,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/313",
+    "title": "docs: add opencode-vise to plugins"
+  },
+  "674": {
+    "upstream_number": 674,
+    "new_pr_number": 314,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/314",
+    "title": "docs: add four opencode TUI plugins to plugins"
+  },
+  "675": {
+    "upstream_number": 675,
+    "new_pr_number": 315,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/315",
+    "title": "docs: add opencode-cmd-provider to plugins"
+  },
+  "676": {
+    "upstream_number": 676,
+    "new_pr_number": 316,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/316",
+    "title": "docs: add oh-my-agentmemory to plugins"
+  },
+  "677": {
+    "upstream_number": 677,
+    "new_pr_number": 317,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/317",
+    "title": "add rlm-opencode plugin"
+  },
+  "678": {
+    "upstream_number": 678,
+    "new_pr_number": 318,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/318",
+    "title": "docs: add opencode-sudo-popup to plugins"
+  },
+  "679": {
+    "upstream_number": 679,
+    "new_pr_number": 319,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/319",
+    "title": "docs: add opencode-usage to plugins"
+  },
+  "680": {
+    "upstream_number": 680,
+    "new_pr_number": 320,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/320",
+    "title": "Add llm-panel"
+  },
+  "681": {
+    "upstream_number": 681,
+    "new_pr_number": 321,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/321",
+    "title": "docs: add Bifrost to awesome-opencode projects"
+  },
+  "682": {
+    "upstream_number": 682,
+    "new_pr_number": 322,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/322",
+    "title": "docs: add Heym to projects"
+  },
+  "683": {
+    "upstream_number": 683,
+    "new_pr_number": 323,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/323",
+    "title": "docs: add cortex to projects"
+  },
+  "684": {
+    "upstream_number": 684,
+    "new_pr_number": 324,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/324",
+    "title": "docs: add opencode-ultra-setup to resources"
+  },
+  "685": {
+    "upstream_number": 685,
+    "new_pr_number": 325,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/325",
+    "title": "docs: add showagent to projects"
+  },
+  "686": {
+    "upstream_number": 686,
+    "new_pr_number": 326,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/326",
+    "title": "docs: add opencode-weknora to plugins"
+  },
+  "687": {
+    "upstream_number": 687,
+    "new_pr_number": 327,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/327",
+    "title": "docs: add Infiknit local MCP plugin"
+  },
+  "688": {
+    "upstream_number": 688,
+    "new_pr_number": 328,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/328",
+    "title": "docs: add TelegramCode to projects"
+  },
+  "689": {
+    "upstream_number": 689,
+    "new_pr_number": 329,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/329",
+    "title": "docs: add opencode-dashboard to projects"
+  },
+  "690": {
+    "upstream_number": 690,
+    "new_pr_number": 330,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/330",
+    "title": "Add oc-go-usage-display plugin"
+  },
+  "691": {
+    "upstream_number": 691,
+    "new_pr_number": 331,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/331",
+    "title": "docs: add opencode-fold-tools to plugins"
+  },
+  "692": {
+    "upstream_number": 692,
+    "new_pr_number": 332,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/332",
+    "title": "docs: add AllaiGate Model Router to plugins"
+  },
+  "693": {
+    "upstream_number": 693,
+    "new_pr_number": 333,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/333",
+    "title": "docs: add token-norm to plugins"
+  },
+  "694": {
+    "upstream_number": 694,
+    "new_pr_number": 334,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/334",
+    "title": "docs: add codemem to plugins"
+  },
+  "695": {
+    "upstream_number": 695,
+    "new_pr_number": 335,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/335",
+    "title": "docs: add ContextStream MCP to plugins"
+  },
+  "696": {
+    "upstream_number": 696,
+    "new_pr_number": 336,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/336",
+    "title": "docs: add Universal Agent Plugins"
+  },
+  "697": {
+    "upstream_number": 697,
+    "new_pr_number": 337,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/337",
+    "title": "docs: add Goblin OpenCode projects"
+  },
+  "699": {
+    "upstream_number": 699,
+    "new_pr_number": 338,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/338",
+    "title": "docs: add cognitive-lead-hq to projects"
+  },
+  "700": {
+    "upstream_number": 700,
+    "new_pr_number": 339,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/339",
+    "title": "docs: add opencode-cd to plugins"
+  },
+  "701": {
+    "upstream_number": 701,
+    "new_pr_number": 340,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/340",
+    "title": "Add opencode-memd plugin"
+  },
+  "703": {
+    "upstream_number": 703,
+    "new_pr_number": 341,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/341",
+    "title": "docs: add Infer client examples to resources"
+  },
+  "705": {
+    "upstream_number": 705,
+    "new_pr_number": 342,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/342",
+    "title": "docs: add opencode-kevin to plugins"
+  },
+  "706": {
+    "upstream_number": 706,
+    "new_pr_number": 343,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/343",
+    "title": "docs: add myc to projects"
+  },
+  "707": {
+    "upstream_number": 707,
+    "new_pr_number": 344,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/344",
+    "title": "docs: add opencode-shield-bash to plugins"
+  },
+  "708": {
+    "upstream_number": 708,
+    "new_pr_number": 345,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/345",
+    "title": "docs: add squirrelscan to projects"
+  },
+  "709": {
+    "upstream_number": 709,
+    "new_pr_number": 346,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/346",
+    "title": "Add dsh-skills-anywhere"
+  },
+  "710": {
+    "upstream_number": 710,
+    "new_pr_number": 347,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/347",
+    "title": "docs: add shunt-digest to plugins"
+  },
+  "711": {
+    "upstream_number": 711,
+    "new_pr_number": 348,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/348",
+    "title": "docs: add axi-memory to projects"
+  },
+  "712": {
+    "upstream_number": 712,
+    "new_pr_number": 349,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/349",
+    "title": "docs: add Total Session Cost Tracker to plugins"
+  },
+  "713": {
+    "upstream_number": 713,
+    "new_pr_number": 350,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/350",
+    "title": "Add Professor"
+  },
+  "715": {
+    "upstream_number": 715,
+    "new_pr_number": 351,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/351",
+    "title": "docs: add opencode-idea-inbox"
+  },
+  "716": {
+    "upstream_number": 716,
+    "new_pr_number": 352,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/352",
+    "title": "docs: add calyx to projects"
+  },
+  "717": {
+    "upstream_number": 717,
+    "new_pr_number": 353,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/353",
+    "title": "Add opencode-agent-factory-plugin"
+  },
+  "719": {
+    "upstream_number": 719,
+    "new_pr_number": 354,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/354",
+    "title": "docs: add mimocode-theme to themes"
+  },
+  "720": {
+    "upstream_number": 720,
+    "new_pr_number": 355,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/355",
+    "title": "Add HostDeFi token-safety scanner"
+  },
+  "721": {
+    "upstream_number": 721,
+    "new_pr_number": 356,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/356",
+    "title": "feat: add OpenCOOP - real-time team collaboration plugin"
+  },
+  "722": {
+    "upstream_number": 722,
+    "new_pr_number": 357,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/357",
+    "title": "Add oos: find any session across all projects and resume instantly"
+  },
+  "723": {
+    "upstream_number": 723,
+    "new_pr_number": 358,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/358",
+    "title": "docs: add omo-vision to plugins"
+  },
+  "724": {
+    "upstream_number": 724,
+    "new_pr_number": 359,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/359",
+    "title": "docs: add opencode-status-popup to plugins"
+  },
+  "725": {
+    "upstream_number": 725,
+    "new_pr_number": 360,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/360",
+    "title": "docs: add circadian to plugins"
+  },
+  "726": {
+    "upstream_number": 726,
+    "new_pr_number": 361,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/361",
+    "title": "docs: add opencode-multi-usage to plugins"
+  },
+  "727": {
+    "upstream_number": 727,
+    "new_pr_number": 362,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/362",
+    "title": "docs: add muse-auth to plugins"
+  },
+  "728": {
+    "upstream_number": 728,
+    "new_pr_number": 363,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/363",
+    "title": "Add opencode-chrome-annotation"
+  },
+  "729": {
+    "upstream_number": 729,
+    "new_pr_number": 364,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/364",
+    "title": "docs: add opencode-mlflow-plugin to plugins"
+  },
+  "730": {
+    "upstream_number": 730,
+    "new_pr_number": 365,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/365",
+    "title": "docs: add opencode-mempalace-persistence plugin"
+  },
+  "731": {
+    "upstream_number": 731,
+    "new_pr_number": 366,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/366",
+    "title": "docs: add Mnemoverse to projects"
+  },
+  "732": {
+    "upstream_number": 732,
+    "new_pr_number": 367,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/367",
+    "title": "docs: point Agent Memory to maintained repository"
+  },
+  "733": {
+    "upstream_number": 733,
+    "new_pr_number": 368,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/368",
+    "title": "docs: add Agent Run Inspector to projects"
+  },
+  "734": {
+    "upstream_number": 734,
+    "new_pr_number": 369,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/369",
+    "title": "docs: add opencode-material-theme to theme"
+  },
+  "735": {
+    "upstream_number": 735,
+    "new_pr_number": 370,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/370",
+    "title": "docs: add opencode-dictate to plugins"
+  },
+  "736": {
+    "upstream_number": 736,
+    "new_pr_number": 371,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/371",
+    "title": "docs: add SCVD General Store integration"
+  },
+  "737": {
+    "upstream_number": 737,
+    "new_pr_number": 372,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/372",
+    "title": "docs: add opencode-ocsm to projects"
+  },
+  "738": {
+    "upstream_number": 738,
+    "new_pr_number": 373,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/373",
+    "title": "docs: add opencode-browser-output to plugins"
+  },
+  "739": {
+    "upstream_number": 739,
+    "new_pr_number": 374,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/374",
+    "title": "docs: add agent-workbench to projects"
+  },
+  "740": {
+    "upstream_number": 740,
+    "new_pr_number": 375,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/375",
+    "title": "docs: add opencode-mesh to plugins"
+  },
+  "741": {
+    "upstream_number": 741,
+    "new_pr_number": 376,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/376",
+    "title": "docs: add BytesBrains Cruise plugin"
+  },
+  "742": {
+    "upstream_number": 742,
+    "new_pr_number": 377,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/377",
+    "title": "docs: add opencode-toast-history to plugins"
+  },
+  "743": {
+    "upstream_number": 743,
+    "new_pr_number": 378,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/378",
+    "title": "docs: add opencode-auto-todos to plugins"
+  },
+  "744": {
+    "upstream_number": 744,
+    "new_pr_number": 379,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/379",
+    "title": "docs: add laya-drift to plugins"
+  },
+  "745": {
+    "upstream_number": 745,
+    "new_pr_number": 380,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/380",
+    "title": "docs: add opencode-cache-compact to plugins"
+  },
+  "746": {
+    "upstream_number": 746,
+    "new_pr_number": 381,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/381",
+    "title": "docs: add plain to plugins"
+  },
+  "747": {
+    "upstream_number": 747,
+    "new_pr_number": 382,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/382",
+    "title": "docs: add OpenCode TUI Context plugin"
+  },
+  "748": {
+    "upstream_number": 748,
+    "new_pr_number": 383,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/383",
+    "title": "docs: add agent-sessions to projects"
+  },
+  "749": {
+    "upstream_number": 749,
+    "new_pr_number": 384,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/384",
+    "title": "docs: add Stay Awake to plugins"
+  },
+  "750": {
+    "upstream_number": 750,
+    "new_pr_number": 385,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/385",
+    "title": "docs: add Baizhi MCP resource"
+  },
+  "751": {
+    "upstream_number": 751,
+    "new_pr_number": 386,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/386",
+    "title": "docs: add Stay Awake to plugins"
+  },
+  "752": {
+    "upstream_number": 752,
+    "new_pr_number": 387,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/387",
+    "title": "docs: add MetaMask Agent Wallet to projects"
+  },
+  "753": {
+    "upstream_number": 753,
+    "new_pr_number": 388,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/388",
+    "title": "docs: add Jev Router to plugins"
+  },
+  "754": {
+    "upstream_number": 754,
+    "new_pr_number": 389,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/389",
+    "title": "docs: add opencode-dynamic-workflows to plugins"
+  },
+  "755": {
+    "upstream_number": 755,
+    "new_pr_number": 390,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/390",
+    "title": "docs: add Jev Social resource"
+  },
+  "756": {
+    "upstream_number": 756,
+    "new_pr_number": 391,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/391",
+    "title": "docs: add telepathy to plugins"
+  },
+  "758": {
+    "upstream_number": 758,
+    "new_pr_number": 392,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/392",
+    "title": "docs: add Sabi adaptive inference router"
+  },
+  "759": {
+    "upstream_number": 759,
+    "new_pr_number": 393,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/393",
+    "title": "docs: add ocm to projects"
+  },
+  "760": {
+    "upstream_number": 760,
+    "new_pr_number": 394,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/394",
+    "title": "docs: add opencode-session-tools to plugins"
+  },
+  "761": {
+    "upstream_number": 761,
+    "new_pr_number": 395,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/395",
+    "title": "Add OpenMate: offline-first Android client for opencode"
+  },
+  "762": {
+    "upstream_number": 762,
+    "new_pr_number": 396,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/396",
+    "title": "Add Free Models Router plugin"
+  },
+  "764": {
+    "upstream_number": 764,
+    "new_pr_number": 397,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/397",
+    "title": "docs: add DataCloak to plugins"
+  },
+  "765": {
+    "upstream_number": 765,
+    "new_pr_number": 398,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/398",
+    "title": "Add Timeline Viewer plugin"
+  },
+  "766": {
+    "upstream_number": 766,
+    "new_pr_number": 399,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/399",
+    "title": "Repair and simplify the Kibi plugin listing"
+  },
+  "767": {
+    "upstream_number": 767,
+    "new_pr_number": 400,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/400",
+    "title": "docs: add opencode-workflows to plugins"
+  },
+  "768": {
+    "upstream_number": 768,
+    "new_pr_number": 401,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/401",
+    "title": "docs: add aftermath to plugins"
+  },
+  "769": {
+    "upstream_number": 769,
+    "new_pr_number": 402,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/402",
+    "title": "Add OpenCode Crosstalk to plugins"
+  },
+  "770": {
+    "upstream_number": 770,
+    "new_pr_number": 403,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/403",
+    "title": "Add SpringBrand to projects"
+  },
+  "771": {
+    "upstream_number": 771,
+    "new_pr_number": 404,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/404",
+    "title": "docs: add four aiev plugins"
+  },
+  "772": {
+    "upstream_number": 772,
+    "new_pr_number": 405,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/405",
+    "title": "Add opencode-memento to plugins"
+  },
+  "773": {
+    "upstream_number": 773,
+    "new_pr_number": 406,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/406",
+    "title": "Add OpenCode Vitals to plugins"
+  },
+  "774": {
+    "upstream_number": 774,
+    "new_pr_number": 407,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/407",
+    "title": "docs: add opencode-seatbelt to plugins"
+  },
+  "776": {
+    "upstream_number": 776,
+    "new_pr_number": 408,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/408",
+    "title": "docs: add ultraopen to plugins"
+  },
+  "778": {
+    "upstream_number": 778,
+    "new_pr_number": 409,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/409",
+    "title": "docs: add Aide to projects"
+  },
+  "779": {
+    "upstream_number": 779,
+    "new_pr_number": 410,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/410",
+    "title": "docs: add aegis-devops to plugins"
+  },
+  "780": {
+    "upstream_number": 780,
+    "new_pr_number": 411,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/411",
+    "title": "Add Kortix (open-source AI Management System, harness powered by OpenCode) to PROJECTS"
+  },
+  "781": {
+    "upstream_number": 781,
+    "new_pr_number": 412,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/412",
+    "title": "docs: add opencode-skills-autocomplete to plugins"
+  },
+  "782": {
+    "upstream_number": 782,
+    "new_pr_number": 413,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/413",
+    "title": "docs: add Kranz MCP integration"
+  },
+  "785": {
+    "upstream_number": 785,
+    "new_pr_number": 414,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/414",
+    "title": "docs: add duplex to projects"
+  },
+  "786": {
+    "upstream_number": 786,
+    "new_pr_number": 415,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/415",
+    "title": "docs: add opencode-dir-tree-tui to plugins"
+  },
+  "787": {
+    "upstream_number": 787,
+    "new_pr_number": 416,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/416",
+    "title": "docs: add opencode-skills-tui to plugins"
+  },
+  "788": {
+    "upstream_number": 788,
+    "new_pr_number": 417,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/417",
+    "title": "docs: add agent-manager to projects"
+  },
+  "789": {
+    "upstream_number": 789,
+    "new_pr_number": 418,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/418",
+    "title": "docs: add OpenCode Sentry (Android alerts) to projects"
+  },
+  "790": {
+    "upstream_number": 790,
+    "new_pr_number": 419,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/419",
+    "title": "docs: add opencode-headroom-plugin to plugins"
+  },
+  "793": {
+    "upstream_number": 793,
+    "new_pr_number": 420,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/420",
+    "title": "add: SRO (Security Research Orchestrator) to plugins"
+  },
+  "794": {
+    "upstream_number": 794,
+    "new_pr_number": 421,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/421",
+    "title": "docs: add dotpals to projects"
+  },
+  "795": {
+    "upstream_number": 795,
+    "new_pr_number": 422,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/422",
+    "title": "docs: add claudex-switch to projects"
+  },
+  "796": {
+    "upstream_number": 796,
+    "new_pr_number": 423,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/423",
+    "title": "docs: add opencode-docker-panel to plugins"
+  },
+  "797": {
+    "upstream_number": 797,
+    "new_pr_number": 424,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/424",
+    "title": "docs: add opencode-serpapi to plugins"
+  },
+  "798": {
+    "upstream_number": 798,
+    "new_pr_number": 425,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/425",
+    "title": "Add Aevral (AI security review for pull requests)"
+  },
+  "799": {
+    "upstream_number": 799,
+    "new_pr_number": 426,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/426",
+    "title": "docs: add sdlc-assist to projects"
+  },
+  "800": {
+    "upstream_number": 800,
+    "new_pr_number": 427,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/427",
+    "title": "docs: add jes to plugins"
+  },
+  "801": {
+    "upstream_number": 801,
+    "new_pr_number": 428,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/428",
+    "title": "docs: add PriceWin to projects"
+  },
+  "802": {
+    "upstream_number": 802,
+    "new_pr_number": 429,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/429",
+    "title": "docs: add gutchapa-opencode-telegram to projects"
+  },
+  "803": {
+    "upstream_number": 803,
+    "new_pr_number": 430,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/430",
+    "title": "docs: add herdr-reviewr to projects"
+  },
+  "804": {
+    "upstream_number": 804,
+    "new_pr_number": 431,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/431",
+    "title": "docs: add caprock to projects"
+  },
+  "805": {
+    "upstream_number": 805,
+    "new_pr_number": 432,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/432",
+    "title": "docs: add session-title, worktree-tools and backslash-newline plugins"
+  },
+  "806": {
+    "upstream_number": 806,
+    "new_pr_number": 433,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/433",
+    "title": "docs: add telemetry.dev OpenCode plugin"
+  },
+  "807": {
+    "upstream_number": 807,
+    "new_pr_number": 434,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/434",
+    "title": "docs: add opencode-secrets-env to plugins"
+  },
+  "808": {
+    "upstream_number": 808,
+    "new_pr_number": 435,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/435",
+    "title": "docs: add crit to projects"
+  },
+  "809": {
+    "upstream_number": 809,
+    "new_pr_number": 436,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/436",
+    "title": "docs: add open-memex to plugins"
+  },
+  "810": {
+    "upstream_number": 810,
+    "new_pr_number": 437,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/437",
+    "title": "docs: add opencode-shortcuts and opencode-background-tasks to plugins"
+  },
+  "811": {
+    "upstream_number": 811,
+    "new_pr_number": 438,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/438",
+    "title": "docs: add read-aloud plugin"
+  },
+  "812": {
+    "upstream_number": 812,
+    "new_pr_number": 439,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/439",
+    "title": "docs: add cliproxy-rs to projects"
+  },
+  "813": {
+    "upstream_number": 813,
+    "new_pr_number": 440,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/440",
+    "title": "docs: add lazy-clean to plugins"
+  },
+  "814": {
+    "upstream_number": 814,
+    "new_pr_number": 441,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/441",
+    "title": "Add OpenCode Model Aliases plugin configuration"
+  },
+  "815": {
+    "upstream_number": 815,
+    "new_pr_number": 442,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/442",
+    "title": "docs: add OpenCode Model Router to plugins"
+  },
+  "816": {
+    "upstream_number": 816,
+    "new_pr_number": 443,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/443",
+    "title": "Add opencode-voice plugin"
+  },
+  "817": {
+    "upstream_number": 817,
+    "new_pr_number": 444,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/444",
+    "title": "docs(plugins): add opencode-mempalace-persistence YAML + refresh its entry"
+  },
+  "818": {
+    "upstream_number": 818,
+    "new_pr_number": 445,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/445",
+    "title": "docs: add Foreman to projects"
+  },
+  "819": {
+    "upstream_number": 819,
+    "new_pr_number": 446,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/446",
+    "title": "Add clm-context \u2014 CLM self-managed context plugin for opencode"
+  },
+  "820": {
+    "upstream_number": 820,
+    "new_pr_number": 447,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/447",
+    "title": "docs: add mrscraper to plugins"
+  },
+  "821": {
+    "upstream_number": 821,
+    "new_pr_number": 448,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/448",
+    "title": "docs: add assay to projects"
+  },
+  "822": {
+    "upstream_number": 822,
+    "new_pr_number": 449,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/449",
+    "title": "docs: add Ritemark to projects"
+  },
+  "823": {
+    "upstream_number": 823,
+    "new_pr_number": 450,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/450",
+    "title": "Add OpenRouter Websearch to plugins"
+  },
+  "824": {
+    "upstream_number": 824,
+    "new_pr_number": 451,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/451",
+    "title": "docs: add opencode-provider-guard to plugins"
+  },
+  "827": {
+    "upstream_number": 827,
+    "new_pr_number": 452,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/452",
+    "title": "docs: add magents to projects"
+  },
+  "828": {
+    "upstream_number": 828,
+    "new_pr_number": 453,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/453",
+    "title": "docs: add Dialbot MCP to projects"
+  },
+  "829": {
+    "upstream_number": 829,
+    "new_pr_number": 454,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/454",
+    "title": "docs: add homie to plugins"
+  },
+  "830": {
+    "upstream_number": 830,
+    "new_pr_number": 455,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/455",
+    "title": "docs: add /call-me to projects"
+  },
+  "831": {
+    "upstream_number": 831,
+    "new_pr_number": 456,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/456",
+    "title": "Add opencode-indexing: semantic code search (reuses Kilo Code index)"
+  },
+  "832": {
+    "upstream_number": 832,
+    "new_pr_number": 457,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/457",
+    "title": "docs: add Geneseed to projects"
+  },
+  "833": {
+    "upstream_number": 833,
+    "new_pr_number": 458,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/458",
+    "title": "docs: add yoink to projects"
+  },
+  "834": {
+    "upstream_number": 834,
+    "new_pr_number": 459,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/459",
+    "title": "docs: add nsq to projects"
+  },
+  "835": {
+    "upstream_number": 835,
+    "new_pr_number": 460,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/460",
+    "title": "docs: add Agent Relay plugin"
+  },
+  "836": {
+    "upstream_number": 836,
+    "new_pr_number": 461,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/461",
+    "title": "docs: add tapetide-mcp to resources"
+  },
+  "837": {
+    "upstream_number": 837,
+    "new_pr_number": 462,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/462",
+    "title": "docs: add Faber to projects"
+  },
+  "838": {
+    "upstream_number": 838,
+    "new_pr_number": 463,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/463",
+    "title": "docs: add opencode-daily-journal (plugins)"
+  },
+  "839": {
+    "upstream_number": 839,
+    "new_pr_number": 464,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/464",
+    "title": "docs: add looot MCP config to resources"
+  },
+  "840": {
+    "upstream_number": 840,
+    "new_pr_number": 465,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/465",
+    "title": "docs: add opencode-session-time to plugins"
+  },
+  "841": {
+    "upstream_number": 841,
+    "new_pr_number": 466,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/466",
+    "title": "Add OpenWork for OpenCode plugin"
+  },
+  "842": {
+    "upstream_number": 842,
+    "new_pr_number": 467,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/467",
+    "title": "docs: add opencode-topics to plugins"
+  },
+  "843": {
+    "upstream_number": 843,
+    "new_pr_number": 468,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/468",
+    "title": "Add OpenCode Teamwork \u2014 multi-agent orchestration plugin"
+  },
+  "844": {
+    "upstream_number": 844,
+    "new_pr_number": 469,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/469",
+    "title": "docs: add OpenCode Custom Providers to plugins"
+  },
+  "845": {
+    "upstream_number": 845,
+    "new_pr_number": 470,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/470",
+    "title": "docs: update opencode-mem description"
+  },
+  "846": {
+    "upstream_number": 846,
+    "new_pr_number": 471,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/471",
+    "title": "docs: add listen-stt and speak-tts to plugins"
+  },
+  "847": {
+    "upstream_number": 847,
+    "new_pr_number": 472,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/472",
+    "title": "docs: add opencode-mobile to projects"
+  },
+  "848": {
+    "upstream_number": 848,
+    "new_pr_number": 473,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/473",
+    "title": "docs: add vsc-opencode-gui to projects"
+  },
+  "849": {
+    "upstream_number": 849,
+    "new_pr_number": 474,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/474",
+    "title": "Add OpenCode Version Footer plugin"
+  },
+  "850": {
+    "upstream_number": 850,
+    "new_pr_number": 475,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/475",
+    "title": "docs: add swe-mux to projects"
+  },
+  "851": {
+    "upstream_number": 851,
+    "new_pr_number": 476,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/476",
+    "title": "Create opencode-pre-tool-review.yaml for plugin"
+  },
+  "852": {
+    "upstream_number": 852,
+    "new_pr_number": 477,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/477",
+    "title": "docs: add opencode-scratchpad to plugins"
+  },
+  "853": {
+    "upstream_number": 853,
+    "new_pr_number": 478,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/478",
+    "title": "docs: add opencode-go-whoami to plugins"
+  },
+  "854": {
+    "upstream_number": 854,
+    "new_pr_number": 479,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/479",
+    "title": "docs: add solenta to projects"
+  },
+  "855": {
+    "upstream_number": 855,
+    "new_pr_number": 480,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/480",
+    "title": "docs: add employed to projects"
+  },
+  "857": {
+    "upstream_number": 857,
+    "new_pr_number": 481,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/481",
+    "title": "Add opencode-rust to projects"
+  },
+  "860": {
+    "upstream_number": 860,
+    "new_pr_number": 482,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/482",
+    "title": "Update froggy.yaml"
+  },
+  "861": {
+    "upstream_number": 861,
+    "new_pr_number": 483,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/483",
+    "title": "docs: add Pixeltable MCP resource"
+  },
+  "862": {
+    "upstream_number": 862,
+    "new_pr_number": 484,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/484",
+    "title": "Add Secret Scrubber plugin"
+  },
+  "863": {
+    "upstream_number": 863,
+    "new_pr_number": 485,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/485",
+    "title": "docs: add opencode-safety-gates to plugins"
+  },
+  "864": {
+    "upstream_number": 864,
+    "new_pr_number": 486,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/486",
+    "title": "docs: add Quota Board plugin for OpenCode V2"
+  },
+  "865": {
+    "upstream_number": 865,
+    "new_pr_number": 487,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/487",
+    "title": "Add OpenChamber Design Studio to projects"
+  },
+  "866": {
+    "upstream_number": 866,
+    "new_pr_number": 488,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/488",
+    "title": "docs: add opencode-ask to plugins"
+  },
+  "867": {
+    "upstream_number": 867,
+    "new_pr_number": 489,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/489",
+    "title": "docs: add llm-roundtable to agents"
+  },
+  "869": {
+    "upstream_number": 869,
+    "new_pr_number": 490,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/490",
+    "title": "docs: add opencode-stats-pills to plugins"
+  },
+  "870": {
+    "upstream_number": 870,
+    "new_pr_number": 491,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/491",
+    "title": "docs: add Agent Nexus to projects"
+  },
+  "871": {
+    "upstream_number": 871,
+    "new_pr_number": 492,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/492",
+    "title": "docs: add pdca-skills to agents"
+  },
+  "872": {
+    "upstream_number": 872,
+    "new_pr_number": 493,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/493",
+    "title": "docs: add agentledger to projects"
+  },
+  "873": {
+    "upstream_number": 873,
+    "new_pr_number": 494,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/494",
+    "title": "docs: add opencode-tg to plugins"
+  },
+  "874": {
+    "upstream_number": 874,
+    "new_pr_number": 495,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/495",
+    "title": "Add opencode-awake, opencode-cost-details and opencode-prs plugins"
+  },
+  "875": {
+    "upstream_number": 875,
+    "new_pr_number": 496,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/496",
+    "title": "Add Openhook callback inbox for OpenCode"
+  },
+  "876": {
+    "upstream_number": 876,
+    "new_pr_number": 497,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/497",
+    "title": "docs: add opencode-unlimited-proxy to projects"
+  },
+  "877": {
+    "upstream_number": 877,
+    "new_pr_number": 498,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/498",
+    "title": "docs: add JustSessions to projects"
+  },
+  "879": {
+    "upstream_number": 879,
+    "new_pr_number": 499,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/499",
+    "title": "docs: add chisle to plugins"
+  },
+  "880": {
+    "upstream_number": 880,
+    "new_pr_number": 500,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/500",
+    "title": "docs: add superlocalmemory to projects"
+  },
+  "881": {
+    "upstream_number": 881,
+    "new_pr_number": 501,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/501",
+    "title": "Add OpenCode Todo Supervisor to plugins"
+  },
+  "882": {
+    "upstream_number": 882,
+    "new_pr_number": 502,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/502",
+    "title": "Add OpenCode Autocompact to plugins"
+  },
+  "883": {
+    "upstream_number": 883,
+    "new_pr_number": 503,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/503",
+    "title": "Add plugins: opencode-goal, opencode-vision, opencode-worktrees, opencode-orchestrator"
+  },
+  "884": {
+    "upstream_number": 884,
+    "new_pr_number": 504,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/504",
+    "title": "docs: add SourcePier to plugins"
+  },
+  "885": {
+    "upstream_number": 885,
+    "new_pr_number": 505,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/505",
+    "title": "docs: add keep-going to plugins"
+  },
+  "886": {
+    "upstream_number": 886,
+    "new_pr_number": 506,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/506",
+    "title": "docs: add lore to plugins"
+  },
+  "887": {
+    "upstream_number": 887,
+    "new_pr_number": 507,
+    "pr_url": "https://github.com/Heretek-AI/awesome-opencode/pull/507",
+    "title": "docs: add growth-architect-foundry to projects"
+  }
+}

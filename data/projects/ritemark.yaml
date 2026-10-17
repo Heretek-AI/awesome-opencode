@@ -1,0 +1,15 @@
+name: Ritemark
+repo: https://github.com/ProductoryHQ/ritemark-native
+homepage: https://ritemark.app
+tagline: Markdown writing app for macOS and Windows where OpenCode works directly in your local documents.
+description: Open-source (MIT) desktop writing app with a visual editor for plain Markdown files in a folder on your computer. OpenCode, with your own API keys, is one of its built-in agents (beside Claude Code and Codex) and edits the documents in place, with a built-in terminal beside the document. Each window is one folder with its own conversations, AGENTS.md, agents and skills. Mermaid and draw.io diagrams, and export to Word and PDF.
+kind: client
+topics:
+  - docs
+  - ui
+compat: n/a
+tags:
+  - desktop
+  - markdown
+  - writing
+  - gui
