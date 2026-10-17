@@ -1,0 +1,8 @@
+name: opencode-voice
+repo: https://github.com/vaibhavgupta0786/opencode-voice
+tagline: Local-only push-to-talk dictation for OpenCode. Press F9, speak, press F9
+description: Press F9, talk (pauses welcome), press F9 again — takes accumulate into a per-session editable draft, then send everything as one prompt. Local whisper transcription (mlx on Apple Silicon), bundled mic recorders, edit-before-send review dialog, STT health indicator, and a recovery skill. No cloud, no temp audio files, no auto-send, no permission answering.
+kind: plugin
+topics:
+  - voice
+compat: v2

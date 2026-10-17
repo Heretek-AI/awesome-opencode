@@ -953,15 +953,6 @@ startup.
 </details>
 
 <details>
-  <summary><b>opencode-voice</b> <img src="https://badgen.net/github/stars/vaibhavgupta0786/opencode-voice" height="14"/> - <i>Local-only push-to-talk dictation for OpenCode. Press F9, speak, press F9</i></summary>
-  <blockquote>
-    Press F9, talk (pauses welcome), press F9 again — takes accumulate into a per-session editable draft, then send everything as one prompt. Local whisper transcription (mlx on Apple Silicon), bundled mic recorders, edit-before-send review dialog, STT health indicator, and a recovery skill. No cloud, no temp audio files, no auto-send, no permission answering.
-    <br><br>
-    <a href="https://github.com/vaibhavgupta0786/opencode-voice">🔗 <b>View Repository</b></a>
-  </blockquote>
-</details>
-
-<details>
   <summary><b>OpenCodeRAG</b> <img src="https://badgen.net/github/stars/MrDoe/OpenCodeRAG" height="14"/> - <i>Local-first RAG plugin for semantic code search with tree-sitter chunking and LanceDB</i></summary>
   <blockquote>
     A local-first Retrieval-Augmented Generation plugin for OpenCode that enables semantic code
