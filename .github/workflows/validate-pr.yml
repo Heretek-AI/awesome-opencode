@@ -1,39 +1,59 @@
-name: Validate PR YAML Files
+# The required "validate" status check. Runs on every PR (including README-only and non-data PRs, so
+# hand edits to generated files get feedback). Runs on PRs opened by github-actions[bot] are held for
+# approval by GitHub; the bot workflows approve their own. workflow_dispatch is for manual runs.
+name: Validate PR
 
 on:
   pull_request:
-    paths:
-      - 'data/**'
+  workflow_dispatch:
 
 permissions:
   contents: read
 
+concurrency:
+  group: validate-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
 jobs:
   validate:
+    name: validate
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+          persist-credentials: false
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
-          node-version: '20'
+          node-version: '24'
+          cache: npm
 
       - name: Install dependencies
-        run: npm ci
+        run: npm ci --ignore-scripts
 
-      - name: Get changed YAML files
-        id: changed-files
-        uses: tj-actions/changed-files@v44
-        with:
-          files: |
-            data/**/*.yaml
+      - name: Unit tests
+        run: npm test
 
-      - name: Validate YAML files
+      - name: Check catalog changes
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          # Compare against the current base branch, not pull_request.base.sha: on an older PR that is the base
+          # commit from when the PR was opened, which would count everything merged since as part of the PR
+          BASE_REF: origin/${{ github.event.pull_request.base.ref || 'main' }}
+          # Only the README bot's own PRs (opened by github-actions[bot] from this repo's bot/readme-* branches)
+          # may change the generated files
+          ALLOW_GENERATED: ${{ github.event_name == 'pull_request' && github.event.pull_request.user.login == 'github-actions[bot]' && github.event.pull_request.head.repo.full_name == github.repository && startsWith(github.head_ref, 'bot/readme-') }}
         run: |
-          if [[ -n "${{ steps.changed-files.outputs.all_changed_files }}" ]]; then
-            node scripts/validate.js ${{ steps.changed-files.outputs.all_changed_files }}
+          if [ "$ALLOW_GENERATED" = "true" ]; then
+            node scripts/check-pr.js --base "$BASE_REF" --allow-generated
           else
-            echo "No YAML files changed, skipping validation"
+            node scripts/check-pr.js --base "$BASE_REF"
           fi
+
+      - name: README and registry still generate
+        run: |
+          node scripts/generate-readme.js
+          node scripts/export-json.js --output "$RUNNER_TEMP/registry.json"

@@ -2,3 +2,8 @@ name: Smart Voice Notify
 repo: https://github.com/MasuRii/opencode-smart-voice-notify
 tagline: Intelligent voice notifications
 description: Smart voice notification plugin with multiple TTS engines (ElevenLabs, Edge TTS, SAPI) and intelligent reminder system.
+kind: plugin
+topics:
+  - notifications
+  - voice
+compat: v1

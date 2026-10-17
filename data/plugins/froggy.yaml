@@ -1,4 +1,8 @@
 name: Froggy
 repo: https://github.com/smartfrog/opencode-froggy
-tagline: Hooks and specialized agents
-description: Plugin providing Claude Code-style hooks, specialized agents, and tools like gitingest.
+tagline: XP-guided multi-agent orchestration
+description: Multi-agent delegation and orchestration guided by XP, KISS, and YAGNI, with specialized agents, independent code review, and a persistent loop to keep work moving toward the objective.
+kind: plugin
+topics:
+  - orchestration
+compat: v2

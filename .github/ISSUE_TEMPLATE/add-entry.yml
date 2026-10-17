@@ -1,0 +1,134 @@
+name: Add an entry
+description: Submit a plugin, theme, agent, project or resource. A bot validates it and opens the pull request for you.
+title: "Add: "
+labels: ["submission"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Fill in the fields below; you never have to write YAML or touch the README. A bot checks the entry within a minute, comments here, and opens a pull request when it passes. Edit this issue to fix anything it reports.
+
+        **Plugins must be built on OpenCode V2**: depend on `@opencode/plugin` and export `Plugin.define({ id, setup(ctx) })`. The check reads your package.json (or npm package) to verify this. See the [catalog policy](https://github.com/Heretek-AI/awesome-opencode/blob/main/docs/policy.md).
+  - type: input
+    id: name
+    attributes:
+      label: Name
+      description: Display name (max 80 characters).
+      placeholder: Quota Board
+    validations:
+      required: true
+  - type: input
+    id: repo
+    attributes:
+      label: Repository URL
+      description: The repository root, e.g. https://github.com/owner/repo. For a package inside a monorepo, use the next field for its folder.
+      placeholder: https://github.com/owner/repo
+    validations:
+      required: true
+  - type: input
+    id: path
+    attributes:
+      label: Folder inside the repository
+      description: Only for monorepos, e.g. packages/my-plugin.
+  - type: input
+    id: npm
+    attributes:
+      label: npm package
+      description: The package users install, if any (e.g. opencode-my-plugin). Strongly recommended for plugins.
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - plugins
+        - themes
+        - agents
+        - projects
+        - resources
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind
+      description: "plugins → plugin; themes → theme; agents → agent or skill; projects → client, tool, mcp-server, skill, agent or fork; resources → guide, config, mcp-server, skill or tool."
+      options:
+        - plugin
+        - theme
+        - agent
+        - skill
+        - mcp-server
+        - client
+        - tool
+        - config
+        - guide
+        - fork
+    validations:
+      required: true
+  - type: dropdown
+    id: topics
+    attributes:
+      label: Topics
+      description: Pick 1 to 3. The first one decides where it appears in the README.
+      multiple: true
+      options:
+        - memory
+        - context
+        - orchestration
+        - workflow
+        - providers
+        - cost
+        - notifications
+        - sessions
+        - code-quality
+        - security
+        - git
+        - remote
+        - web
+        - ui
+        - voice
+        - media
+        - docs
+        - environment
+        - observability
+        - integrations
+        - code-intel
+        - prompting
+        - domain
+    validations:
+      required: true
+  - type: input
+    id: tagline
+    attributes:
+      label: Tagline
+      description: One short line, max 120 characters.
+      placeholder: Provider quotas and reset countdowns in the OpenCode sidebar
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What it does and why it's useful (max 1500 characters).
+    validations:
+      required: true
+  - type: input
+    id: homepage
+    attributes:
+      label: Documentation URL
+      description: Only if the docs live somewhere other than the repository.
+  - type: textarea
+    id: installation
+    attributes:
+      label: Installation
+      description: Optional short install snippet (markdown).
+      render: markdown
+  - type: checkboxes
+    id: policy
+    attributes:
+      label: Checklist
+      options:
+        - label: The repository is public and maintained by me or the project I'm representing, or I'm a user recommending it.
+          required: true
+        - label: It is not a cryptocurrency, token, or trading project (these are not accepted).
+          required: true

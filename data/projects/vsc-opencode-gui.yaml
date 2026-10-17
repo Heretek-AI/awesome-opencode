@@ -1,0 +1,19 @@
+name: VSC OpenCode GUI
+repo: https://github.com/chinese-room-solutions/vsc-opencode-gui
+tagline: The opencode agent, native in VS Code - chat in an editor tab instead of a terminal
+description: A VS Code extension that runs the opencode agent in an editor tab with command-palette parity and full theme sync. It spawns a headless `opencode serve` and drives it with its own webview UI over HTTP/SSE - feature parity with the opencode app, without leaving the editor.
+kind: client
+topics:
+  - ui
+  - environment
+compat: n/a
+tags:
+  - vscode
+  - extension
+  - gui
+  - chat
+installation: |
+  Install from the VS Code Marketplace (search "VSC OpenCode GUI"), or download
+  the latest `.vsix` from GitHub releases and run
+  `code --install-extension vsc-opencode-gui-<version>.vsix`.
+  Requires the `opencode` CLI on PATH.

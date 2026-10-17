@@ -17,6 +17,10 @@ description: A Model Context Protocol (MCP) server that provides
   - Read-only query execution
   - Schema introspection
 
+kind: guide   # plugin, theme, agent, skill, mcp-server, client, tool, config, guide, fork
+topics:   # 1-3 from the fixed list in data/schema.json; the first is used for README grouping
+  - docs
+
 # ============================================================================
 # OPTIONAL FIELDS
 # ============================================================================

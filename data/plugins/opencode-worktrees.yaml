@@ -1,0 +1,23 @@
+name: Worktrees
+repo: https://github.com/KelpHect/opencode-worktrees
+tagline: Run subagents in isolated git worktrees so parallel editors never collide
+description: Selected agents (default `worker`) each get their own git worktree branched from the default branch, with file copies via .worktreeinclude, automatic cleanup of unchanged worktrees, and enforcement against edits to the main checkout. Includes a bundled worktree-isolation skill.
+kind: plugin
+topics:
+  - git
+  - orchestration
+compat: v2
+scope:
+  - global
+  - project
+tags:
+  - worktrees
+  - agents
+  - orchestration
+min_version: 2.0.0
+installation: |
+  ```bash
+  opencode plugin add github:KelpHect/opencode-worktrees
+  ```
+  Requires `git`. Pin a release with
+  `github:KelpHect/opencode-worktrees#v0.2.2`.
