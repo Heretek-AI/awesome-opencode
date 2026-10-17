@@ -43,8 +43,9 @@ async function fetchWithRetry(rawUrl, options = {}, attempts = 5) {
     try {
       const res = await fetch(url, options);
       if ([429, 502, 503, 504].includes(res.status) && attempt < attempts) {
-        const retryAfter = Number(res.headers.get('retry-after'));
-        await new Promise(r => setTimeout(r, (retryAfter > 0 ? retryAfter : 2 ** attempt) * 1000));
+        // Cap waits so a rate-limited batch job degrades (skips items) instead of stalling for hours
+        const retryAfter = Math.min(Number(res.headers.get('retry-after')) || 2 ** attempt, 20);
+        await new Promise(r => setTimeout(r, retryAfter * 1000));
         continue;
       }
       return res;

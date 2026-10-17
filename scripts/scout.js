@@ -103,7 +103,7 @@ async function findCandidates(limit) {
   const fresh = [...seen.values()].filter(p => !known.has(`npm:${p.name}`) && !pending.has(`npm:${p.name}`) && !declined.has(p.name.toLowerCase()));
   console.log(`npm: ${seen.size} packages published since ${V2_RELEASED}, ${fresh.length} not yet listed`);
 
-  const manifests = await mapLimit(fresh, 8, p => getNpmLatest(p.name));
+  const manifests = await mapLimit(fresh, 4, p => getNpmLatest(p.name));
   const v2 = [];
   fresh.forEach((pkg, i) => {
     const manifest = manifests[i];
