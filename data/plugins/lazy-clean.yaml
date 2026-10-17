@@ -1,0 +1,15 @@
+name: lazy-clean
+repo: https://github.com/JustasMonkev/lazy-clean
+tagline: Minimal-code guidance, review commands, and a dependency-free TS/JS slop checker
+description: >-
+  Injects configurable minimal-code guidance into OpenCode each turn and adds
+  slash commands for code review, audits, and test review. Includes a local,
+  dependency-free TypeScript/JavaScript heuristic checker, run manually in
+  OpenCode. Install from the full checkout to keep the shared hooks and skills
+  directories alongside the plugin.
+scope:
+  - project
+tags:
+  - code-review
+  - code-quality
+  - skills
