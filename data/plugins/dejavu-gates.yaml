@@ -1,0 +1,12 @@
+name: dejavu
+repo: https://github.com/WhiteBite/dejavu-gates
+tagline: Cross-session error gates for recurring tool-call failures
+description: >-
+  Mechanically detects recurring tool-call failures (3 failures across 2 distinct sessions
+  promote a gate) and enforces them: reminder on the next attempt, hard block on same-session
+  repeat offense. Diagnostics never block, they annotate. Two-scope store with secret scrubbing
+  and control-char stripping before persistence, 60-day TTL, self-healing reconcile, doctor
+  report. One harness-neutral store shared with Claude Code, Codex CLI, Gemini CLI, Cursor,
+  Copilot CLI, Crush, Devin CLI, Kiro and Cline. TypeScript + Bun, ships as source, no build step.
+installation: |
+  { "plugin": ["dejavu-gates"] } in opencode.json (V1 key "plugin", V2 key "plugins")
