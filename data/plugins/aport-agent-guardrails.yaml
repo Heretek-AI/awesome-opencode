@@ -1,0 +1,8 @@
+name: APort Agent Guardrails
+repo: https://github.com/aporthq/aport-agent-guardrails
+tagline: Pre-action authorization and runtime guardrails
+description: Runtime policy guardrails for agent tool calls, with OpenClaw before-tool-call hooks, blocked-pattern checks, and local or API enforcement before risky actions proceed.
+kind: plugin
+topics:
+  - security
+compat: unknown
