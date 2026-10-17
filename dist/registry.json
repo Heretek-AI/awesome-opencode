@@ -124,6 +124,27 @@
     "installation": "Download the entire `server-manager/` folder into your AI coding tool's skills directory:\n- OpenCode: `~/.config/opencode/skills/server-manager/`\n- Claude Code: `~/.claude/skills/server-manager/`\n- Project-level: `.opencode/skills/` or `.claude/skills/` in your project root\n"
   },
   {
+    "productId": "shipframe",
+    "type": "agents",
+    "displayName": "ShipFrame",
+    "repoUrl": "https://github.com/juanitourquiza/shipframe",
+    "tagline": "AI coding workflows for OpenCode, Claude Code, and Codex",
+    "description": "AI coding workflow toolkit with installable OpenCode skills, converted agents, project profiles, release evidence, and disciplined PR/MR workflows.",
+    "scope": [
+      "global",
+      "project"
+    ],
+    "tags": [
+      "workflow",
+      "skills",
+      "agents",
+      "release",
+      "codex",
+      "claude-code"
+    ],
+    "homepageUrl": "https://shipframe.hackeruna.com/"
+  },
+  {
     "productId": "agent-memory",
     "type": "plugins",
     "displayName": "Agent Memory",
