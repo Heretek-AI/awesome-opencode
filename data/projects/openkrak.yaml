@@ -1,0 +1,4 @@
+name: OpenKrak
+repo: https://github.com/FrnzJulianBergmann/openkrak
+tagline: Pre-computes your repo structure via Dorchester engine before the LLM sees a single token
+description: OpenKrak is an MCP server that runs the Dorchester static analysis engine on your repository and delivers a structured Mahadata brief to your coding agent before it reads any files. Cuts token usage 20-80% by replacing raw file reads with a pre-computed dependency graph, hotspot ranking, and blast radius map. Works with OpenCode. Free tier includes 15 queries per 24h rolling window. Install via npm install -g openkrak-mcp.
