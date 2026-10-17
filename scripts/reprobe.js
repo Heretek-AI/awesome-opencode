@@ -3,7 +3,7 @@
  * Nightly re-check of pull requests held for V2 migration (label: needs-v2).
  * Usage: node scripts/reprobe.js [--dry-run] [--pr <number>]
  *
- * - Target migrated to V2: relabel, thank the author, fill in missing kind/topics/compat on
+ * - Target detected as V2 (not merely "unknown"): relabel, thank the author, fill in missing kind/topics/compat on
  *   same-repo branches, and re-run the validate check.
  * - Still V1 after HOLD_DAYS since needs-v2 was applied: close with a reopen-anytime note.
  */
@@ -67,9 +67,10 @@ async function handle(pull, baseEntries, dryRun) {
   if (!parsed.length) return `#${pull.number}: no plugin entries to re-check`;
 
   const results = await probeCompat(parsed.map(({ c, data }) => ({ key: c.path, repo: data.repo, path: data.path, npm: data.npm, plugin: true })));
-  const stillV1 = parsed.filter(({ c }) => results.get(c.path).compat === 'v1');
+  // Only a positive V2 detection unblocks; "unknown" keeps the hold (the reviewer saw V1 code)
+  const migrated = parsed.every(({ c }) => results.get(c.path).compat === 'v2');
 
-  if (stillV1.length === 0) {
+  if (migrated) {
     const sameRepo = pull.head.repo && pull.head.repo.full_name === REPO;
     if (dryRun) return `#${pull.number}: now ${parsed.map(({ c }) => results.get(c.path).compat).join(', ')} -> would unblock`;
     let fixed = false;

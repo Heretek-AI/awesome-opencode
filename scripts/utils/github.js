@@ -31,7 +31,14 @@ function headers(extra = {}) {
   };
 }
 
-async function fetchWithRetry(url, options = {}, attempts = 5) {
+// The only hosts these scripts talk to
+const ALLOWED_HOSTS = new Set(['api.github.com', 'registry.npmjs.org', 'api.npmjs.org']);
+
+async function fetchWithRetry(rawUrl, options = {}, attempts = 5) {
+  const url = new URL(rawUrl);
+  if (url.protocol !== 'https:' || !ALLOWED_HOSTS.has(url.hostname) || url.pathname.split('/').some(s => s === '..' || s === '.')) {
+    throw new Error(`refusing to fetch ${rawUrl}`);
+  }
   for (let attempt = 1; ; attempt++) {
     try {
       const res = await fetch(url, options);
