@@ -1,0 +1,8 @@
+name: PPTX from Layouts
+repo: https://github.com/tristan-mcinnis/pptx-from-layouts-skill
+tagline: PowerPoint from slide master layouts
+description: Generate consultant-quality PowerPoint presentations from markdown outlines using your template's actual slide master layouts, not text overlays. Includes template profiling, visual types, and surgical edit mode.
+kind: skill
+topics:
+  - media
+compat: n/a
