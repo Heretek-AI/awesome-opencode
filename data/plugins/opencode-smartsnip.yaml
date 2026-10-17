@@ -2,3 +2,9 @@ name: OpenCode SmartSnip
 repo: https://github.com/carson2222/opencode-smartsnip
 tagline: Cuts shell-output tokens safely by wrapping only commands snip can filter.
 description: An OpenCode plugin that routes shell commands through snip only when filtering is safe, reducing context usage without breaking pipes, quotes, redirects, heredocs, or raw API output.
+kind: plugin
+topics:
+  - context
+  - cost
+  - environment
+compat: v2
