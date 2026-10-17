@@ -1,0 +1,8 @@
+name: MorningAI
+repo: https://github.com/octo-patch/MorningAI
+tagline: AI news tracking skill
+description: AI news tracking skill that monitors 80+ entities across 6 free sources (Reddit, HN, GitHub, HuggingFace, arXiv, X/Twitter). Generates scored daily reports with infographics and message digests. Works via SKILL.md — no Docker or servers required.
+kind: skill
+topics:
+  - docs
+compat: n/a
