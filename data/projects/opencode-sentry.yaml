@@ -1,0 +1,31 @@
+name: OpenCode Sentry
+repo: https://github.com/sudo-heyu/OpenCodesentry
+tagline: "Android companion: scan-to-pair live OpenCode console + screen-off alerts over Tailscale"
+description: >-
+  The Android companion for OpenCode. Scan one QR printed by the self-hosted bridge and
+  the official web console opens in-app: watch every session live, send prompts, follow
+  reasoning, tool runs and streaming output, switch models — all directly over your own
+  Tailscale network. A foreground service also rings, vibrates and speaks when a task
+  finishes, needs permission, asks a question or fails, with a three-layer keep-alive
+  (accessibility keeper, persistent Job, exact-alarm watchdog) that survives aggressive
+  vendor-ROM clean-ups. Everything stays on your own tailnet — no third-party server.
+  Not affiliated with the OpenCode team.
+tags:
+  - android
+  - notifications
+  - mobile
+  - tailscale
+  - self-hosted
+  - tts
+  - console
+  - ai-agent
+  - remote-control
+installation: |
+  Download the APK from the [Releases page](https://github.com/sudo-heyu/OpenCodesentry/releases)
+  (Android 12+).
+
+  On the machine that runs OpenCode, start the bridge with a pairing QR:
+  `python3 tools/bridge/opencode-bridge.py --pair`, then scan the QR from the app's
+  "主页" tab — one scan configures the console, the address and the credentials.
+  Manual setup and the full guide:
+  [tools/bridge/README.md](https://github.com/sudo-heyu/OpenCodesentry/blob/main/tools/bridge/README.md).
