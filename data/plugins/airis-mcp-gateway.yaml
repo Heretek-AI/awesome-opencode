@@ -1,0 +1,9 @@
+name: AIRIS MCP Gateway
+repo: https://github.com/agiletec-inc/airis-mcp-gateway
+tagline: Docker MCP multiplexer with Dynamic MCP
+description: Docker-based MCP multiplexer that aggregates 60+ tools behind 7 meta-tools (airis-find, airis-exec, airis-schema, etc.) for 97% token reduction. Features lazy server loading, idle-kill, circuit breaker, API key auth, and auto-enable on first use. Works with Claude Code, Cursor, and any MCP client via SSE.
+kind: plugin
+topics:
+  - context
+  - environment
+compat: unknown
