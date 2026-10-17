@@ -1,0 +1,26 @@
+name: Cost Details
+repo: https://github.com/vvo/opencode-plugins
+tagline: Shows current and previous turn cost in the sidebar Context section
+description: OpenCode TUI plugin that shows how much the current and previous prompt turns cost, right in the sidebar Context section next to the token count.
+scope:
+  - global
+tags:
+  - cost
+  - tokens
+  - tui
+  - sidebar
+homepage: https://www.npmjs.com/package/opencode-cost-details
+installation: |
+  OpenCode 2, in `~/.config/opencode/cli.json`:
+
+  ```json
+  {
+    "plugins": ["-opencode.sidebar.context", "opencode-cost-details"]
+  }
+  ```
+
+  OpenCode 1, in `~/.config/opencode/tui.json`:
+
+  ```json
+  { "plugin": ["opencode-cost-details"] }
+  ```
