@@ -39,7 +39,7 @@
 > **Active Hard Fork**: `Heretek-AI/awesome-opencode` is the actively maintained community continuation of `awesome-opencode`.
 > All original upstream issues, pull requests, and discussions are preserved and imported. Submissions and PRs are actively reviewed!
 
-<p><b>513</b> entries &nbsp;•&nbsp; <b>271</b> plugins: <b>135</b> <code>V2</code>, <b>124</b> <code>V1 only</code> (removed after 2027-01-01), <b>12</b> <code>unverified</code></p>
+<p><b>515</b> entries &nbsp;•&nbsp; <b>271</b> plugins: <b>135</b> <code>V2</code>, <b>124</b> <code>V1 only</code> (removed after 2027-01-01), <b>12</b> <code>unverified</code></p>
 
 <p>
 <a href="https://heretek-ai.github.io/awesome-opencode/"><b>🔎 Search &amp; filter the catalog</b></a>
@@ -79,6 +79,8 @@
 
 | Name | Category | Tagline |
 | :--- | :--- | :--- |
+| **[PPTX from Layouts](https://github.com/tristan-mcinnis/pptx-from-layouts-skill)** | agents | PowerPoint from slide master layouts |
+| **[Promption](https://github.com/Abdssamie/promption)** | projects | Manage AI agent configs |
 | **[agent-sessions](https://github.com/prajwalgajakesari/agent-sessions)** | projects | Share OpenCode, Claude Code and Codex sessions with your team through git |
 | **[OpenClient](https://github.com/ntoporcov/openclient)** | projects | Native iPhone and iPad companion for self-hosted OpenCode servers |
 | **[PPT Design Skill](https://github.com/sunchaokun/PPT-Design-Skill)** | projects | One-liner PPT generation —40,000+ styles, AI images, fully editable .pptx |
@@ -92,8 +94,6 @@
 | **[Kranz](https://github.com/kranz-org/kranz)** | projects | Inspect and control live development services from OpenCode over MCP |
 | **[DataCloak](https://github.com/pratikwayal01/datacloak)** | plugins | Swap secrets and PII for realistic fakes before AI sees them; restore originals on return. |
 | **[Sabi](https://github.com/vizuh/sabi)** | projects | Adaptive per-round inference routing for coding agents — model, effort and provider scheduled against the trajectory |
-| **[Baizhi Cloud Agent Toolkit](https://github.com/chaitin/baizhi-agent-toolkit)** | resources | Remote web search and page extraction MCP for OpenCode agents |
-| **[SCVD General Store](https://github.com/seancrecord/scvd-general-store-repo)** | projects | Skills and MCP tools for checking x402 endpoints before payment and signed receipts afterward |
 
 <br>
 
@@ -2814,7 +2814,7 @@ Also available for bat and Ghostty in the same repository.
 <div id="agents"></div>
 
 <details>
-<summary><strong>🤖 AGENTS (21)</strong></summary>
+<summary><strong>🤖 AGENTS (22)</strong></summary>
 <br>
 
 <h4>Agents <sub>(14)</sub></h4>
@@ -2947,7 +2947,7 @@ Also available for bat and Ghostty in the same repository.
 
 <br>
 
-<h4>Skills <sub>(7)</sub></h4>
+<h4>Skills <sub>(8)</sub></h4>
 
 <details>
   <summary><b>AwareCode</b> <img src="https://badgen.net/github/stars/Wudi12317/aware-code" height="14"/> - <i>Documentation-aware coding protocol for OpenCode</i></summary>
@@ -3014,6 +3014,15 @@ skills stay model- and provider-neutral.
 </details>
 
 <details>
+  <summary><b>PPTX from Layouts</b> <img src="https://badgen.net/github/stars/tristan-mcinnis/pptx-from-layouts-skill" height="14"/> - <i>PowerPoint from slide master layouts</i></summary>
+  <blockquote>
+    Generate consultant-quality PowerPoint presentations from markdown outlines using your template's actual slide master layouts, not text overlays. Includes template profiling, visual types, and surgical edit mode.
+    <br><br>
+    <a href="https://github.com/tristan-mcinnis/pptx-from-layouts-skill">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
   <summary><b>ShipFrame</b> <img src="https://badgen.net/github/stars/juanitourquiza/shipframe" height="14"/> - <i>AI coding workflows for OpenCode, Claude Code, and Codex</i></summary>
   <blockquote>
     AI coding workflow toolkit with installable OpenCode skills, converted agents, project profiles, release evidence, and disciplined PR/MR workflows.
@@ -3031,7 +3040,7 @@ skills stay model- and provider-neutral.
 <div id="projects"></div>
 
 <details>
-<summary><strong>🛠 PROJECTS (184)</strong></summary>
+<summary><strong>🛠 PROJECTS (185)</strong></summary>
 <br>
 
 <h4>Agents <sub>(1)</sub></h4>
@@ -3406,7 +3415,7 @@ first 401, so no API key goes in the config file.
 
 <br>
 
-<h4>Clients & GUIs <sub>(57)</sub></h4>
+<h4>Clients & GUIs <sub>(58)</sub></h4>
 
 <details>
   <summary><b>Agent of Empires</b> <img src="https://badgen.net/github/stars/agent-of-empires/agent-of-empires" height="14"/> - <i>Multi-session TUI for OpenCode</i></summary>
@@ -3855,6 +3864,15 @@ first 401, so no API key goes in the config file.
     Desktop app for orchestrating multiple AI coding agents (Claude Code, Codex CLI, Gemini CLI) simultaneously in isolated git worktrees. Run agents in parallel, each in their own branch, and merge results when ready.
     <br><br>
     <a href="https://github.com/johannesjo/parallel-code">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
+  <summary><b>Promption</b> <img src="https://badgen.net/github/stars/Abdssamie/promption" height="14"/> - <i>Manage AI agent configs</i></summary>
+  <blockquote>
+    A desktop app + CLI for managing AI agent configurations across projects. Stop copy-pasting .cursorrules.
+    <br><br>
+    <a href="https://github.com/Abdssamie/promption">🔗 <b>View Repository</b></a>
   </blockquote>
 </details>
 
