@@ -1,0 +1,20 @@
+name: OpenCode Provider Guard
+repo: https://github.com/okram78/opencode-provider-guard
+tagline: Restrict available providers by project directory
+description: |-
+  An OpenCode V2 plugin that lets you choose which providers are available in
+  each project, so you can keep personal or pay-as-you-go providers out of
+  selected projects.
+kind: plugin
+topics:
+  - providers
+  - security
+  - prompting
+compat: v2
+scope:
+  - global
+tags:
+  - provider
+  - allowlist
+  - access-control
+  - directory-rules

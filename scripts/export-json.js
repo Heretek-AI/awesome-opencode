@@ -4,14 +4,13 @@
  * Usage:
  *   node scripts/export-json.js --pretty --output dist/registry.json
  *   node scripts/export-json.js --pretty > dist/registry.json
+ *
+ * Fails without writing anything if any entry is invalid.
  */
 
 const fs = require('fs');
 const path = require('path');
-const { readYamlDir, slugify } = require('./utils/yaml');
-const { validateEntry, formatValidationErrors } = require('./utils/validation');
-
-const CATEGORIES = ['plugins', 'themes', 'agents', 'projects', 'resources'];
+const { checkCatalog, formatProblems, loadCatalog } = require('./utils/catalog');
 
 function parseArgs(args) {
   const outputFlagIndex = args.findIndex((arg) => arg === '--output');
@@ -22,16 +21,6 @@ function parseArgs(args) {
   return { outputPath, pretty };
 }
 
-function buildProductId(entry) {
-  if (entry._fileName) {
-    return entry._fileName;
-  }
-  if (entry.name) {
-    return slugify(entry.name);
-  }
-  return '';
-}
-
 function sanitizeArray(value, fallback) {
   if (Array.isArray(value) && value.length > 0) {
     return value;
@@ -39,27 +28,28 @@ function sanitizeArray(value, fallback) {
   return fallback;
 }
 
-function mapEntry(entry, category) {
-  const productId = buildProductId(entry);
-  if (!productId) {
-    return null;
-  }
-
-  const output = {
-    productId,
+// type, productId and the original fields keep their names for downstream consumers (opencode.cafe);
+// newer fields are additive.
+function mapEntry({ category, id, data }) {
+  return {
+    productId: id,
     type: category,
-    displayName: entry.name,
-    repoUrl: entry.repo,
-    tagline: entry.tagline,
-    description: entry.description,
-    scope: sanitizeArray(entry.scope, ['global']),
-    tags: sanitizeArray(entry.tags, []),
-    homepageUrl: entry.homepage,
-    installation: entry.installation,
-    minVersion: entry.min_version
+    displayName: data.name,
+    repoUrl: data.repo,
+    repoPath: data.path,
+    npmPackage: data.npm,
+    tagline: data.tagline,
+    description: data.description,
+    kind: data.kind,
+    also: sanitizeArray(data.also, undefined),
+    topics: sanitizeArray(data.topics, []),
+    compat: data.compat || (category === 'plugins' ? 'unknown' : 'n/a'),
+    scope: sanitizeArray(data.scope, ['global']),
+    tags: sanitizeArray(data.tags, []),
+    homepageUrl: data.homepage,
+    installation: data.installation,
+    minVersion: data.min_version
   };
-
-  return output;
 }
 
 function stripUndefined(data) {
@@ -72,87 +62,36 @@ function stripUndefined(data) {
   return cleaned;
 }
 
-async function loadEntries() {
-  const results = [];
-  const errors = [];
-
-  for (const category of CATEGORIES) {
-    const categoryPath = path.join(__dirname, '../data', category);
-    let entries = [];
-
-    try {
-      entries = await readYamlDir(categoryPath);
-    } catch (err) {
-      if (err.code === 'ENOENT') {
-        continue;
-      }
-      throw err;
-    }
-
-    for (const entry of entries) {
-      const result = validateEntry(entry, entry._filePath || categoryPath);
-      if (!result.valid) {
-        errors.push(formatValidationErrors(result));
-        continue;
-      }
-
-      const mapped = mapEntry(entry, category);
-      if (mapped) {
-        results.push(stripUndefined(mapped));
-      }
-    }
-  }
-
-  return { results, errors };
-}
-
-async function main() {
+function main() {
   const { outputPath, pretty } = parseArgs(process.argv.slice(2));
-  const writeToStdout = !outputPath;
-  const log = (...args) => {
-    if (writeToStdout) {
-      console.error(...args);
-    } else {
-      console.log(...args);
-    }
-  };
+  const log = (...args) => (outputPath ? console.log(...args) : console.error(...args));
 
-  const { results, errors } = await loadEntries();
-
-  results.sort((a, b) => {
-    const typeCompare = a.type.localeCompare(b.type);
-    if (typeCompare !== 0) {
-      return typeCompare;
-    }
-    return a.productId.localeCompare(b.productId);
-  });
-
-  if (errors.length > 0) {
-    for (const error of errors) {
-      log(error);
-    }
-    log(`\n⚠️  Skipped ${errors.length} invalid entr${errors.length === 1 ? 'y' : 'ies'}.`);
+  const { entries, errors } = loadCatalog();
+  const problems = [...errors, ...checkCatalog(entries)];
+  if (problems.length > 0) {
+    log(formatProblems(problems));
+    throw new Error(`${problems.length} validation problem(s); nothing was exported`);
   }
+
+  const results = entries.map(e => stripUndefined(mapEntry(e)));
+  results.sort((a, b) => a.type.localeCompare(b.type) || a.productId.localeCompare(b.productId));
 
   const json = JSON.stringify(results, null, pretty ? 2 : 0);
-
   if (outputPath) {
     const outputDir = path.dirname(outputPath);
     if (outputDir && outputDir !== '.') {
       fs.mkdirSync(outputDir, { recursive: true });
     }
-    fs.writeFileSync(outputPath, json);
+    fs.writeFileSync(outputPath, json + '\n');
     log(`Saved ${results.length} entries to ${outputPath}`);
   } else {
     process.stdout.write(json);
   }
-
-  if (errors.length > 0) {
-    process.exit(1);
-  }
 }
 
-main().catch((err) => {
+try {
+  main();
+} catch (err) {
   console.error('Export failed:', err.message);
   process.exit(1);
-});
+}

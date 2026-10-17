@@ -1,0 +1,8 @@
+name: Wuniq
+repo: https://github.com/Wuniq/wuniq-mcp
+tagline: Local-first structured project memory for OpenCode through MCP
+description: Connects OpenCode to the free Wuniq desktop app through @wuniq/mcp. Wuniq keeps decisions, constraints, intent, and human reasoning in .wuniq files beside project files, then exposes progressive read and sync tools to the model. The public repository includes a validated opencode.json setup and AGENTS.md workflow. No account, cloud storage, or telemetry.
+kind: mcp-server
+topics:
+  - memory
+compat: n/a

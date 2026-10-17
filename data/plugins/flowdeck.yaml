@@ -1,7 +1,8 @@
 name: FlowDeck
 repo: https://github.com/DVNghiem/FlowDeck
+homepage: https://github.com/DVNghiem/FlowDeck#readme
 tagline: AI-powered multi-agent workflow orchestration with built-in safety intelligence
-description: |
+description: |-
   FlowDeck adds a structured, multi-agent development workflow to OpenCode. It coordinates 25 specialist agents through a four-phase cycle — discuss, plan, execute, review — with persistent state that survives session restarts.
 
   Key features:
@@ -16,6 +17,12 @@ description: |
   - Built-in MCPs: Context7 (docs), Exa (web search), Grep.app (code search)
   - Ensemble Reasoning via `/fd-council` for synthesized consensus from multiple agents
   - Persistent Memory with SQLite for tool executions and session summaries
+kind: plugin
+topics:
+  - orchestration
+  - workflow
+  - security
+compat: v1
 scope:
   - global
 tags:
@@ -27,8 +34,7 @@ tags:
   - TDD
   - skills
   - commands
-min_version: "1.0.0"
-homepage: https://github.com/DVNghiem/FlowDeck#readme
+min_version: 1.0.0
 installation: |
   ### Method 1: curl (recommended)
   ```bash

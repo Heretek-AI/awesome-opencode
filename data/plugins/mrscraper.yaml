@@ -1,0 +1,32 @@
+name: MrScraper
+repo: https://github.com/mrscraper-com/mrscraper-opencode-plugin
+npm: "@mrscraper/opencode"
+homepage: https://docs.mrscraper.com/docs/getting-started/mcp-server
+tagline: Web pages as HTML, Markdown, or screenshots, plus Google search, through the hosted MrScraper MCP server
+description: OpenCode plugin that registers the hosted MrScraper MCP server (https://mcp.mrscraper.com/mcp, OAuth 2.1) and three on-demand skills. Its tools retrieve known pages as HTML, Markdown, or screenshots (scraperAPI), search Google (webSearch), and report account usage (status). The skills follow a retrieve-first workflow that preserves raw page content and derives structured output locally. Works in OpenCode 2 and OpenCode 1. A MrScraper account is required.
+kind: plugin
+also:
+  - mcp-server
+topics:
+  - web
+compat: v2
+scope:
+  - global
+  - project
+tags:
+  - mcp
+  - web-scraping
+  - screenshots
+  - google-search
+  - serp
+installation: |
+  ```bash
+  # OpenCode 2
+  opencode plugin add @mrscraper/opencode
+  # OpenCode 1
+  opencode plugin @mrscraper/opencode --global
+
+  opencode mcp auth mrscraper
+  ```
+
+  `opencode mcp list` shows `mrscraper` as connected after sign-in.

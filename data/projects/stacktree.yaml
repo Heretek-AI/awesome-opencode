@@ -1,0 +1,43 @@
+name: Stacktree
+repo: https://github.com/stevysmith/stacktree-skill
+homepage: https://stacktr.ee/agents
+tagline: Publish HTML from your agent to a private, unguessable link
+description: Turns HTML an agent produced into a link a person can open — a report, a dashboard, a brief. Links are unguessable and uncrawlable by default, with an optional passcode and expiry, and republishing replaces the page in place so a shared URL stays current. Connects as a local MCP server, and the skill is fetchable over HTTP so it stays current without reinstalling. Free anonymous pages need no account at all; agents with a wallet can pay per page over x402 instead of signing up.
+kind: mcp-server
+topics:
+  - integrations
+compat: n/a
+scope:
+  - global
+  - project
+tags:
+  - mcp
+  - skills
+  - hosting
+  - publishing
+  - html
+  - sharing
+  - x402
+installation: |
+  Skill over HTTP (always current, no install):
+
+  ```json
+  { "skills": { "urls": ["https://stacktr.ee/.well-known/skills/"] } }
+  ```
+
+  MCP server (adds publish/update tools):
+
+  ```json
+  {
+    "mcp": {
+      "stacktree": {
+        "type": "local",
+        "command": ["npx", "-y", "stacktree-mcp"],
+        "enabled": true,
+        "environment": { "STACKTREE_API_KEY": "{env:STACKTREE_API_KEY}" }
+      }
+    }
+  }
+  ```
+
+  Or run `npx stacktree-install` and pick OpenCode, which writes both.

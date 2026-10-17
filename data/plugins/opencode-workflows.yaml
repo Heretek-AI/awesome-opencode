@@ -1,0 +1,20 @@
+name: opencode-workflows
+repo: https://github.com/rphang/opencode-workflows
+npm: "@rphang/opencode-workflows"
+tagline: Claude Code-style dynamic workflows for opencode v2 — a JS script fans work out to parallel subagents
+description: A native opencode v2 plugin that reproduces Claude Code's dynamic workflows. The model writes a small JavaScript orchestration script (agent, parallel, pipeline, phase, budget, nested workflows) that runs in a sandboxed interpreter in the background, fans work out to subagents as child sessions, and can resume from its journal. Includes a live TUI tree to watch, steer, or stop running agents. Uses your configured opencode models; no extra daemon.
+kind: plugin
+topics:
+  - orchestration
+  - workflow
+  - prompting
+compat: v2
+tags:
+  - workflows
+  - subagents
+  - orchestration
+min_version: 2.0.15
+installation: |
+  ```sh
+  opencode plugin add @rphang/opencode-workflows
+  ```
