@@ -1,0 +1,9 @@
+name: opencode-telegram
+repo: https://github.com/raulvalverdeleal/opencode-telegram
+tagline: Control OpenCode sessions from Telegram
+description: A Telegram bot that bridges your chats to an OpenCode server with real-time SSE progress, session management, and access control via user allowlists.
+kind: client
+topics:
+  - sessions
+  - remote
+compat: v1
