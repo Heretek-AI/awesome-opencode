@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Awesome OpenCode</title>
+<meta name="description" content="Search and filter the community catalog of OpenCode plugins, themes, agents, MCP servers, clients and tools.">
+<style>
+  :root {
+    --bg: #fbfbfa; --panel: #ffffff; --text: #1c1d1f; --muted: #62656b; --line: #e3e3e0;
+    --accent: #2f5bd3; --chip: #f1f1ee; --v2: #1f7a3d; --v2-bg: #e3f4e8; --v1: #9a4b00; --v1-bg: #fdeeda;
+    --warn: #8a6d00; --warn-bg: #fbf3d0; --bad: #a42323; --bad-bg: #fbe3e3;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141517; --panel: #1c1d20; --text: #e8e8e6; --muted: #9a9ca2; --line: #2e3034;
+      --accent: #7ea2ff; --chip: #26282c; --v2: #7fd69b; --v2-bg: #1d3325; --v1: #f2b46b; --v1-bg: #3a2a16;
+      --warn: #e8cf6a; --warn-bg: #36301a; --bad: #f19a9a; --bad-bg: #3b1f1f;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  header, main { max-width: 1100px; margin: 0 auto; padding: 0 16px; }
+  header { padding-top: 28px; padding-bottom: 8px; }
+  h1 { margin: 0 0 4px; font-size: 26px; letter-spacing: -0.01em; }
+  .sub { color: var(--muted); margin: 0 0 16px; }
+  .controls { position: sticky; top: 0; z-index: 2; background: var(--bg); padding: 10px 0; border-bottom: 1px solid var(--line); }
+  @media (max-width: 640px) { .controls { position: static; } select { flex: 1 1 45%; } }
+  .row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+  input[type=search], select { font: inherit; color: var(--text); background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; }
+  input[type=search] { flex: 1 1 260px; min-width: 0; }
+  select { flex: 0 1 auto; max-width: 100%; }
+  .cats { margin-top: 8px; }
+  .cats button { font: inherit; font-size: 13px; border: 1px solid var(--line); background: var(--panel); color: var(--text); border-radius: 999px; padding: 4px 12px; cursor: pointer; }
+  .cats button[aria-pressed=true] { background: var(--text); color: var(--bg); border-color: var(--text); }
+  .meta { color: var(--muted); font-size: 13px; margin: 12px 0; display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
+  .meta button { font: inherit; font-size: 13px; background: none; border: 0; color: var(--accent); cursor: pointer; padding: 0; }
+  .list { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 12px; padding-bottom: 40px; }
+  @media (max-width: 400px) { .list { grid-template-columns: 1fr; } }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 14px; display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+  .card h2 { font-size: 16px; margin: 0; display: flex; gap: 8px; align-items: baseline; justify-content: space-between; }
+  .card h2 a { color: var(--text); overflow-wrap: anywhere; }
+  .stars { color: var(--muted); font-size: 13px; font-weight: 400; white-space: nowrap; }
+  .tagline { margin: 0; }
+  .desc { margin: 0; color: var(--muted); font-size: 14px; overflow-wrap: anywhere; }
+  .desc.clamp { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .badges { display: flex; flex-wrap: wrap; gap: 4px; }
+  .b { font-size: 12px; border-radius: 6px; padding: 1px 7px; background: var(--chip); color: var(--muted); white-space: nowrap; }
+  .b.v2 { background: var(--v2-bg); color: var(--v2); }
+  .b.v1 { background: var(--v1-bg); color: var(--v1); }
+  .b.unknown, .b.quiet, .b.stale { background: var(--warn-bg); color: var(--warn); }
+  .b.archived, .b.missing, .b.deprecated { background: var(--bad-bg); color: var(--bad); }
+  .links { display: flex; gap: 12px; flex-wrap: wrap; font-size: 13px; margin-top: auto; padding-top: 4px; }
+  .more { font: inherit; font-size: 13px; background: none; border: 0; padding: 0; color: var(--accent); cursor: pointer; align-self: flex-start; }
+  .empty { color: var(--muted); padding: 40px 0; text-align: center; grid-column: 1 / -1; }
+  footer { max-width: 1100px; margin: 0 auto; padding: 0 16px 40px; color: var(--muted); font-size: 13px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Awesome OpenCode</h1>
+  <p class="sub" id="summary">Community catalog of OpenCode plugins, themes, agents, MCP servers, clients and tools.</p>
+</header>
+<main>
+  <div class="controls">
+    <div class="row">
+      <input type="search" id="q" placeholder="Search name, tagline, description, tags…" aria-label="Search">
+      <select id="kind" aria-label="Kind"><option value="">Any kind</option></select>
+      <select id="topic" aria-label="Topic"><option value="">Any topic</option></select>
+      <select id="compat" aria-label="OpenCode API">
+        <option value="">Any API</option>
+        <option value="v2">V2</option>
+        <option value="v1">V1 only</option>
+        <option value="unknown">Unverified</option>
+      </select>
+      <select id="status" aria-label="Maintenance">
+        <option value="">Any status</option>
+        <option value="active">Active</option>
+        <option value="quiet">Quiet (6–12 months)</option>
+        <option value="stale">No push in a year</option>
+        <option value="dead">Archived / missing / deprecated</option>
+      </select>
+      <select id="sort" aria-label="Sort">
+        <option value="name">Sort: name</option>
+        <option value="stars">Sort: stars</option>
+        <option value="pushed">Sort: recently updated</option>
+      </select>
+    </div>
+    <div class="row cats" id="cats" role="group" aria-label="Category"></div>
+  </div>
+  <div class="meta"><span id="count"></span><button id="reset" type="button">Clear filters</button></div>
+  <div class="list" id="list"></div>
+</main>
+<footer>
+  Generated from <a href="https://github.com/Heretek-AI/awesome-opencode">Heretek-AI/awesome-opencode</a>.
+  <a href="https://github.com/Heretek-AI/awesome-opencode/issues/new?template=add-entry.yml">Submit an entry</a> ·
+  <a href="https://github.com/Heretek-AI/awesome-opencode/blob/main/docs/policy.md">Catalog policy</a>
+  <span id="updated"></span>
+</footer>
+<script>
+const CATEGORY_LABELS = { plugins: 'Plugins', themes: 'Themes', agents: 'Agents', projects: 'Projects', resources: 'Resources' };
+const KIND_LABELS = { plugin: 'Plugin', theme: 'Theme', agent: 'Agent', skill: 'Skill', 'mcp-server': 'MCP server', client: 'Client / GUI', tool: 'Tool', config: 'Config', guide: 'Guide', fork: 'Fork' };
+const TOPIC_LABELS = { memory: 'Memory', context: 'Context & tokens', orchestration: 'Multi-agent', workflow: 'Workflows & planning', providers: 'Providers & auth', cost: 'Cost & usage', notifications: 'Notifications', sessions: 'Sessions & history', 'code-quality': 'Code review & quality', security: 'Security & sandboxing', git: 'Git & GitHub', remote: 'Remote & mobile', web: 'Web & browser', ui: 'UI & TUI', voice: 'Voice', media: 'Media & documents', docs: 'Docs & research', environment: 'Environment & setup', observability: 'Observability', integrations: 'Integrations', 'code-intel': 'Code intelligence', prompting: 'Prompting & skills', domain: 'Domain-specific' };
+const STATUS_LABELS = { quiet: 'quiet', stale: 'no push in 1y', archived: 'archived', missing: 'repo missing', deprecated: 'deprecated' };
+const DEAD = ['archived', 'missing', 'deprecated'];
+const $ = id => document.getElementById(id);
+const isNpmPage = url => { try { const u = new URL(url); return (u.hostname === 'www.npmjs.com' || u.hostname === 'npmjs.com') && u.pathname.startsWith('/package/'); } catch { return false; } };
+const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const state = { q: '', cat: '', kind: '', topic: '', compat: '', status: '', sort: 'name' };
+let entries = [];
+
+function readHash() {
+  const params = new URLSearchParams(location.hash.slice(1));
+  for (const key of Object.keys(state)) if (params.has(key)) state[key] = params.get(key);
+}
+function writeHash() {
+  const params = new URLSearchParams();
+  for (const [k, v] of Object.entries(state)) if (v && !(k === 'sort' && v === 'name')) params.set(k, v);
+  const hash = params.toString();
+  history.replaceState(null, '', hash ? `#${hash}` : location.pathname + location.search);
+}
+
+function fillSelect(el, labels, counts) {
+  for (const [value, label] of Object.entries(labels)) {
+    if (!counts[value]) continue;
+    const opt = document.createElement('option');
+    opt.value = value;
+    opt.textContent = `${label} (${counts[value]})`;
+    el.appendChild(opt);
+  }
+}
+
+function matches(e) {
+  if (state.cat && e.type !== state.cat) return false;
+  if (state.kind && e.kind !== state.kind && !(e.also || []).includes(state.kind)) return false;
+  if (state.topic && !(e.topics || []).includes(state.topic)) return false;
+  if (state.compat && e.compat !== state.compat) return false;
+  if (state.status === 'dead' && !DEAD.includes(e.status)) return false;
+  if (state.status && state.status !== 'dead' && e.status !== state.status) return false;
+  if (state.q) {
+    const terms = state.q.toLowerCase().split(/\s+/).filter(Boolean);
+    return terms.every(t => e.haystack.includes(t));
+  }
+  return true;
+}
+
+function card(e) {
+  const badges = [`<span class="b">${esc(KIND_LABELS[e.kind] || e.kind)}</span>`];
+  if (e.compat === 'v2') badges.push('<span class="b v2">V2</span>');
+  if (e.compat === 'v1') badges.push('<span class="b v1">V1 only</span>');
+  if (e.compat === 'unknown') badges.push('<span class="b unknown">unverified</span>');
+  if (STATUS_LABELS[e.status]) badges.push(`<span class="b ${esc(e.status)}">${esc(STATUS_LABELS[e.status])}</span>`);
+  for (const t of e.topics || []) badges.push(`<span class="b">${esc(TOPIC_LABELS[t] || t)}</span>`);
+  const src = e.repoPath ? `${e.repoUrl.replace(/\/+$/, '')}/tree/HEAD/${e.repoPath}` : e.repoUrl;
+  const links = [`<a href="${esc(src)}" rel="noopener">Repository</a>`];
+  if (e.npmPackage) links.push(`<a href="https://www.npmjs.com/package/${esc(e.npmPackage)}" rel="noopener">npm</a>`);
+  if (e.homepageUrl && !isNpmPage(e.homepageUrl)) links.push(`<a href="${esc(e.homepageUrl)}" rel="noopener">Docs</a>`);
+  if (e.pushedAt) links.push(`<span class="stars">updated ${esc(e.pushedAt.slice(0, 10))}</span>`);
+  const long = (e.description || '').length > 180;
+  return `<article class="card">
+    <h2><a href="${esc(src)}" rel="noopener">${esc(e.displayName)}</a>${e.stars != null ? `<span class="stars">★ ${e.stars.toLocaleString()}</span>` : ''}</h2>
+    <div class="badges">${badges.join('')}</div>
+    <p class="tagline">${esc(e.tagline)}</p>
+    <p class="desc${long ? ' clamp' : ''}">${esc(e.description)}</p>
+    ${long ? '<button class="more" type="button">Show more</button>' : ''}
+    <div class="links">${links.join('')}</div>
+  </article>`;
+}
+
+function render() {
+  writeHash();
+  for (const btn of $('cats').querySelectorAll('button')) btn.setAttribute('aria-pressed', String(btn.dataset.cat === state.cat));
+  const list = entries.filter(matches);
+  const by = {
+    name: (a, b) => a.displayName.localeCompare(b.displayName, undefined, { sensitivity: 'base' }),
+    stars: (a, b) => (b.stars || 0) - (a.stars || 0),
+    pushed: (a, b) => String(b.pushedAt || '').localeCompare(String(a.pushedAt || ''))
+  }[state.sort] || (() => 0);
+  list.sort(by);
+  $('count').textContent = `${list.length} of ${entries.length} entries`;
+  $('list').innerHTML = list.length ? list.map(card).join('') : '<p class="empty">No entries match these filters.</p>';
+}
+
+async function load() {
+  const [registry, health] = await Promise.all([
+    fetch('registry.json').then(r => r.json()),
+    fetch('health.json').then(r => (r.ok ? r.json() : { entries: {} })).catch(() => ({ entries: {} }))
+  ]);
+  entries = registry.map(e => {
+    const h = health.entries[`${e.type}/${e.productId}`] || {};
+    return {
+      ...e, stars: h.stars, pushedAt: h.pushedAt, status: h.status || 'active',
+      haystack: [e.displayName, e.tagline, e.description, ...(e.tags || []), ...(e.topics || []), e.npmPackage, e.repoUrl].join(' ').toLowerCase()
+    };
+  });
+  const count = key => entries.reduce((acc, e) => { for (const v of [].concat(e[key] || [])) acc[v] = (acc[v] || 0) + 1; return acc; }, {});
+  fillSelect($('kind'), KIND_LABELS, count('kind'));
+  fillSelect($('topic'), TOPIC_LABELS, count('topics'));
+  const cats = count('type');
+  $('cats').innerHTML = [`<button type="button" data-cat="">All (${entries.length})</button>`,
+    ...Object.entries(CATEGORY_LABELS).filter(([k]) => cats[k]).map(([k, label]) => `<button type="button" data-cat="${k}">${label} (${cats[k]})</button>`)].join('');
+  const plugins = entries.filter(e => e.type === 'plugins');
+  $('summary').textContent = `${entries.length} OpenCode extensions · ${plugins.filter(e => e.compat === 'v2').length} of ${plugins.length} plugins verified on the V2 API.`;
+  if (health.generated) $('updated').textContent = ` · Health checked ${health.generated.slice(0, 10)}`;
+
+  readHash();
+  for (const id of ['q', 'kind', 'topic', 'compat', 'status', 'sort']) $(id).value = state[id];
+  render();
+}
+
+$('q').addEventListener('input', e => { state.q = e.target.value.trim(); render(); });
+for (const id of ['kind', 'topic', 'compat', 'status', 'sort']) $(id).addEventListener('change', e => { state[id] = e.target.value; render(); });
+$('cats').addEventListener('click', e => { const b = e.target.closest('button'); if (b) { state.cat = b.dataset.cat; render(); } });
+$('reset').addEventListener('click', () => { Object.assign(state, { q: '', cat: '', kind: '', topic: '', compat: '', status: '', sort: 'name' }); for (const id of ['q', 'kind', 'topic', 'compat', 'status', 'sort']) $(id).value = state[id]; render(); });
+$('list').addEventListener('click', e => {
+  const b = e.target.closest('.more');
+  if (!b) return;
+  const desc = b.previousElementSibling;
+  desc.classList.toggle('clamp');
+  b.textContent = desc.classList.contains('clamp') ? 'Show more' : 'Show less';
+});
+load().catch(err => { $('list').innerHTML = `<p class="empty">Could not load the catalog: ${esc(err.message)}</p>`; });
+</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+name: OpenCode Stats Pills
+repo: https://github.com/Henry-916/opencode-stats-pills
+tagline: Inline TUI stats bar for generation speed, tokens, cache hits, cost, and context usage
+description: A compact stats bar under the OpenCode V2 input box showing streamed output speed (tok/s), average TTFT, token usage with cache hits and reasoning, session cost, and context-window usage, without opening the sidebar. Click any pill for a detail panel. Context usage follows OpenCode's own calculation, custom per-model prices are supported, and parent and subagent sessions are tracked separately. Tested on OpenCode 2.0.29; UI text is currently in Chinese.
+kind: plugin
+topics:
+  - context
+  - cost
+  - ui
+compat: v2
+scope:
+  - global
+tags:
+  - tui
+  - tokens
+  - cost
+  - statistics

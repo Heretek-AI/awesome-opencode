@@ -1,0 +1,8 @@
+name: ocm
+repo: https://github.com/wntic/ocm
+tagline: Plugin marketplaces for OpenCode - install skills, agents, commands and MCP servers from any git repo, globally
+description: Turn any git repository into a plugin marketplace. `ocm add <url>` installs its skills, agents, commands, JS plugins and MCP servers once into your global OpenCode config, so they work in every project, and `ocm update` plus a startup auto-sync keep them current. Includes a /ocm TUI for browsing, asks before any plugin code runs, and never overwrites your own files.
+kind: tool
+topics:
+  - environment
+compat: n/a

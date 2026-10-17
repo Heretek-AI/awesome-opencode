@@ -1,0 +1,303 @@
+{
+  "24": {
+    "upstream_number": 24,
+    "title": "Add plugin sections",
+    "state": "closed",
+    "import_id": 16769974,
+    "issue_url": "https://api.github.com/repos/Heretek-AI/awesome-opencode/issues/3"
+  },
+  "67": {
+    "upstream_number": 67,
+    "title": "Samual",
+    "state": "closed",
+    "import_id": 16769975,
+    "issue_url": "https://api.github.com/repos/Heretek-AI/awesome-opencode/issues/4"
+  },
+  "99": {
+    "upstream_number": 99,
+    "title": "change all https://github.com/sst links to https://github.com/anomalyco",
+    "state": "closed",
+    "import_id": 16769976,
+    "issue_url": "https://api.github.com/repos/Heretek-AI/awesome-opencode/issues/5"
+  },
+  "100": {
+    "upstream_number": 100,
+    "title": "Incorrect link for the Smart Voice Notify https://github.com/MasuRii/opencode-smart-voice-notify",
+    "state": "closed",
+    "import_id": 16769977,
+    "issue_url": "https://api.github.com/repos/Heretek-AI/awesome-opencode/issues/6"
+  },
+  "156": {
+    "upstream_number": 156,
+    "title": "\ud83d\udc1b OpenCode v1.1.50 MCP Bug - All MCP Tools Failing",
+    "state": "closed",
+    "import_id": 16769978,
+    "issue_url": "https://api.github.com/repos/Heretek-AI/awesome-opencode/issues/7"
+  },
+  "190": {
+    "upstream_number": 190,
+    "title": "[Bug]: Not reading github copilot premium request usage correctly",
+    "state": "closed",
+    "import_id": 16769979,
+    "issue_url": "https://api.github.com/repos/Heretek-AI/awesome-opencode/issues/8"
+  },
+  "195": {
+    "upstream_number": 195,
+    "title": "Offering to help maintain the list",
+    "state": "closed",
+    "import_id": 16769980,
+    "issue_url": "https://api.github.com/repos/Heretek-AI/awesome-opencode/issues/9"
+  },
+  "216": {
+    "upstream_number": 216,
+    "title": "Add SuperLocalMemory \u2014 Memory MCP server compatible with OpenCode",
+    "state": "open",
+    "import_id": 16769981,
+    "issue_url": "https://api.github.com/repos/Heretek-AI/awesome-opencode/issues/10"
+  },
+  "228": {
+    "upstream_number": 228,
+    "title": "Add opencode-remote-control: Multi-platform remote control via Telegram/Feishu/WeChat",
+    "state": "open",
+    "import_id": 16769982,
+    "issue_url": "https://api.github.com/repos/Heretek-AI/awesome-opencode/issues/11"
+  },
+  "230": {
+    "upstream_number": 230,
+    "title": "Add zosma-qa \u2014 QA agents for OpenCode",
+    "state": "open",
+    "import_id": 16769983,
+    "issue_url": "https://api.github.com/repos/Heretek-AI/awesome-opencode/issues/12"
+  },
+  "236": {
+    "upstream_number": 236,
+    "title": "Add AnveVoice \u2014 Voice AI Plugin for OpenCode Agents",
+    "state": "open",
+    "import_id": 16769984,
+    "issue_url": "https://api.github.com/repos/Heretek-AI/awesome-opencode/issues/13"
+  },
+  "240": {
+    "upstream_number": 240,
+    "title": "Add Clarvia \u2014 AEO quality scanner for MCP tools and AI agents",
+    "state": "closed",
+    "import_id": 16769985,
+    "issue_url": "https://api.github.com/repos/Heretek-AI/awesome-opencode/issues/14"
+  },
+  "241": {
+    "upstream_number": 241,
+    "title": "Add dreampowers: A complete AI skill set for Chinese novel writing",
+    "state": "open",
+    "import_id": 16769986,
+    "issue_url": "https://api.github.com/repos/Heretek-AI/awesome-opencode/issues/15"
+  },
+  "242": {
+    "upstream_number": 242,
+    "title": "Consider listing in awesome-codex-plugins",
+    "state": "open",
+    "import_id": 16769987,
+    "issue_url": "https://api.github.com/repos/Heretek-AI/awesome-opencode/issues/16"
+  },
+  "265": {
+    "upstream_number": 265,
+    "title": "Add opencode-auto-resume",
+    "state": "closed",
+    "import_id": 16769988,
+    "issue_url": "https://api.github.com/repos/Heretek-AI/awesome-opencode/issues/17"
+  },
+  "280": {
+    "upstream_number": 280,
+    "title": "Add opencode-easy-workflow",
+    "state": "closed",
+    "import_id": 16769989,
+    "issue_url": "https://api.github.com/repos/Heretek-AI/awesome-opencode/issues/18"
+  },
+  "295": {
+    "upstream_number": 295,
+    "title": "The comportement of home end is unexpected when we are writing a new prompt",
+    "state": "open",
+    "import_id": 16769990,
+    "issue_url": "https://api.github.com/repos/Heretek-AI/awesome-opencode/issues/19"
+  },
+  "307": {
+    "upstream_number": 307,
+    "title": "Add Skills\u5b9d (skilery.com) - Chinese AI Skills Marketplace",
+    "state": "open",
+    "import_id": 16769991,
+    "issue_url": "https://api.github.com/repos/Heretek-AI/awesome-opencode/issues/20"
+  },
+  "332": {
+    "upstream_number": 332,
+    "title": "Add \u4e2d\u533b\u4e4b\u5fc3 Oh My TCM Powers",
+    "state": "open",
+    "import_id": 16769992,
+    "issue_url": "https://api.github.com/repos/Heretek-AI/awesome-opencode/issues/21"
+  },
+  "333": {
+    "upstream_number": 333,
+    "title": "Add Qi Men Dun Jia: Eight Gates Huaqi Array (\u5947\u95e8\u9041\u7532 \u516b\u95e8\u5316\u6c14\u9635)",
+    "state": "open",
+    "import_id": 16769993,
+    "issue_url": "https://api.github.com/repos/Heretek-AI/awesome-opencode/issues/22"
+  },
+  "343": {
+    "upstream_number": 343,
+    "title": "Add extra maintainers?",
+    "state": "open",
+    "import_id": 16769994,
+    "issue_url": "https://api.github.com/repos/Heretek-AI/awesome-opencode/issues/23"
+  },
+  "398": {
+    "upstream_number": 398,
+    "title": "Add opencode-timings plugin",
+    "state": "open",
+    "import_id": 16769995,
+    "issue_url": "https://api.github.com/repos/Heretek-AI/awesome-opencode/issues/24"
+  },
+  "399": {
+    "upstream_number": 399,
+    "title": "Add n3rv \u2014 Engineering infrastructure for opencode agents",
+    "state": "closed",
+    "import_id": 16769996,
+    "issue_url": "https://api.github.com/repos/Heretek-AI/awesome-opencode/issues/25"
+  },
+  "409": {
+    "upstream_number": 409,
+    "title": "Community project: OneTicket Core \u2013 turning GitHub into an agentic delivery pipeline powered by OpenCode",
+    "state": "open",
+    "import_id": 16769997,
+    "issue_url": "https://api.github.com/repos/Heretek-AI/awesome-opencode/issues/26"
+  },
+  "430": {
+    "upstream_number": 430,
+    "title": "Add AIDevOps to plugins",
+    "state": "open",
+    "import_id": 16769998,
+    "issue_url": "https://api.github.com/repos/Heretek-AI/awesome-opencode/issues/27"
+  },
+  "453": {
+    "upstream_number": 453,
+    "title": "Agents",
+    "state": "open",
+    "import_id": 16769999,
+    "issue_url": "https://api.github.com/repos/Heretek-AI/awesome-opencode/issues/28"
+  },
+  "475": {
+    "upstream_number": 475,
+    "title": "Add Zara Agent OPC - Empathetic AI Engineering Partner",
+    "state": "open",
+    "import_id": 16770000,
+    "issue_url": "https://api.github.com/repos/Heretek-AI/awesome-opencode/issues/29"
+  },
+  "484": {
+    "upstream_number": 484,
+    "title": "Add Skill Hub \u2014 Multi-Platform Skills Discovery",
+    "state": "open",
+    "import_id": 16770001,
+    "issue_url": "https://api.github.com/repos/Heretek-AI/awesome-opencode/issues/30"
+  },
+  "502": {
+    "upstream_number": 502,
+    "title": "Add Data Olympus as governed project knowledge MCP server",
+    "state": "open",
+    "import_id": 16770002,
+    "issue_url": "https://api.github.com/repos/Heretek-AI/awesome-opencode/issues/31"
+  },
+  "507": {
+    "upstream_number": 507,
+    "title": "Add OpenCode Agent Variants",
+    "state": "open",
+    "import_id": 16770003,
+    "issue_url": "https://api.github.com/repos/Heretek-AI/awesome-opencode/issues/32"
+  },
+  "509": {
+    "upstream_number": 509,
+    "title": "Menu bar tool for visualizing token usage and estimated costs - Tokenscope",
+    "state": "open",
+    "import_id": 16770004,
+    "issue_url": "https://api.github.com/repos/Heretek-AI/awesome-opencode/issues/33"
+  },
+  "517": {
+    "upstream_number": 517,
+    "title": "how to change plan or build?",
+    "state": "open",
+    "import_id": 16770005,
+    "issue_url": "https://api.github.com/repos/Heretek-AI/awesome-opencode/issues/34"
+  },
+  "520": {
+    "upstream_number": 520,
+    "title": "UI regressions flow introduced in version 1.18.0",
+    "state": "open",
+    "import_id": 16770006,
+    "issue_url": "https://api.github.com/repos/Heretek-AI/awesome-opencode/issues/35"
+  },
+  "607": {
+    "upstream_number": 607,
+    "title": "Submit IdeaHunter for the tools/resources list",
+    "state": "open",
+    "import_id": 16770007,
+    "issue_url": "https://api.github.com/repos/Heretek-AI/awesome-opencode/issues/36"
+  },
+  "639": {
+    "upstream_number": 639,
+    "title": "Resource suggestion: TANCO SkillHub for reusable OpenCode/Agent Skills",
+    "state": "open",
+    "import_id": 16770008,
+    "issue_url": "https://api.github.com/repos/Heretek-AI/awesome-opencode/issues/37"
+  },
+  "641": {
+    "upstream_number": 641,
+    "title": "Add auto-resume",
+    "state": "open",
+    "import_id": 16770009,
+    "issue_url": "https://api.github.com/repos/Heretek-AI/awesome-opencode/issues/38"
+  },
+  "643": {
+    "upstream_number": 643,
+    "title": "Is this project still actively maintained?",
+    "state": "open",
+    "import_id": 16770010,
+    "issue_url": "https://api.github.com/repos/Heretek-AI/awesome-opencode/issues/39"
+  },
+  "651": {
+    "upstream_number": 651,
+    "title": "Listing request: SandBase CLI project for OpenCode",
+    "state": "open",
+    "import_id": 16770011,
+    "issue_url": "https://api.github.com/repos/Heretek-AI/awesome-opencode/issues/40"
+  },
+  "702": {
+    "upstream_number": 702,
+    "title": "Add AegisOS Enterprise AI Workforce OS",
+    "state": "open",
+    "import_id": 16770012,
+    "issue_url": "https://api.github.com/repos/Heretek-AI/awesome-opencode/issues/41"
+  },
+  "714": {
+    "upstream_number": 714,
+    "title": "Show Opencode V1 and V2 support",
+    "state": "open",
+    "import_id": 16770013,
+    "issue_url": "https://api.github.com/repos/Heretek-AI/awesome-opencode/issues/42"
+  },
+  "763": {
+    "upstream_number": 763,
+    "title": "Add DataCloak: secret/PII cloak plugin for OpenCode",
+    "state": "open",
+    "import_id": 16770014,
+    "issue_url": "https://api.github.com/repos/Heretek-AI/awesome-opencode/issues/43"
+  },
+  "775": {
+    "upstream_number": 775,
+    "title": "Add opencode-seatbelt: macOS kernel sandbox plugin for OpenCode",
+    "state": "open",
+    "import_id": 16770015,
+    "issue_url": "https://api.github.com/repos/Heretek-AI/awesome-opencode/issues/44"
+  },
+  "868": {
+    "upstream_number": 868,
+    "title": "Listing request: Telai, vertical tabs terminal for Opencode",
+    "state": "open",
+    "import_id": 16770016,
+    "issue_url": "https://api.github.com/repos/Heretek-AI/awesome-opencode/issues/45"
+  }
+}

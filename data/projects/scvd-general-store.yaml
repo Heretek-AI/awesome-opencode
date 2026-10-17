@@ -1,0 +1,37 @@
+name: SCVD General Store
+repo: https://github.com/seancrecord/scvd-general-store-repo
+homepage: https://scvd.store
+tagline: Skills and MCP tools for checking x402 endpoints before payment and signed receipts afterward
+description: An evidence observatory for agentic commerce with portable skills and a remote MCP service. OpenCode can load the verification skill and run a free endpoint preflight without a wallet or API key. Guidance covers signed-receipt checks and the limits of unpaid observations. Optional paid observations require an explicit spending decision; installation grants no payment authority.
+kind: mcp-server
+topics:
+  - integrations
+compat: n/a
+scope:
+  - project
+tags:
+  - skills
+  - mcp
+  - x402
+  - verification
+installation: |
+  From a reviewed checkout of the source repository, copy
+  `skills/scvd-general-store` and `skills/scvd-x402-verification` into your
+  project's `.opencode/skills/` directory, keeping each SKILL.md unchanged.
+  Merge this remote server into your existing OpenCode configuration:
+
+  ```json
+  {
+    "mcp": {
+      "scvd-general-store": {
+        "type": "remote",
+        "url": "https://scvd.store/mcp",
+        "enabled": true
+      }
+    }
+  }
+  ```
+
+  Ask OpenCode to load `scvd-x402-verification` and run the free
+  `preflight_endpoint` for a URL. Inspect the returned verdict, reached level
+  and missing evidence. An unpaid reading does not prove payment or delivery.

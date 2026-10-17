@@ -1,0 +1,9 @@
+name: Agent Workbench
+repo: https://github.com/cvelasquez/agent-workbench
+tagline: Local web UI for OpenCode and three other agent CLIs, with one shared history
+description: Runs OpenCode through its own opencode serve process, next to Claude Code, Codex and Antigravity CLI, each in a browser tab. Shows OpenCode sessions as conversation cards read from its database in read-only mode, lets you answer its questions and see its permission waits from the UI, hands a conversation over to another CLI and searches across all of them. Never opens auth.json or opencode.json, no telemetry.
+kind: client
+topics:
+  - sessions
+  - remote
+compat: n/a

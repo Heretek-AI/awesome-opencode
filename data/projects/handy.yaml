@@ -2,3 +2,7 @@ name: Handy
 repo: https://github.com/cjpais/Handy
 tagline: Speech to Text
 description: Easy Open Source Speech to Text.
+kind: client
+topics:
+  - voice
+compat: n/a

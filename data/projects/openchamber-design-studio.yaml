@@ -1,0 +1,9 @@
+name: OpenChamber Design Studio
+repo: https://github.com/lastonoga/openchamber-design-studio
+tagline: Open, local alternative to Claude Design inside OpenChamber
+description: An OpenChamber extension that turns design work into a chat loop. It opens your running app in a real Chrome window beside the conversation; Cmd/Ctrl-click any element to attach it to the chat as a reference (selector, markup, computed styles), and the agent edits the real project while the preview reloads. Ships Design Mode (/design), per-project harness plugin, DESIGN.md / tokens.css authority with a vendored design-system preset catalog, project scaffolding, and a .design-studio.json project config. MIT, install from a git URL via Settings → Extensions.
+kind: client
+topics:
+  - ui
+  - media
+compat: n/a

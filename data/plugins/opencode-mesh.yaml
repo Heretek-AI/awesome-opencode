@@ -1,0 +1,8 @@
+name: OpenCode Mesh
+repo: https://github.com/divisionseven/opencode-mesh
+tagline: The missing agent-to-agent messenger for OpenCode
+description: The free OpenCode plugin that lets your agents communicate directly with any session on your machine. Separate projects, separate terminals, separate models, one connected team.
+kind: plugin
+topics:
+  - orchestration
+compat: v2

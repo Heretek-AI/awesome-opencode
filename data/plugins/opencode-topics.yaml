@@ -1,0 +1,8 @@
+name: OpenCode Topics
+repo: https://github.com/m-uvex/opencode-topics
+tagline: Smart, zero-token session re-titling that tracks topic drift
+description: Tracks topic drift across conversation turns and dynamically re-titles OpenCode sessions when the topic shifts, using zero-token local checks between assistant turns.
+kind: plugin
+topics:
+  - sessions
+compat: v2

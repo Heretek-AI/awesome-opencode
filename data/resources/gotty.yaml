@@ -2,3 +2,8 @@ name: GoTTY
 repo: https://github.com/sorenisanerd/gotty
 tagline: Turn CLI into Web App
 description: A simple command-line tool that turns your CLI tools, like opencode, into web applications.
+kind: tool
+topics:
+  - remote
+  - web
+compat: n/a
