@@ -1,0 +1,18 @@
+name: Geneseed
+repo: https://github.com/Arylmera/Geneseed
+tagline: Compiles a disciplined agent harness for OpenCode - laws enforced by plugins at the tool boundary
+description: One source renders into a ready-made OpenCode harness - a constitution of laws and doctrines, 18 capability agents, 47 native skills, a memory convention and 7 plugins that hard-block force-pushes, reset --hard and credentials written into tracked files before the tool runs. Install once globally and every repo inherits it; 14 themes change only the voice. Zero runtime dependencies. Also emits for Claude Code, Bob, OpenClaude and plain AGENT.md tools.
+scope:
+  - global
+  - project
+tags:
+  - harness
+  - agents
+  - skills
+  - plugins
+  - guardrails
+  - memory
+homepage: https://www.npmjs.com/package/geneseed
+installation: |
+  npx geneseed setup
+  # choose "OpenCode global" so every repo inherits it
