@@ -255,6 +255,18 @@
     "tags": []
   },
   {
+    "productId": "cache-stats",
+    "type": "plugins",
+    "displayName": "cache-stats",
+    "repoUrl": "https://github.com/nmdra/opencode-cache-stats",
+    "tagline": "Showing the active session's cache hit rate in a popup dialog",
+    "description": "This plugin shows the overall cache hit rate, a per-model breakdown, a per subagent breakdown and the associated cost, making it easy to understand cache performance at a glance.",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
     "productId": "cc-safety-net",
     "type": "plugins",
     "displayName": "CC Safety Net",
@@ -548,6 +560,25 @@
     "installation": "Add the package to `opencode.json`:\n\n```json\n{\n  \"plugin\": [\"@xberg-io/opencode-html-to-markdown\"]\n}\n```\n\nRequires the `html-to-markdown` CLI.\n"
   },
   {
+    "productId": "image-reader-relay",
+    "type": "plugins",
+    "displayName": "Image Reader Relay",
+    "repoUrl": "https://github.com/massiveits/image-reader-relay",
+    "tagline": "Let text-only models read pasted images via a vision model (OpenCode plugin)",
+    "description": "OpenCode plugin that lets text-only models read images pasted into a session.\nStashes pasted images in memory, injects a note into the model's context only,\nand registers a `read_image` tool the main model calls with its own question —\nrelaying the image to a configurable vision model in a throwaway session, then\ncleaning up. Models that support images natively are left untouched.\n",
+    "scope": [
+      "global",
+      "project"
+    ],
+    "tags": [
+      "images",
+      "vision",
+      "multimodal",
+      "productivity"
+    ],
+    "installation": "## Prerequisites\n- OpenCode with a tool-capable main model\n- Access to a vision model via one of your providers\n\n## Installation\nAdd to `opencode.json` (project) or `~/.config/opencode/opencode.json` (global):\n```json\n{\n  \"plugin\": [\n    [\"massiveits/image-reader-relay\", { \"model\": \"clinepass/cline-pass/mimo-v2.5\" }]\n  ]\n}\n```\n"
+  },
+  {
     "productId": "kibi-opencode",
     "type": "plugins",
     "displayName": "kibi-opencode",
@@ -572,6 +603,18 @@
     "repoUrl": "https://github.com/JungHoonGhae/opencode-kilo-auth",
     "tagline": "Kilo Gateway provider",
     "description": "Adds Kilo Gateway provider support to OpenCode.",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
+    "productId": "laya-drift",
+    "type": "plugins",
+    "displayName": "Laya Drift",
+    "repoUrl": "https://github.com/pythongiant/laya-drift",
+    "tagline": "Semantic drift monitoring for long-running OpenCode agent sessions.",
+    "description": "Laya Drift monitors whether an OpenCode agent is staying aligned with its original plan over long-running sessions. It uses the Laya decision model to embed session state, compares the current semantic state against a calibrated baseline with Jensen-Shannon divergence, and surfaces a live drift score in the OpenCode UI. When drift gets high, it can inject the score into the system prompt so the agent can self-correct. Sessions can also be recalibrated to establish a new baseline after an intentional change in direction.",
     "scope": [
       "global"
     ],
@@ -615,6 +658,31 @@
     ],
     "homepageUrl": "https://www.npmjs.com/package/@xberg-io/opencode-liter-llm",
     "installation": "Add the package to `opencode.json`:\n\n```json\n{\n  \"plugin\": [\"@xberg-io/opencode-liter-llm\"]\n}\n```\n\nRequires the `liter-llm` CLI.\n"
+  },
+  {
+    "productId": "llm-proxy",
+    "type": "plugins",
+    "displayName": "opencode-llm-proxy",
+    "repoUrl": "https://github.com/KochC/opencode-llm-proxy",
+    "tagline": "OpenCode-backed API gateway with tool calling",
+    "description": "Local OpenCode plugin that exposes OpenAI Chat Completions, OpenAI Responses, Anthropic Messages, and Gemini-compatible endpoints for any model configured in OpenCode. Supports streaming, model listing, and real tool/function calling including parallel tool calls, so tools like n8n, Open WebUI, LangChain, Continue, Zed, and coding agents can reuse the same OpenCode model setup.",
+    "scope": [
+      "global",
+      "project"
+    ],
+    "tags": [
+      "openai",
+      "anthropic",
+      "gemini",
+      "responses-api",
+      "llm-gateway",
+      "tool-calling",
+      "n8n",
+      "open-webui",
+      "langchain"
+    ],
+    "homepageUrl": "https://www.npmjs.com/package/opencode-llm-proxy",
+    "installation": "Add the package to `opencode.json`:\n\n```json\n{\n  \"plugin\": [\"opencode-llm-proxy\"]\n}\n```\n\nThe proxy starts automatically on `http://127.0.0.1:4010`.\n"
   },
   {
     "productId": "magic-context",
@@ -719,12 +787,12 @@
     "minVersion": "1.14.0"
   },
   {
-    "productId": "oh-my-opencode",
+    "productId": "oh-my-openagent",
     "type": "plugins",
-    "displayName": "Oh My Opencode",
-    "repoUrl": "https://github.com/code-yeongyu/oh-my-opencode",
+    "displayName": "Oh My OpenAgent",
+    "repoUrl": "https://github.com/code-yeongyu/oh-my-openagent",
     "tagline": "Agents & Pre-built tools",
-    "description": "Background agents, pre-built tools (LSP/AST/MCP), curated agents, and a Claude Code compatible layer.",
+    "description": "Background agents, pre-built tools (LSP/AST/MCP), curated agents, and a Claude Code compatible layer. (formerly Oh My Opencode)",
     "scope": [
       "global"
     ],
@@ -1606,6 +1674,25 @@
     "tags": []
   },
   {
+    "productId": "opencode-sidebar-usage",
+    "type": "plugins",
+    "displayName": "Sidebar Usage",
+    "repoUrl": "https://github.com/HunkYuan/opencode-sidebar-usage",
+    "tagline": "TUI sidebar showing per-turn and session-cumulative token usage, cache hit rate, and cost",
+    "description": "Adds a collapsible \"Usage\" block to the opencode TUI sidebar showing token\nbreakdown (input, output, reasoning, cache read, cache write), cache hit\npercentage, context window usage, and session cost. Updates reactively as\nnew assistant messages arrive.\n",
+    "scope": [
+      "global"
+    ],
+    "tags": [
+      "sidebar",
+      "tokens",
+      "tui",
+      "cost",
+      "cache"
+    ],
+    "minVersion": "1.17.9"
+  },
+  {
     "productId": "opencode-simple-notify",
     "type": "plugins",
     "displayName": "Simple Notify",
@@ -1713,6 +1800,28 @@
       "global"
     ],
     "tags": []
+  },
+  {
+    "productId": "opencode-teamwork",
+    "type": "plugins",
+    "displayName": "OpenCode Teamwork",
+    "repoUrl": "https://github.com/sorcnr/opencode-teamwork-v2",
+    "tagline": "Antigravity-style multi-agent orchestration with verification loops",
+    "description": "Brings the Antigravity-style Teamwork orchestration model to OpenCode V2, where a Sentinel coordinator dispatches a DAG of specialist agents and a verifier gates every task until it passes. Ships 10 agents (Sentinel, Orchestrator, Crafter, Scout, Worker, Proof Worker, Proposer, Falsifier, Synthesizer, Verifier), 7 slash commands, per-agent git worktrees, cost tracking, and a 9-step prompt-crafting wizard.",
+    "scope": [
+      "global"
+    ],
+    "tags": [
+      "agents",
+      "multi-agent",
+      "orchestration",
+      "worktrees",
+      "verification",
+      "commands"
+    ],
+    "homepageUrl": "https://www.npmjs.com/package/opencode-teamwork-v2",
+    "installation": "Install the plugin and choose a model for each agent:\n\n```sh\nopencode plugin add opencode-teamwork-v2\nnpx opencode-teamwork-v2 init\n```\n\nOr install straight from GitHub: `opencode plugin add github:sorcnr/opencode-teamwork-v2`\n",
+    "minVersion": "2.0.0"
   },
   {
     "productId": "opencode-telemetry",
@@ -1905,6 +2014,18 @@
     "tags": []
   },
   {
+    "productId": "opencodemirror",
+    "type": "plugins",
+    "displayName": "OpenCodeMirror",
+    "repoUrl": "https://github.com/iceberghbs/OpenCodeMirror",
+    "tagline": "Bridge OpenCode sessions to chat platforms from your phone",
+    "description": "Native OpenCode plugin that mirrors session output to Telegram and lets you approve permissions, answer questions, and send prompts from chat. Runs inside the OpenCode process with no separate server.",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
     "productId": "openhax-codex",
     "type": "plugins",
     "displayName": "OpenHax Codex",
@@ -2020,6 +2141,18 @@
     "tags": []
   },
   {
+    "productId": "rehydra",
+    "type": "plugins",
+    "displayName": "Rehydra",
+    "repoUrl": "https://github.com/rehydra-ai/rehydra-sdk",
+    "tagline": "Prevent your coding agent from leaking secrets to LLM providers",
+    "description": "Intercepts the conversation between OpenCode and the LLM, replacing secrets from .env files and detected API keys, tokens, and credentials with placeholders before they leave your machine. Secrets are transparently restored before any tool executes locally. Supports pattern-based detection for Stripe, OpenAI, AWS, GitHub, Slack, and more.\n",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
     "productId": "ring-a-bell-example",
     "type": "plugins",
     "displayName": "Ring a Bell Example",
@@ -2092,6 +2225,18 @@
     "tags": []
   },
   {
+    "productId": "sourcepier",
+    "type": "plugins",
+    "displayName": "SourcePier",
+    "repoUrl": "https://github.com/happyeric77/sourcepier",
+    "tagline": "Persistent project documents across OpenCode sessions",
+    "description": "Manage project-scoped Markdown documents in the OpenCode v2 native TUI. Import, search, edit, and export Sources across sessions, while agents can discover and read them through read-only tools.",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
     "productId": "subtask2",
     "type": "plugins",
     "displayName": "Subtask2",
@@ -2146,6 +2291,18 @@
     "repoUrl": "https://github.com/mmynsted/opencode-toon-config-plugin",
     "tagline": "Loads TOON based, AGENTS.toon rather than Markdown",
     "description": "Use TOON based agent instructions. Command to analyize and improve agent instructions.",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
+    "productId": "topic-compaction",
+    "type": "plugins",
+    "displayName": "Topic Compaction",
+    "repoUrl": "https://github.com/lhaarman/opencode-topic-compaction",
+    "tagline": "Appends late-position overrides to compaction prompts for topic-based session summarization.",
+    "description": "This plugin improves session compaction continuity by restructuring how opencode summarizes file activity. Instead of a single linear stream that can lose track of pending work, the plugin clusters actual file activity into thematic topics during compaction. Each topic carries an explicit `blocked:` status field, and open blockers are guaranteed to survive across successive compaction cycles, ensuring unresolved work persists through session restarts.\n",
     "scope": [
       "global"
     ],

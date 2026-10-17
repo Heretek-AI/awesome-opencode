@@ -185,6 +185,15 @@
 </details>
 
 <details>
+  <summary><b>cache-stats</b> <img src="https://badgen.net/github/stars/nmdra/opencode-cache-stats" height="14"/> - <i>Showing the active session's cache hit rate in a popup dialog</i></summary>
+  <blockquote>
+    This plugin shows the overall cache hit rate, a per-model breakdown, a per subagent breakdown and the associated cost, making it easy to understand cache performance at a glance.
+    <br><br>
+    <a href="https://github.com/nmdra/opencode-cache-stats">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
   <summary><b>CC Safety Net</b> <img src="https://badgen.net/github/stars/kenryu42/claude-code-safety-net" height="14"/> - <i>Safety net catching destructive commands</i></summary>
   <blockquote>
     A Claude Code plugin that acts as a safety net, catching destructive git and filesystem commands before they execute.
@@ -433,6 +442,20 @@ Key features:
 </details>
 
 <details>
+  <summary><b>Image Reader Relay</b> <img src="https://badgen.net/github/stars/massiveits/image-reader-relay" height="14"/> - <i>Let text-only models read pasted images via a vision model (OpenCode plugin)</i></summary>
+  <blockquote>
+    OpenCode plugin that lets text-only models read images pasted into a session.
+Stashes pasted images in memory, injects a note into the model's context only,
+and registers a `read_image` tool the main model calls with its own question —
+relaying the image to a configurable vision model in a throwaway session, then
+cleaning up. Models that support images natively are left untouched.
+
+    <br><br>
+    <a href="https://github.com/massiveits/image-reader-relay">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
   <summary><b>kibi-opencode</b> <img src="https://badgen.net/github/stars/Looted/kibi" height="14"/> - <i>Repo-local, branch-scoped knowledge and traceability for OpenCode</i></summary>
   <blockquote>
     Plugin-first entry point into the Kibi stack for OpenCode users. It adds context-aware
@@ -450,6 +473,15 @@ sync and targeted validation checks, and helps keep repo knowledge branch-local 
     Adds Kilo Gateway provider support to OpenCode.
     <br><br>
     <a href="https://github.com/JungHoonGhae/opencode-kilo-auth">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
+  <summary><b>Laya Drift</b> <img src="https://badgen.net/github/stars/pythongiant/laya-drift" height="14"/> - <i>Semantic drift monitoring for long-running OpenCode agent sessions.</i></summary>
+  <blockquote>
+    Laya Drift monitors whether an OpenCode agent is staying aligned with its original plan over long-running sessions. It uses the Laya decision model to embed session state, compares the current semantic state against a calibrated baseline with Jensen-Shannon divergence, and surfaces a live drift score in the OpenCode UI. When drift gets high, it can inject the score into the system prompt so the agent can self-correct. Sessions can also be recalibrated to establish a new baseline after an intentional change in direction.
+    <br><br>
+    <a href="https://github.com/pythongiant/laya-drift">🔗 <b>View Repository</b></a>
   </blockquote>
 </details>
 
@@ -536,11 +568,11 @@ sync and targeted validation checks, and helps keep repo knowledge branch-local 
 </details>
 
 <details>
-  <summary><b>Oh My Opencode</b> <img src="https://badgen.net/github/stars/code-yeongyu/oh-my-opencode" height="14"/> - <i>Agents & Pre-built tools</i></summary>
+  <summary><b>Oh My OpenAgent</b> <img src="https://badgen.net/github/stars/code-yeongyu/oh-my-openagent" height="14"/> - <i>Agents & Pre-built tools</i></summary>
   <blockquote>
-    Background agents, pre-built tools (LSP/AST/MCP), curated agents, and a Claude Code compatible layer.
+    Background agents, pre-built tools (LSP/AST/MCP), curated agents, and a Claude Code compatible layer. (formerly Oh My Opencode)
     <br><br>
-    <a href="https://github.com/code-yeongyu/oh-my-opencode">🔗 <b>View Repository</b></a>
+    <a href="https://github.com/code-yeongyu/oh-my-openagent">🔗 <b>View Repository</b></a>
   </blockquote>
 </details>
 
@@ -948,6 +980,15 @@ of model or provider, no configuration required.
 </details>
 
 <details>
+  <summary><b>OpenCode Teamwork</b> <img src="https://badgen.net/github/stars/sorcnr/opencode-teamwork-v2" height="14"/> - <i>Antigravity-style multi-agent orchestration with verification loops</i></summary>
+  <blockquote>
+    Brings the Antigravity-style Teamwork orchestration model to OpenCode V2, where a Sentinel coordinator dispatches a DAG of specialist agents and a verifier gates every task until it passes. Ships 10 agents (Sentinel, Orchestrator, Crafter, Scout, Worker, Proof Worker, Proposer, Falsifier, Synthesizer, Verifier), 7 slash commands, per-agent git worktrees, cost tracking, and a 9-step prompt-crafting wizard.
+    <br><br>
+    <a href="https://github.com/sorcnr/opencode-teamwork-v2">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
   <summary><b>Opencode Telemetry</b> <img src="https://badgen.net/github/stars/agostinilabsrl/opencode-telemetry" height="14"/> - <i>Passive cross-session telemetry to local SQLite; cost rollups across agent orchestration chains</i></summary>
   <blockquote>
     Logs every opencode session to a local SQLite database automatically — tokens, tool calls, skills, per-turn cost. Aggregates costs across orchestration chains (conductor + child sessions), offers turn-by-turn forensic inspection, and ships an `octm` CLI for reports without spending model tokens. Zero cloud, zero network, no message bodies stored.
@@ -1114,6 +1155,15 @@ of model or provider, no configuration required.
 </details>
 
 <details>
+  <summary><b>opencode-llm-proxy</b> <img src="https://badgen.net/github/stars/KochC/opencode-llm-proxy" height="14"/> - <i>OpenCode-backed API gateway with tool calling</i></summary>
+  <blockquote>
+    Local OpenCode plugin that exposes OpenAI Chat Completions, OpenAI Responses, Anthropic Messages, and Gemini-compatible endpoints for any model configured in OpenCode. Supports streaming, model listing, and real tool/function calling including parallel tool calls, so tools like n8n, Open WebUI, LangChain, Continue, Zed, and coding agents can reuse the same OpenCode model setup.
+    <br><br>
+    <a href="https://github.com/KochC/opencode-llm-proxy">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
   <summary><b>opencode-mystatus</b> <img src="https://badgen.net/github/stars/vbgate/opencode-mystatus" height="14"/> - <i>Check AI subscription quotas</i></summary>
   <blockquote>
     Check all your AI subscription quotas in one command. Supports OpenAI (Plus/Pro/Codex, etc.), Zhipu AI, Google Antigravity, and more.
@@ -1192,6 +1242,15 @@ of model or provider, no configuration required.
     A native opencode v2 plugin that reproduces Claude Code's dynamic workflows. The model writes a small JavaScript orchestration script (agent, parallel, pipeline, phase, budget, nested workflows) that runs in a sandboxed interpreter in the background, fans work out to subagents as child sessions, and can resume from its journal. Includes a live TUI tree to watch, steer, or stop running agents. Uses your configured opencode models; no extra daemon.
     <br><br>
     <a href="https://github.com/rphang/opencode-workflows">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
+  <summary><b>OpenCodeMirror</b> <img src="https://badgen.net/github/stars/iceberghbs/OpenCodeMirror" height="14"/> - <i>Bridge OpenCode sessions to chat platforms from your phone</i></summary>
+  <blockquote>
+    Native OpenCode plugin that mirrors session output to Telegram and lets you approve permissions, answer questions, and send prompts from chat. Runs inside the OpenCode process with no separate server.
+    <br><br>
+    <a href="https://github.com/iceberghbs/OpenCodeMirror">🔗 <b>View Repository</b></a>
   </blockquote>
 </details>
 
@@ -1329,6 +1388,16 @@ suggestions. All processing stays local by default — no data leaves the machin
 </details>
 
 <details>
+  <summary><b>Rehydra</b> <img src="https://badgen.net/github/stars/rehydra-ai/rehydra-sdk" height="14"/> - <i>Prevent your coding agent from leaking secrets to LLM providers</i></summary>
+  <blockquote>
+    Intercepts the conversation between OpenCode and the LLM, replacing secrets from .env files and detected API keys, tokens, and credentials with placeholders before they leave your machine. Secrets are transparently restored before any tool executes locally. Supports pattern-based detection for Stripe, OpenAI, AWS, GitHub, Slack, and more.
+
+    <br><br>
+    <a href="https://github.com/rehydra-ai/rehydra-sdk">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
   <summary><b>Research Papers</b> <img src="https://badgen.net/github/stars/saim-x/opencode-research-papers" height="14"/> - <i>Search arXiv and OpenAlex for research papers with recency and citation filtering</i></summary>
   <blockquote>
     OpenCode plugin that adds a research_papers tool for searching scholarly literature. Uses arXiv for fresh preprints and OpenAlex for broader metadata, citation counts, and open-access links. Supports filtering by latest, trending, or top-cited papers.
@@ -1374,6 +1443,19 @@ suggestions. All processing stays local by default — no data leaves the machin
 </details>
 
 <details>
+  <summary><b>Sidebar Usage</b> <img src="https://badgen.net/github/stars/HunkYuan/opencode-sidebar-usage" height="14"/> - <i>TUI sidebar showing per-turn and session-cumulative token usage, cache hit rate, and cost</i></summary>
+  <blockquote>
+    Adds a collapsible "Usage" block to the opencode TUI sidebar showing token
+breakdown (input, output, reasoning, cache read, cache write), cache hit
+percentage, context window usage, and session cost. Updates reactively as
+new assistant messages arrive.
+
+    <br><br>
+    <a href="https://github.com/HunkYuan/opencode-sidebar-usage">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
   <summary><b>Simple Memory</b> <img src="https://badgen.net/github/stars/cnicolov/opencode-plugin-simple-memory" height="14"/> - <i>Git-based memory</i></summary>
   <blockquote>
     Simple plugin to manage memory inside a git repo that can be committed and reviewed by team members.
@@ -1406,6 +1488,15 @@ suggestions. All processing stays local by default — no data leaves the machin
     Smart voice notification plugin with multiple TTS engines (ElevenLabs, Edge TTS, SAPI) and intelligent reminder system.
     <br><br>
     <a href="https://github.com/MasuRii/opencode-smart-voice-notify">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
+  <summary><b>SourcePier</b> <img src="https://badgen.net/github/stars/happyeric77/sourcepier" height="14"/> - <i>Persistent project documents across OpenCode sessions</i></summary>
+  <blockquote>
+    Manage project-scoped Markdown documents in the OpenCode v2 native TUI. Import, search, edit, and export Sources across sessions, while agents can discover and read them through read-only tools.
+    <br><br>
+    <a href="https://github.com/happyeric77/sourcepier">🔗 <b>View Repository</b></a>
   </blockquote>
 </details>
 
@@ -1469,6 +1560,16 @@ suggestions. All processing stays local by default — no data leaves the machin
     Use TOON based agent instructions. Command to analyize and improve agent instructions.
     <br><br>
     <a href="https://github.com/mmynsted/opencode-toon-config-plugin">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
+  <summary><b>Topic Compaction</b> <img src="https://badgen.net/github/stars/lhaarman/opencode-topic-compaction" height="14"/> - <i>Appends late-position overrides to compaction prompts for topic-based session summarization.</i></summary>
+  <blockquote>
+    This plugin improves session compaction continuity by restructuring how opencode summarizes file activity. Instead of a single linear stream that can lose track of pending work, the plugin clusters actual file activity into thematic topics during compaction. Each topic carries an explicit `blocked:` status field, and open blockers are guaranteed to survive across successive compaction cycles, ensuring unresolved work persists through session restarts.
+
+    <br><br>
+    <a href="https://github.com/lhaarman/opencode-topic-compaction">🔗 <b>View Repository</b></a>
   </blockquote>
 </details>
 
