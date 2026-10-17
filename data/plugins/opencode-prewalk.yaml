@@ -2,3 +2,9 @@ name: opencode-prewalk
 repo: https://github.com/vivekascoder/opencode-prewalk
 tagline: Save token costs by planning with a frontier model, then finishing with a faster model.
 description: Plans, explores, and begins implementation with a frontier model, then hands the same grounded OpenCode session to a faster model to finish the task while reducing token costs.
+kind: plugin
+topics:
+  - workflow
+  - cost
+  - sessions
+compat: v2
