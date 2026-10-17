@@ -1,0 +1,4 @@
+name: OpenCode Docker Panel
+repo: https://github.com/victor-ochenin/opencodeDockerPlugin
+tagline: Docker containers in the TUI sidebar, with control and logs
+description: Shows the running containers in the session sidebar with their state, published ports and compose project, and a pin keeps a container visible whatever its state. Clicking a row opens the actions docker accepts for that container's current state - start, stop, restart, tearing down its compose project behind a confirmation, or starting the stack declared by the compose file in the agent directory - and the same window doubles as a scrollable log view.
