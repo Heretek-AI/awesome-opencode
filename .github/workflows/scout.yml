@@ -1,6 +1,6 @@
-# Weekly discovery of OpenCode V2 plugins on npm that are not in the catalog yet.
+# Weekly discovery of OpenCode V2 plugins and SDK tools on npm that are not in the catalog yet.
 # Opens a "Scout" issue; ticking a candidate's box opens a PR (see issues.yml).
-name: Scout V2 plugins
+name: Scout V2 packages
 
 on:
   schedule:

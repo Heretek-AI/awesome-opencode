@@ -22,7 +22,7 @@ const { getNpmLatest, getNpmWeeklyDownloads, getRepos, rest } = require('./utils
 const { openPullRequest } = require('./utils/git-pr');
 const { REPO, ensureLabels, listOpenPulls } = require('./utils/repo');
 const { buildEntry } = require('./utils/submission');
-const { suggestTopics } = require('./utils/suggest');
+const { suggestKind, suggestTopics } = require('./utils/suggest');
 
 const V2_RELEASED = '2026-09-02';
 const SEARCHES = ['keywords:opencode-plugin', '@opencode/plugin', 'keywords:opencode'];
@@ -144,13 +144,16 @@ async function findCandidates(limit) {
 function candidateInput(c) {
   const description = truncate(c.info.description || c.manifest.description || c.pkg.description || '', 600);
   const text = [c.pkg.name, description, (c.manifest.keywords || []).join(' ')].join(' ');
+  // Packages built on the plugin API are plugins; other @opencode/* consumers (SDK/client) are projects
+  const isPlugin = c.markers.v2.some(m => /^@opencode(-ai)?\/plugin\b/.test(m));
+  const category = isPlugin ? 'plugins' : 'projects';
   return {
     name: c.pkg.name,
     repo: c.source.repo,
     path: c.source.path,
     npm: c.pkg.name,
-    category: 'plugins',
-    kind: 'plugin',
+    category,
+    kind: isPlugin ? 'plugin' : suggestKind('projects', text),
     topics: suggestTopics(text),
     tagline: truncate(c.manifest.description || description || c.pkg.name, 120),
     description: description || c.pkg.name
@@ -164,10 +167,11 @@ async function run({ dryRun, limit }) {
   const lines = candidates.map((c, i) => {
     const id = `c${i + 1}`;
     data[id] = candidateInput(c);
-    return `- [ ] **${c.pkg.name}** — ${truncate(c.manifest.description || '', 140)} · ⭐ ${c.info.stargazerCount} · ⬇ ${c.downloads}/wk · [repo](${c.source.repo}) · [npm](https://www.npmjs.com/package/${c.pkg.name}) <!-- scout:${id} -->`;
+    const label = data[id].category === 'plugins' ? 'plugin' : data[id].kind;
+    return `- [ ] **${c.pkg.name}** (${label}) — ${truncate(c.manifest.description || '', 140)} · ⭐ ${c.info.stargazerCount} · ⬇ ${c.downloads}/wk · [repo](${c.source.repo}) · [npm](https://www.npmjs.com/package/${c.pkg.name}) <!-- scout:${id} -->`;
   });
   const body = [
-    `OpenCode V2 plugins on npm that are not in the catalog yet: published since ${V2_RELEASED}, depending on \`@opencode/*\`, public, licensed, not archived or forked. Ranked by weekly downloads, then stars.`,
+    `OpenCode V2 packages on npm that are not in the catalog yet: published since ${V2_RELEASED}, depending on \`@opencode/*\` (plugins on \`@opencode/plugin\`, other tools on the SDK/client), public, licensed, not archived or forked. Ranked by weekly downloads, then stars.`,
     '',
     '**Tick a box to open a pull request for that candidate** (maintainers only; topics are a keyword guess, fix them in the PR). To stop suggesting a package, add it to [`discovery/declined.txt`](https://github.com/Heretek-AI/awesome-opencode/blob/main/discovery/declined.txt).',
     '',
@@ -183,7 +187,7 @@ async function run({ dryRun, limit }) {
   for (const old of Array.isArray(open) ? open : []) {
     if (!old.pull_request) await rest(`/repos/${REPO}/issues/${old.number}`, { method: 'PATCH', body: { state: 'closed', state_reason: 'completed' } });
   }
-  const res = await rest(`/repos/${REPO}/issues`, { method: 'POST', body: { title: `Scout: V2 plugin candidates (${week})`, body, labels: ['scout'] } });
+  const res = await rest(`/repos/${REPO}/issues`, { method: 'POST', body: { title: `Scout: V2 candidates (${week})`, body, labels: ['scout'] } });
   console.log(`Opened scout issue #${res.data.number} with ${candidates.length} candidate(s)`);
 }
 
@@ -211,11 +215,11 @@ async function accept({ issueNumber, sender, dryRun }) {
       note = ` → not added: ${result.problems.join('; ').slice(0, 200)}`;
     } else {
       const pr = await openPullRequest({
-        branch: `scout/${result.file.replace(/^data\/plugins\/|\.yaml$/g, '')}`,
+        branch: `scout/${result.file.replace(/^data\/[a-z]+\/|\.yaml$/g, '')}`,
         files: { [result.file]: result.text },
-        title: `docs: add ${input.name} to plugins`,
+        title: `docs: add ${input.name} to ${input.category}`,
         body: [`Found by the weekly scout in #${issueNumber}.`, '', ...result.notes.map(n => `- ${n}`), '', 'Topics are a keyword guess; adjust them before merging.'].join('\n'),
-        labels: ['scout', 'category: plugins'],
+        labels: ['scout', `category: ${input.category}`],
         dryRun
       });
       note = pr ? ` → #${pr.number}` : ' → (no changes)';

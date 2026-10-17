@@ -7,8 +7,9 @@
 
 const path = require('path');
 const yaml = require('js-yaml');
-const { CATEGORIES, canonicalKey, checkCatalog } = require('./catalog');
+const { CATEGORIES, canonicalKey, checkCatalog, parseRepoUrl } = require('./catalog');
 const { probeCompat } = require('./compat');
+const { getRepos } = require('./github');
 
 // Generated files a PR must never edit by hand
 const GENERATED_FILES = ['README.md', 'dist/registry.json'];
@@ -47,6 +48,7 @@ async function analyzePullRequest({ changes, baseEntries, probe = true }) {
   // Overlay the PR's data changes onto the base catalog
   const head = new Map(baseEntries.map(e => [e.file, e]));
   const changed = [];
+  const retargeted = [];
   for (const change of changes.filter(c => DATA_FILE_RE.test(c.path))) {
     head.delete(change.path);
     if (change.status === 'removed') continue;
@@ -69,10 +71,23 @@ async function analyzePullRequest({ changes, baseEntries, probe = true }) {
     if (change.status === 'modified' && change.baseContent) {
       try {
         const before = yaml.load(change.baseContent);
-        if (before && before.repo && data.repo && canonicalKey(before) !== canonicalKey(data)) {
-          warnings.push({ file: change.path, kind: 'human', message: `changes this entry's target from ${before.repo} to ${data.repo}. If this is a different project, add a new file instead of reusing an existing filename.` });
+        // Adding or changing `path` within the same repo is not a new target
+        if (before && before.repo && data.repo && canonicalKey({ repo: before.repo }) !== canonicalKey({ repo: data.repo })) {
+          retargeted.push({ file: change.path, from: before.repo, to: data.repo });
         }
       } catch { /* base file was already broken */ }
+    }
+  }
+
+  // A changed repo URL is fine when GitHub redirects the old name to the new one (rename/transfer)
+  if (retargeted.length) {
+    const olds = retargeted.map(r => parseRepoUrl(r.from)).filter(p => p && p.host === 'github.com');
+    const resolved = probe ? await getRepos(olds.map(p => ({ owner: p.owner, name: p.name }))).catch(() => new Map()) : new Map();
+    for (const r of retargeted) {
+      const old = parseRepoUrl(r.from);
+      const info = old && resolved.get(`${old.owner}/${old.name}`);
+      if (info && canonicalKey({ repo: `https://github.com/${info.nameWithOwner}` }) === canonicalKey({ repo: r.to })) continue;
+      warnings.push({ file: r.file, kind: 'human', message: `changes this entry's target from ${r.from} to ${r.to}. If this is a different project, add a new file instead of reusing an existing filename.` });
     }
   }
 
