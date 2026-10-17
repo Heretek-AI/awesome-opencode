@@ -1,0 +1,8 @@
+name: handoff
+repo: https://github.com/dazuiba/handoff
+tagline: Delegate tasks to OpenCode / DeepSeek V4 right inside your Claude Code / Codex sessions.
+description: Cross-agent task dispatcher — hand off work to DeepSeek V4 (via OpenCode), Codex, or Claude Opus without leaving your current session. Runs in the background; result comes back automatically.
+kind: agent
+topics:
+  - orchestration
+compat: n/a
