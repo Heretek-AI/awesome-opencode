@@ -1,4 +1,8 @@
 name: Opencode Agents
-repo: https://github.com/darrenhinde/opencode-agents
+repo: https://github.com/darrenhinde/OpenAgentsControl
 tagline: Enhanced workflows
 description: A set of opencode configurations, prompts, agents, and plugins for enhanced development workflows.
+kind: agent
+topics:
+  - workflow
+compat: v1

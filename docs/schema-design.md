@@ -31,8 +31,6 @@ awesome-opencode/
 │   │   └── *.yaml
 │   ├── resources/
 │   │   └── *.yaml       # Guides, configs, MCP servers, tools, commands
-│   ├── forks/
-│   │   └── *.yaml
 │   └── examples/
 │       └── *.yaml       # Exemplar files showing all fields
 └── docs/
@@ -114,7 +112,7 @@ Guides, configurations, MCP servers, tools, and commands that enhance the OpenCo
 
 ### 2.6 Fork (`fork`)
 
-Modified builds of OpenCode itself with custom features or patches. Forks maintain compatibility while adding functionality.
+Modified builds of OpenCode itself with custom features or patches. Forks maintain compatibility while adding functionality. They live in `data/projects/` with `kind: fork`.
 
 **Example Use Cases:**
 - Custom builds with enterprise features
@@ -194,39 +192,44 @@ If `scope` is set to `[global, project]` and both global and project configs def
 
 ## 4. YAML Schema
 
-The awesome-opencode registry uses a flexible schema with four required fields and several optional fields for enhanced discoverability.
+`data/schema.json` defines the fields; `scripts/utils/catalog.js` adds rules that need the whole catalog (one entry per repository and `path`, `kind` must fit the category directory, `compat` required for plugins, no placeholder repo owners, no mis-encoded text). Unknown fields are rejected (`additionalProperties: false`).
 
 ### Required Fields
 
 | Field | Type | Description |
 |-------|------|-------------|
-| `name` | string | Display name for the extension (human-readable) |
-| `repo` | string | Repository URL (HTTPS format, e.g., `https://github.com/user/repo`) |
-| `tagline` | string | Short punchy summary, max 120 characters |
-| `description` | string | Full description (can be multi-line) |
+| `name` | string | Display name, max 80 characters |
+| `repo` | string | Repository root URL on GitHub, GitLab, Codeberg or Gitee (gists and GitHub discussions also accepted). No `/tree/` or `/blob/` paths, npm pages or websites |
+| `tagline` | string | Short summary, max 120 characters |
+| `description` | string | Full description, max 1500 characters |
+| `kind` | enum | `plugin`, `theme`, `agent`, `skill`, `mcp-server`, `client`, `tool`, `config`, `guide`, `fork` |
+| `topics` | array | 1–3 of the fixed topic list (see `data/schema.json`); the first is the primary topic used for README grouping |
+| `compat` | enum | Required for `data/plugins/` only: `v2`, `v1` or `unknown` (verified by CI). Other categories: optional, `v2`/`v1` when they use the SDK, otherwise `n/a` |
 
 ### Optional Fields
 
 | Field | Type | Default | Description |
 |-------|------|---------|-------------|
+| `path` | string | - | Folder inside a monorepo, e.g. `packages/my-plugin` |
+| `npm` | string | - | npm package name; used for the V2 check, health checks and the npm link |
+| `also` | array | - | Secondary kinds (e.g. `[mcp-server]`), cross-listed on the site |
 | `scope` | array | `[global]` | Installation scope: `[global]`, `[project]`, or `[global, project]` |
-| `tags` | array | `[]` | Strings for filtering and discoverability |
-| `min_version` | string | - | Minimum OpenCode version required (semver, e.g., `"1.0.0"`) |
+| `tags` | array | `[]` | Free-form search keywords (not rendered; use `topics` for categorization) |
+| `min_version` | string | - | Minimum OpenCode version required (semver, e.g., `"2.0.0"`) |
 | `homepage` | string | - | Documentation URL if different from repository |
 | `installation` | string | - | Detailed installation instructions (markdown format) |
 
-### Type Derivation
+### Kind per Category
 
-Extension type is **not stored in YAML** - it's derived from the directory location:
+The directory is the coarse bucket (and the `type` downstream consumers see); `kind` says what the entry actually is.
 
-| Directory | Type |
-|-----------|------|
+| Directory | Allowed `kind` |
+|-----------|----------------|
 | `data/plugins/` | `plugin` |
 | `data/themes/` | `theme` |
-| `data/agents/` | `agent` |
-| `data/projects/` | `project` |
-| `data/resources/` | `resource` |
-| `data/forks/` | `fork` |
+| `data/agents/` | `agent`, `skill` |
+| `data/projects/` | `client`, `tool`, `mcp-server`, `skill`, `agent`, `fork` |
+| `data/resources/` | `guide`, `config`, `mcp-server`, `skill`, `tool` |
 
 ### Minimal Valid Entry
 
@@ -235,31 +238,42 @@ name: My Extension
 repo: https://github.com/user/my-extension
 tagline: A brief description of what this does
 description: A longer explanation of the extension.
+kind: plugin
+topics:
+  - workflow
+compat: v2
 ```
 
 ### Complete Entry (All Fields)
 
 ```yaml
 name: My Extension
-repo: https://github.com/user/my-extension
-tagline: A brief tagline (max 120 chars)
+repo: https://github.com/user/my-monorepo
+path: packages/my-extension
+npm: opencode-my-extension
+homepage: https://example.com/docs
+tagline: "A brief tagline: quote it when it contains a colon"
 description: |
   A longer description explaining
   the extension in detail.
+kind: plugin
+also:
+  - mcp-server
+topics:
+  - memory
+  - context
+compat: v2
 scope:
   - global
   - project
 tags:
   - productivity
-  - ai
-min_version: "1.0.0"
-homepage: https://example.com/docs
+min_version: "2.0.0"
 installation: |
-  ## Installation
-  ```bash
-  git clone https://github.com/user/my-extension ~/.config/opencode/plugin/my-extension
-  ```
+  Add `opencode-my-extension` to the `plugin` list in `opencode.json`.
 ```
+
+Use `npm run new` to scaffold an entry and `npm run fmt` to rewrite entries in canonical key order with safe quoting.
 
 ### Examples Directory
 
@@ -272,7 +286,7 @@ Full exemplar files for each extension type are available in `data/examples/`:
 | Agent | `data/examples/agent.yaml` |
 | Project | `data/examples/project.yaml` |
 | Resource | `data/examples/resource.yaml` |
-| Fork | `data/examples/fork.yaml` |
+| Fork | `data/examples/fork.yaml` (forks now live in `data/projects/` with `kind: fork`) |
 
 ---
 
@@ -347,6 +361,12 @@ The awesome-opencode schema is designed for seamless conversion to downstream pl
 | `homepage` | `homepageUrl` | Documentation URL |
 | `installation` | `installation` | Markdown content |
 | `min_version` | `minVersion` | Semver string |
+| `path` | `repoPath` | Monorepo folder (added 2026-10) |
+| `npm` | `npmPackage` | npm package name (added 2026-10) |
+| `kind` | `kind` | What the entry is (added 2026-10) |
+| `also` | `also` | Secondary kinds (added 2026-10) |
+| `topics` | `topics` | Use-case topics (added 2026-10) |
+| `compat` | `compat` | `v2`, `v1`, `unknown` or `n/a`; plugins default to `unknown` (added 2026-10) |
 
 ### Conversion Example
 
@@ -422,9 +442,11 @@ When an agent assists with installation, it can:
 
 Future improvements to the contribution process:
 
-1. **Schema Validation**: CI checks YAML validity and required fields
-2. **Preview Tool**: Generate opencode.cafe JSON preview for PRs
-3. **Link Checking**: Verify `repo` and `homepage` URLs are accessible
+Implemented in 2026-10; see [policy.md](policy.md#automation-map):
+
+1. **Schema Validation**: the required `validate` check runs on every PR
+2. **V2 Compatibility Check**: plugins are probed for `@opencode/*` and `Plugin.define`
+3. **Link Checking**: the nightly health job tracks renamed, archived, missing and deprecated targets
 
 ---
 
@@ -439,7 +461,8 @@ Future improvements to the contribution process:
 | `agent` | `data/agents/` |
 | `project` | `data/projects/` |
 | `resource` | `data/resources/` |
-| `fork` | `data/forks/` |
+
+Forks are entries in `data/projects/` with `kind: fork`; see "Kind per Category" in section 4.
 
 ### Minimal Valid Entry
 
@@ -479,69 +502,19 @@ installation: |
 ### Commands
 
 ```bash
-# Validate schema and entries
-node scripts/validate.js
-
-# Regenerate README
-node scripts/generate-readme.js
+npm run validate   # schema and catalog rules for every entry
+npm run generate   # regenerate README.md
+npm run new -- --category plugins --repo <url> --tagline "..." --topics memory
+npm run fmt        # canonical formatting for all entries
 ```
 
 ---
 
-## 9. Future Work
+## 9. Status
 
-Remaining tasks for the awesome-opencode registry.
-
-### 9.1 Update Contributing Guide
-
-Update `contributing.md` to:
-- Reference `data/examples/` directory for full field documentation
-- Document optional fields (`scope`, `tags`, `min_version`, `homepage`, `installation`)
-- Explain scope behavior and defaults
-
-### 9.2 README Generation Enhancements (Optional)
-
-Update `scripts/generate-readme.js` to optionally display:
-- Tags for entries that have them
-- Scope indicators
-- Type badges derived from directory
-
-### 9.3 Export Script for Downstream Platforms
-
-Create `scripts/export-json.js` to generate JSON for platforms like opencode.cafe:
-
-```javascript
-// Pseudocode
-for each file in data/{category}/*.yaml:
-  entry = parseYAML(file)
-  entry.type = category           // derived from directory
-  entry.productId = filename      // derived from filename
-  output.push(mapFields(entry))
-writeJSON(output)
-```
-
-**Field mapping:**
-| YAML | JSON Output |
-|------|-------------|
-| `name` | `displayName` |
-| `repo` | `repoUrl` |
-| `tagline` | `tagline` |
-| `description` | `description` |
-| (directory) | `type` |
-| (filename) | `productId` |
-| `scope` | `scope` (default `["global"]`) |
-| `tags` | `tags` (default `[]`) |
-| `homepage` | `homepageUrl` |
-| `installation` | `installation` |
-| `min_version` | `minVersion` |
-
-**Usage:**
-```bash
-node scripts/export-json.js > dist/registry.json
-node scripts/export-json.js --pretty > dist/registry.json
-```
+The contributing guide, README enhancements (topic/kind grouping, V1/V2 badges, counts, recently added) and the JSON export described in earlier versions of this document are implemented. Catalog rules are in [policy.md](policy.md).
 
 ---
 
-*Document Version: 1.2*
-*Last Updated: 2026-01-12*
+*Document Version: 2.0*
+*Last Updated: 2026-10-17*

@@ -1,0 +1,8 @@
+name: LM Studio Warm
+repo: https://github.com/diegomarino/lm-studio-warm
+tagline: Ensures your LM Studio model is loaded before every request
+description: Guarantees the target LM Studio model is loaded and addressable before any request leaves opencode, healing cold starts, "no model loaded" errors, and mid-session idle-TTL evictions.
+kind: plugin
+topics:
+  - providers
+compat: v1

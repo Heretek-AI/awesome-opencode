@@ -1,0 +1,8 @@
+name: AutoRecord
+repo: https://github.com/kevinsoul/opencode-autorecord
+tagline: Automatic session recording
+description: Automatically saves all OpenCode session records to Markdown files with centralized storage in ~/opencode-autorecord, plus generated HTML views (overview index + per-project pages) for browsing conversations.
+kind: plugin
+topics:
+  - sessions
+compat: v2

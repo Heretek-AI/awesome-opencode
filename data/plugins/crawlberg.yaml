@@ -1,7 +1,13 @@
 name: Crawlberg
-repo: https://github.com/xberg-io/plugins
+repo: https://github.com/xberg-io/crawlberg
+npm: "@xberg-io/opencode-crawlberg"
+homepage: https://www.npmjs.com/package/@xberg-io/opencode-crawlberg
 tagline: Web crawling and scraping tools for opencode
 description: OpenCode plugin exposing crawlberg CLI tools for scraping pages, crawling sites, and mapping URLs to JSON or Markdown.
+kind: plugin
+topics:
+  - web
+compat: v2
 scope:
   - global
   - project
@@ -10,7 +16,6 @@ tags:
   - scraping
   - markdown
   - cli
-homepage: https://www.npmjs.com/package/@xberg-io/opencode-crawlberg
 installation: |
   Add the package to `opencode.json`:
 

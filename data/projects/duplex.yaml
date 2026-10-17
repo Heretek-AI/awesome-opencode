@@ -1,0 +1,42 @@
+name: Duplex
+repo: https://github.com/Eric-huang799/duplex
+tagline: A browser shared by a human and an AI — same tabs, same live session
+description: Electron desktop browser with a bundled stdio MCP bridge (24 tools — snapshot, click, type, screenshot, tabs, annotations) plus an opencode mirror plugin that streams session events into a side panel and injects panel messages back into the same session. Built-in multi-protocol model support (OpenAI / Anthropic / Responses / Gemini) and an Esc takeover for the human.
+kind: client
+topics:
+  - sessions
+  - web
+compat: n/a
+scope:
+  - global
+tags:
+  - browser
+  - mcp
+  - mirror
+  - automation
+  - electron
+installation: |
+  ## Install the Duplex app
+  Download the installer for Windows / macOS / Linux from the
+  [Releases](https://github.com/Eric-huang799/duplex/releases) page (or build from source).
+
+  ## Install the opencode mirror plugin
+  ```bash
+  mkdir -p ~/.config/opencode/plugins
+  curl -o ~/.config/opencode/plugins/cobrowse-mirror.ts \
+    https://raw.githubusercontent.com/Eric-huang799/duplex/master/integrations/opencode/plugins/cobrowse-mirror.ts
+  ```
+
+  ## Register the MCP server
+  Add to `opencode.json` (project-level or global — see `opencode.example.json`):
+  ```json
+  {
+    "mcp": {
+      "duplex": {
+        "type": "local",
+        "command": ["node", "/path/to/duplex/dist-bridge/index.cjs"],
+        "enabled": true
+      }
+    }
+  }
+  ```
