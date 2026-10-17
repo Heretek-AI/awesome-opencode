@@ -1689,7 +1689,7 @@
     "topics": [
       "providers"
     ],
-    "compat": "v1",
+    "compat": "v2",
     "scope": [
       "global",
       "project"
