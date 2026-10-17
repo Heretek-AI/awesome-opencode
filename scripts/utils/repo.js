@@ -137,21 +137,39 @@ async function fileText(repo, filePath, ref) {
 }
 
 /**
- * Re-run the latest "validate" workflow run for a commit, or dispatch one on a same-repo branch.
+ * Approve the pull_request "validate" run(s) waiting on a commit. GitHub holds pull_request runs for PRs
+ * opened or updated by github-actions[bot] as action_required, and only that run satisfies the required
+ * check on main (a workflow_dispatch run on the same commit does not).
+ * @param {string} sha - PR head commit
+ * @param {object} [options] - { waitSeconds: how long to wait for the run to appear }
+ * @returns {Promise<number>} number of runs approved
+ */
+async function approvePendingRuns(sha, { waitSeconds = 60 } = {}) {
+  for (let waited = 0; ; waited += 5) {
+    const runs = await check(rest(`/repos/${REPO}/actions/workflows/validate-pr.yml/runs?head_sha=${sha}&event=pull_request&per_page=10`), 'list runs');
+    const pending = (runs.workflow_runs || []).filter(r => r.conclusion === 'action_required');
+    for (const run of pending) await rest(`/repos/${REPO}/actions/runs/${run.id}/approve`, { method: 'POST' });
+    if (pending.length || (runs.workflow_runs || []).length || waited >= waitSeconds) return pending.length;
+    await new Promise(r => setTimeout(r, 5000));
+  }
+}
+
+/**
+ * Get the "validate" check running again for a PR's head commit: approve a held run, otherwise re-run
+ * the latest pull_request run.
  */
 async function revalidate(pull) {
-  const runs = await check(rest(`/repos/${REPO}/actions/workflows/validate-pr.yml/runs?head_sha=${pull.head.sha}&per_page=5`), 'list runs');
+  if (await approvePendingRuns(pull.head.sha, { waitSeconds: 30 })) return true;
+  const runs = await check(rest(`/repos/${REPO}/actions/workflows/validate-pr.yml/runs?head_sha=${pull.head.sha}&event=pull_request&per_page=5`), 'list runs');
   const run = runs.workflow_runs && runs.workflow_runs[0];
   if (run && run.status === 'completed') {
-    return rest(`/repos/${REPO}/actions/runs/${run.id}/rerun`, { method: 'POST' });
+    await rest(`/repos/${REPO}/actions/runs/${run.id}/rerun`, { method: 'POST' });
+    return true;
   }
-  if (!run && pull.head.repo && pull.head.repo.full_name === REPO) {
-    return rest(`/repos/${REPO}/actions/workflows/validate-pr.yml/dispatches`, { method: 'POST', body: { ref: pull.head.ref } });
-  }
-  return null;
+  return false;
 }
 
 module.exports = {
   BOT_LABELS, REPO, TRIAGE_LABELS,
-  addLabels, comment, ensureLabels, fileText, listComments, listOpenPulls, pullChanges, revalidate, setTriageLabels, upsertComment
+  addLabels, approvePendingRuns, comment, ensureLabels, fileText, listComments, listOpenPulls, pullChanges, revalidate, setTriageLabels, upsertComment
 };

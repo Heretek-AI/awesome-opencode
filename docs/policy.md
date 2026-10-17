@@ -51,7 +51,7 @@ A weekly scout searches npm for packages published since V2 shipped that depend 
 
 ## Branch protection
 
-`main` has a ruleset: changes land only through pull requests with a passing `validate` check (GitHub rulesets do not accept direct pushes while a status check is required), and force-pushes and deletion are blocked. Bots open PRs too and get the check by dispatching `validate` on their branch. Repository admins can merge a PR whose check is failing or pending (for a broken CI).
+`main` has a ruleset: changes land only through pull requests with a passing `validate` check (GitHub rulesets do not accept direct pushes while a status check is required), and force-pushes and deletion are blocked. Bots open PRs too; GitHub holds workflow runs on bot-opened PRs for approval, so each bot approves the `validate` run on its own PR. Repository admins can merge a PR whose check is failing or pending (for a broken CI).
 
 ## Automation map
 

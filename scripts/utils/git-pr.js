@@ -1,16 +1,15 @@
 /**
  * Open or update a bot pull request from file changes (used by submissions, scout, health).
  *
- * Commits made with GITHUB_TOKEN do not trigger workflows, so after pushing, the "validate" workflow
- * is dispatched on the branch; its check run attaches to the head commit and satisfies the required
- * status check on the PR.
+ * GitHub holds pull_request workflow runs for bot-opened PRs as action_required; the bot approves the
+ * "validate" run on its own head commit so the PR gets the required check.
  */
 
 const fs = require('fs');
 const path = require('path');
 const { execFileSync } = require('child_process');
 const { rest } = require('./github');
-const { REPO, addLabels } = require('./repo');
+const { REPO, addLabels, approvePendingRuns } = require('./repo');
 
 const ROOT = path.join(__dirname, '../..');
 const BOT = ['-c', 'user.name=github-actions[bot]', '-c', 'user.email=41898282+github-actions[bot]@users.noreply.github.com'];
@@ -69,7 +68,7 @@ async function openPullRequest({ branch, files, title, body, labels = [], base =
     created = true;
   }
   if (labels.length) await addLabels(pr.number, labels);
-  await rest(`/repos/${REPO}/actions/workflows/validate-pr.yml/dispatches`, { method: 'POST', body: { ref: branch } });
+  await approvePendingRuns(pr.head.sha);
   return { number: pr.number, url: pr.html_url, created };
 }
 
