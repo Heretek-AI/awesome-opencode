@@ -1,0 +1,9 @@
+name: lean-ctx
+repo: https://github.com/yvgude/lean-ctx
+tagline: Context runtime for AI coding agents
+description: Open-source context runtime for AI coding agents (https://leanctx.com). MCP server + shell hook reducing token costs by 60-99%. 46 tools, session caching, AST-aware compression. Single Rust binary. Apache-2.0.
+kind: plugin
+topics:
+  - context
+  - cost
+compat: unknown
