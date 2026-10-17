@@ -39,7 +39,7 @@
 > **Active Hard Fork**: `Heretek-AI/awesome-opencode` is the actively maintained community continuation of `awesome-opencode`.
 > All original upstream issues, pull requests, and discussions are preserved and imported. Submissions and PRs are actively reviewed!
 
-<p><b>542</b> entries &nbsp;•&nbsp; <b>280</b> plugins: <b>144</b> <code>V2</code>, <b>124</b> <code>V1 only</code> (removed after 2027-01-01), <b>12</b> <code>unverified</code></p>
+<p><b>555</b> entries &nbsp;•&nbsp; <b>289</b> plugins: <b>153</b> <code>V2</code>, <b>124</b> <code>V1 only</code> (removed after 2027-01-01), <b>12</b> <code>unverified</code></p>
 
 <p>
 <a href="https://heretek-ai.github.io/awesome-opencode/"><b>🔎 Search &amp; filter the catalog</b></a>
@@ -79,31 +79,31 @@
 
 | Name | Category | Tagline |
 | :--- | :--- | :--- |
+| **[Oh My TCM Powers (中医之心)](https://github.com/skyfiredao/oh-my-tcmpowers)** | agents | Skills and agents for analyzing Traditional Chinese Medicine formulas, symptoms, pulse patterns and acupoints |
+| **[dreampowers](https://github.com/skyfiredao/dreampowers)** | agents | 13 skills for Chinese novel writing, from story ideation to finished manuscript |
+| **[zosma-qa](https://github.com/zosmaai/zosma-qa)** | agents | QA agents for OpenCode: test planner, generator, healer and analyzer for Playwright, Appium and k6 |
+| **[OpenCode Version Footer](https://github.com/vvaldez/opencode-plugins)** | plugins | Show the OpenCode version in the session footer |
+| **[Agent Relay](https://github.com/AgentWorkforce/skills)** | plugins | Connect OpenCode sessions to other coding agents through Agent Relay |
+| **[OpenRouter Websearch](https://github.com/pichenka007gd/opencode-openrouter-websearch)** | plugins | Web search via OpenRouter's web plugin with optional AI summarization |
+| **[opencode-voice](https://github.com/vaibhavgupta0786/opencode-voice)** | plugins | Local-only push-to-talk dictation for OpenCode. Press F9, speak, press F9 |
+| **[OpenCode Model Router](https://github.com/sertdisk/OpenCode-Model-Router)** | plugins | Per-agent model fallback chains (primary/secondary/tertiary) for OpenCode v2.x with a local web UI |
+| **[open-memex](https://github.com/stoneskin/open-memex)** | plugins | Local-first persistent memory for AI agents — opencode, VS Code, Visual Studio, Cursor, Claude Code |
+| **[opencode-headroom-plugin](https://github.com/goldfix/opencode-headroom-plugin)** | plugins | OpenCode v2 plugin compressing large tool results via Headroom at the message level |
+| **[OCSM - OpenCode Session Manager](https://github.com/evil-qq-intestine/OpenCode-Session-Manager)** | projects | Standalone CLI for OpenCode session management |
+| **[opencode-kevin](https://github.com/jmtrin/opencode-kevin)** | plugins | Local-first project memory that learns from coding sessions and turns approved knowledge into durable project guidance. |
+| **[Opencode Autopilot Logbook](https://github.com/smapira/opencode-autopilot-logbook)** | plugins | Auto-generates daily logbooks on session idle |
 | **[opencode-prewalk](https://github.com/vivekascoder/opencode-prewalk)** | plugins | Save token costs by planning with a frontier model, then finishing with a faster model. |
 | **[Chat Sidebar for OpenCode](https://github.com/SenCha930511/chat-sidebar-for-opencode)** | projects | VS Code sidebar chat GUI for OpenCode |
-| **[OpenCode Async Prompt Injector](https://github.com/theOnlyBoy/opencode-async-prompt-injector)** | plugins | Slide a sticky note under your agent's nose: inject prompts mid-task without interrupting agent's flow. |
-| **[@aerovato/operator-memory](https://github.com/aerovato/operator-memory)** | plugins | Durable context for agent-driven development |
-| **[Cursor Auth](https://github.com/ephraimduncan/opencode-cursor)** | plugins | Use your Cursor subscription models in OpenCode via OAuth |
-| **[AI Project Tracker](https://github.com/Helixventures-AI/ai-project-tracker)** | plugins | Real-time project progress tracker with dashboard, MCP, CLI and git-history import |
-| **[omoctl](https://github.com/anfreire/omoctl)** | projects | Define, patch, and switch oh-my-openagent profiles with one command |
-| **[Cursor Provider](https://github.com/oakimov/cursor-opencode-provider)** | plugins | Run Cursor subscription models from OpenCode |
-| **[Opencode Profiles](https://github.com/gtmdev-br/opencode-profiles)** | agents | 17 agent personalities for OpenCode — switch with one command |
-| **[opencode-rtl](https://github.com/razavioo/opencode-rtl)** | plugins | RTL language support for Persian, Arabic, Hebrew and other right-to-left languages |
-| **[EGC](https://github.com/Fmarzochi/EGC)** | projects | Persistent cross-session memory MCP server for 13+ AI coding tools including OpenCode |
-| **[OpenCode SmartSnip](https://github.com/carson2222/opencode-smartsnip)** | plugins | Cuts shell-output tokens safely by wrapping only commands snip can filter. |
-| **[OpenCode Antigravity CLI Auth](https://github.com/anthonyhaussman/opencode-agy-auth)** | plugins | Google Antigravity account auth |
-| **[Generative Media Skills](https://github.com/SamurAIGPT/Generative-Media-Skills)** | projects | Multi-modal AI media generation skills |
-| **[handoff](https://github.com/dazuiba/handoff)** | agents | Delegate tasks to OpenCode / DeepSeek V4 right inside your Claude Code / Codex sessions. |
 
 <br>
 
 <div id="plugins"></div>
 
 <details open>
-<summary><strong>🧩 PLUGINS (280)</strong></summary>
+<summary><strong>🧩 PLUGINS (289)</strong></summary>
 <br>
 
-<h4>Memory <sub>(28)</sub></h4>
+<h4>Memory <sub>(30)</sub></h4>
 
 <details>
   <summary><b>@aerovato/operator-memory</b> <img src="https://badgen.net/github/stars/aerovato/operator-memory" height="14"/> <code>V2</code> - <i>Durable context for agent-driven development</i></summary>
@@ -263,6 +263,15 @@ BM25 over local files. No LLM, no embeddings, no network. Credentials are redact
 </details>
 
 <details>
+  <summary><b>open-memex</b> <img src="https://badgen.net/github/stars/stoneskin/open-memex" height="14"/> <code>V2</code> - <i>Local-first persistent memory for AI agents — opencode, VS Code, Visual Studio, Cursor, Claude Code</i></summary>
+  <blockquote>
+    Native opencode plugin (keyword-triggered capture, first-turn memory injection) backed by plain Markdown memories with a SQLite FTS5 index. One memory shared by every editor you code with, a human review ladder, and team sharing via git PRs. No cloud, no telemetry. Install with `npm install -g open-memex`, then `open-memex init` wires the plugin for you.
+    <br><br>
+    <a href="https://github.com/stoneskin/open-memex">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
   <summary><b>OpenCode Claude Memory</b> <img src="https://badgen.net/github/stars/kuitos/opencode-claude-memory" height="14"/> <code>V2</code> - <i>Claude Code-compatible memory</i></summary>
   <blockquote>
     Share persistent Markdown memory between OpenCode and Claude Code using Claude Code-compatible paths and file formats.
@@ -286,6 +295,15 @@ BM25 over local files. No LLM, no embeddings, no network. Credentials are redact
     Saves every conversation to a local MemPalace palace and recalls it verbatim in later sessions. Mines run on idle, exit and startup — never mid-reply. Zero-config: the plugin registers its own read-only MCP entry, so multiple OpenCode tabs never starve each other on the palace writer lock. Ships a live sidebar status line and a companion local browser/curator (penfield) for timeline, knowledge graph, thread view and duplicate healing.
     <br><br>
     <a href="https://github.com/geco/opencode-mempalace-persistence">🔗 <b>View Repository</b></a> &nbsp;•&nbsp; <a href="https://www.npmjs.com/package/opencode-mempalace-persistence">📦 <b>npm</b></a>
+  </blockquote>
+</details>
+
+<details>
+  <summary><b>opencode-kevin</b> <img src="https://badgen.net/github/stars/jmtrin/opencode-kevin" height="14"/> <code>V2</code> - <i>Local-first project memory that learns from coding sessions and turns approved knowledge into durable project guidance.</i></summary>
+  <blockquote>
+    Kevin is a local-first memory plugin for OpenCode that learns from coding sessions, recalls relevant knowledge, and helps turn approved memories into durable, Git-friendly project guidance. It provides project-scoped persistent memory, confidence-aware retrieval, human curation, and cross-harness memory sources while keeping data local and under the user's control.
+    <br><br>
+    <a href="https://github.com/jmtrin/opencode-kevin">🔗 <b>View Repository</b></a>
   </blockquote>
 </details>
 
@@ -363,7 +381,7 @@ BM25 over local files. No LLM, no embeddings, no network. Credentials are redact
 
 <br>
 
-<h4>Context & Tokens <sub>(14)</sub></h4>
+<h4>Context & Tokens <sub>(16)</sub></h4>
 
 <details>
   <summary><b>cache-stats</b> <img src="https://badgen.net/github/stars/nmdra/opencode-cache-stats" height="14"/> <code>V1 only</code> - <i>Showing the active session's cache hit rate in a popup dialog</i></summary>
@@ -474,11 +492,29 @@ BM25 over local files. No LLM, no embeddings, no network. Credentials are redact
 </details>
 
 <details>
+  <summary><b>opencode-headroom-plugin</b> <img src="https://badgen.net/github/stars/goldfix/opencode-headroom-plugin" height="14"/> <code>V2</code> - <i>OpenCode v2 plugin compressing large tool results via Headroom at the message level</i></summary>
+  <blockquote>
+    A plugin for OpenCode v2 that transparently compresses large tool results in a session via Headroom, without touching the provider configuration already set up in OpenCode and without any provider-specific limitations (it also works with AWS Bedrock). It doesn't modify opencode.json/opencode.jsonc, doesn't create fake providers, and doesn't route provider HTTP traffic through a proxy: it hooks into session.hook(&quot;context&quot;, ...), the point where OpenCode assembles the session's messages before translating them into the provider's native format (Anthropic Messages, OpenAI Chat, Bedrock Converse, ...) and before signing the request. Only tool results (role: &quot;tool&quot;) are sent to Headroom for compression — never user/assistant text, never system messages.
+    <br><br>
+    <a href="https://github.com/goldfix/opencode-headroom-plugin">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
   <summary><b>opencode-snip</b> <img src="https://badgen.net/github/stars/VincentHardouin/opencode-snip" height="14"/> <code>V1 only</code> - <i>OpenCode plugin that prefixes shell commands with snip to reduce LLM token consumption by 60-90%</i></summary>
   <blockquote>
     Automatically prefixes supported shell commands (git, go, cargo, npm, docker, etc.) with snip to filter output before it reaches your LLM context window.
     <br><br>
     <a href="https://github.com/VincentHardouin/opencode-snip">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
+  <summary><b>OpenRouter Websearch</b> <img src="https://badgen.net/github/stars/pichenka007gd/opencode-openrouter-websearch" height="14"/> <code>V2</code> - <i>Web search via OpenRouter's web plugin with optional AI summarization</i></summary>
+  <blockquote>
+    Replaces the built-in websearch provider with OpenRouter's web plugin (Exa by default) so every agent gets one clean web search tool. Optionally summarizes results with a preservation-focused second model call — the agent receives a compact brief with [n] citations plus a source list instead of full page contents, cutting tokens from thousands to a few hundred per query. Ships a settings menu in the command palette (model picker with live OpenRouter list, limits, engine, domain filters), a CLI settings script, and cumulative cost statistics (search vs model vs summarization spend, token counts).
+    <br><br>
+    <a href="https://github.com/pichenka007gd/opencode-openrouter-websearch">🔗 <b>View Repository</b></a>
   </blockquote>
 </details>
 
@@ -493,7 +529,7 @@ BM25 over local files. No LLM, no embeddings, no network. Credentials are redact
 
 <br>
 
-<h4>Multi-Agent & Orchestration <sub>(33)</sub></h4>
+<h4>Multi-Agent & Orchestration <sub>(34)</sub></h4>
 
 <details>
   <summary><b>@bluelovers/opencode-arise</b> <img src="https://badgen.net/github/stars/bluelovers/opencode-arise" height="14"/> <code>V1 only</code> - <i>「⚔️ ARISE!」　A Solo Leveling themed orchestrator harness for OpenCode</i></summary>
@@ -510,6 +546,15 @@ BM25 over local files. No LLM, no embeddings, no network. Credentials are redact
     Two plugins that improve agent identity awareness. AgentSelfIdentityPlugin injects a one-liner into the system prompt so the model knows which agent it's operating as. AgentAttributionToolPlugin exposes a tool for querying per-message agent attribution via the SDK, useful for agents that review multi-agent sessions.
     <br><br>
     <a href="https://github.com/gotgenes/opencode-agent-identity">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
+  <summary><b>Agent Relay</b> <img src="https://badgen.net/github/stars/AgentWorkforce/skills" height="14"/> <code>V2</code> - <i>Connect OpenCode sessions to other coding agents through Agent Relay</i></summary>
+  <blockquote>
+    Lets Claude Code, Codex, Grok, and other agents message a running OpenCode V2 or 1.x session and read its reply through the local Agent Relay desktop.
+    <br><br>
+    <a href="https://github.com/AgentWorkforce/skills/tree/HEAD/plugins/opencode/agent-relay">🔗 <b>View Repository</b></a> &nbsp;•&nbsp; <a href="https://agentrelay.com">📖 <b>Docs</b></a>
   </blockquote>
 </details>
 
@@ -1061,7 +1106,7 @@ single entry point.
 
 <br>
 
-<h4>Providers, Auth & Routing <sub>(28)</sub></h4>
+<h4>Providers, Auth & Routing <sub>(29)</sub></h4>
 
 <details>
   <summary><b>Antigravity Auth</b> <img src="https://badgen.net/github/stars/NoeFabris/opencode-antigravity-auth" height="14"/> <code>V1 only</code> - <i>Google Antigravity models</i></summary>
@@ -1239,6 +1284,15 @@ startup.
     Create stable model IDs within a provider using glob, capability, and context filters. On catalog refresh, each alias resolves to the newest eligible model already in OpenCode's catalog.
     <br><br>
     <a href="https://github.com/vmvarela/opencode-model-aliases">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
+  <summary><b>OpenCode Model Router</b> <img src="https://badgen.net/github/stars/sertdisk/OpenCode-Model-Router" height="14"/> <code>V2</code> - <i>Per-agent model fallback chains (primary/secondary/tertiary) for OpenCode v2.x with a local web UI</i></summary>
+  <blockquote>
+    Give every OpenCode agent a primary, secondary, and tertiary model chain, managed from a clean local web UI served by the plugin itself. The model picker mirrors the models you enabled in Settings &gt; Models, provider-qualified refs make the same model on two different providers count as separate fallback steps, and chains are written natively into oh-my-opencode-slim (agents.&lt;agent&gt;.model arrays) or plain OpenCode config with automatic backups. Zero dependencies; the web UI binds to 127.0.0.1 only. Built for OpenCode v2.x — uses the OpenCode V2 plugin API.
+    <br><br>
+    <a href="https://github.com/sertdisk/OpenCode-Model-Router">🔗 <b>View Repository</b></a> &nbsp;•&nbsp; <a href="https://github.com/sertdisk/OpenCode-Model-Router">📖 <b>Docs</b></a>
   </blockquote>
 </details>
 
@@ -1581,7 +1635,7 @@ new assistant messages arrive.
 
 <br>
 
-<h4>Sessions & History <sub>(14)</sub></h4>
+<h4>Sessions & History <sub>(15)</sub></h4>
 
 <details>
   <summary><b>AI Project Tracker</b> <img src="https://badgen.net/github/stars/Helixventures-AI/ai-project-tracker" height="14"/> <code>V2</code> - <i>Real-time project progress tracker with dashboard, MCP, CLI and git-history import</i></summary>
@@ -1631,6 +1685,15 @@ new assistant messages arrive.
     Laya Drift monitors whether an OpenCode agent is staying aligned with its original plan over long-running sessions. It uses the Laya decision model to embed session state, compares the current semantic state against a calibrated baseline with Jensen-Shannon divergence, and surfaces a live drift score in the OpenCode UI. When drift gets high, it can inject the score into the system prompt so the agent can self-correct. Sessions can also be recalibrated to establish a new baseline after an intentional change in direction.
     <br><br>
     <a href="https://github.com/pythongiant/laya-drift">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
+  <summary><b>Opencode Autopilot Logbook</b> <img src="https://badgen.net/github/stars/smapira/opencode-autopilot-logbook" height="14"/> <code>V2</code> - <i>Auto-generates daily logbooks on session idle</i></summary>
+  <blockquote>
+    Automatically creates a daily logbook when a session becomes idle. Fetches the transcript, masks secrets and truncates before embedding, then prompts a new agent session to write artifacts/daily/YYYYMMDD_logbook.md. Supports custom templates, configurable output directory, throttle window, file-based daily limit with in-flight guard.
+    <br><br>
+    <a href="https://github.com/smapira/opencode-autopilot-logbook">🔗 <b>View Repository</b></a>
   </blockquote>
 </details>
 
@@ -2061,7 +2124,7 @@ new assistant messages arrive.
 
 <br>
 
-<h4>UI & TUI <sub>(14)</sub></h4>
+<h4>UI & TUI <sub>(15)</sub></h4>
 
 <details>
   <summary><b>aerovato/opencode-quotes-plugin</b> <img src="https://badgen.net/github/stars/aerovato/opencode-quotes-plugin" height="14"/> <code>V1 only</code> - <i>Display inspirational quotes instead of tips</i></summary>
@@ -2105,6 +2168,15 @@ new assistant messages arrive.
     Interactive terminal canvases (calendars, documents, flight booking) in tmux splits. Port of claude-canvas for OpenCode.
     <br><br>
     <a href="https://github.com/mailshieldai/opencode-canvas">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
+  <summary><b>OpenCode Version Footer</b> <img src="https://badgen.net/github/stars/vvaldez/opencode-plugins" height="14"/> <code>V2</code> - <i>Show the OpenCode version in the session footer</i></summary>
+  <blockquote>
+    Small TUI plugin that displays the harness version (e.g. v2.0.27) in the in-session footer status row via the documented prompt.footer.status slot. The session footer has no built-in version display, and the home footer hides its version below 64 columns. ~15 lines — no network calls, no filesystem access, no shell execution, no telemetry. MIT licensed.
+    <br><br>
+    <a href="https://github.com/vvaldez/opencode-plugins/tree/HEAD/packages/version-footer">🔗 <b>View Repository</b></a>
   </blockquote>
 </details>
 
@@ -2194,7 +2266,7 @@ and provides a full tool-record viewer. Includes npm installation and a GIF demo
 
 <br>
 
-<h4>Voice <sub>(4)</sub></h4>
+<h4>Voice <sub>(5)</sub></h4>
 
 <details>
   <summary><b>Listen STT</b> <img src="https://badgen.net/github/stars/fahrim/opencode-listen-stt" height="14"/> <code>V2</code> - <i>Offline dictation, 99 languages</i></summary>
@@ -2220,6 +2292,15 @@ and provides a full tool-record viewer. Includes npm installation and a GIF demo
     Adds a microphone button to the OpenCode Web prompt composer using the Web Speech API. Record speech, insert transcripts directly into the prompt editor, and send naturally. Requires Lens to load.
     <br><br>
     <a href="https://github.com/Flickwire-Agent/opencode-web-voice-plugin">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
+  <summary><b>opencode-voice</b> <img src="https://badgen.net/github/stars/vaibhavgupta0786/opencode-voice" height="14"/> <code>V2</code> - <i>Local-only push-to-talk dictation for OpenCode. Press F9, speak, press F9</i></summary>
+  <blockquote>
+    Press F9, talk (pauses welcome), press F9 again — takes accumulate into a per-session editable draft, then send everything as one prompt. Local whisper transcription (mlx on Apple Silicon), bundled mic recorders, edit-before-send review dialog, STT health indicator, and a recovery skill. No cloud, no temp audio files, no auto-send, no permission answering.
+    <br><br>
+    <a href="https://github.com/vaibhavgupta0786/opencode-voice">🔗 <b>View Repository</b></a>
   </blockquote>
 </details>
 
@@ -2901,10 +2982,10 @@ Also available for bat and Ghostty in the same repository.
 <div id="agents"></div>
 
 <details>
-<summary><strong>🤖 AGENTS (30)</strong></summary>
+<summary><strong>🤖 AGENTS (33)</strong></summary>
 <br>
 
-<h4>Agents <sub>(16)</sub></h4>
+<h4>Agents <sub>(17)</sub></h4>
 
 <details>
   <summary><b>Agentic</b> <img src="https://badgen.net/github/stars/Cluster444/agentic" height="14"/> - <i>Modular AI agents</i></summary>
@@ -3050,9 +3131,18 @@ Also available for bat and Ghostty in the same repository.
   </blockquote>
 </details>
 
+<details>
+  <summary><b>zosma-qa</b> <img src="https://badgen.net/github/stars/zosmaai/zosma-qa" height="14"/> - <i>QA agents for OpenCode: test planner, generator, healer and analyzer for Playwright, Appium and k6</i></summary>
+  <blockquote>
+    Zero-config QA platform that scaffolds four OpenCode agent prompts (test planner, generator, healer, analyzer) into .opencode/prompts/ for Playwright web tests, Appium mobile tests and k6 load tests.
+    <br><br>
+    <a href="https://github.com/zosmaai/zosma-qa">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
 <br>
 
-<h4>Skills <sub>(14)</sub></h4>
+<h4>Skills <sub>(16)</sub></h4>
 
 <details>
   <summary><b>AwareCode</b> <img src="https://badgen.net/github/stars/Wudi12317/aware-code" height="14"/> - <i>Documentation-aware coding protocol for OpenCode</i></summary>
@@ -3069,6 +3159,15 @@ Also available for bat and Ghostty in the same repository.
     Stops agents from going in circles. When stuck on the same error 3+ times, guides searching Stack Overflow, GitHub Issues, Reddit, and Discourse forums for vetted solutions.
     <br><br>
     <a href="https://github.com/LDLZM/crowdsource-debugger">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
+  <summary><b>dreampowers</b> <img src="https://badgen.net/github/stars/skyfiredao/dreampowers" height="14"/> - <i>13 skills for Chinese novel writing, from story ideation to finished manuscript</i></summary>
+  <blockquote>
+    A pure-skill set for Chinese fiction writing: 13 specialized skills covering every stage from ideation to manuscript, with checks against worldbuilding info-dumps, reader-perspective testing and AI-flavor removal.
+    <br><br>
+    <a href="https://github.com/skyfiredao/dreampowers">🔗 <b>View Repository</b></a>
   </blockquote>
 </details>
 
@@ -3105,6 +3204,15 @@ Also available for bat and Ghostty in the same repository.
     AI news tracking skill that monitors 80+ entities across 6 free sources (Reddit, HN, GitHub, HuggingFace, arXiv, X/Twitter). Generates scored daily reports with infographics and message digests. Works via SKILL.md — no Docker or servers required.
     <br><br>
     <a href="https://github.com/octo-patch/MorningAI">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
+  <summary><b>Oh My TCM Powers (中医之心)</b> <img src="https://badgen.net/github/stars/skyfiredao/oh-my-tcmpowers" height="14"/> - <i>Skills and agents for analyzing Traditional Chinese Medicine formulas, symptoms, pulse patterns and acupoints</i></summary>
+  <blockquote>
+    14 domain skills and 3 orchestration agents that analyze Traditional Chinese Medicine formulas, symptoms, pulse patterns and acupoints through the Fuxingjue five-phase framework, cross-validating herbal and acupuncture paths.
+    <br><br>
+    <a href="https://github.com/skyfiredao/oh-my-tcmpowers">🔗 <b>View Repository</b></a>
   </blockquote>
 </details>
 
@@ -3199,7 +3307,7 @@ skills stay model- and provider-neutral.
 <div id="projects"></div>
 
 <details>
-<summary><strong>🛠 PROJECTS (195)</strong></summary>
+<summary><strong>🛠 PROJECTS (196)</strong></summary>
 <br>
 
 <h4>Agents <sub>(1)</sub></h4>
@@ -4163,7 +4271,7 @@ first 401, so no API key goes in the config file.
 
 <br>
 
-<h4>Tools & Utilities <sub>(88)</sub></h4>
+<h4>Tools & Utilities <sub>(89)</sub></h4>
 
 <details>
   <summary><b>Agent Run Inspector</b> <img src="https://badgen.net/github/stars/kaboumou/agent-run-inspector-docs" height="14"/> - <i>Local, read-only reports for OpenCode session exports - repeated tool calls, failures, completion</i></summary>
@@ -4603,6 +4711,15 @@ first 401, so no API key goes in the config file.
     A CLI for switching OpenCode configuration profiles stored in Git repositories.
     <br><br>
     <a href="https://github.com/alvarosanchez/ocp">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
+  <summary><b>OCSM - OpenCode Session Manager</b> <img src="https://badgen.net/github/stars/evil-qq-intestine/OpenCode-Session-Manager" height="14"/> <code>V1 only</code> - <i>Standalone CLI for OpenCode session management</i></summary>
+  <blockquote>
+    OCSM is a standalone CLI tool that reads OpenCode's SQLite database directly. It lets you list, search, resume, export, and backup sessions from any directory, with Chinese and English support, without needing to launch OpenCode first.
+    <br><br>
+    <a href="https://github.com/evil-qq-intestine/OpenCode-Session-Manager">🔗 <b>View Repository</b></a>
   </blockquote>
 </details>
 
