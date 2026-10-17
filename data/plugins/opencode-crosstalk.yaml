@@ -1,0 +1,106 @@
+name: OpenCode Crosstalk
+repo: https://github.com/MrDoe/opencode-crosstalk
+tagline: Peer discovery, messaging, and expiring file leases between concurrent OpenCode sessions
+description: |
+  Coordination for agents that share a workspace. Six tools let concurrent sessions
+  discover each other, talk to each other, and take exclusive expiring leases on the
+  files they are editing, so two agents never rewrite the same file at once.
+
+  - `crosstalk_status` / `crosstalk_peers` — declare a role, goal, and working set, then list who is running, what they declared, and what they hold
+  - `crosstalk_send` / `crosstalk_inbox` — message a session, a role, or everyone; mail lands in the recipient's mailbox and is injected into its current turn when the session is live
+  - `crosstalk_claim` — atomic lease on files or named resources; a refusal names the holder and when the lease expires
+  - `crosstalk_wait` — block until a peer goes idle or a resource is released, instead of sleeping and re-checking
+
+  Identity comes from the session rather than from tool input, so no session can
+  release another's lease or read another's mail. All six tools share one permission
+  action (`crosstalk`), so a project can allow or deny coordination with a single
+  rule. The core coordination logic (presence registry, mailboxes, claim table) is
+  host-free and unit tested — the plugin imports nothing from OpenCode outside its
+  single entry point.
+scope:
+  - global
+  - project
+tags:
+  - multi-agent
+  - coordination
+  - file-locking
+  - messaging
+  - agents
+min_version: "2.0.0"
+installation: |
+  ## Prerequisites
+  - OpenCode 2.0.0 or later
+  - Node.js 22.18+ (OpenCode runs the TypeScript source directly, there is no build step)
+
+  ## Install
+  ```bash
+  git clone https://github.com/MrDoe/opencode-crosstalk
+  cd opencode-crosstalk && npm install
+  ```
+
+  ### Every project on this machine
+  ```bash
+  npm run setup      # symlink this checkout into ~/.opencode/plugins/crosstalk
+  npm run uninstall  # remove the link again
+  ```
+
+  The global `plugins/` directory is discovered automatically, so no config edit is
+  needed. Install into exactly one global root — linking both `~/.opencode/plugins/`
+  and `~/.config/opencode/plugins/` loads the plugin twice per location. Set
+  `CROSSTALK_PLUGINS_DIR` to target another directory.
+
+  ### One project
+  Add to `opencode.jsonc`:
+  ```json
+  {
+    "$schema": "https://opencode.ai/config.json",
+    "plugins": ["../opencode-crosstalk"]
+  }
+  ```
+
+  Or symlink or copy the package into `.opencode/plugins/`, where it is discovered
+  with no configuration at all.
+
+  ## Configuration
+  All options are optional and are set with the object form of `plugins`:
+  ```json
+  {
+    "plugins": [
+      {
+        "package": "../opencode-crosstalk",
+        "options": {
+          "scope": "project",
+          "claimTtlMs": 300000,
+          "codemode": false
+        }
+      }
+    ]
+  }
+  ```
+
+  | Option | Default | Meaning |
+  | --- | --- | --- |
+  | `namespace` | `crosstalk` | Tool namespace; dots are rejected. |
+  | `permission` | `crosstalk` | Permission action for all six tools. |
+  | `codemode` | `false` | Expose the tools through Code Mode instead of directly. |
+  | `scope` | `project` | Peer visibility: `project`, `location`, or `server`. |
+  | `claimTtlMs` | `300000` | Default lease duration. |
+  | `maxWaitMs` | `120000` | Ceiling on any blocking call. |
+  | `announce` | `true` | Add the coordination briefing to the system prompt. |
+
+  Bad values degrade to the default with a warning, so a typo never costs an agent
+  its tools mid-session. See the README for the full option table.
+
+  ## Permissions
+  No rule is required to use the tools — OpenCode's base policy already allows the
+  `crosstalk` action. Add a rule to control it instead:
+  ```json
+  {
+    "permissions": [{ "action": "crosstalk", "resource": "*", "effect": "ask" }]
+  }
+  ```
+
+  ## Removal
+  1. Run `npm run uninstall` in the checkout, or remove the symlinked directory
+  2. Remove the `plugins` entry from `opencode.jsonc` if you added one
+  3. `opencode service restart` if the plugin was already loaded in a running session
