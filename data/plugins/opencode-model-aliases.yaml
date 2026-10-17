@@ -1,0 +1,4 @@
+name: OpenCode Model Aliases
+repo: https://github.com/vmvarela/opencode-model-aliases
+tagline: Provider-scoped aliases for the newest eligible OpenCode models
+description: Create stable model IDs within a provider using glob, capability, and context filters. On catalog refresh, each alias resolves to the newest eligible model already in OpenCode's catalog.
