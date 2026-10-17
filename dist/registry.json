@@ -111,6 +111,23 @@
     ]
   },
   {
+    "productId": "dreampowers",
+    "type": "agents",
+    "displayName": "dreampowers",
+    "repoUrl": "https://github.com/skyfiredao/dreampowers",
+    "tagline": "13 skills for Chinese novel writing, from story ideation to finished manuscript",
+    "description": "A pure-skill set for Chinese fiction writing: 13 specialized skills covering every stage from ideation to manuscript, with checks against worldbuilding info-dumps, reader-perspective testing and AI-flavor removal.",
+    "kind": "skill",
+    "topics": [
+      "domain"
+    ],
+    "compat": "n/a",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
     "productId": "gem-team",
     "type": "agents",
     "displayName": "Gem Team",
@@ -234,6 +251,23 @@
     "topics": [
       "workflow",
       "orchestration"
+    ],
+    "compat": "n/a",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
+    "productId": "oh-my-tcmpowers",
+    "type": "agents",
+    "displayName": "Oh My TCM Powers (中医之心)",
+    "repoUrl": "https://github.com/skyfiredao/oh-my-tcmpowers",
+    "tagline": "Skills and agents for analyzing Traditional Chinese Medicine formulas, symptoms, pulse patterns and acupoints",
+    "description": "14 domain skills and 3 orchestration agents that analyze Traditional Chinese Medicine formulas, symptoms, pulse patterns and acupoints through the Fuxingjue five-phase framework, cross-validating herbal and acupuncture paths.",
+    "kind": "skill",
+    "topics": [
+      "domain"
     ],
     "compat": "n/a",
     "scope": [
@@ -573,6 +607,24 @@
     "tags": []
   },
   {
+    "productId": "zosma-qa",
+    "type": "agents",
+    "displayName": "zosma-qa",
+    "repoUrl": "https://github.com/zosmaai/zosma-qa",
+    "tagline": "QA agents for OpenCode: test planner, generator, healer and analyzer for Playwright, Appium and k6",
+    "description": "Zero-config QA platform that scaffolds four OpenCode agent prompts (test planner, generator, healer, analyzer) into .opencode/prompts/ for Playwright web tests, Appium mobile tests and k6 load tests.",
+    "kind": "agent",
+    "topics": [
+      "code-quality"
+    ],
+    "compat": "n/a",
+    "scope": [
+      "global"
+    ],
+    "tags": [],
+    "installation": "npx zosma-qa agents init --loop opencode"
+  },
+  {
     "productId": "accint",
     "type": "plugins",
     "displayName": "AccInt",
@@ -681,6 +733,32 @@
       "global"
     ],
     "tags": []
+  },
+  {
+    "productId": "agent-relay",
+    "type": "plugins",
+    "displayName": "Agent Relay",
+    "repoUrl": "https://github.com/AgentWorkforce/skills",
+    "repoPath": "plugins/opencode/agent-relay",
+    "tagline": "Connect OpenCode sessions to other coding agents through Agent Relay",
+    "description": "Lets Claude Code, Codex, Grok, and other agents message a running OpenCode V2 or 1.x session and read its reply through the local Agent Relay desktop.",
+    "kind": "plugin",
+    "topics": [
+      "orchestration"
+    ],
+    "compat": "v2",
+    "scope": [
+      "global",
+      "project"
+    ],
+    "tags": [
+      "agent-relay",
+      "multi-agent",
+      "messaging"
+    ],
+    "homepageUrl": "https://agentrelay.com",
+    "installation": "1. [Download and install the latest Agent Relay Desktop release](https://github.com/AgentWorkforce/relay-desktop-releases/releases/latest), sign in, and keep it running.\n2. Add `@agent-relay/opencode-plugin` to the `plugins` array in OpenCode V2's `opencode.json` (`plugin` on V1).\n3. Restart OpenCode, then add the session in the desktop's Sessions list.",
+    "minVersion": "1.18.3"
   },
   {
     "productId": "agent-skills-jdt",
@@ -2387,6 +2465,29 @@
     "tags": []
   },
   {
+    "productId": "open-memex",
+    "type": "plugins",
+    "displayName": "open-memex",
+    "repoUrl": "https://github.com/stoneskin/open-memex",
+    "tagline": "Local-first persistent memory for AI agents — opencode, VS Code, Visual Studio, Cursor, Claude Code",
+    "description": "Native opencode plugin (keyword-triggered capture, first-turn memory injection) backed by plain Markdown memories with a SQLite FTS5 index. One memory shared by every editor you code with, a human review ladder, and team sharing via git PRs. No cloud, no telemetry. Install with `npm install -g open-memex`, then `open-memex init` wires the plugin for you.",
+    "kind": "plugin",
+    "topics": [
+      "memory",
+      "code-quality",
+      "security"
+    ],
+    "compat": "v2",
+    "scope": [
+      "global"
+    ],
+    "tags": [
+      "memory",
+      "mcp",
+      "local-first"
+    ]
+  },
+  {
     "productId": "open-plan-annotator",
     "type": "plugins",
     "displayName": "open-plan-annotator",
@@ -2584,6 +2685,25 @@
     ],
     "installation": "## Install\n\n```sh\nopencode plugin add @hacky.software/opencode-autocompact\n```\n\nOr list it in `opencode.json`:\n\n```json\n{\n  \"$schema\": \"https://opencode.ai/config.json\",\n  \"plugins\": [\"@hacky.software/opencode-autocompact\"]\n}\n```\n\n## Usage\n\n```\n/autocompact 500k      # compact this session (and its children) at 500k tokens\n/autocompact 500000    # same, plain count\n/autocompact 1m        # suffix form\n/autocompact           # report the effective threshold and the model's limit\n/autocompact off       # revert this session (and descendants) to normal auto-compaction\n```\n\nNo configuration is required. The plugin does nothing until a threshold is set for a\nsession or one of its ancestors.\n",
     "minVersion": "2.0.0"
+  },
+  {
+    "productId": "opencode-autopilot-logbook",
+    "type": "plugins",
+    "displayName": "Opencode Autopilot Logbook",
+    "repoUrl": "https://github.com/smapira/opencode-autopilot-logbook",
+    "tagline": "Auto-generates daily logbooks on session idle",
+    "description": "Automatically creates a daily logbook when a session becomes idle. Fetches the transcript, masks secrets and truncates before embedding, then prompts a new agent session to write artifacts/daily/YYYYMMDD_logbook.md. Supports custom templates, configurable output directory, throttle window, file-based daily limit with in-flight guard.",
+    "kind": "plugin",
+    "topics": [
+      "sessions",
+      "security",
+      "prompting"
+    ],
+    "compat": "v2",
+    "scope": [
+      "global"
+    ],
+    "tags": []
   },
   {
     "productId": "opencode-autorecord",
@@ -3209,6 +3329,24 @@
     ]
   },
   {
+    "productId": "opencode-headroom-plugin",
+    "type": "plugins",
+    "displayName": "opencode-headroom-plugin",
+    "repoUrl": "https://github.com/goldfix/opencode-headroom-plugin",
+    "tagline": "OpenCode v2 plugin compressing large tool results via Headroom at the message level",
+    "description": "A plugin for OpenCode v2 that transparently compresses large tool results in a session via Headroom, without touching the provider configuration already set up in OpenCode and without any provider-specific limitations (it also works with AWS Bedrock). It doesn't modify opencode.json/opencode.jsonc, doesn't create fake providers, and doesn't route provider HTTP traffic through a proxy: it hooks into session.hook(\"context\", ...), the point where OpenCode assembles the session's messages before translating them into the provider's native format (Anthropic Messages, OpenAI Chat, Bedrock Converse, ...) and before signing the request. Only tool results (role: \"tool\") are sent to Headroom for compression — never user/assistant text, never system messages.",
+    "kind": "plugin",
+    "topics": [
+      "context",
+      "cost"
+    ],
+    "compat": "v2",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
     "productId": "opencode-hooks-plugin",
     "type": "plugins",
     "displayName": "Opencode Hooks Plugin",
@@ -3323,6 +3461,25 @@
     "homepageUrl": "https://github.com/Javierkaiser/opencode-indexing#readme",
     "installation": "## Prerequisites\n- OpenCode v2 (plugin API `@opencode/plugin` 2.x)\n- Node.js >= 22.6\n- Optional: a Qdrant server and/or the `@lancedb/lancedb` module\n\n## Installation\n\n### Installer (recommended, cross-platform)\n\n```bash\n# Linux / macOS\n./install.sh\n# Windows\npowershell -ExecutionPolicy Bypass -File .\\install.ps1\n# any platform (the wrappers call this)\nnode install.mjs\n```\n\n### From npm\n\n```bash\nnpm install @javierkaiser/opencode-indexing\n```\n\nThen reference it from `opencode.json`:\n\n```jsonc\n{\n  \"plugins\": [\n    { \"package\": \"@javierkaiser/opencode-indexing\" }\n  ]\n}\n```\n\n## Configuration\n\nSettings live in `~/.config/opencode/indexing.json` and are editable from\n`/indexing-config` (any client) or the `/indexing` page (terminal TUI).\n",
     "minVersion": "2.0.0"
+  },
+  {
+    "productId": "opencode-kevin",
+    "type": "plugins",
+    "displayName": "opencode-kevin",
+    "repoUrl": "https://github.com/jmtrin/opencode-kevin",
+    "tagline": "Local-first project memory that learns from coding sessions and turns approved knowledge into durable project guidance.",
+    "description": "Kevin is a local-first memory plugin for OpenCode that learns from coding sessions, recalls relevant knowledge, and helps turn approved memories into durable, Git-friendly project guidance. It provides project-scoped persistent memory, confidence-aware retrieval, human curation, and cross-harness memory sources while keeping data local and under the user's control.",
+    "kind": "plugin",
+    "topics": [
+      "memory",
+      "sessions",
+      "git"
+    ],
+    "compat": "v2",
+    "scope": [
+      "global"
+    ],
+    "tags": []
   },
   {
     "productId": "opencode-lens",
@@ -3574,6 +3731,32 @@
       "global"
     ],
     "tags": []
+  },
+  {
+    "productId": "opencode-model-router",
+    "type": "plugins",
+    "displayName": "OpenCode Model Router",
+    "repoUrl": "https://github.com/sertdisk/OpenCode-Model-Router",
+    "tagline": "Per-agent model fallback chains (primary/secondary/tertiary) for OpenCode v2.x with a local web UI",
+    "description": "Give every OpenCode agent a primary, secondary, and tertiary model chain, managed from a clean local web UI served by the plugin itself. The model picker mirrors the models you enabled in Settings > Models, provider-qualified refs make the same model on two different providers count as separate fallback steps, and chains are written natively into oh-my-opencode-slim (agents.<agent>.model arrays) or plain OpenCode config with automatic backups. Zero dependencies; the web UI binds to 127.0.0.1 only. Built for OpenCode v2.x — uses the OpenCode V2 plugin API.",
+    "kind": "plugin",
+    "topics": [
+      "providers"
+    ],
+    "compat": "v2",
+    "scope": [
+      "global"
+    ],
+    "tags": [
+      "model-router",
+      "fallback",
+      "models",
+      "web-ui",
+      "oh-my-opencode-slim",
+      "configuration"
+    ],
+    "homepageUrl": "https://github.com/sertdisk/OpenCode-Model-Router",
+    "installation": "Clone the repository and run the install script:\n\n```powershell\ngit clone https://github.com/sertdisk/OpenCode-Model-Router\ncd OpenCode-Model-Router\npowershell -ExecutionPolicy Bypass -File tools/install-dev.ps1\n```\n\nRestart OpenCode, then open the web UI at `http://127.0.0.1:37337` to configure each agent. Prefer the terminal? Use the `/model-router` command instead.\n"
   },
   {
     "productId": "opencode-models-discovery",
@@ -4994,6 +5177,23 @@
     "tags": []
   },
   {
+    "productId": "opencode-voice",
+    "type": "plugins",
+    "displayName": "opencode-voice",
+    "repoUrl": "https://github.com/vaibhavgupta0786/opencode-voice",
+    "tagline": "Local-only push-to-talk dictation for OpenCode. Press F9, speak, press F9",
+    "description": "Press F9, talk (pauses welcome), press F9 again — takes accumulate into a per-session editable draft, then send everything as one prompt. Local whisper transcription (mlx on Apple Silicon), bundled mic recorders, edit-before-send review dialog, STT health indicator, and a recovery skill. No cloud, no temp audio files, no auto-send, no permission answering.",
+    "kind": "plugin",
+    "topics": [
+      "voice"
+    ],
+    "compat": "v2",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
     "productId": "opencode-web-voice-plugin",
     "type": "plugins",
     "displayName": "OpenCode Web Voice Plugin",
@@ -5184,6 +5384,25 @@
       "providers"
     ],
     "compat": "v1",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
+    "productId": "openrouter-websearch",
+    "type": "plugins",
+    "displayName": "OpenRouter Websearch",
+    "repoUrl": "https://github.com/pichenka007gd/opencode-openrouter-websearch",
+    "tagline": "Web search via OpenRouter's web plugin with optional AI summarization",
+    "description": "Replaces the built-in websearch provider with OpenRouter's web plugin (Exa by default) so every agent gets one clean web search tool. Optionally summarizes results with a preservation-focused second model call — the agent receives a compact brief with [n] citations plus a source list instead of full page contents, cutting tokens from thousands to a few hundred per query. Ships a settings menu in the command palette (model picker with live OpenRouter list, limits, engine, domain filters), a CLI settings script, and cumulative cost statistics (search vs model vs summarization spend, token counts).",
+    "kind": "plugin",
+    "topics": [
+      "context",
+      "providers",
+      "cost"
+    ],
+    "compat": "v2",
     "scope": [
       "global"
     ],
@@ -5937,6 +6156,24 @@
     ],
     "homepageUrl": "https://github.com/veris-ai/plugins#readme",
     "installation": "## Links\n\n- npm: https://www.npmjs.com/package/@veris-ai/veris-sim-opencode\n- Source: https://github.com/veris-ai/plugins/tree/main/veris-sim\n- Docs: https://github.com/veris-ai/plugins#readme\n- Veris: https://veris.ai\n\n## Installation\n\n```sh\nopencode plugin @veris-ai/veris-sim-opencode -g\n```\n\nEquivalently, add `\"@veris-ai/veris-sim-opencode\"` to the `plugin` array in\n`~/.config/opencode/opencode.json`. Then export your credential and restart\nopencode:\n\n```sh\nexport VERIS_API_KEY=...        # https://app.veris.ai\n```\n\n`VERIS_API_BASE` overrides the control plane (it defaults to\n`https://svc.api.veris.ai`). Until the key is set, `opencode mcp list` shows the\n`veris` server as failed; the commands still run, and `setup` walks you through it.\n\n## Commands\n\n| command | what it does |\n|---|---|\n| `/veris-sim:setup` | wires the repository to a Veris environment, once: credential, environment, transport, one smoke run with proof of arrival |\n| `/veris-sim:build <issue link \\| prompt>` | measures every vendor claim the task rests on against the twin before designing, proves the change through veris-proxy with a receipt |\n| `/veris-sim:fix <issue link \\| prompt>` | reproduces the failure the issue describes before designing, proves the same failure closed with a receipt |\n\nThe three are plain OpenCode commands: only the engineer starts them, the model\ncannot invoke them on its own. The same three are also registered as skills.\n"
+  },
+  {
+    "productId": "version-footer",
+    "type": "plugins",
+    "displayName": "OpenCode Version Footer",
+    "repoUrl": "https://github.com/vvaldez/opencode-plugins",
+    "repoPath": "packages/version-footer",
+    "tagline": "Show the OpenCode version in the session footer",
+    "description": "Small TUI plugin that displays the harness version (e.g. v2.0.27) in the in-session footer status row via the documented prompt.footer.status slot. The session footer has no built-in version display, and the home footer hides its version below 64 columns. ~15 lines — no network calls, no filesystem access, no shell execution, no telemetry. MIT licensed.",
+    "kind": "plugin",
+    "topics": [
+      "ui"
+    ],
+    "compat": "v2",
+    "scope": [
+      "global"
+    ],
+    "tags": []
   },
   {
     "productId": "vibe-coding-slack-notifier",
@@ -8649,6 +8886,23 @@
       "ui"
     ],
     "compat": "n/a",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
+    "productId": "opencode-ocsm",
+    "type": "projects",
+    "displayName": "OCSM - OpenCode Session Manager",
+    "repoUrl": "https://github.com/evil-qq-intestine/OpenCode-Session-Manager",
+    "tagline": "Standalone CLI for OpenCode session management",
+    "description": "OCSM is a standalone CLI tool that reads OpenCode's SQLite database directly. It lets you list, search, resume, export, and backup sessions from any directory, with Chinese and English support, without needing to launch OpenCode first.",
+    "kind": "tool",
+    "topics": [
+      "sessions"
+    ],
+    "compat": "v1",
     "scope": [
       "global"
     ],
