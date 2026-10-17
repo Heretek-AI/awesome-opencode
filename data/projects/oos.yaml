@@ -1,0 +1,4 @@
+name: oos
+repo: https://github.com/wsaaaqqq/oos
+tagline: Find any OpenCode session across all projects and resume it instantly
+description: A TUI fuzzy finder over every OpenCode session from every project — type keywords to filter in real time, pick with ↑/↓, Enter to jump back into the conversation. Go, zero config, single binary.
