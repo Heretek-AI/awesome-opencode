@@ -1,0 +1,29 @@
+name: SuperSpec
+repo: https://github.com/lbk-open/super-spec
+tagline: Requirement or production alert in, reviewed pull request out - 20 skills, one SKILL.md source
+description: >-
+  A toolkit of 20 Agent Skills that combines the engineering discipline of
+  superpowers with the living spec lifecycle of OpenSpec, and adds the two
+  things neither has: end-to-end workflows that carry a requirement, or a
+  production alert, all the way to a reviewed pull request, and multi-repo
+  orchestration that runs one headless agent per repository. Implementation is
+  dispatched to parallel test-driven subagents; a review panel with distinct
+  lenses (quality, spec and guardrail compliance, cross-module integration) then
+  returns a severity-graded verdict and drives a bounded fix loop until the code
+  is approved. Root-cause analysis is evidence-based rather than a guess:
+  competing hypotheses are falsified against logs, traces, metrics, code and git
+  history before any fix is written. Capability specs follow the OpenSpec
+  directory convention, so a repository initialized by the OpenSpec CLI works
+  as-is. Nothing is written into your project - the guardrails are read in place
+  at runtime, and there is no CLI or state machine to install.
+scope:
+  - global
+  - project
+tags:
+  - skills
+  - workflow
+  - code-review
+  - tdd
+  - multi-agent
+  - openspec
+  - spec-driven
