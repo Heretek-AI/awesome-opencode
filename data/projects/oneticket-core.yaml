@@ -1,0 +1,9 @@
+name: OneTicket Core
+repo: https://github.com/dsissoko/oneticket-core
+tagline: Turns GitHub issues, PRs and Actions into an agentic delivery pipeline with OpenCode as the engine
+description: "Uses native GitHub objects (issues, pull requests, comments, reviews, Actions) as the collaboration layer: users talk to agents through comments, and GitHub Actions run OpenCode agents that analyze requirements, ask questions, write code and open or update PRs."
+kind: tool
+topics:
+  - git
+  - orchestration
+compat: n/a
