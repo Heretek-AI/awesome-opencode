@@ -1,0 +1,8 @@
+name: WaveSpeed Skill
+repo: https://github.com/WaveSpeedAI/wavespeed-cli
+tagline: AI media generation via the wavespeed CLI
+description: "Agent skill for generating and editing images, video, audio, and 3D through the WaveSpeed platform via the open-source wavespeed CLI: live model catalog search, per-model input-schema introspection, local-file upload with @path markers, and price quotes before running. Works out of the box — `wavespeed skill install` writes to `.claude/skills/`, one of the directories OpenCode loads skills from."
+kind: skill
+topics:
+  - media
+compat: n/a
