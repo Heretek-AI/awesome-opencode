@@ -1,0 +1,11 @@
+name: Cognitive Lead HQ
+repo: https://github.com/mokhtarabadi/cognitive-lead-hq
+tagline: OpenCode multi-agent HQ with Brain/Hands split, FastMCP and 31 skills
+description: Documentation-only OpenCode HQ with Brain/Hands split, 3 FastMCP servers (context/memory/lint), Kanban ZAC workflow and 31 reusable skills.
+tags:
+  - multi-agent
+  - mcp
+  - skills
+  - workflow
+  - opencode
+homepage: https://mokhtarabadi.github.io/cognitive-lead-hq/
