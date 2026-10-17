@@ -1,0 +1,9 @@
+name: opencode-chrome-annotation
+repo: https://github.com/eagleeyejack/opencode-chrome-annotation-extension
+tagline: Point-and-click annotations for live webpages
+description: Chrome side panel that connects a tab to a local OpenCode session. Click an element on the live page, queue instructions with cropped screenshots and exact selectors, and send them all at once. Localhost-only; GPL-3.0 fork of JodusNodus/opencode-chrome-annotation.
+kind: plugin
+topics:
+  - web
+  - ui
+compat: unknown
