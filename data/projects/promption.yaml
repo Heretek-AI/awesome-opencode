@@ -1,0 +1,9 @@
+name: Promption
+repo: https://github.com/Abdssamie/promption
+tagline: Manage AI agent configs
+description: A desktop app + CLI for managing AI agent configurations across projects. Stop copy-pasting .cursorrules.
+kind: client
+topics:
+  - prompting
+  - ui
+compat: n/a
