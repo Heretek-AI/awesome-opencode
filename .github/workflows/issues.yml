@@ -1,0 +1,71 @@
+# Issue automation:
+#   - "Add an entry" form submissions (label: submission) become PRs on submission/<issue>.
+#   - Ticked candidates in Scout issues (label: scout) become PRs on scout/<name>.
+#
+# Security: issue text is untrusted. It is only read by the Node scripts as data (via the API);
+# nothing from the issue is interpolated into shell commands.
+name: Issue automation
+
+on:
+  issues:
+    types: [opened, edited, reopened, labeled]
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+  actions: write
+
+concurrency:
+  group: issue-${{ github.event.issue.number }}
+  cancel-in-progress: false
+
+jobs:
+  submission:
+    if: contains(github.event.issue.labels.*.name, 'submission') && github.event.issue.state == 'open'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build entry and open PR
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: node scripts/submit-entry.js --issue "$ISSUE_NUMBER"
+
+  scout-accept:
+    if: github.event.action == 'edited' && contains(github.event.issue.labels.*.name, 'scout')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Open PRs for ticked candidates
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          SENDER: ${{ github.event.sender.login }}
+        run: node scripts/scout.js accept --issue "$ISSUE_NUMBER" --sender "$SENDER"
