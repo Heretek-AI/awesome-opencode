@@ -1,0 +1,8 @@
+name: Qi Men Dun Jia (奇门遁甲 八门化气阵)
+repo: https://github.com/skyfiredao/qmenpowers
+tagline: Qi Men Dun Jia plate-setting engine and skills for classical Chinese cosmological forecasting
+description: A pure-Bash Qi Men Dun Jia plate-setting engine with zero dependencies, packaged with skills that let the agent set up and read the nine-palace plate of stems, stars, gates and deities.
+kind: skill
+topics:
+  - domain
+compat: n/a
