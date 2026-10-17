@@ -1,0 +1,9 @@
+name: Zara Agent OPC
+repo: https://github.com/aldok10/zara-agent-opc
+tagline: Persistent AI engineering partner for OpenCode with layered memory and 10 coordinated agents
+description: Agent system for OpenCode combining 3-layer cognitive memory with embeddings, 10 orchestrated agents, an MCP server with 24+ tools, adaptive skill routing, self-improving reflection loops and doom-loop detection.
+kind: agent
+topics:
+  - memory
+  - orchestration
+compat: n/a
