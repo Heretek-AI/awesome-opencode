@@ -1,0 +1,8 @@
+name: uv-skill
+repo: https://github.com/LDLZM/uv-skill
+tagline: Use uv for all Python package management
+description: Mandates using uv for ALL Python dependency, virtual environment, and project management tasks. Replaces pip, poetry, pipx, pyenv, and virtualenv.
+kind: skill
+topics:
+  - environment
+compat: n/a
