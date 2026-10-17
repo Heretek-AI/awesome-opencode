@@ -1,0 +1,8 @@
+name: trustless
+repo: https://github.com/ikkun1222/trustless
+tagline: Credential broker CLI — injects secrets into subprocesses and proxies so AI agents never see plaintext keys
+description: trustless decouples AI agents from credentials. Agents reference secrets by name; the broker resolves them at the process or transport layer with output sanitization, integrated DLP (outbound redaction), OAuth token refresh, structured audit logs, and pass/Bitwarden backends. Zero-dependency single binary with bundled agent skills for OpenCode, Claude Code, Codex, and Hermes.
+kind: tool
+topics:
+  - security
+compat: n/a

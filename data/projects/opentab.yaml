@@ -1,12 +1,11 @@
 name: OpenTab
 repo: https://github.com/hamidi-dev/opentab
 tagline: Terminal UI for browsing your OpenCode spend by month, day, project, session, and model
-description: >-
-  A terminal UI that reads OpenCode's local SQLite database (read-only) to show
-  where your tokens and money went — by month, day, project, session, and model,
-  with spend-over-time trends and drill-down into your most expensive sessions
-  (model mix and subagent costs included). Standard-library Python only, offline
-  by default. Also reads Claude Code, Codex, the Copilot CLI, and more.
+description: A terminal UI that reads OpenCode's local SQLite database (read-only) to show where your tokens and money went — by month, day, project, session, and model, with spend-over-time trends and drill-down into your most expensive sessions (model mix and subagent costs included). Standard-library Python only, offline by default. Also reads Claude Code, Codex, the Copilot CLI, and more.
+kind: client
+topics:
+  - cost
+compat: n/a
 tags:
   - cost
   - tokens

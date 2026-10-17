@@ -2,3 +2,7 @@ name: Poimandres Theme
 repo: https://github.com/ajaxdude/opencode-ai-poimandres-theme
 tagline: Poimandres theme
 description: Poimandres theme for opencode.
+kind: theme
+topics:
+  - ui
+compat: n/a

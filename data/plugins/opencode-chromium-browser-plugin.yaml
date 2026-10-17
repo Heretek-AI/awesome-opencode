@@ -1,7 +1,12 @@
 name: OpenCode Chromium Browser Plugin
-repo: https://github.com/DJOCKER-FACE/opencode-chromium-browser-plugin
+repo: https://github.com/Quindart-com/opencode-chromium-browser-plugin
+homepage: https://github.com/DJOCKER-FACE/opencode-chromium-browser-plugin
 tagline: Browser automation for Chromium browsers with a readable extension and native host
 description: OpenCode browser automation for Chromium-based browsers using a readable Manifest V3 extension, Node.js native messaging host, and OpenCode-native tools. Supports Chrome, Edge, Brave, Chromium, screenshots, CDP commands, DOM actions, downloads, console/network inspection, and controlled tab sessions.
+kind: plugin
+topics:
+  - web
+compat: unknown
 scope:
   - project
 tags:
@@ -10,4 +15,3 @@ tags:
   - automation
   - native-messaging
   - cdp
-homepage: https://github.com/DJOCKER-FACE/opencode-chromium-browser-plugin

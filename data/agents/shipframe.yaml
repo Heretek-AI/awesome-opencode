@@ -1,0 +1,19 @@
+name: ShipFrame
+repo: https://github.com/juanitourquiza/shipframe
+homepage: https://shipframe.hackeruna.com/
+tagline: AI coding workflows for OpenCode, Claude Code, and Codex
+description: AI coding workflow toolkit with installable OpenCode skills, converted agents, project profiles, release evidence, and disciplined PR/MR workflows.
+kind: skill
+topics:
+  - workflow
+compat: n/a
+scope:
+  - global
+  - project
+tags:
+  - workflow
+  - skills
+  - agents
+  - release
+  - codex
+  - claude-code

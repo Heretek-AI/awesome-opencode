@@ -1,0 +1,9 @@
+name: Goblin-Logic-Manager
+repo: https://github.com/es-3581100/Goblin-Logic-Manager
+tagline: Model-aware OpenCode agent with skill routing, bounded execution, durable closeout, and cold-session recovery.
+description: A model-expandable OpenCode development-agent system that separates stable development behavior from thin model-specific overlays, with skill routing, bounded waits, evidence-backed verification, durable chunk closeout, and cold-session recovery.
+kind: agent
+topics:
+  - workflow
+  - providers
+compat: n/a
