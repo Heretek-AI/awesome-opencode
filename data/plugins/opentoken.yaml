@@ -1,0 +1,9 @@
+name: OpenToken
+repo: https://github.com/MrGray17/opentoken
+tagline: Token-saving companion — 42 compression layers for input AND output
+description: "Cuts token usage 70–90% on tool outputs and compresses model responses — 35 input layers (AST skeletons, key aliasing, TOON, LTSC/LZW, family-specific filters) + 7 output layers (conciseness directive, budget cap, boilerplate elimination). Zero risk on every stage: if output grew, original is returned. No behavioral changes, no \"caveman speak.\" Production-proven: 862,301 tokens saved in a single 22-hour session."
+kind: plugin
+topics:
+  - context
+  - cost
+compat: v1
