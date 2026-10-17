@@ -39,7 +39,7 @@
 > **Active Hard Fork**: `Heretek-AI/awesome-opencode` is the actively maintained community continuation of `awesome-opencode`.
 > All original upstream issues, pull requests, and discussions are preserved and imported. Submissions and PRs are actively reviewed!
 
-<p><b>513</b> entries &nbsp;•&nbsp; <b>271</b> plugins: <b>134</b> <code>V2</code>, <b>125</b> <code>V1 only</code> (removed after 2027-01-01), <b>12</b> <code>unverified</code></p>
+<p><b>513</b> entries &nbsp;•&nbsp; <b>271</b> plugins: <b>135</b> <code>V2</code>, <b>124</b> <code>V1 only</code> (removed after 2027-01-01), <b>12</b> <code>unverified</code></p>
 
 <p>
 <a href="https://heretek-ai.github.io/awesome-opencode/"><b>🔎 Search &amp; filter the catalog</b></a>
@@ -1227,7 +1227,7 @@ selected projects.
 </details>
 
 <details>
-  <summary><b>opencode-llm-proxy</b> <img src="https://badgen.net/github/stars/KochC/opencode-llm-proxy" height="14"/> <code>V1 only</code> - <i>OpenCode-backed API gateway with tool calling</i></summary>
+  <summary><b>opencode-llm-proxy</b> <img src="https://badgen.net/github/stars/KochC/opencode-llm-proxy" height="14"/> <code>V2</code> - <i>OpenCode-backed API gateway with tool calling</i></summary>
   <blockquote>
     Local OpenCode plugin that exposes OpenAI Chat Completions, OpenAI Responses, Anthropic Messages, and Gemini-compatible endpoints for any model configured in OpenCode. Supports streaming, model listing, and real tool/function calling including parallel tool calls, so tools like n8n, Open WebUI, LangChain, Continue, Zed, and coding agents can reuse the same OpenCode model setup.
     <br><br>
