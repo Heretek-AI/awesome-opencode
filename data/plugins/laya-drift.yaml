@@ -1,0 +1,4 @@
+name: Laya Drift
+repo: https://github.com/pythongiant/laya-drift
+tagline: Semantic drift monitoring for long-running OpenCode agent sessions.
+description: Laya Drift monitors whether an OpenCode agent is staying aligned with its original plan over long-running sessions. It uses the Laya decision model to embed session state, compares the current semantic state against a calibrated baseline with Jensen-Shannon divergence, and surfaces a live drift score in the OpenCode UI. When drift gets high, it can inject the score into the system prompt so the agent can self-correct. Sessions can also be recalibrated to establish a new baseline after an intentional change in direction.
