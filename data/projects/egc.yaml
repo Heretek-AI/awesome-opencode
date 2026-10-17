@@ -1,0 +1,8 @@
+name: EGC
+repo: https://github.com/Fmarzochi/EGC
+tagline: Persistent cross-session memory MCP server for 13+ AI coding tools including OpenCode
+description: "Local-first MCP runtime with persistent SQLite-backed memory that survives context resets. Keeps Claude Code, Cursor, Gemini CLI, Codex, Windsurf, Amp, Kiro, VS Code Copilot, Trae, OpenCode, and more in sync across sessions. Install: npm install -g @egchq/egc"
+kind: mcp-server
+topics:
+  - memory
+compat: v1
