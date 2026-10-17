@@ -1,0 +1,8 @@
+name: Chat Sidebar for OpenCode
+repo: https://github.com/SenCha930511/chat-sidebar-for-opencode
+tagline: VS Code sidebar chat GUI for OpenCode
+description: A VS Code extension that gives a locally installed OpenCode server a full GUI chat panel in the editor sidebar — multi-session streaming, inline permission approvals and question cards, slash commands with agent/model pickers, @-mention file attachments, todos and native diff previews. Bilingual English / 繁體中文 UI. Available on the VS Code Marketplace.
+kind: client
+topics:
+  - ui
+compat: v1
