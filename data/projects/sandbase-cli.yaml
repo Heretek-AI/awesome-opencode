@@ -1,0 +1,11 @@
+name: SandBase CLI
+repo: https://github.com/sandbaseai/cli
+npm: "@sandbaseai/cli"
+tagline: Connect OpenCode to 2,000+ AI models and APIs through one local MCP bridge
+description: SandBase CLI installs an ownership-aware local MCP bridge for OpenCode, updates its JSONC configuration while preserving comments, and provides doctor and unregister flows that only change the exact managed entry.
+kind: tool
+topics:
+  - providers
+  - integrations
+compat: n/a
+installation: npx -y @sandbaseai/cli connect --client opencode
