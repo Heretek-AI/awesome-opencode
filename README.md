@@ -325,9 +325,9 @@ Key features:
 </details>
 
 <details>
-  <summary><b>Froggy</b> <img src="https://badgen.net/github/stars/smartfrog/opencode-froggy" height="14"/> - <i>Hooks and specialized agents</i></summary>
+  <summary><b>Froggy</b> <img src="https://badgen.net/github/stars/smartfrog/opencode-froggy" height="14"/> - <i>XP-guided multi-agent orchestration</i></summary>
   <blockquote>
-    Plugin providing Claude Code-style hooks, specialized agents, and tools like gitingest.
+    Multi-agent delegation and orchestration guided by XP, KISS, and YAGNI, with specialized agents, independent code review, and a persistent loop to keep work moving toward the objective.
     <br><br>
     <a href="https://github.com/smartfrog/opencode-froggy">🔗 <b>View Repository</b></a>
   </blockquote>
@@ -635,6 +635,15 @@ sync and targeted validation checks, and helps keep repo knowledge branch-local 
 </details>
 
 <details>
+  <summary><b>OpenCode Autocompact</b> <img src="https://badgen.net/github/stars/N0K0/opencode-autocompact" height="14"/> - <i>Per-session autocompact — /autocompact 500k compacts a session and its children early</i></summary>
+  <blockquote>
+    Claude Code's autocompact, with a knob. Compacts a session before the model's real context limit, at a token count you choose per session. OpenCode's built-in auto-compaction is configured globally and only relative to the model limit, so on a 256K or 1M context model it kicks in very late; this adds an earlier, deliberate ceiling for one session and its children, useful for cheaper requests, more headroom for large tool results, or a shorter tail for the summarizer. Thresholds are inherited by subagents by walking the parentID chain, `/autocompact off` reverts to normal behaviour, and with no threshold set the plugin has zero footprint. When a threshold applies, a chip joins the prompt footer and a side panel shows the numbers. Tested against 2.0.24.
+    <br><br>
+    <a href="https://github.com/N0K0/opencode-autocompact">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
   <summary><b>Opencode Canvas</b> <img src="https://badgen.net/github/stars/mailshieldai/opencode-canvas" height="14"/> - <i>Interactive terminal canvases in tmux splits</i></summary>
   <blockquote>
     Interactive terminal canvases (calendars, documents, flight booking) in tmux splits. Port of claude-canvas for OpenCode.
@@ -698,6 +707,29 @@ sync and targeted validation checks, and helps keep repo knowledge branch-local 
 </details>
 
 <details>
+  <summary><b>OpenCode Indexing</b> <img src="https://badgen.net/github/stars/Javierkaiser/opencode-indexing" height="14"/> - <i>Semantic code search for OpenCode that reuses Kilo Code's index and keeps its own incremental one.</i></summary>
+  <blockquote>
+    Adds semantic (vector) code search to OpenCode. It reads Kilo Code's existing
+index (Qdrant ws-* collections and Kilo's local LanceDB) without ever modifying
+it, and can import those vectors and chunks at zero embedding cost, then keep
+its own incremental index (Qdrant oc-* collections or embedded LanceDB) keyed
+on a per-file SHA-256. Search merges results from both indexes, so semantic
+search keeps working even when Kilo is not installed, is disabled, or its index
+is stale.
+
+- Reuse Kilo Code's index read-only, importing vectors without re-embedding
+- Own incremental index with manifest-based freshness (new/changed/deleted only)
+- Vector-store agnostic: Qdrant or embedded LanceDB
+- Settings and index actions from the TUI, Desktop and web clients
+- Supported embedding providers: Mistral, OpenAI, Ollama, Gemini, Voyage,
+  OpenRouter and any OpenAI-compatible endpoint
+
+    <br><br>
+    <a href="https://github.com/Javierkaiser/opencode-indexing">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
   <summary><b>Opencode LiteLLM</b> <img src="https://badgen.net/github/stars/yuseferi/opencode-litellm" height="14"/> - <i>Auto-discover models from a LiteLLM proxy</i></summary>
   <blockquote>
     Drop-in LiteLLM provider for OpenCode with zero configuration. Auto-detects a running
@@ -722,9 +754,9 @@ startup.
 </details>
 
 <details>
-  <summary><b>Opencode Mem</b> <img src="https://badgen.net/github/stars/tickernelz/opencode-mem" height="14"/> - <i>Persistent memory with vector database</i></summary>
+  <summary><b>Opencode Mem</b> <img src="https://badgen.net/github/stars/tickernelz/opencode-mem" height="14"/> - <i>Persistent local memory with Turso/libSQL vector search</i></summary>
   <blockquote>
-    A persistent memory system for AI coding agents that enables long-term context retention across sessions using local vector database technology. Features dual memory scopes, web interface, auto-capture system, and multi-provider AI support.
+    A persistent memory system for AI coding agents that enables long-term context retention across sessions using embedded Turso/libSQL vector search. Features dual memory scopes, auto-capture, user profile learning, a full web UI, and multi-provider AI support.
     <br><br>
     <a href="https://github.com/tickernelz/opencode-mem">🔗 <b>View Repository</b></a>
   </blockquote>
@@ -880,6 +912,15 @@ of model or provider, no configuration required.
 </details>
 
 <details>
+  <summary><b>OpenCode Stats Pills</b> <img src="https://badgen.net/github/stars/Henry-916/opencode-stats-pills" height="14"/> - <i>Inline TUI stats bar for generation speed, tokens, cache hits, cost, and context usage</i></summary>
+  <blockquote>
+    A compact stats bar under the OpenCode V2 input box showing streamed output speed (tok/s), average TTFT, token usage with cache hits and reasoning, session cost, and context-window usage, without opening the sidebar. Click any pill for a detail panel. Context usage follows OpenCode's own calculation, custom per-model prices are supported, and parent and subagent sessions are tracked separately. Tested on OpenCode 2.0.29; UI text is currently in Chinese.
+    <br><br>
+    <a href="https://github.com/Henry-916/opencode-stats-pills">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
   <summary><b>Opencode Status Popup</b> <img src="https://badgen.net/github/stars/LucasInstra/opencode-status-popup" height="14"/> - <i>Always-on-top status pill or tray icon that shows what the agent is doing (Windows)</i></summary>
   <blockquote>
     A second screen for your agent. While a session is thinking, a small always-on-top pill types the word out letter by letter, or a tray icon draws the letter o pixel by pixel. It turns amber on provider retries, red when an execution fails, and violet when OpenCode is waiting for a permission, so you can be in another window and still notice. One PowerShell host starts on demand and is shared by every instance, and the renderer can be switched at runtime with the /popup-* commands or a tool.
@@ -925,11 +966,29 @@ of model or provider, no configuration required.
 </details>
 
 <details>
+  <summary><b>OpenCode Todo Supervisor</b> <img src="https://badgen.net/github/stars/N0K0/opencode-todo-supervisor" height="14"/> - <i>Session todo lists, plus a supervisor that keeps nudging idle sessions until the list is done</i></summary>
+  <blockquote>
+    Gives every OpenCode V2 session a real todo list and then keeps the agent working on it. Ships todo_write, todo_read, todo_add and todo_remove tools (V2 ships none), stored per session with stable per-item ids, with a live progress strip in the composer. A supervisor re-prompts any session that goes idle while its list still has open items, and stays quiet while the agent is actually working, including during tool calls, subagent runs and background shells. Any markdown file can be subscribed so its GFM checklists count as todos, and the TUI panel can tick them off by hand. Nudges are delivered as synthetic session input, so the model reads them as ordinary instructions. Tested against 2.0.24.
+    <br><br>
+    <a href="https://github.com/N0K0/opencode-todo-supervisor">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
   <summary><b>OpenCode Token Tracker</b> <img src="https://badgen.net/github/stars/eserete/opencode-token-tracker" height="14"/> - <i>Real-time token usage, cost, and latency tracking for every AI request in OpenCode</i></summary>
   <blockquote>
     Displays a toast after each AI response with input/output tokens, cache hits, reasoning tokens, response latency, per-message cost, cumulative session cost, model identifier, and request count. Automatically aggregates tokens from subagent sessions spawned via the Task tool. Zero config — drop the file in and it works.
     <br><br>
     <a href="https://github.com/eserete/opencode-token-tracker">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
+  <summary><b>OpenCode Topics</b> <img src="https://badgen.net/github/stars/m-uvex/opencode-topics" height="14"/> - <i>Smart, zero-token session re-titling that tracks topic drift</i></summary>
+  <blockquote>
+    Tracks topic drift across conversation turns and dynamically re-titles OpenCode sessions when the topic shifts, using zero-token local checks between assistant turns.
+    <br><br>
+    <a href="https://github.com/m-uvex/opencode-topics">🔗 <b>View Repository</b></a>
   </blockquote>
 </details>
 
@@ -1018,6 +1077,15 @@ of model or provider, no configuration required.
 </details>
 
 <details>
+  <summary><b>opencode-ask</b> <img src="https://badgen.net/github/stars/dhkimxx/opencode-ask" height="14"/> - <i>Multi-turn /btw-style side chat that never adds to your session</i></summary>
+  <blockquote>
+    Ask follow-up side questions about the current session in a full-screen view. Switch to the main conversation and back with shift+arrows, and close the side chat to forget it. Built for OpenCode 2.
+    <br><br>
+    <a href="https://github.com/dhkimxx/opencode-ask">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
   <summary><b>opencode-bmad-workflow</b> <img src="https://badgen.net/github/stars/Alex-stack-cell/opencode-bmad-workflow" height="14"/> - <i>BMAD workflow plugin — automates epic, feature, sprint and code review workflows using specialized AI agents</i></summary>
   <blockquote>
     Brings the BMAD (Breakthrough Method of Agile AI-Driven Development) methodology to OpenCode. Provides specialized agents for product management, architecture, development, and QA roles. Automates epic planning, feature breakdown, sprint workflows, and code reviews through a structured multi-agent pipeline.
@@ -1032,6 +1100,16 @@ of model or provider, no configuration required.
     Replaces OpenCode's built-in compaction, which rebuilds the prompt from scratch (no system prompt, no tools, history re-serialized) and therefore cold-prefills the whole conversation. This plugin appends the summary turn instead — a cache hit — and then rewrites only the outgoing message list down to that summary, so a locally hosted model reuses its KV cache instead of re-reading everything. Aimed at llama.cpp / LM Studio / vLLM setups where prefilling a large context is the expensive part.
     <br><br>
     <a href="https://github.com/lennartschoch/opencode-cache-compact">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
+  <summary><b>opencode-go-whoami</b> <img src="https://badgen.net/github/stars/senorMk/opencode-go-whoami" height="14"/> - <i>Display local email labels for OpenCode Go/Zen accounts</i></summary>
+  <blockquote>
+    Identify your OpenCode Go/Zen accounts through user-assigned email labels, a permanent sidebar panel, and /go-whoami. Runs locally and displays only masked keys and fingerprints.
+
+    <br><br>
+    <a href="https://github.com/senorMk/opencode-go-whoami">🔗 <b>View Repository</b></a>
   </blockquote>
 </details>
 
@@ -1059,6 +1137,16 @@ of model or provider, no configuration required.
     Exports metrics, logs, and traces from opencode sessions via OTLP/gRPC to any OpenTelemetry-compatible backend (Datadog, Honeycomb, Grafana Cloud, etc.). Instruments session lifecycle, token usage, cost, tool durations, and git commits — mirroring the same signals as Claude Code's monitoring.
     <br><br>
     <a href="https://github.com/DEVtheOPS/opencode-plugin-otel">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
+  <summary><b>opencode-pre-tool-review</b> <img src="https://badgen.net/github/stars/yehweihsu/opencode-pre-tool-review" height="14"/> - <i>Model-assisted pre-execution review for OpenCode V2 tool permissions</i></summary>
+  <blockquote>
+    Experimental OpenCode V2 plugin that reviews tool permission checks using a configurable reviewer model before execution. Integrates with OpenCode's native permission system, supports conservative read-only whitelisting, and offers user-confirmed one-time releases for blocked actions.
+
+    <br><br>
+    <a href="https://github.com/yehweihsu/opencode-pre-tool-review">🔗 <b>View Repository</b></a>
   </blockquote>
 </details>
 
@@ -1264,6 +1352,15 @@ suggestions. All processing stays local by default — no data leaves the machin
     Runtime steering plugin that enforces behavioral contracts via plugin hooks. Monitors chat messages and tool calls against configurable rules, supports BLOCK/WARN modes, built-in profiles (socratic, architecture), step confirmation intervals, override mechanism, dynamic role switching, and Zod-validated YAML configuration.
     <br><br>
     <a href="https://github.com/JensGrote/opencode-semantic-anchors">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
+  <summary><b>Session Time</b> <img src="https://badgen.net/github/stars/LazyGatto/opencode-session-time" height="14"/> - <i>Session start / last answer timestamps and a clock</i></summary>
+  <blockquote>
+    Adds a wall clock to the prompt footer, a "Session" block to the sidebar with the session start time and the time of the last model answer, and a /time timeline panel with every turn's timing.
+    <br><br>
+    <a href="https://github.com/LazyGatto/opencode-session-time">🔗 <b>View Repository</b></a>
   </blockquote>
 </details>
 

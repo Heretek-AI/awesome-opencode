@@ -448,8 +448,8 @@
     "type": "plugins",
     "displayName": "Froggy",
     "repoUrl": "https://github.com/smartfrog/opencode-froggy",
-    "tagline": "Hooks and specialized agents",
-    "description": "Plugin providing Claude Code-style hooks, specialized agents, and tools like gitingest.",
+    "tagline": "XP-guided multi-agent orchestration",
+    "description": "Multi-agent delegation and orchestration guided by XP, KISS, and YAGNI, with specialized agents, independent code review, and a persistent loop to keep work moving toward the objective.",
     "scope": [
       "global"
     ],
@@ -894,6 +894,39 @@
     "tags": []
   },
   {
+    "productId": "opencode-ask",
+    "type": "plugins",
+    "displayName": "opencode-ask",
+    "repoUrl": "https://github.com/dhkimxx/opencode-ask",
+    "tagline": "Multi-turn /btw-style side chat that never adds to your session",
+    "description": "Ask follow-up side questions about the current session in a full-screen view. Switch to the main conversation and back with shift+arrows, and close the side chat to forget it. Built for OpenCode 2.",
+    "scope": [
+      "global"
+    ],
+    "tags": [],
+    "minVersion": "2.0.27"
+  },
+  {
+    "productId": "opencode-autocompact",
+    "type": "plugins",
+    "displayName": "OpenCode Autocompact",
+    "repoUrl": "https://github.com/N0K0/opencode-autocompact",
+    "tagline": "Per-session autocompact — /autocompact 500k compacts a session and its children early",
+    "description": "Claude Code's autocompact, with a knob. Compacts a session before the model's real context limit, at a token count you choose per session. OpenCode's built-in auto-compaction is configured globally and only relative to the model limit, so on a 256K or 1M context model it kicks in very late; this adds an earlier, deliberate ceiling for one session and its children, useful for cheaper requests, more headroom for large tool results, or a shorter tail for the summarizer. Thresholds are inherited by subagents by walking the parentID chain, `/autocompact off` reverts to normal behaviour, and with no threshold set the plugin has zero footprint. When a threshold applies, a chip joins the prompt footer and a side panel shows the numbers. Tested against 2.0.24.",
+    "scope": [
+      "global",
+      "project"
+    ],
+    "tags": [
+      "context",
+      "compaction",
+      "tokens",
+      "tui"
+    ],
+    "installation": "## Install\n\n```sh\nopencode plugin add @hacky.software/opencode-autocompact\n```\n\nOr list it in `opencode.json`:\n\n```json\n{\n  \"$schema\": \"https://opencode.ai/config.json\",\n  \"plugins\": [\"@hacky.software/opencode-autocompact\"]\n}\n```\n\n## Usage\n\n```\n/autocompact 500k      # compact this session (and its children) at 500k tokens\n/autocompact 500000    # same, plain count\n/autocompact 1m        # suffix form\n/autocompact           # report the effective threshold and the model's limit\n/autocompact off       # revert this session (and descendants) to normal auto-compaction\n```\n\nNo configuration is required. The plugin does nothing until a threshold is set for a\nsession or one of its ancestors.\n",
+    "minVersion": "2.0.0"
+  },
+  {
     "productId": "opencode-bmad-workflow",
     "type": "plugins",
     "displayName": "opencode-bmad-workflow",
@@ -1012,6 +1045,19 @@
     "tags": []
   },
   {
+    "productId": "opencode-go-whoami",
+    "type": "plugins",
+    "displayName": "opencode-go-whoami",
+    "repoUrl": "https://github.com/senorMk/opencode-go-whoami",
+    "tagline": "Display local email labels for OpenCode Go/Zen accounts",
+    "description": "Identify your OpenCode Go/Zen accounts through user-assigned email labels, a permanent sidebar panel, and /go-whoami. Runs locally and displays only masked keys and fingerprints.\n",
+    "scope": [
+      "global"
+    ],
+    "tags": [],
+    "minVersion": "2.0.0"
+  },
+  {
     "productId": "opencode-goopspec",
     "type": "plugins",
     "displayName": "GoopSpec",
@@ -1110,6 +1156,28 @@
     "tags": []
   },
   {
+    "productId": "opencode-indexing",
+    "type": "plugins",
+    "displayName": "OpenCode Indexing",
+    "repoUrl": "https://github.com/Javierkaiser/opencode-indexing",
+    "tagline": "Semantic code search for OpenCode that reuses Kilo Code's index and keeps its own incremental one.",
+    "description": "Adds semantic (vector) code search to OpenCode. It reads Kilo Code's existing\nindex (Qdrant ws-* collections and Kilo's local LanceDB) without ever modifying\nit, and can import those vectors and chunks at zero embedding cost, then keep\nits own incremental index (Qdrant oc-* collections or embedded LanceDB) keyed\non a per-file SHA-256. Search merges results from both indexes, so semantic\nsearch keeps working even when Kilo is not installed, is disabled, or its index\nis stale.\n\n- Reuse Kilo Code's index read-only, importing vectors without re-embedding\n- Own incremental index with manifest-based freshness (new/changed/deleted only)\n- Vector-store agnostic: Qdrant or embedded LanceDB\n- Settings and index actions from the TUI, Desktop and web clients\n- Supported embedding providers: Mistral, OpenAI, Ollama, Gemini, Voyage,\n  OpenRouter and any OpenAI-compatible endpoint\n",
+    "scope": [
+      "global"
+    ],
+    "tags": [
+      "semantic-search",
+      "code-search",
+      "indexing",
+      "embeddings",
+      "qdrant",
+      "lancedb"
+    ],
+    "homepageUrl": "https://github.com/Javierkaiser/opencode-indexing#readme",
+    "installation": "## Prerequisites\n- OpenCode v2 (plugin API `@opencode/plugin` 2.x)\n- Node.js >= 22.6\n- Optional: a Qdrant server and/or the `@lancedb/lancedb` module\n\n## Installation\n\n### Installer (recommended, cross-platform)\n\n```bash\n# Linux / macOS\n./install.sh\n# Windows\npowershell -ExecutionPolicy Bypass -File .\\install.ps1\n# any platform (the wrappers call this)\nnode install.mjs\n```\n\n### From npm\n\n```bash\nnpm install @javierkaiser/opencode-indexing\n```\n\nThen reference it from `opencode.json`:\n\n```jsonc\n{\n  \"plugins\": [\n    { \"package\": \"@javierkaiser/opencode-indexing\" }\n  ]\n}\n```\n\n## Configuration\n\nSettings live in `~/.config/opencode/indexing.json` and are editable from\n`/indexing-config` (any client) or the `/indexing` page (terminal TUI).\n",
+    "minVersion": "2.0.0"
+  },
+  {
     "productId": "opencode-litellm",
     "type": "plugins",
     "displayName": "Opencode LiteLLM",
@@ -1145,8 +1213,8 @@
     "type": "plugins",
     "displayName": "Opencode Mem",
     "repoUrl": "https://github.com/tickernelz/opencode-mem",
-    "tagline": "Persistent memory with vector database",
-    "description": "A persistent memory system for AI coding agents that enables long-term context retention across sessions using local vector database technology. Features dual memory scopes, web interface, auto-capture system, and multi-provider AI support.",
+    "tagline": "Persistent local memory with Turso/libSQL vector search",
+    "description": "A persistent memory system for AI coding agents that enables long-term context retention across sessions using embedded Turso/libSQL vector search. Features dual memory scopes, auto-capture, user profile learning, a full web UI, and multi-provider AI support.",
     "scope": [
       "global"
     ],
@@ -1318,6 +1386,18 @@
     "tags": []
   },
   {
+    "productId": "opencode-pre-tool-review",
+    "type": "plugins",
+    "displayName": "opencode-pre-tool-review",
+    "repoUrl": "https://github.com/yehweihsu/opencode-pre-tool-review",
+    "tagline": "Model-assisted pre-execution review for OpenCode V2 tool permissions",
+    "description": "Experimental OpenCode V2 plugin that reviews tool permission checks using a configurable reviewer model before execution. Integrates with OpenCode's native permission system, supports conservative read-only whitelisting, and offers user-confirmed one-time releases for blocked actions.\n",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
     "productId": "opencode-provider-alias",
     "type": "plugins",
     "displayName": "OpenCode Provider Alias",
@@ -1478,6 +1558,18 @@
     "minVersion": "1.18.0"
   },
   {
+    "productId": "opencode-session-time",
+    "type": "plugins",
+    "displayName": "Session Time",
+    "repoUrl": "https://github.com/LazyGatto/opencode-session-time",
+    "tagline": "Session start / last answer timestamps and a clock",
+    "description": "Adds a wall clock to the prompt footer, a \"Session\" block to the sidebar with the session start time and the time of the last model answer, and a /time timeline panel with every turn's timing.",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
     "productId": "opencode-session-tracker",
     "type": "plugins",
     "displayName": "OpenCode Session Tracker",
@@ -1548,6 +1640,23 @@
       "global"
     ],
     "tags": []
+  },
+  {
+    "productId": "opencode-stats-pills",
+    "type": "plugins",
+    "displayName": "OpenCode Stats Pills",
+    "repoUrl": "https://github.com/Henry-916/opencode-stats-pills",
+    "tagline": "Inline TUI stats bar for generation speed, tokens, cache hits, cost, and context usage",
+    "description": "A compact stats bar under the OpenCode V2 input box showing streamed output speed (tok/s), average TTFT, token usage with cache hits and reasoning, session cost, and context-window usage, without opening the sidebar. Click any pill for a detail panel. Context usage follows OpenCode's own calculation, custom per-model prices are supported, and parent and subagent sessions are tracked separately. Tested on OpenCode 2.0.29; UI text is currently in Chinese.",
+    "scope": [
+      "global"
+    ],
+    "tags": [
+      "tui",
+      "tokens",
+      "cost",
+      "statistics"
+    ]
   },
   {
     "productId": "opencode-status-popup",
@@ -1637,12 +1746,45 @@
     "tags": []
   },
   {
+    "productId": "opencode-todo-supervisor",
+    "type": "plugins",
+    "displayName": "OpenCode Todo Supervisor",
+    "repoUrl": "https://github.com/N0K0/opencode-todo-supervisor",
+    "tagline": "Session todo lists, plus a supervisor that keeps nudging idle sessions until the list is done",
+    "description": "Gives every OpenCode V2 session a real todo list and then keeps the agent working on it. Ships todo_write, todo_read, todo_add and todo_remove tools (V2 ships none), stored per session with stable per-item ids, with a live progress strip in the composer. A supervisor re-prompts any session that goes idle while its list still has open items, and stays quiet while the agent is actually working, including during tool calls, subagent runs and background shells. Any markdown file can be subscribed so its GFM checklists count as todos, and the TUI panel can tick them off by hand. Nudges are delivered as synthetic session input, so the model reads them as ordinary instructions. Tested against 2.0.24.",
+    "scope": [
+      "global",
+      "project"
+    ],
+    "tags": [
+      "todo",
+      "task-tracking",
+      "productivity",
+      "automation",
+      "tui"
+    ],
+    "installation": "## Install\n\n```sh\nopencode plugin add @hacky.software/opencode-todo-supervisor\n```\n\nOr list it in `opencode.json`:\n\n```json\n{\n  \"$schema\": \"https://opencode.ai/config.json\",\n  \"plugins\": [\"@hacky.software/opencode-todo-supervisor\"]\n}\n```\n\n## Configuration\n\nOptions are optional; the defaults supervise quietly in the background.\n\n```jsonc\n{\n  \"$schema\": \"https://opencode.ai/config.json\",\n  \"plugins\": [\n    {\n      \"package\": \"@hacky.software/opencode-todo-supervisor\",\n      \"options\": {\n        \"stallMinutes\": 5,           // idle time before the first nudge\n        \"minNudgeIntervalMs\": 45000, // rate limit between nudges\n        \"maxNoProgressNudges\": 5,    // give up after this many no-progress nudges\n        \"injectTodoContext\": true,   // remind the model of the list on each prompt\n        \"markdownFiles\": [\"PLAN.md\"] // treat these files' checklists as the todo list\n      }\n    }\n  ]\n}\n```\n\n## Usage\n\nAsk the agent to plan with `todo_write`, then check `todo_read`. In the TUI the composer\nstrip shows progress; open the panel from the command palette to add, remove or reorder\nitems, and to check off markdown checklist items.\n",
+    "minVersion": "2.0.0"
+  },
+  {
     "productId": "opencode-token-tracker",
     "type": "plugins",
     "displayName": "OpenCode Token Tracker",
     "repoUrl": "https://github.com/eserete/opencode-token-tracker",
     "tagline": "Real-time token usage, cost, and latency tracking for every AI request in OpenCode",
     "description": "Displays a toast after each AI response with input/output tokens, cache hits, reasoning tokens, response latency, per-message cost, cumulative session cost, model identifier, and request count. Automatically aggregates tokens from subagent sessions spawned via the Task tool. Zero config — drop the file in and it works.",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
+    "productId": "opencode-topics",
+    "type": "plugins",
+    "displayName": "OpenCode Topics",
+    "repoUrl": "https://github.com/m-uvex/opencode-topics",
+    "tagline": "Smart, zero-token session re-titling that tracks topic drift",
+    "description": "Tracks topic drift across conversation turns and dynamically re-titles OpenCode sessions when the topic shifts, using zero-token local checks between assistant turns.",
     "scope": [
       "global"
     ],
