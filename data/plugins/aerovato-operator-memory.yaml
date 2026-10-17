@@ -1,11 +1,14 @@
 name: "@aerovato/operator-memory"
 repo: https://github.com/aerovato/operator-memory
+homepage: https://www.npmjs.com/package/@aerovato/operator-opencode
 tagline: Durable context for agent-driven development
-description: >-
-  Operator Memory gives the agent durable memory made of ordinary Markdown:
-  specs, decisions, standards, and research, kept across private, shared, and user partitions.
-  Every file is yours to read, correct, or remove, and new sessions start from that knowledge.
-  No embeddings, no vector database, no hosted service.
+description: "Operator Memory gives the agent durable memory made of ordinary Markdown: specs, decisions, standards, and research, kept across private, shared, and user partitions. Every file is yours to read, correct, or remove, and new sessions start from that knowledge. No embeddings, no vector database, no hosted service."
+kind: plugin
+topics:
+  - memory
+  - context
+  - sessions
+compat: v2
 scope:
   - global
   - project
@@ -14,7 +17,6 @@ tags:
   - context
   - documentation
   - markdown
-homepage: https://www.npmjs.com/package/@aerovato/operator-opencode
 installation: |
   Install the Helper globally:
 
