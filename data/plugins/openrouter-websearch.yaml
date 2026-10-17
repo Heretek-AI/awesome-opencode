@@ -2,3 +2,9 @@ name: OpenRouter Websearch
 repo: https://github.com/pichenka007gd/opencode-openrouter-websearch
 tagline: Web search via OpenRouter's web plugin with optional AI summarization
 description: Replaces the built-in websearch provider with OpenRouter's web plugin (Exa by default) so every agent gets one clean web search tool. Optionally summarizes results with a preservation-focused second model call — the agent receives a compact brief with [n] citations plus a source list instead of full page contents, cutting tokens from thousands to a few hundred per query. Ships a settings menu in the command palette (model picker with live OpenRouter list, limits, engine, domain filters), a CLI settings script, and cumulative cost statistics (search vs model vs summarization spend, token counts).
+kind: plugin
+topics:
+  - context
+  - providers
+  - cost
+compat: v2
