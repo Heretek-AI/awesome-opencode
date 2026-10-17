@@ -1,0 +1,32 @@
+name: Awake
+repo: https://github.com/vvo/opencode-plugins
+path: packages/awake
+npm: opencode-awake
+homepage: https://www.npmjs.com/package/opencode-awake
+tagline: Keeps your computer awake while a session works, even with the lid closed
+description: OpenCode plugin that keeps the computer from sleeping while a session is working, including lid-close sleep on MacBooks. Other sleep plugins only block idle sleep with caffeinate; this one also blocks lid sleep via pmset on macOS and systemd-inhibit on Linux, and releases it as soon as every session is idle.
+kind: plugin
+topics:
+  - environment
+compat: v2
+scope:
+  - global
+tags:
+  - sleep
+  - caffeinate
+  - macos
+  - linux
+installation: |
+  OpenCode 2:
+
+  ```sh
+  opencode plugin add opencode-awake
+  ```
+
+  OpenCode 1, in `opencode.json`:
+
+  ```json
+  { "plugin": ["opencode-awake"] }
+  ```
+
+  On macOS, allowing `pmset` without a password is needed for the closed-lid feature.

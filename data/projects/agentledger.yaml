@@ -1,0 +1,8 @@
+name: agentledger
+repo: https://github.com/garyleelty/agentledger
+tagline: Local-first cost ledger — what your coding agents really cost in tokens and money
+description: Reads the session logs OpenCode, Claude Code, Codex and Gemini CLI already leave on disk and turns them into token and dollar totals. Prices cache reads and cache writes at their own rates instead of counting them as input, attributes spend by project/branch/model, detects context churn, and projects a budget. Zero dependencies, no network calls — your entire coding history never leaves the machine.
+kind: tool
+topics:
+  - cost
+compat: n/a

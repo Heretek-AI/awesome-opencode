@@ -1,0 +1,9 @@
+name: Topic Compaction
+repo: https://github.com/lhaarman/opencode-topic-compaction
+tagline: Appends late-position overrides to compaction prompts for topic-based session summarization.
+description: This plugin improves session compaction continuity by restructuring how opencode summarizes file activity. Instead of a single linear stream that can lose track of pending work, the plugin clusters actual file activity into thematic topics during compaction. Each topic carries an explicit `blocked:` status field, and open blockers are guaranteed to survive across successive compaction cycles, ensuring unresolved work persists through session restarts.
+kind: plugin
+topics:
+  - context
+  - sessions
+compat: v2

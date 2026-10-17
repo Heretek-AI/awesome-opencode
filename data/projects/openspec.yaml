@@ -2,3 +2,7 @@ name: OpenSpec
 repo: https://github.com/Fission-AI/OpenSpec
 tagline: Spec-driven development
 description: Spec-driven development with opencode - structured specification management.
+kind: tool
+topics:
+  - workflow
+compat: n/a

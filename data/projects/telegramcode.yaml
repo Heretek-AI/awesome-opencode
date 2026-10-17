@@ -1,0 +1,20 @@
+name: TelegramCode
+repo: https://github.com/olosegres/charness
+tagline: Telegram bot for OpenCode and Claude Code, run coding agents from your phone
+description: Run your coding agents on your own machine or VPS and drive them from Telegram, by voice or text. Each forum topic is its own project session, like terminal tabs on your phone. Self-hosted, no open ports, MIT.
+kind: client
+topics:
+  - remote
+  - voice
+compat: n/a
+tags:
+  - telegram
+  - telegram-bot
+  - coding-agent
+  - opencode
+  - claude-code
+  - self-hosted
+  - voice
+  - vps
+  - mobile
+  - remote-development

@@ -1,0 +1,8 @@
+name: Neuralyzer
+repo: https://github.com/gintasz/neuralyzer
+tagline: Easier Ralph loop inside harness
+description: Allow agent to wipe its own session context and re-run the first message. This allows easier and more ergonomic Ralph loop engineering.
+kind: plugin
+topics:
+  - workflow
+compat: v1
