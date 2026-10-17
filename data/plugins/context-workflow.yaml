@@ -1,0 +1,9 @@
+name: context-workflow
+repo: https://github.com/Thexinyi/context-workflow
+tagline: Context-management + auto-compact relay workflow for long-running multi-file tasks
+description: Breaks long tasks into independent steps persisted to workflow.json, drops notes summaries when key files are read, and writes handoff.json at step completion. Script gates (not prompt soft-rules) enforce that the handoff is complete before compact, and a one-shot wf_resume.ps1 restores state after compact. Pairs with a guard plugin for automatic token water-level injection and a wf_compact tool. Keeps the context window between 100K-150K tokens. Designed for non-pure-code long-running tasks (report analysis, multi-document processing) that risk blowing the context window.
+kind: plugin
+topics:
+  - context
+  - workflow
+compat: v1
