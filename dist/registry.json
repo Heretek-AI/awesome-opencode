@@ -8996,6 +8996,25 @@
     "tags": []
   },
   {
+    "productId": "opencode-openchamber-mobile-bridge",
+    "type": "projects",
+    "displayName": "OpenChamber Mobile Bridge",
+    "repoUrl": "https://github.com/Zaradacht/opencode-openchamber-mobile-bridge",
+    "npmPackage": "opencode-openchamber-mobile-bridge",
+    "tagline": "Expose devcontainer OpenChamber sessions over Tailscale",
+    "description": "Starts OpenChamber inside devcontainers, creates a host bridge, and serves each project on a stable private Tailscale URL for mobile and desktop clients.",
+    "kind": "tool",
+    "topics": [
+      "remote",
+      "environment"
+    ],
+    "compat": "n/a",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
     "productId": "opencode-profile-router",
     "type": "projects",
     "displayName": "Opencode Profile Router",
