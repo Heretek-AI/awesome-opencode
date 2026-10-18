@@ -1,0 +1,9 @@
+name: "@brainervirus/workit-opencode"
+repo: https://github.com/BrainerVirus/workit
+npm: "@brainervirus/workit-opencode"
+tagline: Workit OpenCode plugin — native tools, adaptive policy, and sixteen method skills
+description: "Workflow rails for agentic coding: one shared task and policy core with native OpenCode, Cursor, Codex, Pi, and CLI surfaces."
+kind: plugin
+topics:
+  - workflow
+compat: v2
