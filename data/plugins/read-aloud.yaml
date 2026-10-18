@@ -2,3 +2,9 @@ name: Read Aloud
 repo: https://github.com/moritzWa/opencode-read-aloud
 tagline: Read the last answer aloud, highlighting each word as it is spoken
 description: TUI plugin that reads the latest answer with ElevenLabs text-to-speech and highlights the current word and sentence in the transcript, scrolling to keep it on screen. Option+click any word to read from there. Clickable play/pause and speed controls, pitch-preserving speed changes, cached audio, and on macOS the AirPods button and media keys pause and resume. Needs an ElevenLabs API key and ffmpeg.
+kind: plugin
+topics:
+  - providers
+  - sessions
+  - ui
+compat: v2
