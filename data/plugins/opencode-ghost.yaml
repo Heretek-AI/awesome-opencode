@@ -1,0 +1,10 @@
+name: opencode-ghost
+repo: https://github.com/ozandogrultan/opencode-ghost
+npm: opencode-ghost
+tagline: Stateless inline next-prompt ghosts for the empty OpenCode V2 composer, accepted with Tab or Right.
+description: "OpenCode ghost text autosuggest: suggests your next message as dimmed inline ghost text in the empty TUI composer, accepted with Tab or Right arrow."
+kind: plugin
+topics:
+  - ui
+  - prompting
+compat: v2
