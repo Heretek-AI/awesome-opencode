@@ -1,0 +1,9 @@
+name: "@brendonovich/vite-plugin-opencode"
+repo: https://github.com/Brendonovich/vite-plugin-opencode
+npm: "@brendonovich/vite-plugin-opencode"
+tagline: Select UI elements in a Vite app and send contextual feedback to OpenCode.
+description: Select UI elements in a Vite app and send contextual feedback to OpenCode
+kind: client
+topics:
+  - workflow
+compat: v2
