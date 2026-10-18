@@ -1,0 +1,10 @@
+name: "@adonis-agora/agent"
+repo: https://github.com/DavideCarvalho/adonis-agora-agent
+path: packages/adonis
+npm: "@adonis-agora/agent"
+tagline: Governed, durable-backed AI agent (chat + tool-calling + governance) for AdonisJS — part of the Agora ecosystem.
+description: Governed, durable-ready AI agent (chat + tool-calling + governance + HITL) for AdonisJS — part of the Agora ecosystem
+kind: tool
+topics:
+  - security
+compat: v2
