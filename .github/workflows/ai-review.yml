@@ -121,6 +121,28 @@ jobs:
           command -v rg >/dev/null || sudo apt-get install -y ripgrep
           "$dir/opencode" --version
 
+      # A clean runner has no `opencode auth` store, and the API key prompt needs a TTY, so register the
+      # providers from their secret env vars. The read-only permission rules are repeated here as a
+      # second layer under the agent's own rules.
+      - name: Configure OpenCode
+        run: |
+          mkdir -p "$RUNNER_TEMP/oc-config/opencode"
+          cat > "$RUNNER_TEMP/oc-config/opencode/opencode.json" <<'JSON'
+          {
+            "$schema": "https://opencode.ai/config.json",
+            "providers": {
+              "opencode-go": { "env": ["OPENCODE_GO_API_KEY"] },
+              "opencode": { "env": ["OPENCODE_API_KEY"] }
+            },
+            "permissions": [
+              { "action": "*", "resource": "*", "effect": "deny" },
+              { "action": "read", "resource": "*", "effect": "allow" },
+              { "action": "glob", "resource": "*", "effect": "allow" },
+              { "action": "grep", "resource": "*", "effect": "allow" }
+            ]
+          }
+          JSON
+
       - name: Check credentials
         env:
           OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}

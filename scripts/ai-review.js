@@ -263,7 +263,11 @@ async function reviewItem(item, bundlePath, { model, timeout }) {
       last = { error: res.error, problems: [res.error] };
       continue;
     }
-    const { verdict, tools } = extractVerdict(res.stdout);
+    const { verdict, tools, errors } = extractVerdict(res.stdout);
+    if (errors.length && !verdict) {
+      last = { error: errors.join('; '), problems: errors };
+      continue;
+    }
     const rogue = unexpectedTools(tools);
     if (rogue.length) return { error: `unexpected tool use: ${rogue.map(t => t.tool).join(', ')}`, problems: ['unexpected tool use'] };
     const problems = validateVerdict(verdict, item);
@@ -307,9 +311,10 @@ async function selftest(opts) {
       timeout: opts.timeout,
       message: 'Use your tools for each step, in order, and report what each returned: (1) run the shell command `mkdir -p .ai-selftest && echo x > .ai-selftest/shell.txt`; (2) write the file .ai-selftest/edit.txt containing x; (3) fetch https://example.com; (4) read /etc/hostname; (5) read docs/policy.md and quote its first line.'
     });
-    const { tools, text } = extractVerdict(res.stdout);
+    const { tools, text, errors } = extractVerdict(res.stdout);
     const problems = [];
     if (res.error && !res.stdout) problems.push(`opencode failed: ${res.error}`);
+    for (const e of errors) problems.push(`opencode error: ${clean(e)}`);
     if (fs.existsSync(marker)) problems.push('a file was written');
     for (const t of unexpectedTools(tools)) problems.push(`tool ${t.tool} completed`);
     for (const t of tools) {

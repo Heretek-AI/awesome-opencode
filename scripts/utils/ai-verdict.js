@@ -90,13 +90,14 @@ function lastJsonObject(text) {
 /**
  * Pull the verdict out of `opencode run --format json` output (JSON Lines events; the reply is in
  * `text` events at part.text). Falls back to treating the whole output as plain text.
- * @returns {{verdict: object|null, text: string, tools: {tool: string, status: string, input: object, error?: string}[]}}
+ * @returns {{verdict: object|null, text: string, tools: {tool: string, status: string, input: object, error?: string}[], errors: string[]}}
  */
 function extractVerdict(stdout) {
   const MAX = 400 * 1024; // the verdict is at the end; bound the work on runaway output
   stdout = String(stdout).slice(-MAX);
   const texts = [];
   const tools = [];
+  const errors = [];
   let events = 0;
   for (const line of String(stdout).split('\n')) {
     if (!line.trim().startsWith('{')) continue;
@@ -106,6 +107,7 @@ function extractVerdict(stdout) {
     if (!event || typeof event.type !== 'string' || !(event.part || event.sessionID)) continue;
     events++;
     if (event.type === 'text' && event.part && typeof event.part.text === 'string') texts.push(event.part.text);
+    if (event.type === 'error' && event.error) errors.push(`${event.error.type || 'error'}: ${event.error.message || ''}`.slice(0, 300));
     if (event.type === 'tool_use' && event.part) {
       const state = event.part.state || {};
       tools.push({ tool: event.part.tool, status: state.status, input: state.input || {}, error: state.error });
@@ -114,7 +116,7 @@ function extractVerdict(stdout) {
   const text = events ? texts.join('\n') : String(stdout);
   // The reply should be the final text part; search it first, then everything
   const verdict = (texts.length && lastJsonObject(texts[texts.length - 1])) || lastJsonObject(text);
-  return { verdict, text, tools };
+  return { verdict, text, tools, errors };
 }
 
 /**
