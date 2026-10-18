@@ -19,3 +19,6 @@ Thumbs.db
 
 # Built search site (deployed by .github/workflows/site.yml)
 _site/
+
+# AI review working files (CI artifacts)
+.ai-review/

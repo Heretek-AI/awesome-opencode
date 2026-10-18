@@ -52,6 +52,26 @@ Removal PRs are reviewed like any other PR; closing one keeps the entries until 
 
 A weekly scout searches npm for packages published since V2 shipped that depend on `@opencode/*`, keeps public, licensed, non-archived, non-fork repositories that are not already listed or in an open PR, and ranks them by weekly downloads, then stars. It posts a **Scout** issue; a maintainer ticking a candidate's box makes the bot open a PR for it. Add a package or repo to [`discovery/declined.txt`](../discovery/declined.txt) to stop suggesting it.
 
+## AI review
+
+An OpenCode V2 agent reviews the judgment calls the deterministic checks leave open. It is advisory: **it never merges or closes anything.**
+
+| What | When | Result |
+| :--- | :--- | :--- |
+| Open PRs labeled `needs-human` or `scout` | daily; a PR is reviewed again only after it gets a new commit | One "AI review" comment (verdict, reasons, suggested placement, and for `fix` a corrected entry checked against the schema) and one label: `ai-approve`, `ai-fix`, `ai-close` or `ai-unsure` |
+| Unticked candidates on the open Scout issue | weekly, after the scout run | Confident, policy-clean accepts get a PR opened by the bot, with the AI's kind, topics and tagline; everything else gets an "AI: …" note on its line |
+
+A maintainer still merges every PR, including the ones the AI opened, and the `validate` check still applies. Delete the comment or remove the label to discard a verdict; dispatching the workflow with `force` re-reviews.
+
+How it is contained:
+
+- It runs only on a schedule or manual dispatch, with base-branch code; PR code is never checked out.
+- The model runs in a job whose GitHub token has no permissions and is never in its environment. Its agent ([`.opencode/agents/catalog-reviewer.md`](../.opencode/agents/catalog-reviewer.md)) may only read, glob and grep inside the repository; a self-test before every run proves shell, edit and web access are unavailable.
+- It sees a pre-built evidence bundle (the PR's entries, check results, the target's README and `package.json`, similar entries), treats it as untrusted data, and must reply with one JSON verdict.
+- A separate job validates that verdict against a strict schema (known verdicts, categories, kinds and topics; matching PR number and commit) and renders all comment text itself, escaping HTML and breaking @mentions. Anything else is dropped.
+
+The model comes from the `OPENCODE_MODEL` repository variable; credentials from the `OPENCODE_GO_API_KEY` (or `OPENCODE_API_KEY`) secret.
+
 ## Branch protection
 
 `main` has a ruleset: changes land only through pull requests with a passing `validate` check (GitHub rulesets do not accept direct pushes while a status check is required), and force-pushes and deletion are blocked. Bots open PRs too; GitHub holds workflow runs on bot-opened PRs for approval, so each bot approves the `validate` run on its own PR. Repository admins can merge a PR whose check is failing or pending (for a broken CI).
@@ -68,3 +88,4 @@ A weekly scout searches npm for packages published since V2 shipped that depend 
 | `reprobe.yml` | daily | Re-checks `needs-v2` PRs |
 | `scout.yml` | weekly | Scout issue with V2 plugin candidates |
 | `issues.yml` | issue opened/edited | Issue-form submissions and scout acceptances become PRs |
+| `ai-review.yml` | daily (PRs), weekly (scout) | Advisory AI review of `needs-human` and `scout` PRs; opens PRs for scout candidates it accepts |
