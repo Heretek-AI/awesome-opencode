@@ -1,0 +1,10 @@
+name: OpenChamber Mobile Bridge
+repo: https://github.com/Zaradacht/opencode-openchamber-mobile-bridge
+npm: opencode-openchamber-mobile-bridge
+tagline: Expose devcontainer OpenChamber sessions over Tailscale
+description: Starts OpenChamber inside devcontainers, creates a host bridge, and serves each project on a stable private Tailscale URL for mobile and desktop clients.
+kind: tool
+topics:
+  - remote
+  - environment
+compat: n/a
