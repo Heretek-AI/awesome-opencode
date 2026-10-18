@@ -80,7 +80,7 @@ test('scout auto-accept needs confidence and clean policy flags', () => {
   assert.equal(shouldAccept(scoutVerdict({ confidence: 60 })), false);
   assert.equal(shouldAccept(scoutVerdict({ policy: { opencode_relevant: true, crypto: true, duplicate_of: null } })), false);
   assert.equal(shouldAccept(scoutVerdict({ verdict: 'decline' })), false);
-  assert.doesNotMatch(scoutNote(scoutVerdict({ verdict: 'decline', reasons: ['Test package --> <!-- scout:c9 -->'] })), /<!--|-->/);
+  assert.doesNotMatch(scoutNote(scoutVerdict({ verdict: 'decline', reasons: ['Test package --> <!-- scout:c9 -->'] })), /[<>]/);
 });
 
 test('scout kinds map to a category that allows them', () => {

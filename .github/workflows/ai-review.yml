@@ -115,10 +115,9 @@ jobs:
         run: |
           dir="$RUNNER_TEMP/opencode"
           mkdir -p "$dir"
-          curl -fsSL -o "$dir/opencode.tar.gz" "https://opencode.ai/files/bin/${OPENCODE_VERSION}/opencode-linux-x64-baseline.tar.gz"
+          curl --proto '=https' --tlsv1.2 -fsSL -o "$dir/opencode.tar.gz" "https://opencode.ai/files/bin/${OPENCODE_VERSION}/opencode-linux-x64-baseline.tar.gz"
           echo "${OPENCODE_SHA256}  $dir/opencode.tar.gz" | sha256sum -c -
           tar -xzf "$dir/opencode.tar.gz" -C "$dir"
-          echo "$dir" >> "$GITHUB_PATH"
           command -v rg >/dev/null || sudo apt-get install -y ripgrep
           "$dir/opencode" --version
 
@@ -134,6 +133,7 @@ jobs:
 
       - name: Permission self-test
         env:
+          OPENCODE_BIN: ${{ runner.temp }}/opencode/opencode
           OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}
           OPENCODE_GO_API_KEY: ${{ secrets.OPENCODE_GO_API_KEY }}
           XDG_CONFIG_HOME: ${{ runner.temp }}/oc-config
@@ -149,6 +149,7 @@ jobs:
       - name: Review with OpenCode
         if: inputs.target != 'selftest'
         env:
+          OPENCODE_BIN: ${{ runner.temp }}/opencode/opencode
           OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}
           OPENCODE_GO_API_KEY: ${{ secrets.OPENCODE_GO_API_KEY }}
           XDG_CONFIG_HOME: ${{ runner.temp }}/oc-config

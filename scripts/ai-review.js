@@ -26,12 +26,14 @@ const { getFiles, getNpmLatest, getRepos, rest } = require('./utils/github');
 const { analyzePullRequest } = require('./utils/pr-checks');
 const { REPO, addLabels, listComments, listOpenPulls, pullChanges, upsertComment } = require('./utils/repo');
 const { AI_LABELS, MARKER, extractVerdict, renderComment, reviewedSha, scoutNote, shouldAccept, validateVerdict } = require('./utils/ai-verdict');
+const { escapeCell } = require('./utils/template');
 
 const ROOT = path.join(__dirname, '..');
 const AGENT = 'catalog-reviewer';
 const PR_LABELS = ['needs-human', 'scout'];
 const READ_TOOLS = new Set(['read', 'glob', 'grep']);
 const DATA_RE = /<!-- scout-data (\{.*?\}) -->/s;
+const ITEM_ID_RE = /^(pr-\d+|scout-\d+-c\d+)$/;
 
 const clean = text => String(text == null ? '' : text).replace(/[\r\n]+/g, ' ').slice(0, 500);
 const truncate = (text, max) => {
@@ -77,7 +79,7 @@ async function describeTarget({ repo, path: subPath, npm, compat }) {
     if (info) {
       const readme = await rest(`/repos/${parsed.owner}/${parsed.name}/readme${subPath ? `/${subPath.split('/').map(encodeURIComponent).join('/')}` : ''}`);
       if (readme.status === 200 && readme.data && readme.data.content) out.readme = truncate(Buffer.from(readme.data.content, 'base64').toString('utf8'), 6000);
-      const pkgPath = subPath ? `${subPath.replace(/\/+$/, '')}/package.json` : 'package.json';
+      const pkgPath = [...String(subPath || '').split('/').filter(Boolean), 'package.json'].join('/');
       const files = await getFiles([{ owner: parsed.owner, name: parsed.name, path: pkgPath }]);
       const pkg = files.get(`${parsed.owner}/${parsed.name}:${pkgPath}`);
       if (pkg && pkg.text) out.package_json = truncate(pkg.text, 4000);
@@ -146,7 +148,7 @@ async function collectPulls({ pr, force, limit }, entries) {
         title: pull.title,
         author: authorOf(pull),
         labels: pull.labels.map(l => l.name),
-        body: truncate(String(pull.body || '').replace(/<!--[\s\S]*?-->/g, ''), 3000),
+        body: truncate(pull.body, 3000),
         files: changes.map(c => ({ path: c.path, status: c.status, content: c.content ? truncate(c.content, 4000) : undefined })),
         checks: {
           errors: analysis.errors.map(e => `${e.file}: ${e.message}`),
@@ -222,13 +224,23 @@ function opencodeEnv() {
   return env;
 }
 
+/** Absolute path of the opencode binary: $OPENCODE_BIN (set by the workflow), else the first match on PATH. */
+function opencodeBin() {
+  if (process.env.OPENCODE_BIN) return process.env.OPENCODE_BIN;
+  for (const dir of String(process.env.PATH || '').split(path.delimiter).filter(d => path.isAbsolute(d))) {
+    const candidate = path.join(dir, 'opencode');
+    try { fs.accessSync(candidate, fs.constants.X_OK); return candidate; } catch { /* keep looking */ }
+  }
+  throw new Error('opencode not found; set OPENCODE_BIN');
+}
+
 function opencode({ agent, model, file, message, title, timeout }) {
   const args = ['run', '--standalone', '--agent', agent, '--format', 'json', '--log-level', 'warn', '--title', title];
   if (model) args.push('--model', model);
   if (file) args.push('--file', file);
   args.push(message);
   return new Promise(resolve => {
-    const child = execFile('opencode', args, { cwd: ROOT, env: opencodeEnv(), timeout: timeout * 1000, maxBuffer: 32 * 1024 * 1024 }, (err, stdout, stderr) => {
+    const child = execFile(opencodeBin(), args, { cwd: ROOT, env: opencodeEnv(), timeout: timeout * 1000, maxBuffer: 32 * 1024 * 1024 }, (err, stdout, stderr) => {
       resolve({ stdout: String(stdout || ''), stderr: String(stderr || ''), error: err ? (err.killed ? `timed out after ${timeout}s` : `exit ${err.code}: ${clean(stderr).slice(0, 300)}`) : null });
     });
     // `opencode run` reads a piped stdin as extra message input; close it so the run starts
@@ -332,7 +344,9 @@ async function setAiLabel(number, wanted, current) {
 
 async function apply(opts) {
   if (!opts.inDir || !opts.outDir) throw new Error('apply needs --in and --out');
-  const items = JSON.parse(fs.readFileSync(path.join(opts.inDir, 'items.json'), 'utf8'));
+  // items.json comes from the collect job; still, only well-formed items are routed to API calls
+  const items = JSON.parse(fs.readFileSync(path.join(opts.inDir, 'items.json'), 'utf8'))
+    .filter(i => ITEM_ID_RE.test(String(i.id)) && (i.type === 'pr' ? Number.isInteger(i.number) : Number.isInteger(i.issue) && /^c\d+$/.test(String(i.cid))));
   const rows = [];
   const scout = new Map(); // issue -> { ids, overrides, notes }
 
@@ -348,7 +362,8 @@ async function apply(opts) {
     const v = result.verdict;
 
     if (item.type === 'pr') {
-      const { data: pull } = await rest(`/repos/${REPO}/pulls/${item.number}`);
+      const number = Number(item.number);
+      const { data: pull } = await rest(`/repos/${REPO}/pulls/${number}`);
       if (!pull || pull.state !== 'open' || pull.head.sha !== item.head_sha) {
         rows.push([item.id, v.verdict, 'skipped: PR changed or closed since review']);
         continue;
@@ -359,8 +374,8 @@ async function apply(opts) {
         console.log(`--- #${item.number} (${label})\n${renderComment(v, item, { model: result.model || opts.model })}\n`);
         continue;
       }
-      await upsertComment(item.number, MARKER, renderComment(v, item, { model: result.model || opts.model }));
-      await setAiLabel(item.number, label, pull.labels.map(l => l.name));
+      await upsertComment(number, MARKER, renderComment(v, item, { model: result.model || opts.model }));
+      await setAiLabel(number, label, pull.labels.map(l => l.name));
       rows.push([item.id, v.verdict, `commented, labeled ${label}`]);
     } else {
       if (!scout.has(item.issue)) scout.set(item.issue, { ids: [], overrides: {}, notes: {} });
@@ -390,7 +405,7 @@ async function apply(opts) {
     await accept({ issueNumber, ids: plan.ids, overrides: plan.overrides, notes: plan.notes });
   }
 
-  const summary = ['### AI review', '', '| Item | Verdict | Action |', '| :--- | :--- | :--- |', ...rows.map(r => `| ${r.map(c => String(c).replace(/\|/g, '\\|')).join(' | ')} |`)].join('\n');
+  const summary = ['### AI review', '', '| Item | Verdict | Action |', '| :--- | :--- | :--- |', ...rows.map(r => `| ${r.map(c => escapeCell(c)).join(' | ')} |`)].join('\n');
   console.log(summary);
   if (process.env.GITHUB_STEP_SUMMARY) fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, summary + '\n');
 }

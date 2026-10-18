@@ -93,6 +93,8 @@ function lastJsonObject(text) {
  * @returns {{verdict: object|null, text: string, tools: {tool: string, status: string, input: object, error?: string}[]}}
  */
 function extractVerdict(stdout) {
+  const MAX = 400 * 1024; // the verdict is at the end; bound the work on runaway output
+  stdout = String(stdout).slice(-MAX);
   const texts = [];
   const tools = [];
   let events = 0;
@@ -206,7 +208,8 @@ function renderComment(verdict, item, { model } = {}) {
 
 /** Short note appended to a scout candidate line. */
 function scoutNote(verdict) {
-  const reason = safe(verdict.reasons[0]).replace(/<!--|-->/g, '').slice(0, 160);
+  // safe() escapes < and >, so the note cannot open or close the line's <!-- scout:… --> marker
+  const reason = safe(verdict.reasons[0]).slice(0, 160);
   return ` — AI: ${verdict.verdict} (${reason})`;
 }
 
