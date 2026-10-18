@@ -39,7 +39,7 @@
 > **Active Hard Fork**: `Heretek-AI/awesome-opencode` is the actively maintained community continuation of `awesome-opencode`.
 > All original upstream issues, pull requests, and discussions are preserved and imported. Submissions and PRs are actively reviewed!
 
-<p><b>563</b> entries &nbsp;•&nbsp; <b>290</b> plugins: <b>154</b> <code>V2</code>, <b>124</b> <code>V1 only</code> (removed after 2027-01-01), <b>12</b> <code>unverified</code></p>
+<p><b>564</b> entries &nbsp;•&nbsp; <b>290</b> plugins: <b>154</b> <code>V2</code>, <b>124</b> <code>V1 only</code> (removed after 2027-01-01), <b>12</b> <code>unverified</code></p>
 
 <p>
 <a href="https://heretek-ai.github.io/awesome-opencode/"><b>🔎 Search &amp; filter the catalog</b></a>
@@ -3343,7 +3343,7 @@ skills stay model- and provider-neutral.
 <div id="projects"></div>
 
 <details>
-<summary><strong>🛠 PROJECTS (199)</strong></summary>
+<summary><strong>🛠 PROJECTS (200)</strong></summary>
 <br>
 
 <h4>Agents <sub>(1)</sub></h4>
@@ -4316,7 +4316,7 @@ first 401, so no API key goes in the config file.
 
 <br>
 
-<h4>Tools & Utilities <sub>(91)</sub></h4>
+<h4>Tools & Utilities <sub>(92)</sub></h4>
 
 <details>
   <summary><b>Agent Run Inspector</b> <img src="https://badgen.net/github/stars/kaboumou/agent-run-inspector-docs" height="14"/> - <i>Local, read-only reports for OpenCode session exports - repeated tool calls, failures, completion</i></summary>
@@ -4801,6 +4801,15 @@ first 401, so no API key goes in the config file.
     A TUI fuzzy finder over every OpenCode session from every project — type keywords to filter in real time, pick with ↑/↓, Enter to jump back into the conversation. Go, zero config, single binary.
     <br><br>
     <a href="https://github.com/wsaaaqqq/oos">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
+  <summary><b>OpenChamber Mobile Bridge</b> <img src="https://badgen.net/github/stars/Zaradacht/opencode-openchamber-mobile-bridge" height="14"/> - <i>Expose devcontainer OpenChamber sessions over Tailscale</i></summary>
+  <blockquote>
+    Starts OpenChamber inside devcontainers, creates a host bridge, and serves each project on a stable private Tailscale URL for mobile and desktop clients.
+    <br><br>
+    <a href="https://github.com/Zaradacht/opencode-openchamber-mobile-bridge">🔗 <b>View Repository</b></a> &nbsp;•&nbsp; <a href="https://www.npmjs.com/package/opencode-openchamber-mobile-bridge">📦 <b>npm</b></a>
   </blockquote>
 </details>
 
