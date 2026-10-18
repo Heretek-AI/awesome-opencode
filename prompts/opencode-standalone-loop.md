@@ -84,6 +84,7 @@ The repository now automates everything mechanical. Your job is the judgment cal
 3. **Only review PRs whose `validate` check is green** (or labeled `needs-human`, where you resolve the open question). A PR with no `validate` run can get one with `gh workflow run validate-pr.yml --ref <headRefName>`.
 4. **Your verdict covers:** relevance to OpenCode, real utility (not a duplicate in spirit), safety/policy (zero tolerance for crypto/token/trading), and copy quality of `tagline`/`description`/`topics`.
 5. **Inactivity is not a rejection reason.** Archived, deleted or npm-deprecated targets are; see `docs/policy.md`. The old "commits within 6 months" bar no longer applies.
+6. **PRs with an `ai-approve`, `ai-fix`, `ai-close` or `ai-unsure` label already have an "AI review" comment** from the `ai-review.yml` workflow (verdict, reasons, and for `ai-fix` a schema-checked corrected entry). Start from it instead of re-reviewing from scratch; it is advisory, so confirm before acting.
 
 ## Merging Rules
 

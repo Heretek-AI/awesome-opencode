@@ -191,7 +191,12 @@ async function run({ dryRun, limit }) {
   console.log(`Opened scout issue #${res.data.number} with ${candidates.length} candidate(s)`);
 }
 
-async function accept({ issueNumber, sender, dryRun }) {
+/**
+ * Open PRs for accepted candidates. Maintainers tick boxes (issues.yml passes --sender). The AI review
+ * calls this directly with `ids` (candidates it accepted, ticked by the bot), `overrides` (its kind,
+ * topics, tagline and a PR note per id) and `notes` (text appended to candidates it did not accept).
+ */
+async function accept({ issueNumber, sender, dryRun, ids = null, overrides = {}, notes = {} }) {
   if (sender) {
     const { data } = await rest(`/repos/${REPO}/collaborators/${encodeURIComponent(sender)}/permission`);
     if (!data || !['admin', 'maintain', 'write'].includes(data.permission)) {
@@ -205,10 +210,19 @@ async function accept({ issueNumber, sender, dryRun }) {
   let body = issue.body;
   let opened = 0;
   for (const line of body.split('\n')) {
-    const ticked = line.match(/^- \[x\] .*<!-- scout:(c\d+) -->$/i);
-    if (!ticked || / → #\d+/.test(line) || opened >= ACCEPT_LIMIT) continue;
-    const input = data[ticked[1]];
-    if (!input) continue;
+    const candidate = line.match(/^- \[( |x)\] .*<!-- scout:(c\d+) -->$/i);
+    if (!candidate) continue;
+    const id = candidate[2];
+    if (notes[id]) {
+      if (!/ — AI: /.test(line)) body = body.replace(line, line.replace(/ <!-- scout:/, `${notes[id]} <!-- scout:`));
+      continue;
+    }
+    const selected = ids ? ids.includes(id) : candidate[1].toLowerCase() === 'x';
+    if (!selected || / → #\d+/.test(line) || opened >= ACCEPT_LIMIT) continue;
+    if (!data[id]) continue;
+    const { note: prNote, ...override } = overrides[id] || {};
+    const input = { ...data[id], ...override };
+    if (override.kind) input.category = categoryForKind(override.kind, data[id].category);
     const result = await buildEntry(input);
     let note;
     if (!result.ok) {
@@ -218,17 +232,32 @@ async function accept({ issueNumber, sender, dryRun }) {
         branch: `scout/${result.file.replace(/^data\/[a-z]+\/|\.yaml$/g, '')}`,
         files: { [result.file]: result.text },
         title: `docs: add ${input.name} to ${input.category}`,
-        body: [`Found by the weekly scout in #${issueNumber}.`, '', ...result.notes.map(n => `- ${n}`), '', 'Topics are a keyword guess; adjust them before merging.'].join('\n'),
+        body: [
+          `Found by the weekly scout in #${issueNumber}.${prNote ? ` ${prNote}` : ''}`,
+          '',
+          ...result.notes.map(n => `- ${n}`),
+          '',
+          override.topics ? 'Kind, topics and tagline were set by the AI review; check them before merging.' : 'Topics are a keyword guess; adjust them before merging.'
+        ].join('\n'),
         labels: ['scout', `category: ${input.category}`],
         dryRun
       });
       note = pr ? ` → #${pr.number}` : ' → (no changes)';
       opened++;
     }
-    body = body.replace(line, line.replace(/ <!-- scout:/, `${note} <!-- scout:`));
+    body = body.replace(line, line.replace(/^- \[ \]/, '- [x]').replace(/ <!-- scout:/, `${note} <!-- scout:`));
   }
   if (!dryRun && body !== issue.body) await rest(`/repos/${REPO}/issues/${issueNumber}`, { method: 'PATCH', body: { body } });
-  console.log(`Processed ${opened} ticked candidate(s)`);
+  console.log(`Processed ${opened} accepted candidate(s)`);
+  return { opened, body };
+}
+
+/** Category that fits a kind (scout candidates start as plugins or projects). */
+function categoryForKind(kind, fallback) {
+  if (kind === 'plugin') return 'plugins';
+  if (kind === 'theme') return 'themes';
+  if (kind === 'agent' || kind === 'skill') return 'agents';
+  return fallback === 'plugins' ? 'projects' : fallback;
 }
 
 async function main() {
@@ -245,7 +274,11 @@ async function main() {
   }
 }
 
-main().catch(err => {
-  console.error(err);
-  process.exit(1);
-});
+if (require.main === module) {
+  main().catch(err => {
+    console.error(err);
+    process.exit(1);
+  });
+}
+
+module.exports = { DATA_RE, accept, categoryForKind };

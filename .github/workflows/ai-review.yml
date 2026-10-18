@@ -1,0 +1,210 @@
+# AI review with OpenCode V2 (see docs/policy.md#ai-review): open PRs labeled needs-human or scout get
+# an advisory verdict comment and an ai-* label; unreviewed candidates on the scout issue are accepted
+# (the bot opens a PR, which still needs validate and a human merge) or annotated. Never merges or closes.
+#
+# Security: runs only on schedule/dispatch with base-branch code; PR code is never checked out. The model
+# reads untrusted PR and README text, so it runs in the `review` job, whose GITHUB_TOKEN has no permissions
+# and is never put in its environment, with an agent limited to read/glob/grep inside the repository
+# (verified by a self-test before every run). Only schema-validated verdicts are acted on, by our own code
+# in the `apply` job.
+name: AI review
+
+on:
+  schedule:
+    - cron: '30 7 * * *'  # PRs, after the nightly V2 re-check
+    - cron: '0 9 * * 1'   # scout candidates, after the weekly scout run
+  workflow_dispatch:
+    inputs:
+      target:
+        description: What to review
+        type: choice
+        options: [all, prs, scout, selftest]
+        default: all
+      pr:
+        description: Only this PR number (optional)
+        required: false
+      dry_run:
+        description: Review, but do not comment, label or open PRs
+        type: boolean
+        default: false
+      force:
+        description: Re-review PRs already reviewed at their current commit
+        type: boolean
+        default: false
+
+permissions: {}
+
+concurrency:
+  group: ai-review
+  cancel-in-progress: false
+
+env:
+  OPENCODE_VERSION: '2.0.32'
+  OPENCODE_SHA256: 8adfbefe1d697b5d1774ab8d31630303543aa0676b9aa15d94ceb8e80a5bff69
+  MODEL: ${{ vars.OPENCODE_MODEL || 'opencode-go/muse-spark-1.3-contributor' }}
+
+jobs:
+  collect:
+    if: inputs.target != 'selftest'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+      pull-requests: read
+      issues: read
+    outputs:
+      count: ${{ steps.collect.outputs.count }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci --ignore-scripts
+
+      - name: Build evidence bundles
+        id: collect
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          TARGET: ${{ github.event_name == 'schedule' && (github.event.schedule == '0 9 * * 1' && 'scout' || 'prs') || inputs.target }}
+          ONLY_PR: ${{ inputs.pr }}
+          FORCE: ${{ inputs.force }}
+        run: |
+          args=(collect --out .ai-review/inputs --target "$TARGET")
+          if [ -n "${ONLY_PR:-}" ]; then args+=(--pr "$ONLY_PR"); fi
+          if [ "${FORCE:-}" = "true" ]; then args+=(--force); fi
+          node scripts/ai-review.js "${args[@]}"
+
+      - name: Upload evidence bundles
+        if: steps.collect.outputs.count != '0'
+        uses: actions/upload-artifact@v7
+        with:
+          name: ai-review-inputs
+          path: .ai-review/inputs
+          retention-days: 7
+
+  review:
+    needs: collect
+    if: always() && needs.collect.result != 'failure' && (needs.collect.outputs.count != '0' || inputs.target == 'selftest')
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    permissions: {}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci --ignore-scripts
+
+      - name: Install OpenCode
+        run: |
+          dir="$RUNNER_TEMP/opencode"
+          mkdir -p "$dir"
+          curl --proto '=https' --tlsv1.2 -fsSL -o "$dir/opencode.tar.gz" "https://opencode.ai/files/bin/${OPENCODE_VERSION}/opencode-linux-x64-baseline.tar.gz"
+          echo "${OPENCODE_SHA256}  $dir/opencode.tar.gz" | sha256sum -c -
+          tar -xzf "$dir/opencode.tar.gz" -C "$dir"
+          command -v rg >/dev/null || sudo apt-get install -y ripgrep
+          "$dir/opencode" --version
+
+      - name: Check credentials
+        env:
+          OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}
+          OPENCODE_GO_API_KEY: ${{ secrets.OPENCODE_GO_API_KEY }}
+        run: |
+          if [ -z "${OPENCODE_GO_API_KEY}${OPENCODE_API_KEY}" ]; then
+            echo "::error::Set the OPENCODE_GO_API_KEY (or OPENCODE_API_KEY) repository secret"
+            exit 1
+          fi
+
+      - name: Permission self-test
+        env:
+          OPENCODE_BIN: ${{ runner.temp }}/opencode/opencode
+          OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}
+          OPENCODE_GO_API_KEY: ${{ secrets.OPENCODE_GO_API_KEY }}
+          XDG_CONFIG_HOME: ${{ runner.temp }}/oc-config
+        run: node scripts/ai-review.js selftest --model "$MODEL" --timeout 240
+
+      - name: Download evidence bundles
+        if: inputs.target != 'selftest'
+        uses: actions/download-artifact@v8
+        with:
+          name: ai-review-inputs
+          path: .ai-review/inputs
+
+      - name: Review with OpenCode
+        if: inputs.target != 'selftest'
+        env:
+          OPENCODE_BIN: ${{ runner.temp }}/opencode/opencode
+          OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}
+          OPENCODE_GO_API_KEY: ${{ secrets.OPENCODE_GO_API_KEY }}
+          XDG_CONFIG_HOME: ${{ runner.temp }}/oc-config
+        run: node scripts/ai-review.js run --in .ai-review/inputs --out .ai-review/outputs --model "$MODEL"
+
+      - name: Upload verdicts
+        if: inputs.target != 'selftest'
+        uses: actions/upload-artifact@v7
+        with:
+          name: ai-review-outputs
+          path: .ai-review/outputs
+          retention-days: 7
+
+  apply:
+    needs: [collect, review]
+    if: needs.review.result == 'success' && inputs.target != 'selftest'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+      actions: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci --ignore-scripts
+
+      - name: Download evidence bundles
+        uses: actions/download-artifact@v8
+        with:
+          name: ai-review-inputs
+          path: .ai-review/inputs
+
+      - name: Download verdicts
+        uses: actions/download-artifact@v8
+        with:
+          name: ai-review-outputs
+          path: .ai-review/outputs
+
+      - name: Apply verdicts
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          DRY_RUN: ${{ inputs.dry_run }}
+        run: |
+          args=(apply --in .ai-review/inputs --out .ai-review/outputs --model "$MODEL")
+          if [ "${DRY_RUN:-}" = "true" ]; then args+=(--dry-run); fi
+          node scripts/ai-review.js "${args[@]}"
