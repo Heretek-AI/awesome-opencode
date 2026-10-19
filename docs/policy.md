@@ -63,6 +63,8 @@ An OpenCode V2 agent reviews the judgment calls the deterministic checks leave o
 
 A maintainer still merges every PR, including the ones the AI opened, and the `validate` check still applies. Delete the comment or remove the label to discard a verdict; dispatching the workflow with `force` re-reviews.
 
+Maintainers can apply a fix verdict in one click by commenting /apply-ai-fix on the PR. The bot validates the sender, checks the suggestion is fresh and schema-valid, commits it to the PR branch (same-repo PRs only), and validate re-runs.
+
 How it is contained:
 
 - It runs only on a schedule or manual dispatch, with base-branch code; PR code is never checked out.

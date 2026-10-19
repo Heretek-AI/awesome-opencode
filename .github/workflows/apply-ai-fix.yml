@@ -1,0 +1,56 @@
+# Apply an AI review `fix` verdict in one command.
+#
+# A maintainer comments `/apply-ai-fix` on a PR and this workflow commits the Suggested
+# entry from the latest AI review comment to the PR branch (same-repo PRs only).
+#
+# Security:
+# - The trigger comment body is untrusted and only used as a signal (an `if:` check for
+#   the command string); nothing from it is interpolated into shell commands.
+# - The YAML applied comes only from our own validated bot AI-review comment
+#   (MARKER `<!-- ai-review -->`), never from the trigger comment.
+# - The sender's permission is checked via the collaborators permission API (write or
+#   admin required) before anything is written; fork PRs are rejected with an
+#   explanatory comment (same-repo only for the MVP); a stale reviewed SHA is rejected.
+# - Untrusted strings are escaped with safe() before reaching a comment, and git runs
+#   via execFile array args (no shell).
+name: Apply AI fix
+
+on:
+  issue_comment:
+    types: [created]
+
+permissions: {}
+
+concurrency:
+  group: apply-ai-fix-${{ github.event.issue.number }}
+  cancel-in-progress: false
+
+jobs:
+  apply:
+    if: github.event.issue.pull_request && contains(github.event.comment.body, '/apply-ai-fix')
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci --ignore-scripts
+
+      - name: Apply AI suggested entry
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: node scripts/apply-ai-fix.js --pr "${{ github.event.issue.number }}" --comment-id "${{ github.event.comment.id }}" --sender "${{ github.event.comment.user.login }}"
