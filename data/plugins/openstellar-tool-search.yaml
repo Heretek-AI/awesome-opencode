@@ -1,0 +1,9 @@
+name: "@openstellar/tool-search"
+repo: https://github.com/open-stl/openstellar-tool-search
+tagline: Save context by deferring tool descriptions with local BM25 + semantic search
+description: A context-saving plugin for OpenCode that defers heavy tool descriptions to save substantial token usage. Automatically prunes registered tool descriptions to a short placeholder tag (like '[d]'), records the full metadata locally, and exposes powerful local search tools (BM25 + Semantic Search using @xenova/paraphrase-multilingual-MiniLM-L12-v2) for the agent to retrieve full schemas dynamically on demand. Must be used with @openstellar/mcp-adapter.
+kind: plugin
+topics:
+  - context
+  - cost
+compat: v2

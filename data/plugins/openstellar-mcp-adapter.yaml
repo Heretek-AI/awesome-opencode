@@ -1,0 +1,9 @@
+name: "@openstellar/mcp-adapter"
+repo: https://github.com/open-stl/openstellar-mcp-adapter
+tagline: Connect any MCP server to OpenCode with clean, token-efficient schemas and robust conversions
+description: A reliable bridge connecting stdio/SSE MCP servers to OpenCode. Converts complex JSON Schema inputs to Zod validation objects, flattens heavy multimedia responses (like base64 images and audio) into short, token-saving plain text placeholders, and includes robust runtime timeout guards to prevent frozen sessions.
+kind: plugin
+topics:
+  - integrations
+  - context
+compat: v1
