@@ -1,0 +1,11 @@
+name: "@rynfar/meridian"
+repo: https://github.com/rynfar/meridian
+npm: "@rynfar/meridian"
+tagline: Use Claude and Antigravity subscriptions with Pi, OpenCode and other coding clients. Local API bridge, usage dashboard…
+description: Use Claude and Antigravity with Pi, OpenCode and other coding clients. Local API bridge, usage dashboard and Mac app. Antigravity preview available in 1.74.0.
+kind: plugin
+topics:
+  - providers
+  - cost
+  - ui
+compat: v2
