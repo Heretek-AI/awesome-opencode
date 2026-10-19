@@ -1,0 +1,95 @@
+name: oc-go-usage-display
+repo: https://github.com/christophkroeppl/oc-go-usage-display
+tagline: "OpenCode Go plan usage (5h/7d/30d) in the sidebar + statusline, for opencode and Kilo Code."
+description: >-
+  Live OpenCode Go subscription usage for opencode and the Kilo Code CLI. TUI
+  target renders a `Go Usage` sidebar block: `5h` / `7d` / `30d` meters, the next
+  reset on its own line (`5h resets in 2h5m`), and a foldable per-model mix
+  whose bars are each model's share of the Go tokens spent in this session.
+  Plus a compact `session_prompt_right` statusline (`Go 5h 42% | 7d 15%`).
+  Server target exposes a `go_usage` tool returning one line plus a JSON
+  snapshot (`Go 5h 42% (reset 3h12m) | 7d 15% | 30d 61%`). One package ships
+  four bundles (opencode + Kilo server/TUI), and each host reads only its own
+  credential store, so a Kilo login never feeds the opencode plugin. Zero
+  popups and no context injection: a failed request keeps the last good
+  snapshot and never blocks startup. Auth via `OPENCODE_OC_GO_API_KEY` /
+  `KILO_OC_GO_API_KEY`, or just sign in through the `opencode-go` provider.
+  Snapshots cache for 60s; the only network call is the usage endpoint.
+scope:
+  - global
+  - project
+tags:
+  - opencode-plugin
+  - opencode-go
+  - kilocode
+  - usage
+  - quota
+  - tui
+  - sidebar
+  - statusline
+min_version: "1.18.0"
+homepage: https://github.com/christophkroeppl/oc-go-usage-display
+installation: |
+  Requires Node >= 22 and opencode >= 1.18. The Kilo target additionally needs
+  the Kilo Code CLI (>= 7.8). Restart the host(s) after installing.
+
+  ### npm (project-local - recommended)
+  ```sh
+  npm install oc-go-usage-display
+  npx oc-go-usage-display-init --copy
+  ```
+
+  ### npm (global)
+  ```sh
+  npm install -g oc-go-usage-display
+  oc-go-usage-display-init --copy
+  ```
+
+  ### Bun
+  ```sh
+  bun add oc-go-usage-display
+  bunx oc-go-usage-display-init --copy
+  ```
+
+  ### One-shot (nothing added to your project)
+  ```sh
+  npx -p oc-go-usage-display oc-go-usage-display-init --copy
+  ```
+
+  `--copy` is the default and self-contained (`--symlink` is dev-only). Hosts are
+  detected automatically (binary on PATH or config dir): one detected host
+  installs silently, two or more prompt for a multiselect in an interactive
+  shell, nothing detected installs both. Narrow it with `--target opencode|kilo|all`,
+  `--config-dir <path>` (opencode) or `--kilo-config-dir <path>`.
+
+  ### Kilo Code
+  ```sh
+  oc-go-usage-display-init --target kilo
+  ```
+  Kilo's `tui.json` rejects the `sidebar` / `statusline` options (both surfaces
+  default on there) and does not resolve `./...` against its config dir, so the
+  installer registers `kilo.json` + `tui.json` with absolute paths to the
+  installed Kilo bundles. Toggle surfaces from the command palette
+  (`Go usage: toggle sidebar` / `toggle statusline`) or `KILO_OC_GO_*`.
+
+  ### Project scope (`.opencode/` instead of `~/.config/opencode`)
+  ```sh
+  npx -p oc-go-usage-display oc-go-usage-display-init --copy --config-dir .opencode
+  ```
+
+  ### Manual entries (no files copied - the host resolves the package)
+  ```jsonc
+  // opencode.jsonc - server target (go_usage tool)
+  { "plugin": ["oc-go-usage-display"] }
+  ```
+  ```jsonc
+  // tui.json - TUI target (Go Usage sidebar + statusline)
+  { "plugin": [["oc-go-usage-display", { "sidebar": true, "statusline": true }]] }
+  ```
+
+  ### Verify / uninstall
+  ```sh
+  oc-go-usage-display-show     # effective install per host (--json for machines)
+  oc-go-usage-display-status   # health check: exit 0 healthy, 1 with reasons
+  oc-go-usage-display-remove   # drop plugin files + config entries (secrets untouched)
+  ```
