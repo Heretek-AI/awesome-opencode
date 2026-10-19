@@ -1,0 +1,9 @@
+name: "@gamflaz/opencode-todolist"
+repo: https://github.com/MomoPi-Dark/opencode-todolist
+npm: "@gamflaz/opencode-todolist"
+tagline: Hierarchical todo list plugin for OpenCode with a real-time TUI widget.
+description: Hierarchical todo list plugin for OpenCode with a real-time TUI widget.
+kind: plugin
+topics:
+  - ui
+compat: v2
