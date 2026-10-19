@@ -1,0 +1,11 @@
+name: opencode-courier
+repo: https://github.com/ivopogace/opencode-courier
+npm: opencode-courier
+tagline: "Multi-session orchestration for OpenCode V2: spawn child sessions, be woken by them. No polling."
+description: "Multi-session orchestration for OpenCode V2: spawn child sessions, be woken by them. No polling."
+kind: plugin
+topics:
+  - orchestration
+  - sessions
+  - git
+compat: v2
