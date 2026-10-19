@@ -1,0 +1,10 @@
+name: "@opencode/plugin-browser"
+repo: https://github.com/anomalyco/opencode
+path: packages/plugin-browser
+npm: "@opencode/plugin-browser"
+tagline: OpenCode's desktop browser plugin
+description: The open source coding agent.
+kind: plugin
+topics:
+  - web
+compat: v2
