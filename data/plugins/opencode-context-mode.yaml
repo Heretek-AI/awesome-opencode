@@ -1,0 +1,11 @@
+name: open-context-mode
+repo: https://github.com/zademy/opencode-context-mode
+npm: open-context-mode
+tagline: OpenCode plugin and MCP server for sandboxed execution and searchable session memory
+description: Sandbox tool output with code execution and persist session history in SQLite FTS5 for search via MCP and hooks.
+kind: plugin
+topics:
+  - memory
+  - context
+  - sessions
+compat: v2
