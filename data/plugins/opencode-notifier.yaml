@@ -1,0 +1,9 @@
+name: "@mohak34/opencode-notifier"
+repo: https://github.com/mohak34/opencode-notifier
+npm: "@mohak34/opencode-notifier"
+tagline: OpenCode plugin that sends system notifications and plays sounds when permission is needed, generation completes, or…
+description: OpenCode plugin for desktop notifications and sounds on permission, completion, and error events.
+kind: plugin
+topics:
+  - notifications
+compat: v2
