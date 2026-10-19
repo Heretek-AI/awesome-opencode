@@ -203,6 +203,9 @@ function renderComment(verdict, item, { model } = {}) {
       '</details>',
       ''
     );
+    if (verdict.verdict === 'fix' && check.ok) {
+      lines.push('To apply this entry automatically, comment `/apply-ai-fix` on this PR (maintainers only).', '');
+    }
   }
   lines.push(`<sub>Confidence ${verdict.confidence}/100 · reviewed commit \`${item.head_sha.slice(0, 7)}\`${model ? ` · ${safe(model)}` : ''} · advisory only: a maintainer decides. [How this works](https://github.com/Heretek-AI/awesome-opencode/blob/main/docs/policy.md#ai-review)</sub>`);
   return lines.join('\n');
