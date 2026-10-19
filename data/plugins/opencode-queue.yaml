@@ -1,0 +1,9 @@
+name: opencode-queue
+repo: https://github.com/mirsella/opencode-queue
+npm: opencode-queue
+tagline: Persistent prompt, command and shell queues for OpenCode v2
+description: Queue OpenCode input until the current session is idle
+kind: plugin
+topics:
+  - sessions
+compat: v2
