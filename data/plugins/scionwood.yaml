@@ -1,0 +1,4 @@
+name: Scionwood
+repo: https://github.com/selcukusta/scionwood
+tagline: PR worktrees with their own index
+description: Creates an isolated worktree from a pull request — "--pr 1234" fetches the PR itself rather than branching off your local HEAD, and a prRef template makes the same flow work on GitLab, Gitea and Bitbucket. Each worktree is indexed separately, and a tools entry gives it whatever else it needs per worktree, such as its own docker compose project. Worktrees are driven by a CLI, so the plugin registers no LLM tool and never invokes the model.
