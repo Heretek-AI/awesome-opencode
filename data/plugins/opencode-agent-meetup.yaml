@@ -1,0 +1,12 @@
+name: opencode-agent-meetup
+repo: https://github.com/vimtor/opencode-plugins
+path: packages/opencode-agent-meetup
+npm: opencode-agent-meetup
+tagline: OpenCode plugin that lets your agent message a coworker's agent over an OpenTunnel link.
+description: My personal OpenCode plugins.
+kind: plugin
+topics:
+  - orchestration
+  - ui
+  - prompting
+compat: v2
