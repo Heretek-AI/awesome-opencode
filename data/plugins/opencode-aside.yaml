@@ -1,0 +1,20 @@
+name: OpenCode Aside
+repo: https://github.com/tannerbruhn/opencode-aside
+tagline: "Claude Code's /btw for opencode: a one-shot side question in an overlay, nothing persisted"
+description: >-
+  A port of Claude Code's /btw. Ask a question about the session you are in, get the answer in
+  an overlay, and have none of it enter the transcript. It snapshots recent text and tool
+  activity, opens a hidden child session with tools denied, asks once, and deletes the child
+  session afterwards. It deliberately neither forks the session nor persists anything, which
+  is what distinguishes it from the fork-and-merge and persistent-panel alternatives. The model
+  is inherited from the session, which matters on a swap-based local backend where naming a
+  different model would force a reload.
+scope:
+  - global
+  - project
+tags:
+  - side-chat
+  - btw
+  - claude-code
+  - context
+  - ephemeral
