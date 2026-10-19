@@ -1,0 +1,10 @@
+name: "@cortexkit/opencode-antigravity-auth"
+repo: https://github.com/cortexkit/antigravity-auth
+path: packages/opencode
+npm: "@cortexkit/opencode-antigravity-auth"
+tagline: Google Antigravity OAuth auth plugin for OpenCode - access Gemini and Claude models using Google credentials
+description: Google Antigravity OAuth for OpenCode and Pi — access Gemini 3 and Claude 4.6 with Google credentials
+kind: plugin
+topics:
+  - providers
+compat: v2
