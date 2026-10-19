@@ -1,0 +1,4 @@
+name: Backslash Newline
+repo: https://github.com/moritzWa/opencode-backslash-newline
+tagline: Backslash then Enter inserts a newline in the prompt, like Claude Code
+description: TUI plugin that turns a \ right before the cursor plus Enter into a newline instead of submitting the message, matching Claude Code's behavior anywhere in the prompt.
