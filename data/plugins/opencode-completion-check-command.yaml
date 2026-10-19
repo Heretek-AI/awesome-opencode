@@ -1,0 +1,10 @@
+name: bacluc-opencode-completion-check-command
+repo: https://github.com/BacLuc/opencode-completion-check-command
+npm: bacluc-opencode-completion-check-command
+tagline: An [opencode](https://opencode.ai) plugin that automatically verifies task completion by running a shell command after…
+description: An [opencode](https://opencode.ai) plugin that automatically verifies task completion by running a shell command after the agent finishes.
+kind: plugin
+topics:
+  - code-quality
+  - environment
+compat: v2
