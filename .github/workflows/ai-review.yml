@@ -41,7 +41,7 @@ concurrency:
 env:
   OPENCODE_VERSION: '2.0.32'
   OPENCODE_SHA256: 8adfbefe1d697b5d1774ab8d31630303543aa0676b9aa15d94ceb8e80a5bff69
-  MODEL: ${{ vars.OPENCODE_MODEL || 'opencode-go/muse-spark-1.3-contributor' }}
+  MODEL: ${{ vars.OPENCODE_MODEL || 'opencode/muse-spark-1.3-contributor' }}
 
 jobs:
   collect:
@@ -131,7 +131,6 @@ jobs:
           {
             "$schema": "https://opencode.ai/config.json",
             "providers": {
-              "opencode-go": { "env": ["OPENCODE_GO_API_KEY"] },
               "opencode": { "env": ["OPENCODE_API_KEY"] }
             },
             "permissions": [
@@ -146,10 +145,9 @@ jobs:
       - name: Check credentials
         env:
           OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}
-          OPENCODE_GO_API_KEY: ${{ secrets.OPENCODE_GO_API_KEY }}
         run: |
-          if [ -z "${OPENCODE_GO_API_KEY}${OPENCODE_API_KEY}" ]; then
-            echo "::error::Set the OPENCODE_GO_API_KEY (or OPENCODE_API_KEY) repository secret"
+          if [ -z "${OPENCODE_API_KEY}" ]; then
+            echo "::error::Set the OPENCODE_API_KEY organization secret"
             exit 1
           fi
 
@@ -157,7 +155,6 @@ jobs:
         env:
           OPENCODE_BIN: ${{ runner.temp }}/opencode/opencode
           OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}
-          OPENCODE_GO_API_KEY: ${{ secrets.OPENCODE_GO_API_KEY }}
           XDG_CONFIG_HOME: ${{ runner.temp }}/oc-config
         run: node scripts/ai-review.js selftest --model "$MODEL" --timeout 240
 
@@ -173,7 +170,6 @@ jobs:
         env:
           OPENCODE_BIN: ${{ runner.temp }}/opencode/opencode
           OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}
-          OPENCODE_GO_API_KEY: ${{ secrets.OPENCODE_GO_API_KEY }}
           XDG_CONFIG_HOME: ${{ runner.temp }}/oc-config
         run: node scripts/ai-review.js run --in .ai-review/inputs --out .ai-review/outputs --model "$MODEL"
 

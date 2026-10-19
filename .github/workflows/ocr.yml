@@ -1,0 +1,38 @@
+name: OpenCodeReview
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+  issue_comment:
+    types: [created]
+
+concurrency:
+  group: ocr-${{ github.workflow }}-${{ github.event.pull_request.number || github.event.issue.number }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  pull-requests: write
+  issues: write
+  checks: write
+
+jobs:
+  ocr:
+    if: >-
+      github.event_name == 'pull_request' ||
+      (
+        github.event_name == 'issue_comment' &&
+        github.event.issue.pull_request &&
+        contains(github.event.comment.body, '@ocr') &&
+        contains(
+          fromJSON('["OWNER","MEMBER","COLLABORATOR"]'),
+          github.event.comment.author_association
+        )
+      )
+    uses: Heretek-AI/.github/.github/workflows/ocr-review.yml@main
+    with:
+      llm_url: ${{ vars.OCR_LLM_URL || 'https://token-plan-sgp.xiaomimimo.com/v1' }}
+      llm_model: ${{ vars.OCR_LLM_MODEL || 'mimo-v2.6-flash' }}
+      use_anthropic: ${{ vars.OCR_LLM_USE_ANTHROPIC == 'true' }}
+    secrets:
+      OCR_LLM_TOKEN: ${{ secrets.OCR_LLM_TOKEN }}
