@@ -1,0 +1,9 @@
+name: opencode-with-claude
+repo: https://github.com/ianjwhite99/opencode-with-claude
+npm: opencode-with-claude
+tagline: OpenCode plugin to use your Claude Max subscription via Meridian proxy
+description: OpenCode plugin to use your Claude Max/Pro subscription with OpenCode via Meridian
+kind: plugin
+topics:
+  - providers
+compat: v2
