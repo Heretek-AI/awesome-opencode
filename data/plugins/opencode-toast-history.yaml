@@ -1,0 +1,10 @@
+name: OpenCode Toast History
+repo: https://github.com/LouisLau-art/opencode-toast-history
+tagline: Keep a history of TUI toasts and session errors in a JSONL file
+description: The TUI shows notifications in a single toast slot that disappears after a few seconds and keeps no history. This plugin listens on the server event bus for tui.toast.show and session.error and appends them to a JSONL file, so provider errors, rate limits, MCP alerts and plugin failures can be reviewed later with tail or jq.
+scope:
+  - global
+tags:
+  - notifications
+  - logging
+  - observability
