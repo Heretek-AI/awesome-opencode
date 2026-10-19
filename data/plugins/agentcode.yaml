@@ -1,0 +1,8 @@
+name: AgentCode
+repo: https://github.com/mrcbrbn5361/agentcode
+tagline: 7 ücretsiz modelin en iyi yeteneklerini tek çatı altında toplayan akıllı coding agent'ı
+description: MiMo-V2.5, DeepSeek V4 Flash, Laguna S 2.1, Ling-3.0-flash, North Mini Code, Nemotron 3 Ultra ve Big Pickle modellerini otomatik yönlendirir. Görev türüne göre en uygun modeli seçer.
+kind: plugin
+topics:
+  - providers
+compat: unknown
