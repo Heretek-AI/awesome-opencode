@@ -1,0 +1,4 @@
+name: Oya
+repo: https://github.com/OyaAIProd/oya-plugins
+tagline: Build, deploy, and manage Oya AI agents and skills from OpenCode via the Oya MCP server.
+description: Adds Oya tools to OpenCode through the @oyadotai/opencode-plugin npm package. Create and deploy Oya agents (instructions, skills, routines, knowledge) to a sandboxed cloud runtime, schedule routines, connect gateways like Slack and Gmail, trigger runs, and inspect traces, all without leaving the editor. Requires a free Oya account and API key.
