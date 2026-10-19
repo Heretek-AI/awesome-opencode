@@ -1,0 +1,11 @@
+name: "@cortexkit/aft-opencode"
+repo: https://github.com/cortexkit/aft
+npm: "@cortexkit/aft-opencode"
+tagline: OpenCode plugin for Agent File Tools (AFT) — tree-sitter and lsp powered code analysis
+description: "Give your agent a proper IDE and OS. The sensorimotor cortex for coding agents (OpenCode + Pi), part of CortexKit: symbol-aware edits, semantic search, code health, fast grep/glob, bash compression, background tasks, PTY."
+kind: plugin
+topics:
+  - context
+  - orchestration
+  - code-intel
+compat: v2
