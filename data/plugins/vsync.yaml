@@ -1,0 +1,8 @@
+name: vsync
+repo: https://github.com/nicepkg/vsync
+npm: "@nicepkg/vsync"
+tagline: Config sync across AI coding tools
+description: Sync Skills, MCP servers, Agents & Commands across Claude Code, Cursor, OpenCode, and Codex. One command syncs everything with automatic format conversion (JSON ↔ TOML ↔ JSONC), environment variable syntax preservation, and atomic writes.
+kind: tool
+topics:
+  - environment
