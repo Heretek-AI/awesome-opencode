@@ -1,0 +1,14 @@
+name: Faber
+repo: https://github.com/bhagirathsinh-vaghela/faber
+tagline: "OpenCode fork with a web UI for long sessions: ~99% prompt-cache reads, durable jobs, restart recovery"
+description: A personal fork of OpenCode v1.1.50 built for long sessions. It keeps the prompt prefix byte-stable across turns, repos and compaction (99.05% of Anthropic input tokens read from cache over three months of use), runs every shell command as a durable job that reports back even across a server restart, delivers subagent results exactly once, and adds voice dictation and read-aloud to the web UI. Tested with Anthropic models; macOS and Linux, built from source.
+kind: client
+topics:
+  - context
+  - orchestration
+  - sessions
+compat: v1
+tags:
+  - fork
+  - web-ui
+  - prompt-caching
