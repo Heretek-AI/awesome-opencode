@@ -1,0 +1,14 @@
+name: Session Recall
+repo: https://github.com/rmk40/opencode-session-recall
+tagline: Search everything your agent ever did — full history search that survives compaction
+description: OpenCode already stores every session's messages, tool outputs, and reasoning traces in its database; compaction only hides them from the model. This plugin adds recall tools that search and retrieve that history on demand — recover lost tool output after compaction, pull up exact original requirements, or answer "how did we solve this last time?" across every project on the machine. No memory layer, no embeddings, no API keys, zero setup.
+scope:
+  - global
+  - project
+tags:
+  - memory
+  - history
+  - search
+  - compaction
+  - context
+homepage: https://github.com/rmk40/opencode-session-recall#readme
