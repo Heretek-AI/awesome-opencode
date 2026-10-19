@@ -745,6 +745,26 @@
     "installation": "Install the Helper globally:\n\n```sh\nnpm install --global @aerovato/operator-helper\n```\n\nThen install the plugin for OpenCode:\n\n```sh\noperator-helper install opencode\n```\n"
   },
   {
+    "productId": "aft",
+    "type": "plugins",
+    "displayName": "@cortexkit/aft-opencode",
+    "repoUrl": "https://github.com/cortexkit/aft",
+    "npmPackage": "@cortexkit/aft-opencode",
+    "tagline": "OpenCode plugin for Agent File Tools (AFT) — tree-sitter and lsp powered code analysis",
+    "description": "Give your agent a proper IDE and OS. The sensorimotor cortex for coding agents (OpenCode + Pi), part of CortexKit: symbol-aware edits, semantic search, code health, fast grep/glob, bash compression, background tasks, PTY.",
+    "kind": "plugin",
+    "topics": [
+      "context",
+      "orchestration",
+      "code-intel"
+    ],
+    "compat": "v2",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
     "productId": "aftermath",
     "type": "plugins",
     "displayName": "Aftermath",
@@ -2293,6 +2313,24 @@
     "tags": []
   },
   {
+    "productId": "momopi-dark-opencode-todolist",
+    "type": "plugins",
+    "displayName": "@gamflaz/opencode-todolist",
+    "repoUrl": "https://github.com/MomoPi-Dark/opencode-todolist",
+    "npmPackage": "@gamflaz/opencode-todolist",
+    "tagline": "Hierarchical todo list plugin for OpenCode with a real-time TUI widget.",
+    "description": "Hierarchical todo list plugin for OpenCode with a real-time TUI widget.",
+    "kind": "plugin",
+    "topics": [
+      "ui"
+    ],
+    "compat": "v2",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
     "productId": "morph-fast-apply",
     "type": "plugins",
     "displayName": "Morph Fast Apply",
@@ -3109,6 +3147,25 @@
     ]
   },
   {
+    "productId": "opencode-config",
+    "type": "plugins",
+    "displayName": "@unfrgivn/opencode-config",
+    "repoUrl": "https://github.com/unfrgivn/opencode-config",
+    "npmPackage": "@unfrgivn/opencode-config",
+    "tagline": "OpenCode plugin that bundles orchestration agents, skills, commands, instructions, and MCP configs",
+    "description": "OpenCode plugin that bundles orchestration agents, skills, commands, instructions, and MCP configs",
+    "kind": "plugin",
+    "topics": [
+      "orchestration",
+      "prompting"
+    ],
+    "compat": "v2",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
     "productId": "opencode-cost-details",
     "type": "plugins",
     "displayName": "Cost Details",
@@ -3134,6 +3191,26 @@
     ],
     "homepageUrl": "https://www.npmjs.com/package/opencode-cost-details",
     "installation": "OpenCode 2, in `~/.config/opencode/cli.json`:\n\n```json\n{\n  \"plugins\": [\"-opencode.sidebar.context\", \"opencode-cost-details\"]\n}\n```\n\nOpenCode 1, in `~/.config/opencode/tui.json`:\n\n```json\n{ \"plugin\": [\"opencode-cost-details\"] }\n```\n"
+  },
+  {
+    "productId": "opencode-courier",
+    "type": "plugins",
+    "displayName": "opencode-courier",
+    "repoUrl": "https://github.com/ivopogace/opencode-courier",
+    "npmPackage": "opencode-courier",
+    "tagline": "Multi-session orchestration for OpenCode V2: spawn child sessions, be woken by them. No polling.",
+    "description": "Multi-session orchestration for OpenCode V2: spawn child sessions, be woken by them. No polling.",
+    "kind": "plugin",
+    "topics": [
+      "orchestration",
+      "sessions",
+      "git"
+    ],
+    "compat": "v2",
+    "scope": [
+      "global"
+    ],
+    "tags": []
   },
   {
     "productId": "opencode-craft",
@@ -5445,6 +5522,24 @@
     "tags": []
   },
   {
+    "productId": "opencode-with-claude",
+    "type": "plugins",
+    "displayName": "opencode-with-claude",
+    "repoUrl": "https://github.com/ianjwhite99/opencode-with-claude",
+    "npmPackage": "opencode-with-claude",
+    "tagline": "OpenCode plugin to use your Claude Max subscription via Meridian proxy",
+    "description": "OpenCode plugin to use your Claude Max/Pro subscription with OpenCode via Meridian",
+    "kind": "plugin",
+    "topics": [
+      "providers"
+    ],
+    "compat": "v2",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
     "productId": "opencode-workaholic",
     "type": "plugins",
     "displayName": "OpenCode Workaholic",
@@ -6020,6 +6115,26 @@
     "kind": "plugin",
     "topics": [
       "environment"
+    ],
+    "compat": "v2",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
+    "productId": "sub-agent-statusline",
+    "type": "plugins",
+    "displayName": "opencode-subagent-statusline",
+    "repoUrl": "https://github.com/Joaquinvesapa/sub-agent-statusline",
+    "npmPackage": "opencode-subagent-statusline",
+    "tagline": "OpenCode plugin that exposes subagent session statusline state",
+    "description": "OpenCode plugin that exposes subagent session statusline state",
+    "kind": "plugin",
+    "topics": [
+      "orchestration",
+      "sessions",
+      "ui"
     ],
     "compat": "v2",
     "scope": [

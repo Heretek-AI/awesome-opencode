@@ -39,7 +39,7 @@
 > **Active Hard Fork**: `Heretek-AI/awesome-opencode` is the actively maintained community continuation of `awesome-opencode`.
 > All original upstream issues, pull requests, and discussions are preserved and imported. Submissions and PRs are actively reviewed!
 
-<p><b>576</b> entries &nbsp;•&nbsp; <b>300</b> plugins: <b>164</b> <code>V2</code>, <b>124</b> <code>V1 only</code> (removed after 2027-01-01), <b>12</b> <code>unverified</code></p>
+<p><b>582</b> entries &nbsp;•&nbsp; <b>306</b> plugins: <b>170</b> <code>V2</code>, <b>124</b> <code>V1 only</code> (removed after 2027-01-01), <b>12</b> <code>unverified</code></p>
 
 <p>
 <a href="https://heretek-ai.github.io/awesome-opencode/"><b>🔎 Search &amp; filter the catalog</b></a>
@@ -79,6 +79,12 @@
 
 | Name | Category | Tagline |
 | :--- | :--- | :--- |
+| **[opencode-subagent-statusline](https://github.com/Joaquinvesapa/sub-agent-statusline)** | plugins | OpenCode plugin that exposes subagent session statusline state |
+| **[opencode-courier](https://github.com/ivopogace/opencode-courier)** | plugins | Multi-session orchestration for OpenCode V2: spawn child sessions, be woken by them. No polling. |
+| **[@gamflaz/opencode-todolist](https://github.com/MomoPi-Dark/opencode-todolist)** | plugins | Hierarchical todo list plugin for OpenCode with a real-time TUI widget. |
+| **[@cortexkit/aft-opencode](https://github.com/cortexkit/aft)** | plugins | OpenCode plugin for Agent File Tools (AFT) — tree-sitter and lsp powered code analysis |
+| **[opencode-with-claude](https://github.com/ianjwhite99/opencode-with-claude)** | plugins | OpenCode plugin to use your Claude Max subscription via Meridian proxy |
+| **[@unfrgivn/opencode-config](https://github.com/unfrgivn/opencode-config)** | plugins | OpenCode plugin that bundles orchestration agents, skills, commands, instructions, and MCP configs |
 | **[@juliuskb/opencode-voice](https://github.com/JuliusKB/opencode-voice)** | plugins | Local-first voice dictation for OpenCode with push-to-talk Whisper transcription |
 | **[opencode-queue](https://github.com/mirsella/opencode-queue)** | plugins | Persistent prompt, command and shell queues for OpenCode v2 |
 | **[opencode-claude-auth](https://github.com/griffinmartin/opencode-claude-auth)** | plugins | OpenCode 2 plugin that uses your Claude Code credentials — no separate login needed. |
@@ -88,19 +94,13 @@
 | **[@brainervirus/workit-opencode](https://github.com/BrainerVirus/workit)** | plugins | Workit OpenCode plugin — native tools, adaptive policy, and sixteen method skills |
 | **[opencode-skills-collection](https://github.com/FrancoStino/opencode-skills-collection)** | plugins | OpenCode CLI plugin that automatically downloads and keeps skills up to date. |
 | **[opencode-supermemory](https://github.com/supermemoryai/opencode-supermemory)** | plugins | OpenCode plugin that gives coding agents persistent memory using Supermemory |
-| **[opencode-ghost](https://github.com/ozandogrultan/opencode-ghost)** | plugins | Stateless inline next-prompt ghosts for the empty OpenCode V2 composer, accepted with Tab or Right. |
-| **[opencode-plugboard](https://github.com/jjjermiah/opencode-plugboard)** | plugins | Use the ChatGPT, Claude, Copilot and OpenCode Go logins in your OpenCode server from any app: an OpenCode V2 plugin… |
-| **[gutchapa-opencode-telegram](https://github.com/gutchapa/opencode-telegram)** | projects | Telegram bot for opencode — plugin + standalone poller, 70+ commands, AI digest |
-| **[WaveSpeed Skill](https://github.com/WaveSpeedAI/wavespeed-cli)** | agents | AI media generation via the wavespeed CLI |
-| **[Telai](https://github.com/inventopiano/telai)** | projects | macOS terminal for OpenCode with vertical tabs, sessions and groups |
-| **[SandBase CLI](https://github.com/sandbaseai/cli)** | projects | Connect OpenCode to 2,000+ AI models and APIs through one local MCP bridge |
 
 <br>
 
 <div id="plugins"></div>
 
 <details open>
-<summary><strong>🧩 PLUGINS (300)</strong></summary>
+<summary><strong>🧩 PLUGINS (306)</strong></summary>
 <br>
 
 <h4>Memory <sub>(31)</sub></h4>
@@ -390,7 +390,16 @@ BM25 over local files. No LLM, no embeddings, no network. Credentials are redact
 
 <br>
 
-<h4>Context & Tokens <sub>(16)</sub></h4>
+<h4>Context & Tokens <sub>(17)</sub></h4>
+
+<details>
+  <summary><b>@cortexkit/aft-opencode</b> <img src="https://badgen.net/github/stars/cortexkit/aft" height="14"/> <code>V2</code> - <i>OpenCode plugin for Agent File Tools (AFT) — tree-sitter and lsp powered code analysis</i></summary>
+  <blockquote>
+    Give your agent a proper IDE and OS. The sensorimotor cortex for coding agents (OpenCode + Pi), part of CortexKit: symbol-aware edits, semantic search, code health, fast grep/glob, bash compression, background tasks, PTY.
+    <br><br>
+    <a href="https://github.com/cortexkit/aft">🔗 <b>View Repository</b></a> &nbsp;•&nbsp; <a href="https://www.npmjs.com/package/@cortexkit/aft-opencode">📦 <b>npm</b></a>
+  </blockquote>
+</details>
 
 <details>
   <summary><b>cache-stats</b> <img src="https://badgen.net/github/stars/nmdra/opencode-cache-stats" height="14"/> <code>V1 only</code> - <i>Showing the active session's cache hit rate in a popup dialog</i></summary>
@@ -538,7 +547,7 @@ BM25 over local files. No LLM, no embeddings, no network. Credentials are redact
 
 <br>
 
-<h4>Multi-Agent & Orchestration <sub>(34)</sub></h4>
+<h4>Multi-Agent & Orchestration <sub>(37)</sub></h4>
 
 <details>
   <summary><b>@bluelovers/opencode-arise</b> <img src="https://badgen.net/github/stars/bluelovers/opencode-arise" height="14"/> <code>V1 only</code> - <i>「⚔️ ARISE!」　A Solo Leveling themed orchestrator harness for OpenCode</i></summary>
@@ -546,6 +555,15 @@ BM25 over local files. No LLM, no embeddings, no network. Credentials are redact
     A lightweight, token-efficient orchestrator layer. Enables parallel background task execution in OpenCode. Launch AI agents to work simultaneously on exploration and research while continuing with other tasks. Allows specifying custom models for each_agent via configuration.
     <br><br>
     <a href="https://github.com/bluelovers/opencode-arise">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
+  <summary><b>@unfrgivn/opencode-config</b> <img src="https://badgen.net/github/stars/unfrgivn/opencode-config" height="14"/> <code>V2</code> - <i>OpenCode plugin that bundles orchestration agents, skills, commands, instructions, and MCP configs</i></summary>
+  <blockquote>
+    OpenCode plugin that bundles orchestration agents, skills, commands, instructions, and MCP configs
+    <br><br>
+    <a href="https://github.com/unfrgivn/opencode-config">🔗 <b>View Repository</b></a> &nbsp;•&nbsp; <a href="https://www.npmjs.com/package/@unfrgivn/opencode-config">📦 <b>npm</b></a>
   </blockquote>
 </details>
 
@@ -789,6 +807,24 @@ single entry point.
     Adds a Background list to the OpenCode v2 session sidebar with every shell and subagent sent to the background, a live timer on each, and a done or failed mark when it ends.
     <br><br>
     <a href="https://github.com/PrismKitty/opencode-background-tasks">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
+  <summary><b>opencode-courier</b> <img src="https://badgen.net/github/stars/ivopogace/opencode-courier" height="14"/> <code>V2</code> - <i>Multi-session orchestration for OpenCode V2: spawn child sessions, be woken by them. No polling.</i></summary>
+  <blockquote>
+    Multi-session orchestration for OpenCode V2: spawn child sessions, be woken by them. No polling.
+    <br><br>
+    <a href="https://github.com/ivopogace/opencode-courier">🔗 <b>View Repository</b></a> &nbsp;•&nbsp; <a href="https://www.npmjs.com/package/opencode-courier">📦 <b>npm</b></a>
+  </blockquote>
+</details>
+
+<details>
+  <summary><b>opencode-subagent-statusline</b> <img src="https://badgen.net/github/stars/Joaquinvesapa/sub-agent-statusline" height="14"/> <code>V2</code> - <i>OpenCode plugin that exposes subagent session statusline state</i></summary>
+  <blockquote>
+    OpenCode plugin that exposes subagent session statusline state
+    <br><br>
+    <a href="https://github.com/Joaquinvesapa/sub-agent-statusline">🔗 <b>View Repository</b></a> &nbsp;•&nbsp; <a href="https://www.npmjs.com/package/opencode-subagent-statusline">📦 <b>npm</b></a>
   </blockquote>
 </details>
 
@@ -1124,7 +1160,7 @@ single entry point.
 
 <br>
 
-<h4>Providers, Auth & Routing <sub>(32)</sub></h4>
+<h4>Providers, Auth & Routing <sub>(33)</sub></h4>
 
 <details>
   <summary><b>@openchamber/opencode-claude</b> <img src="https://badgen.net/github/stars/openchamber/opencode-claude" height="14"/> <code>V2</code> - <i>Claude Code in OpenCode — local CLI auth, Agent SDK harness, effort variants, tools/MCP, images &amp; compact.</i></summary>
@@ -1385,6 +1421,15 @@ selected projects.
     OpenCode V2 plugin: serve OpenAI, Anthropic and Gemini compatible APIs from your OpenCode server's provider logins, with per-app keys, fallbacks, limits, caching and usage stats.
     <br><br>
     <a href="https://github.com/jjjermiah/opencode-plugboard">🔗 <b>View Repository</b></a> &nbsp;•&nbsp; <a href="https://www.npmjs.com/package/opencode-plugboard">📦 <b>npm</b></a>
+  </blockquote>
+</details>
+
+<details>
+  <summary><b>opencode-with-claude</b> <img src="https://badgen.net/github/stars/ianjwhite99/opencode-with-claude" height="14"/> <code>V2</code> - <i>OpenCode plugin to use your Claude Max subscription via Meridian proxy</i></summary>
+  <blockquote>
+    OpenCode plugin to use your Claude Max/Pro subscription with OpenCode via Meridian
+    <br><br>
+    <a href="https://github.com/ianjwhite99/opencode-with-claude">🔗 <b>View Repository</b></a> &nbsp;•&nbsp; <a href="https://www.npmjs.com/package/opencode-with-claude">📦 <b>npm</b></a>
   </blockquote>
 </details>
 
@@ -2196,7 +2241,16 @@ new assistant messages arrive.
 
 <br>
 
-<h4>UI & TUI <sub>(16)</sub></h4>
+<h4>UI & TUI <sub>(17)</sub></h4>
+
+<details>
+  <summary><b>@gamflaz/opencode-todolist</b> <img src="https://badgen.net/github/stars/MomoPi-Dark/opencode-todolist" height="14"/> <code>V2</code> - <i>Hierarchical todo list plugin for OpenCode with a real-time TUI widget.</i></summary>
+  <blockquote>
+    Hierarchical todo list plugin for OpenCode with a real-time TUI widget.
+    <br><br>
+    <a href="https://github.com/MomoPi-Dark/opencode-todolist">🔗 <b>View Repository</b></a> &nbsp;•&nbsp; <a href="https://www.npmjs.com/package/@gamflaz/opencode-todolist">📦 <b>npm</b></a>
+  </blockquote>
+</details>
 
 <details>
   <summary><b>aerovato/opencode-quotes-plugin</b> <img src="https://badgen.net/github/stars/aerovato/opencode-quotes-plugin" height="14"/> <code>V1 only</code> - <i>Display inspirational quotes instead of tips</i></summary>
