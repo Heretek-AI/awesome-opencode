@@ -39,7 +39,7 @@
 > **Active Hard Fork**: `Heretek-AI/awesome-opencode` is the actively maintained community continuation of `awesome-opencode`.
 > All original upstream issues, pull requests, and discussions are preserved and imported. Submissions and PRs are actively reviewed!
 
-<p><b>582</b> entries &nbsp;•&nbsp; <b>306</b> plugins: <b>170</b> <code>V2</code>, <b>124</b> <code>V1 only</code> (removed after 2027-01-01), <b>12</b> <code>unverified</code></p>
+<p><b>583</b> entries &nbsp;•&nbsp; <b>307</b> plugins: <b>171</b> <code>V2</code>, <b>124</b> <code>V1 only</code> (removed after 2027-01-01), <b>12</b> <code>unverified</code></p>
 
 <p>
 <a href="https://heretek-ai.github.io/awesome-opencode/"><b>🔎 Search &amp; filter the catalog</b></a>
@@ -79,6 +79,7 @@
 
 | Name | Category | Tagline |
 | :--- | :--- | :--- |
+| **[open-context-mode](https://github.com/zademy/opencode-context-mode)** | plugins | OpenCode plugin and MCP server for sandboxed execution and searchable session memory |
 | **[opencode-subagent-statusline](https://github.com/Joaquinvesapa/sub-agent-statusline)** | plugins | OpenCode plugin that exposes subagent session statusline state |
 | **[opencode-courier](https://github.com/ivopogace/opencode-courier)** | plugins | Multi-session orchestration for OpenCode V2: spawn child sessions, be woken by them. No polling. |
 | **[@gamflaz/opencode-todolist](https://github.com/MomoPi-Dark/opencode-todolist)** | plugins | Hierarchical todo list plugin for OpenCode with a real-time TUI widget. |
@@ -93,17 +94,16 @@
 | **[ai-sdk-provider-opencode-sdk](https://github.com/ben-vargas/ai-sdk-provider-opencode-sdk)** | projects | AI SDK v7 provider for OpenCode 2.x via @opencode/client: sessions, streaming, tool approvals, and interactive forms |
 | **[@brainervirus/workit-opencode](https://github.com/BrainerVirus/workit)** | plugins | Workit OpenCode plugin — native tools, adaptive policy, and sixteen method skills |
 | **[opencode-skills-collection](https://github.com/FrancoStino/opencode-skills-collection)** | plugins | OpenCode CLI plugin that automatically downloads and keeps skills up to date. |
-| **[opencode-supermemory](https://github.com/supermemoryai/opencode-supermemory)** | plugins | OpenCode plugin that gives coding agents persistent memory using Supermemory |
 
 <br>
 
 <div id="plugins"></div>
 
 <details open>
-<summary><strong>🧩 PLUGINS (306)</strong></summary>
+<summary><strong>🧩 PLUGINS (307)</strong></summary>
 <br>
 
-<h4>Memory <sub>(31)</sub></h4>
+<h4>Memory <sub>(32)</sub></h4>
 
 <details>
   <summary><b>@aerovato/operator-memory</b> <img src="https://badgen.net/github/stars/aerovato/operator-memory" height="14"/> <code>V2</code> - <i>Durable context for agent-driven development</i></summary>
@@ -259,6 +259,15 @@ BM25 over local files. No LLM, no embeddings, no network. Credentials are redact
     Companion plugin to agentmemory-capture. Re-injects a memory policy directive into the system prompt every turn so the agent actually calls memory_save, bootstraps empty pinned slots on session start, catches bilingual intent keywords (EN/KR), auto-saves lessons from error-signal file edits, and suggests crystallizing finished work. Installs from npm with one line in opencode.json.
     <br><br>
     <a href="https://github.com/dev-hann/oh-my-agentmemory">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
+  <summary><b>open-context-mode</b> <img src="https://badgen.net/github/stars/zademy/opencode-context-mode" height="14"/> <code>V2</code> - <i>OpenCode plugin and MCP server for sandboxed execution and searchable session memory</i></summary>
+  <blockquote>
+    Sandbox tool output with code execution and persist session history in SQLite FTS5 for search via MCP and hooks.
+    <br><br>
+    <a href="https://github.com/zademy/opencode-context-mode">🔗 <b>View Repository</b></a> &nbsp;•&nbsp; <a href="https://www.npmjs.com/package/open-context-mode">📦 <b>npm</b></a>
   </blockquote>
 </details>
 

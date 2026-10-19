@@ -3166,6 +3166,26 @@
     "tags": []
   },
   {
+    "productId": "opencode-context-mode",
+    "type": "plugins",
+    "displayName": "open-context-mode",
+    "repoUrl": "https://github.com/zademy/opencode-context-mode",
+    "npmPackage": "open-context-mode",
+    "tagline": "OpenCode plugin and MCP server for sandboxed execution and searchable session memory",
+    "description": "Sandbox tool output with code execution and persist session history in SQLite FTS5 for search via MCP and hooks.",
+    "kind": "plugin",
+    "topics": [
+      "memory",
+      "context",
+      "sessions"
+    ],
+    "compat": "v2",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
     "productId": "opencode-cost-details",
     "type": "plugins",
     "displayName": "Cost Details",
