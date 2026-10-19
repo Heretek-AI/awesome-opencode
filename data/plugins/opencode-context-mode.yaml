@@ -1,0 +1,11 @@
+name: open-context-mode
+repo: https://github.com/zademy/opencode-context-mode
+npm: open-context-mode
+tagline: OpenCode plugin + MCP server that saves 98% of your context window. Sandboxed code execution, FTS5 knowledge base, and…
+description: Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and MCP + hooks.
+kind: plugin
+topics:
+  - memory
+  - context
+  - sessions
+compat: v2
