@@ -1,0 +1,4 @@
+name: Parley (MIT)
+repo: https://github.com/kyeshmz/opencode-parley-mit
+tagline: MIT Parley provider with validated API-key auth and cost tracking
+description: Registers MIT's Parley LLM gateway as a provider with models pulled live from its API, validated API-key login, per-message cost display, and /parley_usage and /parley_budget commands for billed spend and budget alerts.
