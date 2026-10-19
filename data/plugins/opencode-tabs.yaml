@@ -1,0 +1,4 @@
+name: opencode-tabs
+repo: https://github.com/Minhir/opencode-tabs
+tagline: Session tabs for the OpenCode TUI.
+description: Adds a persistent tab bar to the OpenCode TUI for switching between sessions.
