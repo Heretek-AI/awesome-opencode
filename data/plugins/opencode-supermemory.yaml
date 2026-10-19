@@ -1,0 +1,9 @@
+name: opencode-supermemory
+repo: https://github.com/supermemoryai/opencode-supermemory
+npm: opencode-supermemory
+tagline: OpenCode plugin that gives coding agents persistent memory using Supermemory
+description: Supermemory plugin for OpenCode
+kind: plugin
+topics:
+  - memory
+compat: v2
