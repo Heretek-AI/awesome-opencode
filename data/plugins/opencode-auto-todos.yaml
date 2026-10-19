@@ -1,0 +1,4 @@
+name: opencode-auto-todos
+repo: https://github.com/serkanalgur/opencode-auto-todos
+tagline: Automatically append custom todos to every task list
+description: An OpenCode plugin that automatically adds your standard workflow items to every todowrite call. Define version bump reminders, GitHub workflow steps, code review checklists, or deployment tasks once in a config file, and they'll be injected into every new task list automatically. Supports deduplication and conditional matching.
