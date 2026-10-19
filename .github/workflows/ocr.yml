@@ -1,38 +1,41 @@
 name: OpenCodeReview
 
+concurrency:
+  group: >-
+    ${{
+      (
+        github.event_name == 'pull_request_target'
+        || (
+          github.event_name == 'issue_comment'
+          && github.event.issue.pull_request
+          && github.event.comment.user.type != 'Bot'
+          && (
+            github.event.comment.author_association == 'MEMBER'
+            || github.event.comment.author_association == 'OWNER'
+            || github.event.comment.author_association == 'COLLABORATOR'
+          )
+          && (
+            startsWith(github.event.comment.body, '/open-code-review')
+            || startsWith(github.event.comment.body, '@open-code-review')
+          )
+        )
+      )
+      && format('ocr-{0}', github.event.pull_request.number || github.event.issue.number)
+      || format('noop-{0}', github.run_id)
+    }}
+  cancel-in-progress: true
+
 on:
-  pull_request:
+  pull_request_target:
     types: [opened, synchronize, reopened]
   issue_comment:
     types: [created]
 
-concurrency:
-  group: ocr-${{ github.workflow }}-${{ github.event.pull_request.number || github.event.issue.number }}
-  cancel-in-progress: true
-
 permissions:
   contents: read
   pull-requests: write
-  issues: write
-  checks: write
 
 jobs:
-  ocr:
-    if: >-
-      github.event_name == 'pull_request' ||
-      (
-        github.event_name == 'issue_comment' &&
-        github.event.issue.pull_request &&
-        contains(github.event.comment.body, '@ocr') &&
-        contains(
-          fromJSON('["OWNER","MEMBER","COLLABORATOR"]'),
-          github.event.comment.author_association
-        )
-      )
-    uses: Heretek-AI/.github/.github/workflows/ocr-review.yml@main
-    with:
-      llm_url: ${{ vars.OCR_LLM_URL || 'https://token-plan-sgp.xiaomimimo.com/v1' }}
-      llm_model: ${{ vars.OCR_LLM_MODEL || 'mimo-v2.6-flash' }}
-      use_anthropic: ${{ vars.OCR_LLM_USE_ANTHROPIC == 'true' }}
-    secrets:
-      OCR_LLM_TOKEN: ${{ secrets.OCR_LLM_TOKEN }}
+  review:
+    uses: Heretek-AI/.github/.github/workflows/ocr-review.yml@a440b485d779b9177b1602c4d4f7f58cff0483a2 # main
+    secrets: inherit
