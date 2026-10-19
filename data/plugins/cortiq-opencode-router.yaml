@@ -1,0 +1,4 @@
+name: AllaiGate Model Router
+repo: https://github.com/infosave2007/cortiq-opencode-router
+tagline: Use inexpensive models for simple tasks and stronger models for complex work with AllaiGate
+description: Automatically select models for OpenCode with AllaiGate and your own rules. Send simple tasks to inexpensive models and complex work to stronger models you have configured. OpenCode continues to manage provider credentials and tool execution.
