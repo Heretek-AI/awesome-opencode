@@ -1917,6 +1917,24 @@
     "tags": []
   },
   {
+    "productId": "juliuskb-opencode-voice",
+    "type": "plugins",
+    "displayName": "@juliuskb/opencode-voice",
+    "repoUrl": "https://github.com/JuliusKB/opencode-voice",
+    "npmPackage": "@juliuskb/opencode-voice",
+    "tagline": "Local-first voice dictation for OpenCode with push-to-talk Whisper transcription",
+    "description": "Local-first voice dictation for OpenCode (v2)",
+    "kind": "plugin",
+    "topics": [
+      "voice"
+    ],
+    "compat": "v2",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
     "productId": "keep-going",
     "type": "plugins",
     "displayName": "keep-going",
@@ -3015,6 +3033,42 @@
     "tags": []
   },
   {
+    "productId": "opencode-claude",
+    "type": "plugins",
+    "displayName": "@openchamber/opencode-claude",
+    "repoUrl": "https://github.com/openchamber/opencode-claude",
+    "npmPackage": "@openchamber/opencode-claude",
+    "tagline": "Claude Code in OpenCode — local CLI auth, Agent SDK harness, effort variants, tools/MCP, images & compact.",
+    "description": "Anthropic provider plugin for OpenCode",
+    "kind": "plugin",
+    "topics": [
+      "providers"
+    ],
+    "compat": "v2",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
+    "productId": "opencode-claude-auth",
+    "type": "plugins",
+    "displayName": "opencode-claude-auth",
+    "repoUrl": "https://github.com/griffinmartin/opencode-claude-auth",
+    "npmPackage": "opencode-claude-auth",
+    "tagline": "OpenCode 2 plugin that uses your Claude Code credentials — no separate login needed.",
+    "description": "OpenCode 2 plugin that uses your existing Claude Code credentials — no separate login needed.",
+    "kind": "plugin",
+    "topics": [
+      "providers"
+    ],
+    "compat": "v2",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
     "productId": "opencode-claude-memory",
     "type": "plugins",
     "displayName": "OpenCode Claude Memory",
@@ -3292,6 +3346,25 @@
     ],
     "installation": "Add it to `opencode.jsonc`:\n\n```jsonc\n{\n  \"$schema\": \"https://opencode.ai/config.json\",\n  \"plugins\": [\"opencode-free-models\"]\n}\n```\n\nOr install from the CLI:\n\n```sh\nopencode plugin add opencode-free-models\n```\n\nOptional TUI toasts: add `\"opencode-free-models/tui\"` to the `plugins` array\nin `cli.json`.\n",
     "minVersion": "2.0.16"
+  },
+  {
+    "productId": "opencode-ghost",
+    "type": "plugins",
+    "displayName": "opencode-ghost",
+    "repoUrl": "https://github.com/ozandogrultan/opencode-ghost",
+    "npmPackage": "opencode-ghost",
+    "tagline": "Stateless inline next-prompt ghosts for the empty OpenCode V2 composer, accepted with Tab or Right.",
+    "description": "OpenCode ghost text autosuggest: suggests your next message as dimmed inline ghost text in the empty TUI composer, accepted with Tab or Right arrow.",
+    "kind": "plugin",
+    "topics": [
+      "ui",
+      "prompting"
+    ],
+    "compat": "v2",
+    "scope": [
+      "global"
+    ],
+    "tags": []
   },
   {
     "productId": "opencode-github-release",
@@ -3915,6 +3988,25 @@
     "tags": []
   },
   {
+    "productId": "opencode-observability-plugin",
+    "type": "plugins",
+    "displayName": "@langfuse/opencode-observability-plugin",
+    "repoUrl": "https://github.com/langfuse/opencode-observability-plugin",
+    "npmPackage": "@langfuse/opencode-observability-plugin",
+    "tagline": "OpenCode plugin that sends session telemetry to Langfuse.",
+    "description": "🪢 An opencode plugin that instruments sessions in Langfuse",
+    "kind": "plugin",
+    "topics": [
+      "sessions",
+      "observability"
+    ],
+    "compat": "v2",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
     "productId": "opencode-obvious-grid",
     "type": "plugins",
     "displayName": "OpenCode Obvious Grid",
@@ -4184,6 +4276,24 @@
     "kind": "plugin",
     "topics": [
       "providers"
+    ],
+    "compat": "v2",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
+    "productId": "opencode-queue",
+    "type": "plugins",
+    "displayName": "opencode-queue",
+    "repoUrl": "https://github.com/mirsella/opencode-queue",
+    "npmPackage": "opencode-queue",
+    "tagline": "Persistent prompt, command and shell queues for OpenCode v2",
+    "description": "Queue OpenCode input until the current session is idle",
+    "kind": "plugin",
+    "topics": [
+      "sessions"
     ],
     "compat": "v2",
     "scope": [
@@ -4676,6 +4786,24 @@
     "tags": []
   },
   {
+    "productId": "opencode-skills-collection",
+    "type": "plugins",
+    "displayName": "opencode-skills-collection",
+    "repoUrl": "https://github.com/FrancoStino/opencode-skills-collection",
+    "npmPackage": "opencode-skills-collection",
+    "tagline": "OpenCode CLI plugin that automatically downloads and keeps skills up to date.",
+    "description": "OpenCode Skills Collection is a OpenCode plugin that automatically downloads and keeps Skills up to date",
+    "kind": "plugin",
+    "topics": [
+      "prompting"
+    ],
+    "compat": "v2",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
     "productId": "opencode-skills-tui",
     "type": "plugins",
     "displayName": "opencode-skills-tui",
@@ -4815,6 +4943,24 @@
     ],
     "installation": "opencode plugin add opencode-status-popup",
     "minVersion": "2.0.0"
+  },
+  {
+    "productId": "opencode-supermemory",
+    "type": "plugins",
+    "displayName": "opencode-supermemory",
+    "repoUrl": "https://github.com/supermemoryai/opencode-supermemory",
+    "npmPackage": "opencode-supermemory",
+    "tagline": "OpenCode plugin that gives coding agents persistent memory using Supermemory",
+    "description": "Supermemory plugin for OpenCode",
+    "kind": "plugin",
+    "topics": [
+      "memory"
+    ],
+    "compat": "v2",
+    "scope": [
+      "global"
+    ],
+    "tags": []
   },
   {
     "productId": "opencode-swarm",
@@ -6337,6 +6483,24 @@
     "tags": []
   },
   {
+    "productId": "workit",
+    "type": "plugins",
+    "displayName": "@brainervirus/workit-opencode",
+    "repoUrl": "https://github.com/BrainerVirus/workit",
+    "npmPackage": "@brainervirus/workit-opencode",
+    "tagline": "Workit OpenCode plugin — native tools, adaptive policy, and sixteen method skills",
+    "description": "Workflow rails for agentic coding: one shared task and policy core with native OpenCode, Cursor, Codex, Pi, and CLI surfaces.",
+    "kind": "plugin",
+    "topics": [
+      "workflow"
+    ],
+    "compat": "v2",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
     "productId": "worktree-memory-sync",
     "type": "plugins",
     "displayName": "Worktree Memory Sync",
@@ -6837,6 +7001,24 @@
       "dashboard",
       "opencode"
     ]
+  },
+  {
+    "productId": "ai-sdk-provider-opencode-sdk",
+    "type": "projects",
+    "displayName": "ai-sdk-provider-opencode-sdk",
+    "repoUrl": "https://github.com/ben-vargas/ai-sdk-provider-opencode-sdk",
+    "npmPackage": "ai-sdk-provider-opencode-sdk",
+    "tagline": "AI SDK v7 provider for OpenCode 2.x via @opencode/client: sessions, streaming, tool approvals, and interactive forms",
+    "description": "Vercel AI SDK community provider for OpenCode SDK - Use OpenCode configured providers via SDK",
+    "kind": "tool",
+    "topics": [
+      "providers"
+    ],
+    "compat": "v2",
+    "scope": [
+      "global"
+    ],
+    "tags": []
   },
   {
     "productId": "aide",
