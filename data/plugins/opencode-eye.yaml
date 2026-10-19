@@ -1,0 +1,4 @@
+name: opencode-eye
+repo: https://github.com/Hidayathamir/opencode-eye
+tagline: Your model can't see? Give it eyes.
+description: Give eyes to models that can't see images. Paste a screenshot with DeepSeek or any non-vision model, and opencode-eye routes it to a vision model that answers for you — no extra API keys needed.
