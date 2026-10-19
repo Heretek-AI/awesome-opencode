@@ -1,0 +1,10 @@
+name: "@langfuse/opencode-observability-plugin"
+repo: https://github.com/langfuse/opencode-observability-plugin
+npm: "@langfuse/opencode-observability-plugin"
+tagline: OpenCode plugin that sends session telemetry to Langfuse.
+description: 🪢 An opencode plugin that instruments sessions in Langfuse
+kind: plugin
+topics:
+  - sessions
+  - observability
+compat: v2
