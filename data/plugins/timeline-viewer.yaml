@@ -1,0 +1,4 @@
+name: Timeline Viewer
+repo: https://github.com/1624318455/opencode-timeline-plugin
+tagline: Sidebar conversation timeline with click-to-jump navigation
+description: Lists current session user messages newest-first in the TUI sidebar; click a row to scroll the transcript to that message, one-click back-to-bottom, last selection persisted via kv.
