@@ -1,0 +1,10 @@
+name: "@unfrgivn/opencode-config"
+repo: https://github.com/unfrgivn/opencode-config
+npm: "@unfrgivn/opencode-config"
+tagline: OpenCode plugin that bundles orchestration agents, skills, commands, instructions, and MCP configs
+description: OpenCode plugin that bundles orchestration agents, skills, commands, instructions, and MCP configs
+kind: plugin
+topics:
+  - orchestration
+  - prompting
+compat: v2
