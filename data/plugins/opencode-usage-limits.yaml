@@ -1,0 +1,12 @@
+name: "@mynameistito/opencode-usage-limits"
+repo: https://github.com/mynameistito/opencode-plugins
+path: packages/opencode-usage-limits
+npm: "@mynameistito/opencode-usage-limits"
+tagline: OpenCode TUI plugin that shows Codex, DeepSeek, Moonshot/Kimi API balances, Novita AI, OpenRouter, Command Code,…
+description: My Personal OpenCode v2 Plugins
+kind: plugin
+topics:
+  - workflow
+  - providers
+  - cost
+compat: v2
