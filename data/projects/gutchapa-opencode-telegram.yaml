@@ -1,0 +1,8 @@
+name: gutchapa-opencode-telegram
+repo: https://github.com/gutchapa/opencode-telegram
+tagline: Telegram bot for opencode — plugin + standalone poller, 70+ commands, AI digest
+description: Telegram bot for opencode with dual runtime (opencode plugin + standalone 24/7 poller), 70+ slash commands, file/media both ways, and a bundled AI morning briefing with fitment verdicts. Local-first, MIT.
+kind: client
+topics:
+  - remote
+compat: n/a
