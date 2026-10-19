@@ -1,0 +1,11 @@
+name: opencode-subagent-statusline
+repo: https://github.com/Joaquinvesapa/sub-agent-statusline
+npm: opencode-subagent-statusline
+tagline: OpenCode plugin that exposes subagent session statusline state
+description: OpenCode plugin that exposes subagent session statusline state
+kind: plugin
+topics:
+  - orchestration
+  - sessions
+  - ui
+compat: v2
