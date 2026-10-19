@@ -1,0 +1,10 @@
+name: "@prevalentware/opencode-goal-plugin"
+repo: https://github.com/prevalentWare/opencode-goal-plugin
+npm: "@prevalentware/opencode-goal-plugin"
+tagline: OpenCode goal plugin that adds Codex-style long-running goal mode, /goal commands, persistence, and TUI status for AI…
+description: OpenCode goal plugin for Codex-style goal mode, /goal slash commands, persistent objectives, and AI coding agent focus.
+kind: plugin
+topics:
+  - workflow
+  - ui
+compat: v2
