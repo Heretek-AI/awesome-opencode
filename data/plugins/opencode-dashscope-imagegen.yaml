@@ -1,0 +1,14 @@
+name: DashScope Imagegen
+repo: https://github.com/WhiteBite/opencode-dashscope-imagegen
+tagline: Text-to-image generation for OpenCode via Alibaba DashScope (Qwen-Image & Wan models)
+description: Adds an image_generate tool to OpenCode that generates images with Alibaba DashScope text-to-image models (qwen-image-2.0, qwen-image-3.0, wan2.7-image) and saves the PNG locally. The API key is picked up from env or any dashscope* provider already configured in opencode.json - no extra server or MCP setup needed. Vision models can inspect the saved result via normal image attachments.
+tags:
+  - dashscope
+  - alibaba
+  - aliyun
+  - qwen
+  - qwen-image
+  - wan
+  - image-generation
+  - text-to-image
+  - ai-image
