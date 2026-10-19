@@ -1,0 +1,4 @@
+name: Opencode Session ID
+repo: https://github.com/hardes11/opencode-session-id-plugin
+tagline: Show the session ID beneath the title in the TUI sidebar
+description: TUI plugin that displays the session ID beneath the title in OpenCode's sidebar, making it easy to identify and share the current session. Upstream only shows this line on dev/edge builds; this plugin restores it for stable-channel users. Distributed via npm as opencode-session-id-plugin.
