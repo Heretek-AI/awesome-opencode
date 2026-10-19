@@ -1,0 +1,10 @@
+name: OpenCode TUI Context
+repo: https://github.com/SolitudeRA/opencode-tui-context
+tagline: Context-window usage and token composition in the OpenCode TUI sidebar
+description: Adds two compact sidebar bars showing context-window capacity and the cache, prompt, reasoning, and output breakdown of the latest assistant message with output tokens. Adapts to sidebar width and reads existing usage data without extra model calls or credentials.
+kind: plugin
+topics:
+  - context
+  - cost
+  - ui
+compat: v2
