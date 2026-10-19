@@ -1,0 +1,9 @@
+name: "@juliuskb/opencode-voice"
+repo: https://github.com/JuliusKB/opencode-voice
+npm: "@juliuskb/opencode-voice"
+tagline: Local-first voice dictation for OpenCode with push-to-talk Whisper transcription
+description: Local-first voice dictation for OpenCode (v2)
+kind: plugin
+topics:
+  - voice
+compat: v2
