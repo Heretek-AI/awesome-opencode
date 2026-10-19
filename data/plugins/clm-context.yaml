@@ -1,0 +1,8 @@
+name: clm-context
+repo: https://github.com/masculinecache/clm-context
+tagline: CLM self-managed context plugin for opencode
+description: CLM self-managed context plugin for opencode — live-context mirror, edit gate, and token budget (implements the Context Language Models protocol).
+kind: plugin
+topics:
+  - context
+compat: v1
