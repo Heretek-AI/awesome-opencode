@@ -1,0 +1,9 @@
+name: opencode-claude-auth
+repo: https://github.com/griffinmartin/opencode-claude-auth
+npm: opencode-claude-auth
+tagline: OpenCode 2 plugin that uses your Claude Code credentials — no separate login needed.
+description: OpenCode 2 plugin that uses your existing Claude Code credentials — no separate login needed.
+kind: plugin
+topics:
+  - providers
+compat: v2
