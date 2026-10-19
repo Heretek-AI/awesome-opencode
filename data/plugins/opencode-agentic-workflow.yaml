@@ -1,0 +1,11 @@
+name: "@mickorz/opencode-agentic-workflow"
+repo: https://github.com/mickorz/opencode-agentic-workflow
+npm: "@mickorz/opencode-agentic-workflow"
+tagline: "Durable Agentic Workflow Runtime for OpenCode V2: journal & resume, version registry, tracing, token/cost metrics, git…"
+description: "Durable Agentic Workflow Runtime for OpenCode V2: journal & resume, version registry, tracing, token/cost metrics, git worktree isolation"
+kind: plugin
+topics:
+  - memory
+  - orchestration
+  - workflow
+compat: v2
