@@ -1,0 +1,9 @@
+name: ai-sdk-provider-opencode-sdk
+repo: https://github.com/ben-vargas/ai-sdk-provider-opencode-sdk
+npm: ai-sdk-provider-opencode-sdk
+tagline: "AI SDK v7 provider for OpenCode 2.x via @opencode/client: sessions, streaming, tool approvals, and interactive forms"
+description: Vercel AI SDK community provider for OpenCode SDK - Use OpenCode configured providers via SDK
+kind: tool
+topics:
+  - providers
+compat: v2
