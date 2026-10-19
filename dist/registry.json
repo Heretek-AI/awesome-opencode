@@ -4001,6 +4001,25 @@
     "tags": []
   },
   {
+    "productId": "opencode-plugboard",
+    "type": "plugins",
+    "displayName": "opencode-plugboard",
+    "repoUrl": "https://github.com/jjjermiah/opencode-plugboard",
+    "npmPackage": "opencode-plugboard",
+    "tagline": "Use the ChatGPT, Claude, Copilot and OpenCode Go logins in your OpenCode server from any app: an OpenCode V2 plugin…",
+    "description": "OpenCode V2 plugin: serve OpenAI, Anthropic and Gemini compatible APIs from your OpenCode server's provider logins, with per-app keys, fallbacks, limits, caching and usage stats.",
+    "kind": "plugin",
+    "topics": [
+      "providers",
+      "cost"
+    ],
+    "compat": "v2",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
     "productId": "opencode-plugin-openspec",
     "type": "plugins",
     "displayName": "OpenSpec",
@@ -7904,6 +7923,23 @@
     "kind": "skill",
     "topics": [
       "domain"
+    ],
+    "compat": "n/a",
+    "scope": [
+      "global"
+    ],
+    "tags": []
+  },
+  {
+    "productId": "gutchapa-opencode-telegram",
+    "type": "projects",
+    "displayName": "gutchapa-opencode-telegram",
+    "repoUrl": "https://github.com/gutchapa/opencode-telegram",
+    "tagline": "Telegram bot for opencode — plugin + standalone poller, 70+ commands, AI digest",
+    "description": "Telegram bot for opencode with dual runtime (opencode plugin + standalone 24/7 poller), 70+ slash commands, file/media both ways, and a bundled AI morning briefing with fitment verdicts. Local-first, MIT.",
+    "kind": "client",
+    "topics": [
+      "remote"
     ],
     "compat": "n/a",
     "scope": [

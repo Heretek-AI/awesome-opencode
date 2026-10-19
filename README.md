@@ -39,7 +39,7 @@
 > **Active Hard Fork**: `Heretek-AI/awesome-opencode` is the actively maintained community continuation of `awesome-opencode`.
 > All original upstream issues, pull requests, and discussions are preserved and imported. Submissions and PRs are actively reviewed!
 
-<p><b>564</b> entries &nbsp;•&nbsp; <b>290</b> plugins: <b>154</b> <code>V2</code>, <b>124</b> <code>V1 only</code> (removed after 2027-01-01), <b>12</b> <code>unverified</code></p>
+<p><b>566</b> entries &nbsp;•&nbsp; <b>291</b> plugins: <b>155</b> <code>V2</code>, <b>124</b> <code>V1 only</code> (removed after 2027-01-01), <b>12</b> <code>unverified</code></p>
 
 <p>
 <a href="https://heretek-ai.github.io/awesome-opencode/"><b>🔎 Search &amp; filter the catalog</b></a>
@@ -79,6 +79,8 @@
 
 | Name | Category | Tagline |
 | :--- | :--- | :--- |
+| **[opencode-plugboard](https://github.com/jjjermiah/opencode-plugboard)** | plugins | Use the ChatGPT, Claude, Copilot and OpenCode Go logins in your OpenCode server from any app: an OpenCode V2 plugin… |
+| **[gutchapa-opencode-telegram](https://github.com/gutchapa/opencode-telegram)** | projects | Telegram bot for opencode — plugin + standalone poller, 70+ commands, AI digest |
 | **[WaveSpeed Skill](https://github.com/WaveSpeedAI/wavespeed-cli)** | agents | AI media generation via the wavespeed CLI |
 | **[Telai](https://github.com/inventopiano/telai)** | projects | macOS terminal for OpenCode with vertical tabs, sessions and groups |
 | **[SandBase CLI](https://github.com/sandbaseai/cli)** | projects | Connect OpenCode to 2,000+ AI models and APIs through one local MCP bridge |
@@ -92,15 +94,13 @@
 | **[zosma-qa](https://github.com/zosmaai/zosma-qa)** | agents | QA agents for OpenCode: test planner, generator, healer and analyzer for Playwright, Appium and k6 |
 | **[OpenCode Version Footer](https://github.com/vvaldez/opencode-plugins)** | plugins | Show the OpenCode version in the session footer |
 | **[Agent Relay](https://github.com/AgentWorkforce/skills)** | plugins | Connect OpenCode sessions to other coding agents through Agent Relay |
-| **[OpenRouter Websearch](https://github.com/pichenka007gd/opencode-openrouter-websearch)** | plugins | Web search via OpenRouter's web plugin with optional AI summarization |
-| **[opencode-voice](https://github.com/vaibhavgupta0786/opencode-voice)** | plugins | Local-only push-to-talk dictation for OpenCode. Press F9, speak, press F9 |
 
 <br>
 
 <div id="plugins"></div>
 
 <details open>
-<summary><strong>🧩 PLUGINS (290)</strong></summary>
+<summary><strong>🧩 PLUGINS (291)</strong></summary>
 <br>
 
 <h4>Memory <sub>(30)</sub></h4>
@@ -1106,7 +1106,7 @@ single entry point.
 
 <br>
 
-<h4>Providers, Auth & Routing <sub>(29)</sub></h4>
+<h4>Providers, Auth & Routing <sub>(30)</sub></h4>
 
 <details>
   <summary><b>Antigravity Auth</b> <img src="https://badgen.net/github/stars/NoeFabris/opencode-antigravity-auth" height="14"/> <code>V1 only</code> - <i>Google Antigravity models</i></summary>
@@ -1340,6 +1340,15 @@ selected projects.
     Local OpenCode plugin that exposes OpenAI Chat Completions, OpenAI Responses, Anthropic Messages, and Gemini-compatible endpoints for any model configured in OpenCode. Supports streaming, model listing, and real tool/function calling including parallel tool calls, so tools like n8n, Open WebUI, LangChain, Continue, Zed, and coding agents can reuse the same OpenCode model setup.
     <br><br>
     <a href="https://github.com/KochC/opencode-llm-proxy">🔗 <b>View Repository</b></a> &nbsp;•&nbsp; <a href="https://www.npmjs.com/package/opencode-llm-proxy">📦 <b>npm</b></a>
+  </blockquote>
+</details>
+
+<details>
+  <summary><b>opencode-plugboard</b> <img src="https://badgen.net/github/stars/jjjermiah/opencode-plugboard" height="14"/> <code>V2</code> - <i>Use the ChatGPT, Claude, Copilot and OpenCode Go logins in your OpenCode server from any app: an OpenCode V2 plugin…</i></summary>
+  <blockquote>
+    OpenCode V2 plugin: serve OpenAI, Anthropic and Gemini compatible APIs from your OpenCode server's provider logins, with per-app keys, fallbacks, limits, caching and usage stats.
+    <br><br>
+    <a href="https://github.com/jjjermiah/opencode-plugboard">🔗 <b>View Repository</b></a> &nbsp;•&nbsp; <a href="https://www.npmjs.com/package/opencode-plugboard">📦 <b>npm</b></a>
   </blockquote>
 </details>
 
@@ -3343,7 +3352,7 @@ skills stay model- and provider-neutral.
 <div id="projects"></div>
 
 <details>
-<summary><strong>🛠 PROJECTS (200)</strong></summary>
+<summary><strong>🛠 PROJECTS (201)</strong></summary>
 <br>
 
 <h4>Agents <sub>(1)</sub></h4>
@@ -3754,7 +3763,7 @@ first 401, so no API key goes in the config file.
 
 <br>
 
-<h4>Clients & GUIs <sub>(62)</sub></h4>
+<h4>Clients & GUIs <sub>(63)</sub></h4>
 
 <details>
   <summary><b>Agent of Empires</b> <img src="https://badgen.net/github/stars/agent-of-empires/agent-of-empires" height="14"/> - <i>Multi-session TUI for OpenCode</i></summary>
@@ -3906,6 +3915,15 @@ first 401, so no API key goes in the config file.
     Electron desktop browser with a bundled stdio MCP bridge (24 tools — snapshot, click, type, screenshot, tabs, annotations) plus an opencode mirror plugin that streams session events into a side panel and injects panel messages back into the same session. Built-in multi-protocol model support (OpenAI / Anthropic / Responses / Gemini) and an Esc takeover for the human.
     <br><br>
     <a href="https://github.com/Eric-huang799/duplex">🔗 <b>View Repository</b></a>
+  </blockquote>
+</details>
+
+<details>
+  <summary><b>gutchapa-opencode-telegram</b> <img src="https://badgen.net/github/stars/gutchapa/opencode-telegram" height="14"/> - <i>Telegram bot for opencode — plugin + standalone poller, 70+ commands, AI digest</i></summary>
+  <blockquote>
+    Telegram bot for opencode with dual runtime (opencode plugin + standalone 24/7 poller), 70+ slash commands, file/media both ways, and a bundled AI morning briefing with fitment verdicts. Local-first, MIT.
+    <br><br>
+    <a href="https://github.com/gutchapa/opencode-telegram">🔗 <b>View Repository</b></a>
   </blockquote>
 </details>
 
