@@ -1,0 +1,10 @@
+name: opencode-timings
+repo: https://github.com/foae/opencode-timings
+npm: "@foae/opencode-timings"
+tagline: "Sidebar panel with per-session timings: API time, wall-clock, turns, average and slowest turn"
+description: Lightweight TUI plugin that adds a sidebar panel showing per-session timings (total API/inference time, wall-clock, turns, average and slowest turn), with configurable values and styling.
+kind: plugin
+topics:
+  - ui
+  - observability
+compat: v1
