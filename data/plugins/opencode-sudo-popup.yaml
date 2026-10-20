@@ -2,3 +2,9 @@ name: opencode-sudo-popup
 repo: https://github.com/uvindusl/opencode-sudo-popup
 tagline: Desktop GUI popup showing the exact sudo command before you authenticate
 description: Shows a compact, native GNOME (GTK4/libadwaita) popup when opencode needs root access, displaying the exact command it's about to run so you can review and approve it — no more stopping tasks mid-work to run sudo manually.
+kind: plugin
+topics:
+  - context
+  - code-quality
+  - ui
+compat: v2
