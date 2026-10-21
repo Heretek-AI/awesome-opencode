@@ -1,0 +1,9 @@
+name: Browser Output
+repo: https://github.com/sporteka2/opencode-browser-output
+tagline: Opens the final assistant response in your default browser
+description: Useful when you have a small screen and don't want to keep scrolling the terminal. The plugin listens for the final assistant output on session completion and opens it in a separate browser window via the system default browser (xdg-open on Linux, open on macOS, start on Windows).
+kind: plugin
+topics:
+  - sessions
+  - web
+compat: v2
