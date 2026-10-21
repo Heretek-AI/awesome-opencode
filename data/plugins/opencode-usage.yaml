@@ -1,0 +1,17 @@
+name: opencode-usage
+repo: https://github.com/1930-dev/opencode-usage
+tagline: Every connected provider's quota as one comparable percentage, plus intelligence-per-dollar ranking
+description: Adds a /usage dialog and an opencode-usage CLI. Reads opencode's own SQLite and auth store, so every provider you have connected shows up with no configuration, including the ones you have not used today. Each provider's remaining budget is normalized into a single percentage bar, whether it meters in tokens per day, requests per day, credits per month or neurons — resolved from live provider quota first, then documented limits, then your own monthly USD budgets. Also ranks models by intelligence index per blended dollar.
+kind: plugin
+topics:
+  - providers
+  - cost
+compat: v2
+scope:
+  - global
+tags:
+  - budget
+  - cost
+  - quota
+  - tokens
+  - usage
