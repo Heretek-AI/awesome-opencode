@@ -1,0 +1,11 @@
+name: opencode-search-plugin
+repo: https://github.com/guotree/opencode-search-plugin
+npm: opencode-search-plugin
+tagline: "Nineteen self-contained websearch provider plugins for OpenCode v2: AnySearch, Bocha, Brave, DeepSeek, Jina, Keenable,…"
+description: OpenCode v2 plugins adding web search providers — install from npm, GitHub, or copy a single file.
+kind: plugin
+topics:
+  - providers
+  - git
+  - web
+compat: v2
