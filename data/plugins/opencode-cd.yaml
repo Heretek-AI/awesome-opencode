@@ -1,0 +1,4 @@
+name: opencode-cd
+repo: https://github.com/artempavlov/opencode-cd
+tagline: Move an OpenCode session to another directory without losing its conversation
+description: TUI plugin for changing the current session directory. Same-project moves use OpenCode's native move API; cross-project moves preserve conversation history and child sessions through a verified migration flow.
