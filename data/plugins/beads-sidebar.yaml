@@ -1,7 +1,14 @@
 name: Beads Sidebar
 repo: https://github.com/nycdubliner/opencode-beads-sidebar
+homepage: https://www.npmjs.com/package/opencode-beads-sidebar
 tagline: Shows your beads plan and how far through it you are, in the sidebar
 description: Renders the current beads plan — the epic, its tasks, and percentage complete — in the opencode sidebar, the way the built-in Todo panel shows opencode's own todos. It follows the bead bd last touched, so the panel tracks the work as an agent moves through the plan, and glyphs match bd statuses so it reads like the CLI. Beads is durable and dependency-aware, unlike session todos that die with the session. TUI plugin only; it pairs with the Beads Plugin, which covers the server side and renders nothing. Neither needs the other.
+kind: plugin
+topics:
+  - workflow
+  - sessions
+  - ui
+compat: v2
 scope:
   - global
 tags:
@@ -11,7 +18,6 @@ tags:
   - tui
   - sidebar
 min_version: 1.18.0
-homepage: https://www.npmjs.com/package/opencode-beads-sidebar
 installation: |
   ```bash
   opencode plugin opencode-beads-sidebar --global
