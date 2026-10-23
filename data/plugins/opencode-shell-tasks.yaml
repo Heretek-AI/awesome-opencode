@@ -1,0 +1,4 @@
+name: Shell Tasks
+repo: https://github.com/madcpt/opencode-shell-tasks
+tagline: Background shell jobs with live logs and a native /tasks panel
+description: Claude Code-style background shell tasks for OpenCode. Start long-running commands without blocking, inspect status and output, cancel jobs, receive completion notifications, and manage tasks from the native TUI.
