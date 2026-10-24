@@ -1,0 +1,17 @@
+name: Token Norm
+repo: https://github.com/salitaba/opencode-token-norm
+tagline: Token budget enforcement that fires on its own, plus a session handoff tool
+description: >-
+  Counts tool calls per session and staples a system-reminder onto tool output
+  at the cost-statement threshold and periodically after, so the budget check
+  happens even when the agent is deep in a task. It runs the usage audit itself
+  and injects the numbers rather than telling the agent to run one. Overrides
+  like "do everything" expire with the task that granted them instead of
+  silently carrying into the next request. Bundles a handoff tool that writes
+  the note to disk, then opens a fresh session with the note pre-filled.
+tags:
+  - tokens
+  - cost
+  - context
+  - handoff
+  - sessions
