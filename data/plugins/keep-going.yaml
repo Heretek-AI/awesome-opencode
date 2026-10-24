@@ -5,6 +5,6 @@ description: When a session goes idle, a reviewer model reads the owner's reques
 kind: plugin
 topics:
   - workflow
-compat: v1
+compat: v2
 scope:
   - global
