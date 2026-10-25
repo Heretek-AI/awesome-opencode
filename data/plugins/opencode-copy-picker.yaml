@@ -1,0 +1,4 @@
+name: OpenCode Copy Picker
+repo: https://github.com/tomyjany/opencode-copy-picker
+tagline: Copy complete replies, Markdown sections, or code blocks from the OpenCode TUI
+description: A Claude-style copy picker for OpenCode. Use /copy-part or Ctrl+Y to copy the latest assistant reply, a Markdown heading section, or an individual fenced code block.
