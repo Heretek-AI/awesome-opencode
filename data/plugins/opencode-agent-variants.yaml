@@ -1,0 +1,10 @@
+name: OpenCode Agent Variants
+repo: https://github.com/Mirrowel/opencode-agent-variants
+npm: "@mirrowel/opencode-agent-variants"
+tagline: Generate variants of installed agents with other models or prompts, callable through the task tool
+description: Extends installed agents with generated variants (for example general-light or explore-fast) that use different models or prompts, so the main model can call them through the normal task tool.
+kind: plugin
+topics:
+  - orchestration
+  - providers
+compat: v1
