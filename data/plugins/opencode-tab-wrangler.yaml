@@ -1,0 +1,25 @@
+name: OpenCode Tab Wrangler
+repo: https://github.com/YidiDev/opencode-tab-wrangler
+npm: opencode-tab-wrangler
+tagline: Preview-first tab housekeeping and recovery for the OpenCode terminal
+description: >-
+  CLI-only OpenCode V2 plugin with configurable idle cleanup, ordered rules,
+  manual locks, snoozes, schedules, a protection inspector, and Corral recovery.
+  Closes tabs without deleting sessions. Selected, running, and unknown-state
+  tabs remain protected. Shared layouts require explicit acknowledgement;
+  other terminals' selected tabs are not visible. OpenCode 2.1.4+ is eligible;
+  full native acceptance is tested on 2.1.4 and forward checks on 2.2.2, Linux x64.
+kind: plugin
+topics:
+  - sessions
+  - ui
+  - workflow
+compat: v2
+scope:
+  - global
+min_version: 2.1.4
+installation: |-
+  Merge {"package":"opencode-tab-wrangler@1.0.1","options":{}} into the
+  plugins array in the global ~/.config/opencode/cli.json. Preserve existing
+  settings/plugins. Open /wrangler. Defaults to preview; do not install this
+  CLI-only package as a server plugin in opencode.json.
