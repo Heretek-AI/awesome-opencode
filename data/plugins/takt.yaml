@@ -1,0 +1,11 @@
+name: takt
+repo: https://github.com/nrslib/takt
+npm: takt
+tagline: Workflow control for AI coding agents
+description: TAKT Agent Koordination Topology - Define how AI agents coordinate, where humans intervene, and what gets recorded — in YAML
+kind: plugin
+topics:
+  - context
+  - orchestration
+  - workflow
+compat: v2
