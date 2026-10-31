@@ -5,7 +5,7 @@ description: A tool.execute.before plugin that checks every bash command OpenCod
 kind: plugin
 topics:
   - security
-compat: v1
+compat: v2
 scope:
   - global
   - project
