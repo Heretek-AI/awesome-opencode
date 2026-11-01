@@ -1,0 +1,15 @@
+name: Ducksay
+repo: https://github.com/zhek/opencode-ducksay
+npm: opencode-ducksay
+tagline: An ASCII duck that swims in the sidebar and tells jokes about your work
+description: A TUI plugin that puts an ASCII duck in the OpenCode V2 session sidebar. It swims while the session works, docks when the turn ends, and shows a short joke written by the session's model; /duck asks for another one. The dialogue stays out of the session context and transcript.
+kind: plugin
+topics:
+  - ui
+  - sessions
+compat: v2
+installation: |-
+  opencode plugin add opencode-ducksay
+
+
+  To enable it only in one project, add `"opencode-ducksay"` to the `plugins` array in that project's `opencode.json`.
