@@ -1,0 +1,9 @@
+name: OpenCode Focus
+repo: https://github.com/kivervinicius/opencode-focus
+tagline: Status-aware terminal titles and focus-aware notifications
+description: Status-aware terminal titles with spinner/state for the TUI, minimal desktop notifications (error, waiting decision, completion, retry) and click-to-focus via a GNOME extension, with focus-based suppression.
+kind: plugin
+topics:
+  - notifications
+  - ui
+compat: v1
