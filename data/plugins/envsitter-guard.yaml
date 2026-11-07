@@ -5,4 +5,4 @@ description: OpenCode plugin that prevents agents/tools from reading or editing 
 kind: plugin
 topics:
   - security
-compat: v1
+compat: v2

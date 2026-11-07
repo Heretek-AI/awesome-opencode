@@ -6,4 +6,4 @@ kind: plugin
 topics:
   - context
   - observability
-compat: v1
+compat: v2

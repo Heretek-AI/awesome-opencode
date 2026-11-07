@@ -6,4 +6,4 @@ kind: plugin
 topics:
   - context
   - environment
-compat: v1
+compat: v2
