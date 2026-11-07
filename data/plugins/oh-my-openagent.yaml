@@ -5,4 +5,4 @@ description: Background agents, pre-built tools (LSP/AST/MCP), curated agents, a
 kind: plugin
 topics:
   - orchestration
-compat: v1
+compat: v2
