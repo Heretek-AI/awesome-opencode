@@ -1,0 +1,8 @@
+name: Crawl4AI
+repo: https://github.com/ckanthony/opencode-crawl4ai
+tagline: Web scraping, crawling, and structured extraction
+description: OpenCode plugin for Crawl4AI — gives your AI agent reliable web scraping, deep crawling, LLM-powered extraction, and structured data via the Crawl4AI CLI.
+kind: plugin
+topics:
+  - web
+compat: v1
