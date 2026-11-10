@@ -1,0 +1,10 @@
+name: opencode-council
+repo: https://github.com/RoderickOxen/opencode-council
+tagline: Multi-agent council — structured debate for hard questions across any domain
+description: >
+  Runs 4 specialist perspectives (Researcher, Logician, Creative, Critic)
+  in parallel debate rounds, then a Synthesizer produces the final answer.
+  Works for ethics, strategy, policy, science, design — any question where
+  a single perspective is likely to miss something important. Backed by
+  peer-reviewed evidence on multi-agent debate (Du et al., 2023).
+  Install: add "@roderickoxen/opencode-council" to your plugin array.
