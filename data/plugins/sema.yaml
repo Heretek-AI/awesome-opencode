@@ -1,0 +1,20 @@
+name: Sema
+repo: https://github.com/sema-lisp/opencode-sema
+tagline: Sema Lisp language support — LSP, MCP eval/compile tools, and theme
+description: >-
+  Integrates Sema (a Lisp with first-class LLM primitives) into OpenCode. Bundles
+  a language server for completions, hover docs, navigation, and formatting on
+  .sema files; an MCP server exposing Sema tools (eval, compile, docs) to the
+  agent; automatic formatting via `sema fmt`; injected syntax guidance so the
+  agent writes correct Sema; and a dark gold-accented editor theme.
+scope:
+  - global
+  - project
+tags:
+  - sema
+  - lisp
+  - lsp
+  - mcp
+  - language-server
+  - theme
+homepage: https://github.com/sema-lisp/opencode-sema
