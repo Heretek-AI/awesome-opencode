@@ -1,0 +1,9 @@
+name: opencode-lazy-load
+repo: https://github.com/jijoyo/opencode-lazy-load
+tagline: Reduces MCP token overhead 88-90% via HTTP interception - 3 layer defense
+description: "Strips ALL MCP tool definitions from LLM requests. The LLM only sees load_tool as a callable tool. 3-layer defense: HTTP interception + SSE redirect + pointer list. 7 ALWAYS_VISIBLE core tools (bash, read, edit, write, task, glob, grep) work directly without loading."
+kind: plugin
+topics:
+  - context
+  - cost
+compat: v1
