@@ -1,0 +1,9 @@
+name: Memento
+repo: https://github.com/awdemos/opencode-memento
+tagline: Preserve project context across sessions
+description: OpenCode plugin that preserves project context across sessions, automatically injecting relevant prior work into compaction.
+kind: plugin
+topics:
+  - memory
+  - context
+compat: v1
