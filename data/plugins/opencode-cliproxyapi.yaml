@@ -1,0 +1,4 @@
+name: OpenCode CLIProxyAPI
+repo: https://github.com/yourcasualdev/opencode-cliproxyapi
+tagline: Live CLIProxyAPI models in OpenCode's native picker
+description: Connects OpenCode to any CLIProxyAPI server, discovers its live model catalog, and adds every available model to the standard model picker.
