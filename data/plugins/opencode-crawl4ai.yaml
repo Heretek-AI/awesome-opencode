@@ -1,0 +1,8 @@
+name: crawl4ai
+repo: https://github.com/bewinxed/opencode-crawl4ai
+tagline: Unrestricted web access
+description: Gives AI agents full web access via crawl4ai — fetch any URL, search the web (SearXNG or DuckDuckGo), extract structured data with CSS selectors, take screenshots, deep crawl sites, and map URLs. Stealth mode by default.
+kind: plugin
+topics:
+  - web
+compat: v1
