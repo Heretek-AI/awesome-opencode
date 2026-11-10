@@ -1,0 +1,8 @@
+name: OpenCode Dynamic Workflows
+repo: https://github.com/mickorz/opencode-dynamicworkflows
+tagline: Dynamic workflow orchestration for OpenCode with multi-agent execution, parallelism, verification, and HITL.
+description: |
+  A dynamic workflow orchestration plugin for OpenCode.
+  Build complex AI workflows with multi-agent execution, parallel tasks,
+  dynamic control flow, verification, human-in-the-loop checkpoints,
+  nested workflows, and reusable workflow composition.
