@@ -1,0 +1,16 @@
+name: Circadian
+repo: https://github.com/clappingmonkey/opencode-circadian
+tagline: Auto-switch the TUI theme by time of day — by location or set hours
+description: >-
+  Automatically switches your opencode TUI theme between a day theme and a
+  night theme. Pick fixed mode to switch at hours you choose, or solar mode to
+  follow the actual sunrise/sunset for your location (latitude/longitude). It
+  applies the right theme at launch, switches live at the boundary, and
+  respects manual /theme changes until the next boundary.
+scope:
+  - global
+min_version: 1.4.0
+tags:
+  - tui
+  - theme
+  - dark-mode
