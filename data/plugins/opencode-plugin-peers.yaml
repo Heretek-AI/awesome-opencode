@@ -1,0 +1,4 @@
+name: OpenCode Plugin Peers
+repo: https://github.com/jkrandom-sudo/opencode-plugin-peers
+tagline: Claude Code-style cross-session messaging for local OpenCode sessions
+description: Lets independent OpenCode sessions discover and message each other with local-only transport, durable queues, delivery tracking, configurable inbound policies, and permission controls.
