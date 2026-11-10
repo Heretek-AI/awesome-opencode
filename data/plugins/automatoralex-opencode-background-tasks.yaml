@@ -1,0 +1,8 @@
+name: Background Tasks
+repo: https://github.com/AutomatorAlex/opencode-background-tasks
+tagline: Multi-agent background task orchestration
+description: Fan out complex work across multiple agents running in parallel with git worktree isolation, target-based overlap detection, and parent-session question relay.
+kind: plugin
+topics:
+  - orchestration
+compat: v1
