@@ -1,0 +1,4 @@
+name: superpowers-controller
+repo: https://github.com/goodjin/superpowers-controller
+tagline: Stateful Superpowers workflow controller for OpenCode
+description: Encapsulates Superpowers skills into a controlled agent workflow with project-local state, gates, recovery, and node agents behind the superpowers-agent entrypoint.
