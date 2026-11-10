@@ -1,0 +1,27 @@
+name: OpenCode Model Scorecard
+repo: https://github.com/bnc4vk/opencode-model-scorecard
+tagline: Model benchmark score, token cost, and token efficiency in the OpenCode TUI
+description: Shows a persistent home-screen scorecard for the selected OpenCode model, including benchmark score, input/output token price, and token-efficiency context from bundled public data sources.
+scope:
+  - global
+  - project
+tags:
+  - tui
+  - benchmarks
+  - model-costs
+  - token-efficiency
+installation: |
+  Install globally:
+
+  ```bash
+  opencode plugin opencode-model-scorecard -g
+  ```
+
+  Or add it to `tui.json`:
+
+  ```json
+  {
+    "$schema": "https://opencode.ai/tui.json",
+    "plugin": ["opencode-model-scorecard"]
+  }
+  ```
