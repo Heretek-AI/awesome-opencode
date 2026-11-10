@@ -1,0 +1,19 @@
+name: OpenCode Snap to Bottom
+repo: https://github.com/tannerbruhn/opencode-snap-to-bottom
+tagline: Typing snaps the transcript back to the bottom, the way a terminal treats scrollback
+description: >-
+  OpenCode pins the transcript while output streams, but once you scroll up it stays up until
+  you scroll all the way back down. In a terminal the scrollback rule is different: any
+  keystroke jumps you to the bottom while new output does not. This ports that rule. Snapping
+  skips OpenCode's own scroll and message-navigation commands, which it identifies from the
+  dispatched command name, so it follows your keybinds rather than hardcoded keys. It stays
+  out of the way while a dialog or the command palette is open.
+scope:
+  - global
+  - project
+tags:
+  - scroll
+  - scrollback
+  - transcript
+  - terminal
+  - ergonomics
