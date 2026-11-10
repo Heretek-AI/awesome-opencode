@@ -1,0 +1,4 @@
+name: opencode-vise
+repo: https://github.com/NakliTechie/opencode-vise
+tagline: Gate agent changes against a frozen behavioural baseline
+description: An opencode plugin that runs the vise judge when the agent finishes a turn. It re-runs the project frozen probes and metrics and feeds the typed verdict from vise — an exit code plus a closed next.action vocabulary — back into the session. Same observable behaviour passes; any drift is refused. A deterministic, tamper-proof behavioural gate, not an LLM reviewer.
