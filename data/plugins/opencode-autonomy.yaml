@@ -1,0 +1,14 @@
+name: opencode-autonomy
+repo: https://github.com/vocino/opencode-autonomy
+tagline: Ships features end-to-end without babysitting — concept to verified code
+description: Actually ships. /ship scans, plans 3-5 file batches, runs lint → typecheck → test → build, hands failures to @fixer and loops until green. /fix uses parallel @explore then patches. @explore is read-only. Plan mode is ask-first for dry runs. Full-disk allow-all autonomy (*, external_directory, doom_loop), 300-step builder / 150-step fixer with 3x same-error stop, 5000 lines / 200KB logs. Keeps your model/provider, adds verification loops so you stop cleaning up after it.
+scope:
+  - global
+  - project
+tags:
+  - autonomy
+  - ship
+  - fixer
+  - explore
+  - verification
+  - agents

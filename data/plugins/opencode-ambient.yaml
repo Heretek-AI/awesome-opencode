@@ -1,0 +1,15 @@
+name: opencode-ambient
+repo: https://github.com/vocino/opencode-ambient
+tagline: See where your tokens and money go — provider-indexed Hue + Govee glow
+description: Provider = color, pressure = brightness, fix streak = tempo. Meta deep blue 1M, Cursor yellow, Anthropic clay, OpenAI teal, OpenRouter violet, Google light blue, local slate. Tank 0% bright calm → 40% amber hint → 70% amber → 85% orange → 95%+ red 35% dim. Router-first glow shows where money goes. Daemon on :7686 fans to lightIds[] or single lightId, detects provider from chat params, estimates tokens. One function glows both Hue xy and Govee UDP. Pair with autonomy — one drives, one glows.
+scope:
+  - global
+  - project
+tags:
+  - ambient
+  - hue
+  - govee
+  - observability
+  - tokens
+  - lighting
+homepage: https://github.com/vocino/opencode-ambient
