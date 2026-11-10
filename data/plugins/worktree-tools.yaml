@@ -1,0 +1,4 @@
+name: Worktree Tools
+repo: https://github.com/moritzWa/opencode-worktree-tools
+tagline: Git worktree tools for the agent, in the same place Claude Code puts them
+description: Adds worktree_create, worktree_list and worktree_remove tools so parallel or risky work happens in its own checkout under .claude/worktrees. Tools only, with no prompt injection and no new terminals; removal refuses on uncommitted changes and keeps unmerged branches.

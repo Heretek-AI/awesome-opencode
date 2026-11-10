@@ -1,0 +1,4 @@
+name: Session Title
+repo: https://github.com/moritzWa/opencode-session-title
+tagline: Show the session title next to the prompt, like Claude Code
+description: TUI plugin that shows the current session title, dimmed, at the right end of the agent/model row under the prompt, so you don't have to look at the terminal tab to see which session you're in. Updates live when the session is titled or renamed.
