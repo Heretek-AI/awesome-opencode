@@ -1,0 +1,14 @@
+name: OpenCode Dictate
+repo: https://github.com/rodri45l/opencode-dictate
+tagline: Hands-free voice conversation mode — dictate prompts and answer questions by voice
+description: >-
+  Voice conversation mode for the OpenCode TUI. Speak your prompts instead of typing
+  them, and let the agent's questions and permission prompts be answered out loud too,
+  while a small status scanner above the prompt shows whether it is listening,
+  capturing, transcribing or muted. Two things it takes seriously: it installs with
+  nothing else to install (it ships its own tiny recorder, so no ffmpeg, Homebrew or
+  calibration), and it refuses to transcribe room noise — every utterance logs why it
+  was kept or dropped, which is how Whisper's habit of inventing phrases from silence
+  is kept out of your prompt. Bring your own speech-to-text: any OpenAI-compatible
+  endpoint, local or cloud. Linux/WSL and macOS are supported; Windows falls back to
+  ffmpeg.
