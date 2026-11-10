@@ -1,0 +1,9 @@
+name: opencode-plugin-statusbar
+repo: https://github.com/yuseferi/opencode-statusbar
+tagline: Reactive token & cost status bar for the OpenCode TUI
+description: Live per-session token and cost totals — input, output, and reasoning tokens, cache reads/writes, and accumulated spend — rendered right-aligned in the TUI status bar. Reacts to navigation and new messages via the standard TUI plugin API (app_bottom slot); no server component. Published on npm as opencode-plugin-statusbar under MIT.
+tags:
+  - tui
+  - tokens
+  - cost
+  - usage
