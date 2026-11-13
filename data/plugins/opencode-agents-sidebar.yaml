@@ -5,4 +5,4 @@ description: OpenCode sidebar plugin that displays configured OhMyOpenAgent agen
 kind: plugin
 topics:
   - ui
-compat: v1
+compat: v2

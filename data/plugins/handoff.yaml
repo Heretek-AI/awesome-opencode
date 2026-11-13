@@ -5,4 +5,4 @@ description: Creates focused handoff prompts for continuing work in a new sessio
 kind: plugin
 topics:
   - sessions
-compat: v1
+compat: v2
