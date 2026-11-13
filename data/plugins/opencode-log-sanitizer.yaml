@@ -5,4 +5,4 @@ description: Sanitizes pasted logs before sending them to AI by redacting long q
 kind: plugin
 topics:
   - security
-compat: v1
+compat: v2

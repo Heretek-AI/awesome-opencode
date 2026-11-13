@@ -5,4 +5,4 @@ description: Tokenscope, Comprehensive token usage analysis and cost tracking fo
 kind: plugin
 topics:
   - cost
-compat: v1
+compat: v2
