@@ -1,5 +1,5 @@
 name: Sidebar Usage
-repo: https://github.com/HunkYuan/opencode-sidebar-usage
+repo: https://github.com/YanicHalcyon/opencode-sidebar-usage
 tagline: TUI sidebar showing per-turn and session-cumulative token usage, cache hit rate, and cost
 description: |-
   Adds a collapsible "Usage" block to the opencode TUI sidebar showing token
