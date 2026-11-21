@@ -5,4 +5,4 @@ description: Structured, persistent planning for OpenCode with local session sta
 kind: plugin
 topics:
   - workflow
-compat: v1
+compat: v2

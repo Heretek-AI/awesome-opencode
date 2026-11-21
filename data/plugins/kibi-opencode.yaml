@@ -7,7 +7,7 @@ kind: plugin
 topics:
   - code-quality
   - workflow
-compat: v1
+compat: v2
 scope:
   - project
 tags:

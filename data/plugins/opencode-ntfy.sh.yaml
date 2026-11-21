@@ -5,4 +5,4 @@ description: An OpenCode plugin that adds push notifications through ntfy.sh.
 kind: plugin
 topics:
   - notifications
-compat: v1
+compat: v2
