@@ -6,7 +6,7 @@ kind: plugin
 topics:
   - media
   - providers
-compat: v1
+compat: v2
 tags:
   - openai
   - gpt-image-2

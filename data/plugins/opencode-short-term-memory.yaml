@@ -6,4 +6,4 @@ kind: plugin
 topics:
   - memory
   - prompting
-compat: v1
+compat: v2

@@ -8,7 +8,7 @@ topics:
   - context
   - cost
   - prompting
-compat: v1
+compat: v2
 scope:
   - global
 tags:

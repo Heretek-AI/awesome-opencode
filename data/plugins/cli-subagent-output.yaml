@@ -6,4 +6,4 @@ kind: plugin
 topics:
   - orchestration
   - observability
-compat: v1
+compat: v2
