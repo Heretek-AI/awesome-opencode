@@ -1,0 +1,51 @@
+name: OpenCode Token Metrics
+repo: https://github.com/jashjacob/opencode-token-metrics
+npm: opencode-token-metrics
+tagline: Live tokens-per-second meter for the OpenCode TUI prompt.
+description: >
+  A live throughput meter for the OpenCode TUI, for OpenCode V1 and V2.
+  It renders beside the session prompt as a VU-style time-series of
+  generation speed, with average, peak, trend, time-to-first-token, and
+  prompt-cache hit rate. One npm package serves both generations. It
+  measures how fast a response streams; it is not a spending dashboard
+  or a cryptocurrency project.
+kind: plugin
+topics:
+  - observability
+  - ui
+compat: v2
+min_version: "1.4.3"
+homepage: https://jashjacob.github.io/opencode-token-metrics/
+scope:
+  - global
+  - project
+installation: |
+  ### V2 (2.x)
+
+  Add it to the `plugins` array in `~/.config/opencode/opencode.jsonc` or
+  `opencode.json`:
+
+  ```jsonc
+  {
+    "plugins": ["opencode-token-metrics"]
+  }
+  ```
+
+  Options belong in `~/.config/opencode/cli.json`:
+
+  ```jsonc
+  {
+    "plugins": [
+      {
+        "package": "opencode-token-metrics",
+        "options": { "vuColumns": 20, "vuScale": "fixed", "vuFullTps": 80 }
+      }
+    ]
+  }
+  ```
+
+  ### V1 (1.x)
+
+  ```bash
+  opencode plugin opencode-token-metrics -g
+  ```
