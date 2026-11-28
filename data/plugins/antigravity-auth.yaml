@@ -5,4 +5,4 @@ description: Use Gemini and Anthropic models for free via Google Antigravity IDE
 kind: plugin
 topics:
   - providers
-compat: v1
+compat: v2

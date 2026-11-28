@@ -22,7 +22,7 @@ topics:
   - orchestration
   - workflow
   - security
-compat: v1
+compat: v2
 scope:
   - global
 tags:

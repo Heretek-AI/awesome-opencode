@@ -5,4 +5,4 @@ description: Structured workflow with session continuity, subagent orchestration
 kind: plugin
 topics:
   - workflow
-compat: v1
+compat: v2

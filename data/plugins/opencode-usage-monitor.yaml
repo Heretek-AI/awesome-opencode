@@ -6,4 +6,4 @@ kind: plugin
 topics:
   - cost
   - ui
-compat: v1
+compat: v2

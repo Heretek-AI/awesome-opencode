@@ -6,4 +6,4 @@ kind: plugin
 topics:
   - prompting
   - context
-compat: v1
+compat: v2

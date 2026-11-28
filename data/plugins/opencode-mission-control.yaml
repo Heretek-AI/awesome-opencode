@@ -6,4 +6,4 @@ kind: plugin
 topics:
   - orchestration
   - git
-compat: v1
+compat: v2

@@ -5,4 +5,4 @@ description: CrewBee is an independent Agent Team framework for OpenCode. It let
 kind: plugin
 topics:
   - orchestration
-compat: v1
+compat: v2
